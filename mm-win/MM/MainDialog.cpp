@@ -132,7 +132,7 @@ LPCTSTR CMainDialog::GetItemText( CControlUI* pList, int iItem, int iSubItem )
 	//	return m_arstrListString2 [iItem];
 	//}
 
-	return _T (_T(""));
+	return  _T("");
 }
 
 void CMainDialog::OnNotify( TNotifyUI& msg )

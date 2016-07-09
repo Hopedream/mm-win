@@ -827,7 +827,7 @@ bool IMDB::SaveGroupChatMessage(const tstring& strRoomId, _tGroupChatMessage& tG
 		int nBuffLen = tGroupMsg.strMsg.length()+tGroupMsg.strRoomID.length()
 			+tGroupMsg.strSenderAccount.length()+tGroupMsg.strSenderPhone.length()
 			+tGroupMsg.strTimeString.length()
-			+tstring("INSERT INTO %s (roomId, senderPhone, senderAccount, msgText, stime) VALUES('%s','%s','%s','%s','%d');").length();
+			+tstring(_T("INSERT INTO %s (roomId, senderPhone, senderAccount, msgText, stime) VALUES('%s','%s','%s','%s','%d');")).length();
 		char* pBuf = new char[nBuffLen+2048];
 		memset(pBuf, 0, nBuffLen+2048);
 		sprintf_s(pBuf, nBuffLen+2048, _T("INSERT INTO %s (roomId, senderPhone, senderAccount, msgText, stime) VALUES('%s','%s','%s','%s','%d');"),

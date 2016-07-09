@@ -47,16 +47,16 @@ namespace DuiLib
 		{
 			//增加一个时间节点。
 			struct tm * now = localtime(&pchatInfo->uTime);
-			char chBuf[50];
+			TCHAR chBuf[50];
 			memset(chBuf, 0, 50);
-			sprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
+			_tprintf(chBuf, _T("%02u:%02u"), now->tm_hour, now->tm_min);
 			CDuiString strTm = chBuf;
 			AddTimeItem(strTm);
 		}
 		//接收文件提示
-		if (pchatInfo->m_strRawMsg.Find("#COMMAND#type=filedownloaded") != -1)
+		if (pchatInfo->m_strRawMsg.Find(_T("#COMMAND#type=filedownloaded")) != -1)
 		{
-			tstring sSignal = "#COMMAND#type=filedownloaded,";
+			tstring sSignal = _T("#COMMAND#type=filedownloaded,");
 			tstring sRawMsg =  pchatInfo->m_strRawMsg.GetData();
 			tstring sJson = sRawMsg.substr(sSignal.length());
 			tstring sFileName;
@@ -67,24 +67,24 @@ namespace DuiLib
 			{
 				if (reader.parse(sJson, root))
 				{
-					sFileName = root["filename"].asString();
+					sFileName = root["filename"].asString(1);
 				}
 			}
 			catch (...)
 			{
-				CLogger::GetInstance()->PrintErrLog( "parse filedownload receipt exception: %s", sJson.c_str());	
+				CLogger::GetInstance()->PrintErrLog( _T("parse filedownload receipt exception: %s"), sJson.c_str());	
 			}	
 	
 			CDuiString sReply;
-			sReply.Format("%s%s","对方接收了您发送的文件",sFileName.c_str());
+			sReply.Format(_T("%s%s"),_T("对方接收了您发送的文件"),sFileName.c_str());
 			AddTimeItem(sReply, 10);//借用下
 			return true;
 		}
 
 		//拒收文件提示
-		if (pchatInfo->m_strRawMsg.Find("#COMMAND#type=filerejected") != -1)
+		if (pchatInfo->m_strRawMsg.Find(_T("#COMMAND#type=filerejected")) != -1)
 		{
-			tstring sSignal = "#COMMAND#type=filerejected,";
+			tstring sSignal = _T("#COMMAND#type=filerejected,");
 			tstring sRawMsg =  pchatInfo->m_strRawMsg.GetData();
 			tstring sJson = sRawMsg.substr(sSignal.length());
 			tstring sFileName;
@@ -95,16 +95,16 @@ namespace DuiLib
 			{
 				if (reader.parse(sJson, root))
 				{
-					sFileName = root["filename"].asString();
+					sFileName = root["filename"].asString(1);
 				}
 			}
 			catch (...)
 			{
-				CLogger::GetInstance()->PrintErrLog( "parse filedownload receipt exception: %s", sJson.c_str());	
+				CLogger::GetInstance()->PrintErrLog( _T("parse filedownload receipt exception: %s"), sJson.c_str());	
 			}	
 
 			CDuiString sReply;
-			sReply.Format("%s%s","对方拒收了您发送的文件",sFileName.c_str());
+			sReply.Format(_T("%s%s"),_T("对方拒收了您发送的文件"),sFileName.c_str());
 			AddTimeItem(sReply, 10);//借用下
 			return true;
 		}
@@ -246,7 +246,7 @@ namespace DuiLib
 			return false;
 		CLabelUI *plblTm= static_cast<CLabelUI*>(m_pPaintManager->FindSubControlByName(plstItem, _T("sysNotification")));
 		if (plblTm != NULL)
-			plblTm->SetText("我们已经是好友了，开始聊天吧!");
+			plblTm->SetText(_T("我们已经是好友了，开始聊天吧!"));
 		plstItem->SetFixedHeight(iItemHeight);
 		if (!CListUI::Add(plstItem))
 		{
@@ -359,9 +359,9 @@ namespace DuiLib
 		if (pchatInfo->uTime - m_curTime >= sn_FIVE_MINITUS)               //时间超过5分钟
 		{
 			struct tm * now = localtime(&pchatInfo->uTime);
-			char chBuf[50];
+			TCHAR chBuf[50];
 			memset(chBuf, 0, 50);
-			sprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
+			_tprintf(chBuf, _T("%02u:%02u"), now->tm_hour, now->tm_min);
 			CDuiString strTm = chBuf;
 
 			AddTimeItem(strTm);
@@ -509,9 +509,9 @@ namespace DuiLib
 		if (pFilesInfo->uTime - m_curTime >= sn_FIVE_MINITUS)               //时间超过5分钟
 		{
 			struct tm * now = localtime(&pFilesInfo->uTime);
-			char chBuf[50];
+			TCHAR chBuf[50];
 			memset(chBuf, 0, 50);
-			sprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
+			_tprintf(chBuf, _T("%02u:%02u"), now->tm_hour, now->tm_min);
 			CDuiString strTm = chBuf;
 
 			AddTimeItem(strTm);
@@ -534,21 +534,21 @@ namespace DuiLib
 		if (plstItem == NULL)
 			return false;
 
-		if(pFilesInfo->m_strRawMsg.Find("#COMMAND#type=fileRequest") != -1)
+		if(pFilesInfo->m_strRawMsg.Find(_T("#COMMAND#type=fileRequest")) != -1)
 		{
 			pFilesInfo->m_lstFiles.clear();
 			tstring strRight = pFilesInfo->m_strRawMsg;
 			fileInfo downLoadInfo;
-			downLoadInfo.strFileFullName = strRight.substr(strRight.find("\"file_name\":\"") + 13, strRight.find("\",\"file_type\"") - (strRight.find("\"file_name\":\"") + 13));
+			downLoadInfo.strFileFullName = strRight.substr(strRight.find(_T("\"file_name\":\"")) + 13, strRight.find(_T("\",\"file_type\"")) - (strRight.find(_T("\"file_name\":\"")) + 13));
 			//m_bAddFiles = false;
-			strRight = strRight.substr(strRight.find("\"file_type\":\""), strRight.length());
-			downLoadInfo.strFileType = strRight.substr(strRight.find("\"file_type\":\"") + 13, strRight.find("\",\"file_size\"") - (strRight.find("\"file_type\":\"") + 13));
-			strRight = strRight.substr(strRight.find("\"file_size\":\""), strRight.length());
-			downLoadInfo.dwFileSize = atol(strRight.substr(strRight.find("\"file_size\":\"") + 13, strRight.find("\",\"ali_file_url\"") - (strRight.find("\"file_size\":\"") + 13)).c_str());
-			strRight = strRight.substr(strRight.find("\"ali_file_url\":\""), strRight.length());
-			downLoadInfo.strFileUrl = strRight.substr(strRight.find("\"ali_file_url\":\"") + 16, strRight.find("\",\"file_path\"") - (strRight.find("\"ali_file_url\":\"") + 16));
+			strRight = strRight.substr(strRight.find(_T("\"file_type\":\"")), strRight.length());
+			downLoadInfo.strFileType = strRight.substr(strRight.find(_T("\"file_type\":\"")) + 13, strRight.find(_T("\",\"file_size\"")) - (strRight.find(_T("\"file_type\":\"")) + 13));
+			strRight = strRight.substr(strRight.find(_T("\"file_size\":\"")), strRight.length());
+			downLoadInfo.dwFileSize = _ttol(strRight.substr(strRight.find(_T("\"file_size\":\"")) + 13, strRight.find(_T("\",\"ali_file_url\"")) - (strRight.find(_T("\"file_size\":\"")) + 13)).c_str());
+			strRight = strRight.substr(strRight.find(_T("\"ali_file_url\":\"")), strRight.length());
+			downLoadInfo.strFileUrl = strRight.substr(strRight.find(_T("\"ali_file_url\":\"")) + 16, strRight.find(_T("\",\"file_path\"")) - (strRight.find(_T("\"ali_file_url\":\"")) + 16));
 			tstring strName = downLoadInfo.strFileFullName;
-			tstring strfileName = strName.substr(0, strName.find_last_of("."));
+			tstring strfileName = strName.substr(0, strName.find_last_of(_T(".")));
 			downLoadInfo.strFileName = strfileName;
 			pFilesInfo->m_lstFiles.push_back(downLoadInfo);
 		}
@@ -592,9 +592,9 @@ namespace DuiLib
 		if (pFilesInfo->uTime - m_curTime >= sn_FIVE_MINITUS)               //时间超过5分钟
 		{
 			struct tm * now = localtime(&pFilesInfo->uTime);
-			char chBuf[50];
+			TCHAR chBuf[50];
 			memset(chBuf, 0, 50);
-			sprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
+			_tprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
 			CDuiString strTm = chBuf;
 
 			AddTimeItem(strTm);
@@ -617,21 +617,21 @@ namespace DuiLib
 		if (plstItem == NULL)
 			return false;
 		
-		if(pFilesInfo->m_strRawMsg.Find("#COMMAND#type=fileRequest") != -1)
+		if(pFilesInfo->m_strRawMsg.Find(_T("#COMMAND#type=fileRequest")) != -1)
 		{
 			pFilesInfo->m_lstFiles.clear();
 			tstring strRight = pFilesInfo->m_strRawMsg;
 			fileInfo downLoadInfo;
-			downLoadInfo.strFileFullName = strRight.substr(strRight.find("\"file_name\":\"") + 13, strRight.find("\",\"file_type\"") - (strRight.find("\"file_name\":\"") + 13));
+			downLoadInfo.strFileFullName = strRight.substr(strRight.find(_T("\"file_name\":\"")) + 13, strRight.find(_T("\",\"file_type\"")) - (strRight.find(_T("\"file_name\":\"")) + 13));
 			//m_bAddFiles = false;
-			strRight = strRight.substr(strRight.find("\"file_type\":\""), strRight.length());
-			downLoadInfo.strFileType = strRight.substr(strRight.find("\"file_type\":\"") + 13, strRight.find("\",\"file_size\"") - (strRight.find("\"file_type\":\"") + 13));
-			strRight = strRight.substr(strRight.find("\"file_size\":\""), strRight.length());
-			downLoadInfo.dwFileSize = atol(strRight.substr(strRight.find("\"file_size\":\"") + 13, strRight.find("\",\"ali_file_url\"") - (strRight.find("\"file_size\":\"") + 13)).c_str());
-			strRight = strRight.substr(strRight.find("\"ali_file_url\":\""), strRight.length());
-			downLoadInfo.strFileUrl = strRight.substr(strRight.find("\"ali_file_url\":\"") + 16, strRight.find("\",\"file_path\"") - (strRight.find("\"ali_file_url\":\"") + 16));
+			strRight = strRight.substr(strRight.find(_T("\"file_type\":\"")), strRight.length());
+			downLoadInfo.strFileType = strRight.substr(strRight.find(_T("\"file_type\":\"")) + 13, strRight.find(_T("\",\"file_size\"")) - (strRight.find(_T("\"file_type\":\"")) + 13));
+			strRight = strRight.substr(strRight.find(_T("\"file_size\":\"")), strRight.length());
+			downLoadInfo.dwFileSize = _ttol(strRight.substr(strRight.find(_T("\"file_size\":\"")) + 13, strRight.find(_T("\",\"ali_file_url\"")) - (strRight.find(_T("\"file_size\":\"")) + 13)).c_str());
+			strRight = strRight.substr(strRight.find(_T("\"ali_file_url\":\"")), strRight.length());
+			downLoadInfo.strFileUrl = strRight.substr(strRight.find(_T("\"ali_file_url\":\"")) + 16, strRight.find(_T("\",\"file_path\"")) - (strRight.find(_T("\"ali_file_url\":\"")) + 16));
 			tstring strName = downLoadInfo.strFileFullName;
-			tstring strfileName = strName.substr(0, strName.find_last_of("."));
+			tstring strfileName = strName.substr(0, strName.find_last_of(_T(".")));
 			downLoadInfo.strFileName = strfileName;
 			pFilesInfo->m_lstFiles.push_back(downLoadInfo);
 		}
@@ -666,9 +666,9 @@ namespace DuiLib
 		if (timeRecv - m_curTime >= sn_FIVE_MINITUS)               //时间超过5分钟
 		{
 			struct tm * now = localtime(&timeRecv/*&pFilesInfo->uTime*/);
-			char chBuf[50];
+			TCHAR chBuf[50];
 			memset(chBuf, 0, 50);
-			sprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
+			_tprintf(chBuf, _T("%02u:%02u"), now->tm_hour, now->tm_min);
 			CDuiString strTm = chBuf;
 
 			AddTimeItem(strTm);
@@ -751,9 +751,9 @@ namespace DuiLib
 		if (timeRecv - m_curTime >= sn_FIVE_MINITUS)               //时间超过5分钟
 		{
 			struct tm * now = localtime(&timeRecv);
-			char chBuf[50];
+			TCHAR chBuf[50];
 			memset(chBuf, 0, 50);
-			sprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
+			_tprintf(chBuf, _T("%02u:%02u"), now->tm_hour, now->tm_min);
 			CDuiString strTm = chBuf;
 
 			AddTimeItem(strTm);
@@ -866,7 +866,7 @@ namespace DuiLib
 			CDuiString strFullName;
 			if(!strType.IsEmpty())
 			{
-				strFullName = strName + "." + strType;
+				strFullName = strName + _T(".") + strType;
 			}
 			else
 			{
@@ -900,9 +900,9 @@ namespace DuiLib
 		if (pFilesInfo->uTime - m_curTime >= sn_FIVE_MINITUS)               //时间超过5分钟
 		{
 			struct tm * now = localtime(&pFilesInfo->uTime);
-			char chBuf[50];
+			TCHAR chBuf[50];
 			memset(chBuf, 0, 50);
-			sprintf(chBuf, "%02u:%02u", now->tm_hour, now->tm_min);
+			_tprintf(chBuf, _T("%02u:%02u"), now->tm_hour, now->tm_min);
 			CDuiString strTm = chBuf;
 
 			AddTimeItem(strTm);
@@ -925,21 +925,21 @@ namespace DuiLib
 		if (plstItem == NULL)
 			return false;
 
-		if(pFilesInfo->m_strRawMsg.Find("#COMMAND#type=fileRequest") != -1)
+		if(pFilesInfo->m_strRawMsg.Find(_T("#COMMAND#type=fileRequest")) != -1)
 		{
 			pFilesInfo->m_lstFiles.clear();
 			tstring strRight = pFilesInfo->m_strRawMsg;
 			fileInfo downLoadInfo;
-			downLoadInfo.strFileFullName = strRight.substr(strRight.find("\"file_name\":\"") + 13, strRight.find("\",\"file_type\"") - (strRight.find("\"file_name\":\"") + 13));
+			downLoadInfo.strFileFullName = strRight.substr(strRight.find(_T("\"file_name\":\"")) + 13, strRight.find(_T("\",\"file_type\"")) - (strRight.find(_T("\"file_name\":\"")) + 13));
 			//m_bAddFiles = false;
-			strRight = strRight.substr(strRight.find("\"file_type\":\""), strRight.length());
-			downLoadInfo.strFileType = strRight.substr(strRight.find("\"file_type\":\"") + 13, strRight.find("\",\"file_size\"") - (strRight.find("\"file_type\":\"") + 13));
-			strRight = strRight.substr(strRight.find("\"file_size\":\""), strRight.length());
-			downLoadInfo.dwFileSize = atol(strRight.substr(strRight.find("\"file_size\":\"") + 13, strRight.find("\",\"ali_file_url\"") - (strRight.find("\"file_size\":\"") + 13)).c_str());
-			strRight = strRight.substr(strRight.find("\"ali_file_url\":\""), strRight.length());
-			downLoadInfo.strFileUrl = strRight.substr(strRight.find("\"ali_file_url\":\"") + 16, strRight.find("\",\"file_path\"") - (strRight.find("\"ali_file_url\":\"") + 16));
+			strRight = strRight.substr(strRight.find(_T("\"file_type\":\"")), strRight.length());
+			downLoadInfo.strFileType = strRight.substr(strRight.find(_T("\"file_type\":\"")) + 13, strRight.find(_T("\",\"file_size\"")) - (strRight.find(_T("\"file_type\":\"")) + 13));
+			strRight = strRight.substr(strRight.find(_T("\"file_size\":\"")), strRight.length());
+			downLoadInfo.dwFileSize = _ttol(strRight.substr(strRight.find(_T("\"file_size\":\"")) + 13, strRight.find(_T("\",\"ali_file_url\"")) - (strRight.find(_T("\"file_size\":\"")) + 13)).c_str());
+			strRight = strRight.substr(strRight.find(_T("\"ali_file_url\":\"")), strRight.length());
+			downLoadInfo.strFileUrl = strRight.substr(strRight.find(_T("\"ali_file_url\":\"")) + 16, strRight.find(_T("\",\"file_path\"")) - (strRight.find(_T("\"ali_file_url\":\"")) + 16));
 			tstring strName = downLoadInfo.strFileFullName;
-			tstring strfileName = strName.substr(0, strName.find_last_of("."));
+			tstring strfileName = strName.substr(0, strName.find_last_of(_T(".")));
 			downLoadInfo.strFileName = strfileName;
 			pFilesInfo->m_lstFiles.push_back(downLoadInfo);
 		}

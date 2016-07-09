@@ -418,7 +418,7 @@ Node* CUIBussinessDataList::AddNode(const BDLstItemInfo& item, Node* parent)
 		plabel_name->SetText(item.strFileFullName.c_str());
 
 		CLabelUI *plabel_size = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, _T("Label_size")));
-		plabel_size->SetText(GetFileSizeFormat(atol(item.strSize.c_str())).c_str());
+		plabel_size->SetText(GetFileSizeFormat(_ttol(item.strSize.c_str())).c_str());
 		
 	}
 

@@ -92,7 +92,7 @@ void CUserInfoManager::FetchVCardByAccount(tstring& strAccount)
 	}
 
 	if (strTmp.length() == tstring(MMPC_DOMAIN).length()+11 ||
-		strTmp.length() == tstring("@test-d").length()+11)//11:电话号码的长度！
+		strTmp.length() == tstring(_T("@test-d")).length()+11)//11:电话号码的长度！
 	{
 		JID jid(strTmp);
 		FetchvcardByJid(jid);

@@ -10,12 +10,12 @@
 	const int kPackItemHeight	= 80;
 	const int kFileItemHeight	= 50;
 
-	const TCHAR* string_expand_icon = "PackList\\arrow1.png";
-	const TCHAR* string_unexpand_icon = "PackList\\arrow2.png";
-	const TCHAR* string_Un_qianyuePack = "PackList\\pack.png";
-	const TCHAR* string_qianyuePack = "PackList\\package_red.png";
+	const TCHAR* string_expand_icon = _T("PackList\\arrow1.png");
+	const TCHAR* string_unexpand_icon = _T("PackList\\arrow2.png");
+	const TCHAR* string_Un_qianyuePack = _T("PackList\\pack.png");
+	const TCHAR* string_qianyuePack = _T("PackList\\package_red.png");
 
-	#define STR_RESLIST_ITEM "ResListItem_"
+	#define STR_RESLIST_ITEM _T("ResListItem_")
 
 	CListResPacket::CListResPacket(CPaintManagerUI& paint_manager)
 		: root_node_(NULL)
@@ -500,17 +500,17 @@
 					//如果是 处理过的，并且”同意“的签约资料包
 					if (item.nPackStatus == 3)
 					{	
-						SetQianyueState(pListElement, true, tstring("已签约"));
+						SetQianyueState(pListElement, true, tstring(_T("已签约")));
 					}
 					//如果是 处理过的，并且”拒绝“的资料包
 					else if(item.nPackStatus == 4)
 					{
-						SetQianyueState(pListElement, true, tstring("已拒绝"));
+						SetQianyueState(pListElement, true, tstring(_T("已拒绝")));
 					}
 					//如果是未处理过的:默认，保存，发送
 					else if (item.nPackStatus == 0 || item.nPackStatus == 1 || item.nPackStatus == 2)
 					{
-						SetQianyueState(pListElement, true, tstring("未处理"));
+						SetQianyueState(pListElement, true, tstring(_T("未处理")));
 					}
 					
 				}
@@ -523,7 +523,7 @@
 						//隐藏同意，拒绝
 						SetAgreeDenyBtnState(pListElement, false);
 						//设置签约状态
-						SetQianyueState(pListElement, true, tstring("已签约"));
+						SetQianyueState(pListElement, true, tstring(_T("已签约")));
 					}
 					//如果是 处理过的，并且”拒绝“的资料包
 					else if(item.nPackStatus == 4)
@@ -531,7 +531,7 @@
 						//隐藏同意，拒绝
 						SetAgreeDenyBtnState(pListElement, false);
 						//设置签约状态
-						SetQianyueState(pListElement, true, tstring("已拒绝"));
+						SetQianyueState(pListElement, true, tstring(_T("已拒绝")));
 					}
 					//那么就是没处理的包了。。。显示同意，拒绝:默认，保存，发送
 					else if(item.nPackStatus == 0 || item.nPackStatus == 1 || item.nPackStatus == 2)
@@ -550,7 +550,7 @@
 							//隐藏同意拒绝按钮，且显示当前状态为”未处理“=====>高度为80,下面的code会设置。
 							SetAgreeDenyBtnState(pListElement, false);	
 							//隐藏状态
-							SetQianyueState(pListElement, false, tstring("未处理"));
+							SetQianyueState(pListElement, false, tstring(_T("未处理")));
 						}
 					}
 				}
@@ -663,68 +663,68 @@
 
 	void CListResPacket::SetPackState(CListContainerElementUI* pListElement, bool bVisible, DuiLib::NodeData* pNodeData)
 	{
-		CControlUI* pPackIcon = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_pack_dir_icon"));
+		CControlUI* pPackIcon = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_pack_dir_icon")));
 		pPackIcon->SetVisible(bVisible);
 		pPackIcon->SetBkImage(pNodeData->strPackIcon.c_str());
 
-		CControlUI* pPackName = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_pack_name"));
+		CControlUI* pPackName = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_pack_name")));
 		pPackName->SetVisible(bVisible);
 		pPackName->SetText(pNodeData->strPackName.c_str());
 
-		CLabelUI* pPacktime = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_pack_time"));
+		CLabelUI* pPacktime = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_pack_time")));
 		pPacktime->SetVisible(bVisible);
 		pPacktime->SetText(pNodeData->strPackTime.c_str());
 
-		CControlUI* pPackExpand = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_pack_expand"));
+		CControlUI* pPackExpand = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_pack_expand")));
 		pPackExpand->SetVisible(bVisible);
 		pPackExpand->SetBkImage(string_unexpand_icon);
 		
-		CLabelUI* pPacksend = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_pack_sender"));
+		CLabelUI* pPacksend = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_pack_sender")));
 		pPacksend->SetVisible(bVisible);
-		tstring strSender("发送人：");
+		tstring strSender(_T("发送人："));
 		strSender += pNodeData->strPackSender;
 		pPacksend->SetText(strSender.c_str());
 
 
-		CLabelUI* pPacksize = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_pack_size"));
+		CLabelUI* pPacksize = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_pack_size")));
 		pPacksize->SetVisible(bVisible);
 		pPacksize->SetText(pNodeData->strPackSize.c_str());
 
-		CLabelUI* pPackprop = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_pack_propety"));
+		CLabelUI* pPackprop = static_cast<CLabelUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_pack_propety")));
 		pPackprop->SetVisible(bVisible);
 		pPackprop->SetText(pNodeData->strPackProp.c_str());
 
-		CControlUI* pPackBtnOpen = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_button_openfile"));
+		CControlUI* pPackBtnOpen = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_button_openfile")));
 		pPackBtnOpen->SetVisible(bVisible);
 	}
 
 	void CListResPacket::SetFileState(CListContainerElementUI* pListElement, bool bVisible, DuiLib::NodeData* pNodeData)
 	{
-		CControlUI* pFileIcon = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_file_icon"));
+		CControlUI* pFileIcon = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_file_icon")));
 		pFileIcon->SetVisible(bVisible);
 		pFileIcon->SetBkImage(pNodeData->strFileIcon.c_str());
 
-		CControlUI* pFileName = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_file_name"));
+		CControlUI* pFileName = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_file_name")));
 		pFileName->SetVisible(bVisible);
 		pFileName->SetText(pNodeData->strFileName.c_str());
 
-		CControlUI* pFileSize = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_file_size"));
+		CControlUI* pFileSize = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_file_size")));
 		pFileSize->SetVisible(bVisible);
 		pFileSize->SetText(pNodeData->strFileSizeShow.c_str());
 	
-		CControlUI* pPackBtnOpen = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_button_openfile"));
+		CControlUI* pPackBtnOpen = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_button_openfile")));
 		pPackBtnOpen->SetVisible(bVisible);
 	}
 
 	void CListResPacket::SetAgreeDenyBtnState(CListContainerElementUI* pListElement, bool bVisible)
 	{
-		CControlUI* pPackAgreeBtn = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_button_agree"));
+		CControlUI* pPackAgreeBtn = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_button_agree")));
 		if (NULL != pPackAgreeBtn)
 		{
 			pPackAgreeBtn->SetVisible(bVisible);
 		}
 
-		CControlUI* pPackDenyBtn = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, "gm_button_deny"));
+		CControlUI* pPackDenyBtn = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListElement, _T("gm_button_deny")));
 		if (NULL != pPackDenyBtn)
 		{
 			pPackDenyBtn->SetVisible(bVisible);
@@ -733,7 +733,7 @@
 	void CListResPacket::SetQianyueState(CListContainerElementUI* pListItem, bool bVisible, tstring& strState)
 	{
 		//
-		CControlUI* pQianyueState = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListItem, "label_qianyue_state"));
+		CControlUI* pQianyueState = static_cast<CControlUI*>(paint_manager_.FindSubControlByName(pListItem, _T("label_qianyue_state")));
 		if (NULL != pQianyueState)
 		{
 			pQianyueState->SetVisible(bVisible);

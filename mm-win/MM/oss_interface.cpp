@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <atlstr.h>
 #include "../Common/Logger.h"
+#include "Utility.h"
 
 HANDLE ossInterface::m_hEventExit = NULL;
 HANDLE ossInterface::m_hThreadExit=NULL;
@@ -168,7 +169,7 @@ int ossInterface::downloadObjectByUrl(std::tstring & strUrl, std::tstring& strFi
 		char strend[16];
 		sprintf(strbegin,"%d",ibegin);
 		sprintf(strend, "%d", iend);
-		tstring strRange = "bytes=" + tstring(strbegin) + '-'+ tstring(strend);
+		string strRange = "bytes=" + string(strbegin) + '-'+ string(strend);
 		apr_table_set(headers, "Range", strRange.c_str());
 		s = oss_get_object_to_file_by_url(m_pOptions, &strurl, headers, &file, &resp_headers);
 
@@ -290,7 +291,7 @@ int ossInterface::uploadPartFromFile( std::tstring& strObject, std::tstring& str
 		return s->code;
 	}
 	upload_file = oss_create_upload_file(m_pPool);
-	aos_str_set(&upload_file->filename, _T(strFilePath.c_str()));
+	aos_str_set(&upload_file->filename, WStringToString(strFilePath).c_str());
 	upload_file->file_pos = 0;
 	upload_file->file_last = 0;
 	while(1)
@@ -417,7 +418,7 @@ int ossInterface::uploadPartFromFileEx(std::tstring& strObject, std::tstring& st
 		return s->code;
 	}
 	upload_file = oss_create_upload_file(m_pPool);
-	aos_str_set(&upload_file->filename, (strFilePath.c_str());
+	aos_str_set(&upload_file->filename, WStringToString(strFilePath).c_str());
 	upload_file->file_pos = 0;
 	upload_file->file_last = 0;
 	while(1)
