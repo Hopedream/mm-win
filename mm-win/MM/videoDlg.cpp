@@ -14,8 +14,8 @@
 #define VOICE_PAGE_VIEW 0
 #define VIDEO_PAGE_VIEW 1
 
-#define DIAL_STATUS_DIALIING  "正在拨号......"
-#define DIAL_STATUS_WAIT_ANSWER  "正在等待对方接听......"
+#define DIAL_STATUS_DIALIING  _T("正在拨号......")
+#define DIAL_STATUS_WAIT_ANSWER  _T("正在等待对方接听......")
 
 const TCHAR* const kCloseDlgBtnName = _T("btnCloseVoiceDlg");
 
@@ -113,7 +113,7 @@ void CVideoDlg::OnBtnClickHangup(void)
 	StopUpdateCallTime();
 
 	SetCallStatus(CALL_END);
-	Ucs_hangUp(_T(""));
+	Ucs_hangUp("");
 	EnableHangUp(false);
 	ActiveVoiceDlg(false);
 	//mainDlg::getInstance()->EnableCallBtn(true);	
@@ -130,13 +130,13 @@ void CVideoDlg::OnCloseClick()
 		tstring strTip;
 		if ( CALL_DIALLING == nCallStatus )
 		{
-			strTip = "当前正在呼叫中，是否挂断？";
+			strTip = _T("当前正在呼叫中，是否挂断？");
 		}
 		else
 		{	
-			strTip = "当前正在通话中，是否挂断？";
+			strTip = _T("当前正在通话中，是否挂断？");
 		}
-		CMsgBox* pMsgBox = new CMsgBox("",strTip,MSGBOX_ICON_ASK, MSGBOX_IDYESNO);
+		CMsgBox* pMsgBox = new CMsgBox(_T(""),strTip,MSGBOX_ICON_ASK, MSGBOX_IDYESNO);
 		if (MSGBOX_IDNO == pMsgBox->ShowModal(NULL))
 		{			
 			return;
@@ -251,13 +251,13 @@ void CVideoDlg::HandleAnswerEvent()
 {	
 	if (CALL_END == GetCallStatus())
 	{
-		Ucs_hangUp(_T("")); //收到alert之前主叫方挂电话不起作用，再次挂掉
+		Ucs_hangUp(""); //收到alert之前主叫方挂电话不起作用，再次挂掉
 		return;
 	}
 
 	UpdateCallTime();
 	SetCallStatus(CALL_CALLING);	
-	SetCallTipInfo("正在通话中......");
+	SetCallTipInfo(_T("正在通话中......"));
 	if (m_bVideoView)
 	{
 		ShowVideoWnd(true);
@@ -266,9 +266,9 @@ void CVideoDlg::HandleAnswerEvent()
 
 void CVideoDlg::HandleDialFailedEvent( int reason )
 {
-	CLogger::GetInstance()->PrintErrLog("Dial failed, ErrCode:%d, description: %s", reason, CUcPaasClient::GetUcsErrInfo(reason));
+	CLogger::GetInstance()->PrintErrLog(_T("Dial failed, ErrCode:%d, description: %s"), reason, CUcPaasClient::GetUcsErrInfo(reason));
 	SetCallStatus(CALL_NORMAL);
-	CMsgBox* pMsgBox = new CMsgBox("拨号失败",CUcPaasClient::GetUcsErrInfo(reason));
+	CMsgBox* pMsgBox = new CMsgBox(_T("拨号失败"),CUcPaasClient::GetUcsErrInfo(reason));
 	pMsgBox->ShowModal();
 	ActiveVoiceDlg(false);
 }
@@ -277,7 +277,7 @@ void CVideoDlg::HandleAlertingEvent()
 {
 	if (CALL_END == GetCallStatus())
 	{
-		Ucs_hangUp(_T("")); //收到alert之前主叫方挂电话不起作用，再次挂掉
+		Ucs_hangUp(""); //收到alert之前主叫方挂电话不起作用，再次挂掉
 		return;
 	}
 	EnableHangUp(true);
@@ -325,15 +325,15 @@ void CVideoDlg::HandleClickEvent( TNotifyUI& msg )
 	}
 	else if ( msg.pSender == m_pSetTelVoice )
 	{
-		SetMicMuteStatus( m_pSetTelVoice->GetUserData() == "0");
+		SetMicMuteStatus( m_pSetTelVoice->GetUserData() == _T("0"));
 	}
 	else if ( msg.pSender == m_pBtnCamera )
 	{
-		SetLocalVideoStatus( m_pBtnCamera->GetUserData() == "0");
+		SetLocalVideoStatus( m_pBtnCamera->GetUserData() == _T("0"));
 	}
 	else if ( msg.pSender == m_pPinTopWnd )
 	{
-		SetWndPinStatus( m_pPinTopWnd->GetUserData() == "0");
+		SetWndPinStatus( m_pPinTopWnd->GetUserData() == _T("0"));
 	}
 }
 
@@ -343,13 +343,13 @@ void CVideoDlg::SetMicMuteStatus(bool bIsMicMute)
 	CDuiString strAtt;
 	if (bIsMicMute)
 	{
-		m_pSetTelVoice->SetUserData("1");
-		strAtt = "normalimage=\"Call\\mic_blue.PNG\" hotimage=\"Call\\mic_grey.png\" pushedimage=\"Call\\mic_grey.png\"";				
+		m_pSetTelVoice->SetUserData(_T("1"));
+		strAtt = _T("normalimage=\"Call\\mic_blue.PNG\" hotimage=\"Call\\mic_grey.png\" pushedimage=\"Call\\mic_grey.png\"");				
 	}
 	else 
 	{
-		m_pSetTelVoice->SetUserData("0");
-		strAtt = "normalimage=\"Call\\mic_grey.png\" hotimage=\"Call\\mic_blue.png\" pushedimage=\"Call\\mic_blue.png\"";				
+		m_pSetTelVoice->SetUserData(_T("0"));
+		strAtt = _T("normalimage=\"Call\\mic_grey.png\" hotimage=\"Call\\mic_blue.png\" pushedimage=\"Call\\mic_blue.png\"");				
 	}
 	m_pSetTelVoice->ApplyAttributeList(strAtt);
 }
@@ -360,14 +360,14 @@ void CVideoDlg::SetLocalVideoStatus(bool bIsOpened)
 	if (bIsOpened)
 	{
 		CUcPaasClient::Instance()->OpenVideo(VIDEO_SEND_MODE);
-		m_pBtnCamera->SetUserData("1");
-		strAtt = "normalimage=\"Call\\cam_blue.PNG\" hotimage=\"Call\\cam_grey.png\" pushedimage=\"Call\\cam_grey.png\"";				
+		m_pBtnCamera->SetUserData(_T("1"));
+		strAtt = _T("normalimage=\"Call\\cam_blue.PNG\" hotimage=\"Call\\cam_grey.png\" pushedimage=\"Call\\cam_grey.png\"");				
 	}
 	else 
 	{
 		CUcPaasClient::Instance()->CloseVideo(VIDEO_SEND_MODE);
-		m_pBtnCamera->SetUserData("0");
-		strAtt = "normalimage=\"Call\\cam_grey.png\" hotimage=\"Call\\cam_blue.png\" pushedimage=\"Call\\cam_blue.png\"";				
+		m_pBtnCamera->SetUserData(_T("0"));
+		strAtt = _T("normalimage=\"Call\\cam_grey.png\" hotimage=\"Call\\cam_blue.png\" pushedimage=\"Call\\cam_blue.png\"");				
 	}
 	m_pBtnCamera->ApplyAttributeList(strAtt);
 }
@@ -378,14 +378,14 @@ void CVideoDlg::SetWndPinStatus(bool bIsTop)
 	if (bIsTop)
 	{
 		SetTopMostWnd(true);
-		m_pPinTopWnd->SetUserData("1");
-		strAtt = "normalimage=\"Call\\pin_top.PNG\"";				
+		m_pPinTopWnd->SetUserData(_T("1"));
+		strAtt = _T("normalimage=\"Call\\pin_top.PNG\"");				
 	}
 	else 
 	{
 		SetTopMostWnd(false);
-		m_pPinTopWnd->SetUserData("0");
-		strAtt = "normalimage=\"Call\\pin_default.png\"";				
+		m_pPinTopWnd->SetUserData(_T("0"));
+		strAtt = _T("normalimage=\"Call\\pin_default.png\"");				
 	}
 	m_pPinTopWnd->ApplyAttributeList(strAtt);
 }
@@ -400,12 +400,12 @@ void CVideoDlg::HandleTimerEvent( TNotifyUI& msg )
 		int nHour = m_uCallTime / 3600;			
 		int nSec  = m_uCallTime;					
 
-		char szTime[256] = {0};
+		TCHAR szTime[256] = {0};
 		if ( nHour > 0 )
 		{
 			int nMins = (m_uCallTime - nHour * 3600 ) / 60;
 			nSec  = m_uCallTime - nHour * 3600 - nMins * 60;
-			sprintf(szTime, " %02d:%02d:%02d",  nHour, nMins, nSec);
+			_stprintf(szTime, _T(" %02d:%02d:%02d"),  nHour, nMins, nSec);
 		}
 		else 
 		{
@@ -414,7 +414,7 @@ void CVideoDlg::HandleTimerEvent( TNotifyUI& msg )
 			{
 				nSec = m_uCallTime - nMins * 60;
 			}
-			sprintf(szTime, " %02d:%02d",  nMins, nSec);
+			_stprintf(szTime, _T(" %02d:%02d"),  nMins, nSec);
 		}
 		m_pCallTime->SetText(szTime);	
 	}	
@@ -428,17 +428,17 @@ void CVideoDlg::SetCallerInfo()
 	{
 		if (CUcPaasClient::Instance()->GetCameraNum() == 0)
 		{
-			CLogger::GetInstance()->PrintLog(LOG_INFO, "local camera don't exist.");
+			CLogger::GetInstance()->PrintLog(LOG_INFO, _T("local camera don't exist."));
 			CUcPaasClient::Instance()->SendExCallStatus(m_strPhone.GetData(), eLackCamera);
 		}
 		CUcPaasClient::Instance()->OpenVideo(VIDEO_RECEIVE_MODE);		
-		strCaption.Format("正在和%s进行视频通话", m_strNickname.GetData());				
+		strCaption.Format(_T("正在和%s进行视频通话"), m_strNickname.GetData());				
 	}
 	else
 	{
 		m_pNickname->SetText(m_strNickname);
 		m_pOrgNameLabel->SetText(m_strOrgName);
-		strCaption.Format("正在和%s进行语音通话", m_strNickname.GetData());
+		strCaption.Format(_T("正在和%s进行语音通话"), m_strNickname.GetData());
 		if (!m_strAvatar.IsEmpty())
 		{
 			m_pContactLogo->SetBkImage(m_strAvatar);
@@ -448,7 +448,7 @@ void CVideoDlg::SetCallerInfo()
 	m_pBtnCamera->SetVisible(m_bVideoView);
 
 	CDuiString strCallStatusMsg;
-	strCallStatusMsg.Format("正在呼叫 %s", m_strNickname.GetData());
+	strCallStatusMsg.Format(_T("正在呼叫 %s"), m_strNickname.GetData());
 	SetCallTipInfo(strCallStatusMsg.GetData());
 	m_pFrmCaption->SetText(strCaption);
 
@@ -465,7 +465,7 @@ bool CVideoDlg::LauchCall(const UCS_DIALTYPE eDialType)
 			return false;
 		}
 
-		CLogger::GetInstance()->PrintLog(LOG_INFO, "Waiting connect ucs.....");
+		CLogger::GetInstance()->PrintLog(LOG_INFO, _T("Waiting connect ucs....."));
 		Sleep(1000);
 	}
 
@@ -539,8 +539,8 @@ void CVideoDlg::HandleExStatus(eExCallStatus eStatus )
 {
 	if (eLackCamera == eStatus)
 	{
-		CLogger::GetInstance()->PrintLog(LOG_INFO, "remote camera don't exist.");
-		m_pCaneraInfo->SetText("对方没有打开视频设备");
+		CLogger::GetInstance()->PrintLog(LOG_INFO, _T("remote camera don't exist."));
+		m_pCaneraInfo->SetText(_T("对方没有打开视频设备"));
 		m_bShowRemoteVideo = false;
 		::ShowWindow(m_remoteVideo, false);	
 	}
@@ -550,7 +550,7 @@ void CVideoDlg::HandleExStatus(eExCallStatus eStatus )
 
 void CVideoDlg::HandleUcsConnSuccessEvent()
 {
-	CLogger::GetInstance()->PrintLog(LOG_INFO, "Connect Ucs sucess.");		
+	CLogger::GetInstance()->PrintLog(LOG_INFO, _T("Connect Ucs sucess."));		
 }
 
 void CVideoDlg::HandleCallBackEvent(int reason)
@@ -558,13 +558,13 @@ void CVideoDlg::HandleCallBackEvent(int reason)
 	tstring strMsg;
 	if (0 == reason)
 	{
-		strMsg = "双向回拨请求成功";			
+		strMsg = _T("双向回拨请求成功");			
 	}
 	else
 	{
 		strMsg = CUcPaasClient::GetUcsErrInfo(reason);
 	}
-	CMsgBox* pMsgBox = new CMsgBox("", strMsg);
+	CMsgBox* pMsgBox = new CMsgBox(_T(""), strMsg);
 	pMsgBox->ShowModal();
 }
 
@@ -574,7 +574,7 @@ void CVideoDlg::HandleUcsConnFailedEvent(int reason)
 #ifdef _DEBUG
 	//fiCMsgBox::MsgBox(NULL, "云之讯", CUcPaasClient::GetUcsErrInfo(reason), MSGBOX_ICON_ERROR);
 #endif
-	CLogger::GetInstance()->PrintErrLog("Connect ucpaas filed, errCode: %d, desription: %s.  retry again...", reason, CUcPaasClient::GetUcsErrInfo(reason));
+	CLogger::GetInstance()->PrintErrLog(_T("Connect ucpaas filed, errCode: %d, desription: %s.  retry again..."), reason, CUcPaasClient::GetUcsErrInfo(reason));
 	CUcPaasClient::Instance()->ConnectUcPaas();
 }
 
@@ -583,7 +583,7 @@ void CVideoDlg::OnLauchNetCall(const CDuiString strAccount, int type)
 {
 	if ( !CUcPaasClient::Instance()->IsConnecting())
 	{
-		CMsgBox* pMsgBox = new CMsgBox("", "链接视频语音网络平台失败，请检查网络", MSGBOX_ICON_ERROR);
+		CMsgBox* pMsgBox = new CMsgBox(_T(""), _T("链接视频语音网络平台失败，请检查网络"), MSGBOX_ICON_ERROR);
 		pMsgBox->ShowModal();
 		return;
 	}
@@ -605,7 +605,7 @@ void CVideoDlg::OnLauchNetCall(const CDuiString strAccount, int type)
 	case WM_VIDEO_CALL:
 		if (eState == enmState_Offline)
 		{
-			CMsgBox::MsgBox(mainDlg::getInstance()->GetHWND(), "拨号失败","当前用户不在线，无法进行网络视频通信", MSGBOX_ICON_WARNING);
+			CMsgBox::MsgBox(mainDlg::getInstance()->GetHWND(), _T("拨号失败"),_T("当前用户不在线，无法进行网络视频通信"), MSGBOX_ICON_WARNING);
 			return;
 		}
 		eDialType = VIDEO_CALL;
@@ -617,7 +617,7 @@ void CVideoDlg::OnLauchNetCall(const CDuiString strAccount, int type)
 		{
 			if (eState == enmState_Offline)
 			{
-				CMsgBox* lpMsgBox = new CMsgBox("拨号失败","当前用户不在线，无法进行网络语音通信", MSGBOX_ICON_WARNING);
+				CMsgBox* lpMsgBox = new CMsgBox(_T("拨号失败"),_T("当前用户不在线，无法进行网络语音通信"), MSGBOX_ICON_WARNING);
 				lpMsgBox->ShowModal(mainDlg::getInstance()->GetHWND());
 				return;
 			}
@@ -634,12 +634,12 @@ void CVideoDlg::OnLauchNetCall(const CDuiString strAccount, int type)
 	sFriendListItem friendItem;
 	if (!mainDlg::getInstance()->GetCallInFriendItem(ExtractPhoneNo(strAccount).GetData(), friendItem))
 	{
-		CMsgBox* pMsgBox = new CMsgBox("","获取联系人信息失败", MSGBOX_ICON_ERROR);
+		CMsgBox* pMsgBox = new CMsgBox(_T(""),_T("获取联系人信息失败"), MSGBOX_ICON_ERROR);
 		pMsgBox->ShowModal();
 	}
 
 
-	CVideoDlg::Instance()->InitalDialInfo( ExtractPhoneNo(strAccount), friendItem.strShowName.c_str(), "", friendItem.strAvatar.c_str());		
+	CVideoDlg::Instance()->InitalDialInfo( ExtractPhoneNo(strAccount), friendItem.strShowName.c_str(), _T(""), friendItem.strAvatar.c_str());		
 	if(CVideoDlg::Instance()->LauchCall(eDialType))
 	{
 		CVideoDlg::Instance()->ActiveVoiceDlg(true);
@@ -647,7 +647,7 @@ void CVideoDlg::OnLauchNetCall(const CDuiString strAccount, int type)
 	}
 	else
 	{
-		CMsgBox* pMsgBox = new CMsgBox("连接超时","连接云之讯服务器失败！", MSGBOX_ICON_ERROR);
+		CMsgBox* pMsgBox = new CMsgBox(_T("连接超时"),_T("连接云之讯服务器失败！"), MSGBOX_ICON_ERROR);
 		pMsgBox->ShowModal();
 	}
 	
@@ -667,7 +667,7 @@ void CVideoDlg::OnUserStateUpdated( tstring& strAccount, EUsrState eState, tstri
 {
 	if (m_bIsActive && tstring::npos != strAccount.find(m_strPhone) && enmState_Offline == eState)
 	{
-		CMsgBox::MsgBox(GetHWND(), "下线通知", "对方已经下线，通话终止", MSGBOX_ICON_WARNING);
+		CMsgBox::MsgBox(GetHWND(), _T("下线通知"), _T("对方已经下线，通话终止"), MSGBOX_ICON_WARNING);
 		Ucs_hangUp(_T(""));
 		ActiveVoiceDlg(false);
 	}
@@ -679,13 +679,13 @@ void CVideoDlg::HandleIncomming(stUcsIncommingCall* lpUcsCallInfo)
 	tstring strPhoneNo;
 	if (!CUcPaasClient::Instance()->QueryUcsClientPhoneNo(lpUcsCallInfo->strCallerNumber, strPhoneNo))
 	{
-		CLogger::GetInstance()->PrintErrLog("QueryUcsClientPhoneNo failed. CallerNumber:%s", lpUcsCallInfo->strCallerNumber.c_str());
+		CLogger::GetInstance()->PrintErrLog(_T("QueryUcsClientPhoneNo failed. CallerNumber:%s"), lpUcsCallInfo->strCallerNumber.c_str());
 		return;
 	}
 
 	if (!mainDlg::getInstance()->GetCallInFriendItem(strPhoneNo, userInfo))
 	{
-		CLogger::GetInstance()->PrintErrLog("Query user info failed. PhoneNo:%s", strPhoneNo.c_str());
+		CLogger::GetInstance()->PrintErrLog(_T("Query user info failed. PhoneNo:%s"), strPhoneNo.c_str());
 		return;
 	}
 
@@ -715,10 +715,10 @@ void CVideoDlg::HandleIncomming(stUcsIncommingCall* lpUcsCallInfo)
 		ActiveVoiceDlg(true);
 		SetVideoView(lpUcsCallInfo->eCallType == VIDEO_CALL);
 
-		InitalDialInfo(strPhoneNo.c_str(), userInfo.strShowName.c_str(), "", userInfo.strAvatar.c_str());	
+		InitalDialInfo(strPhoneNo.c_str(), userInfo.strShowName.c_str(), _T(""), userInfo.strAvatar.c_str());	
 		SetCallerInfo();
 		CDuiString strCallStatus;
-		strCallStatus.Format("正在和 %s 进行通话......", userInfo.strShowName.c_str());
+		strCallStatus.Format(_T("正在和 %s 进行通话......"), userInfo.strShowName.c_str());
 		SetCallTipInfo(strCallStatus.GetData());
 		if (lpUcsCallInfo->eCallType == VIDEO_CALL)
 		{

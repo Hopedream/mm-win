@@ -66,7 +66,7 @@ void CSystemSetDlg::InitVCardEditPage()
 	m_ptxtMyName->SetText(m_myVcard.strUserNickname.c_str());
 	m_ptxtMyPhone->SetText(m_myVcard.strPhone.c_str());
 	m_ptxtMyAddress->SetText(m_myVcard.strAddr.c_str());
-	m_pComboMyGender->SelectItem(0 == m_myVcard.strGender.compare("ÄÐ")?0:1);
+	m_pComboMyGender->SelectItem(0 == m_myVcard.strGender.compare(_T("ÄÐ"))?0:1);
 	m_ptxtMyEmailAddr->SetText(m_myVcard.strEmail.c_str());
 	m_ptxtMysignature->SetText(m_myVcard.strSignature.c_str());
 	m_ptxtMyOrg->SetText(m_myVcard.strOrganization.c_str());
@@ -155,13 +155,13 @@ void CSystemSetDlg::SavePersonInfo()
 	m_myVcard.strUserNickname =  m_ptxtMyName->GetText();
 	m_myVcard.strPhone =  m_ptxtMyPhone->GetText();
 	m_myVcard.strAddr =  m_ptxtMyAddress->GetText().GetData();
-	m_myVcard.strGender =  m_pComboMyGender->GetCurSel() ? "Å®" : "ÄÐ";
+	m_myVcard.strGender =  m_pComboMyGender->GetCurSel() ? _T("Å®") : _T("ÄÐ");
 	m_myVcard.strEmail =  m_ptxtMyEmailAddr->GetText();
 	m_myVcard.strSignature =  m_ptxtMysignature->GetText().GetData();
 	m_myVcard.strAge = m_ptxtMyAge->GetText().GetData();
 	m_myVcard.strOrganization = m_ptxtMyOrg->GetText().GetData();
 	CMagicKHelper::Instance()->GetPhotoBinval(m_myVcard.strPhotoPath, m_myVcard.strPhotoBinary);
-	m_myVcard.strPhotoType = "image/jpeg";
+	m_myVcard.strPhotoType = _T("image/jpeg");
 	CController::Instance()->GetUserInfoMgr()->StoreMyVCard(m_myVcard);
 }
 
@@ -176,7 +176,7 @@ void CSystemSetDlg::UpdateLogo()
 		}
 		tstring strPhonePath = lstFiles.front();
 
-		m_strUpdateLogo = CFileHelper::GetHeadCacheDir() + "tmp.jpeg" ;		
+		m_strUpdateLogo = CFileHelper::GetHeadCacheDir() + _T("tmp.jpeg") ;		
 		CMagicKHelper::Instance()->ResizeImage(strPhonePath, m_strUpdateLogo.GetData(), IMG_PIXEL_LIMIT, IMG_PIXEL_LIMIT);
 		m_pMyLogoUpdate->SetBkImage(strPhonePath.c_str());	
 		m_pMyLogoCtrl->SetBkImage(strPhonePath.c_str());	

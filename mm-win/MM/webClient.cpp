@@ -248,7 +248,7 @@ bool CWebClient::GetOrgById( tstring strId, orgInfo& org )
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
-	if (strHttpResponse.find("name") != -1 && strHttpResponse.find("detail_address") != -1)
+	if (strHttpResponse.find(_T("name")) != -1 && strHttpResponse.find(_T("detail_address")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
@@ -402,7 +402,7 @@ bool CWebClient::addOrgFriend(const tstring& strOrgId)
 	}
 	else
 	{
-		if (strHttpResponse.find("\"result\":1") != -1)
+		if (strHttpResponse.find(_T("\"result\":1")) != -1)
 			return true;
 		else
 			return false;
@@ -421,13 +421,13 @@ bool CWebClient::delOrgFriend( tstring strOrgId )
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
-	if (strHttpResponse.find("\"result\":0") != -1)
+	if (strHttpResponse.find(_T("\"result\":0")) != -1)
 	{
 		return false;
 	}
 	else
 	{
-		if (strHttpResponse.find("\"result\":1") != -1)
+		if (strHttpResponse.find(_T("\"result\":1")) != -1)
 			return true;
 		else
 			return false;
@@ -442,18 +442,18 @@ bool CWebClient::isOrgBuddy( tstring strOrgId, tstring strOrgidDest )
 	tstring strPost = (_T(""));
 	strPost += _T("oid1=");
 	strPost += strOrgId;
-	strPost += "&oid2=";
+	strPost += _T("&oid2=");
 	strPost += strOrgidDest;
 	strUrl += strPost;
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strHttpResponse);
-	if (strHttpResponse.find("\"result\":0") != -1)
+	if (strHttpResponse.find(_T("\"result\":0")) != -1)
 	{
 		return false;
 	}
 	else
 	{
-		if (strHttpResponse.find("\"result\":1") != -1)
+		if (strHttpResponse.find(_T("\"result\":1")) != -1)
 			return true;
 		else
 			return false;
@@ -474,13 +474,13 @@ bool CWebClient::approveOrgBuddyRequest( tstring strReqId,bool isAgree)
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
-	if (strHttpResponse.find("\"result\":0") != -1)
+	if (strHttpResponse.find(_T("\"result\":0")) != -1)
 	{
 		return false;
 	}
 	else
 	{
-		if (strHttpResponse.find("\"result\":1") != -1)
+		if (strHttpResponse.find(_T("\"result\":1")) != -1)
 			return true;
 		else
 			return false;
@@ -493,13 +493,13 @@ bool CWebClient::GetUidAndSid(tstring& uid, tstring& sid)
 	bool ret(false);
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
-	strUrl += "user/get-key";
+	strUrl += _T("user/get-key");
 
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
-	if (strHttpResponse.find("\"result\":1") != -1 && strHttpResponse.find("uid") != -1 
-		&& strHttpResponse.find("key") != -1)
+	if (strHttpResponse.find(_T("\"result\":1")) != -1 && strHttpResponse.find(_T("uid")) != -1 
+		&& strHttpResponse.find(_T("key")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
@@ -507,14 +507,14 @@ bool CWebClient::GetUidAndSid(tstring& uid, tstring& sid)
 		{
 			if (reader.parse(strHttpResponse, root))
 			{
-				sid = root["key"].asString();
-				uid = root["uid"].asString();
+				sid = root["key"].asString(0);
+				uid = root["uid"].asString(0);
 				ret = true;
 			}
 		}
 		catch (...)
 		{
-			CLogger::GetInstance()->PrintErrLog( "parse http Response exception: %s", strHttpResponse.c_str());	
+			CLogger::GetInstance()->PrintErrLog( _T("parse http Response exception: %s"), strHttpResponse.c_str());	
 			ret = false;
 		}	
 	}
@@ -566,30 +566,30 @@ bool CWebClient::getContractInfo(tstring& strResponsInfo,const tstring& status /
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("file/get-signed-list?");
-	strUrl += "status=";
+	strUrl += _T("status=");
 	strUrl += status;
 
 	if(!type.empty())
 	{
-		strUrl += "&pay_type=";
+		strUrl += _T("&pay_type=");
 		strUrl += type;
 	}
 
 	if(!stime.empty())
 	{
-		strUrl += "&stime=";
+		strUrl += _T("&stime=");
 		strUrl += stime;
 	}
 
 	if(!etime.empty())
 	{
-		strUrl += "&etime=";
+		strUrl += _T("&etime=");
 		strUrl += etime;
 	}
 
 	if(!key.empty())
 	{
-		strUrl += "&key=";
+		strUrl += _T("&key=");
 		strUrl += key;
 	}
 
@@ -606,7 +606,7 @@ bool CWebClient::getContractInfo(tstring& strResponsInfo,const tstring& status /
 tstring CWebClient::GetVersion()
 {
 	tstring strhttpUrl(WEB_SERVER_BASE_URL);
-	strhttpUrl += "site/get-version";
+	strhttpUrl += _T("site/get-version");
 	tstring strResponse;
 	CHttpClient reqClient;
 	int nResult = reqClient.Get(strhttpUrl, strResponse);
@@ -616,7 +616,7 @@ tstring CWebClient::GetVersion()
 tstring CWebClient::GetVerifyCode(const tstring& phone)
 {
 	tstring strhttpUrl(WEB_SERVER_BASE_URL);
-	strhttpUrl += "site/get-vcode-by-cell?cell=";
+	strhttpUrl += _T("site/get-vcode-by-cell?cell=");
 	strhttpUrl += phone;
 	tstring strResponse;
 	CHttpClient reqClient;
@@ -648,32 +648,32 @@ bool CWebClient::addContract(const vector<tstring>& vecInfo,tstring& strRespons)
 	strUrl += _T("file/create-agr-pack?");
 
 	tstring tmp;
-	strUrl += "name=";
+	strUrl += _T("name=");
 	strUrl += vecInfo[0];
 
-	strUrl += "&status=";
+	strUrl += _T("&status=");
 	strUrl += vecInfo[1];
 
-	strUrl += "&money=";
+	strUrl += _T("&money=");
 	strUrl += vecInfo[2];
 
-	strUrl += "&pay_type=";
+	strUrl += _T("&pay_type=");
 	strUrl += vecInfo[3];
 
-	strUrl += "&rec_oid=";
+	strUrl += _T("&rec_oid=");
 	strUrl += vecInfo[4];
 
 	tmp = vecInfo[5];
 	if(!tmp.empty())
 	{
-		strUrl += "&desc=";
+		strUrl += _T("&desc=");
 		strUrl += vecInfo[5];
 	}
 
 	tmp = vecInfo[6];
 	if(!tmp.empty())
 	{
-		strUrl += "&bid=";
+		strUrl += _T("&bid=");
 		strUrl += vecInfo[6];
 	}
 
@@ -694,84 +694,84 @@ tstring CWebClient::getFindFiles( tstring strFileName, tstring strbid, tstring s
 	strUrl += _T("file/find-files?");
 	tstring strPost;
 	bool bfirst = true;
-	if (strFileName != "")
+	if (strFileName != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "name=";
+		strPost += _T("name=");
 		strPost += strFileName;
 	}
-	if (strbid != "")
+	if (strbid != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "bid=";
+		strPost += _T("bid=");
 		strPost += strbid;
 	}
-	if (strSender != "")
+	if (strSender != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "sender_uname=";
+		strPost += _T("sender_uname=");
 		strPost += strSender;
 	}
-	if (strSendTime != "")
+	if (strSendTime != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "send_stime=";
+		strPost += _T("send_stime=");
 		strPost += strSendTime;
 	}
-	if (strSendEtime != "")
+	if (strSendEtime != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "send_etime=";
+		strPost += _T("send_etime=");
 		strPost += strSendEtime;
 	}
-	if (strRecv != "")
+	if (strRecv != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "receiver_oname=";
+		strPost += _T("receiver_oname=");
 		strPost += strRecv;
 	}
-	if (strRecvTime != "")
+	if (strRecvTime != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "receive_stime=";
+		strPost += _T("receive_stime=");
 		strPost += strRecvTime;
 	}
-	if (strRecvEtime != "")
+	if (strRecvEtime != _T(""))
 	{
 		if (!bfirst)
 		{
-			strPost+="&";
+			strPost+=_T("&");
 		}
 		bfirst = false;
-		strPost += "receive_etime=";
+		strPost += _T("receive_etime=");
 		strPost += strRecvEtime;
 	}
 	//strPost=(_T(""));
@@ -782,7 +782,7 @@ tstring CWebClient::getFindFiles( tstring strFileName, tstring strbid, tstring s
 		return strHttpResponse;
 	}
 
-	return "";
+	return _T("");
 }
 
 t_orgInfoMap CWebClient::m_orgMap;

@@ -38,16 +38,16 @@ const TCHAR* const kRegisterNewUserBtnName = _T("btnRegisterNewUser");
 #define GET_PINCODE_TIPTEXT _T("发送验证码")
 #define INPUT_PINCODE_TIPTEXT _T("请输入验证码")
 #define PINCODE_ERROR  _T("验证码错误，请重新输入！")
-#define SEND_PIN_TIP "系统已向您的手机发送验证码，请注意查收！"
+#define SEND_PIN_TIP _T("系统已向您的手机发送验证码，请注意查收！")
 
 
-#define REG_RESULT_SUCCESS "注册成功！"
-#define REG_SUCCESS_DESCRIPTION "现在就开始您的买卖之旅吧！"
-#define REG_RESULT_FAILED "注册失败！"
-#define REG_SUCCESS_ICON "systemMsgBox\\MsgIcon0.png"
-#define REG_FAILED_ICON "systemMsgBox\\MsgIcon1.png"
-#define REG_BTN_LOGIN "立即登录"
-#define REG_BTN_RE_SINGUP "重新注册"
+#define REG_RESULT_SUCCESS _T("注册成功！")
+#define REG_SUCCESS_DESCRIPTION _T("现在就开始您的买卖之旅吧！")
+#define REG_RESULT_FAILED _T("注册失败！")
+#define REG_SUCCESS_ICON _T("systemMsgBox\\MsgIcon0.png")
+#define REG_FAILED_ICON _T("systemMsgBox\\MsgIcon1.png")
+#define REG_BTN_LOGIN _T("立即登录")
+#define REG_BTN_RE_SINGUP _T("重新注册")
 
 #define TIMERID_VERIFY_CODE  1
 
@@ -135,7 +135,7 @@ void CRegisterAccountDlg::HandleClickEvent( TNotifyUI& msg )
 		}
 		
 	}
-	else if (msg.pSender->GetName() == "btnclose")
+	else if (msg.pSender->GetName() == _T("btnclose"))
 	{
 		m_bActive = false;
 		Close();
@@ -169,13 +169,13 @@ void CRegisterAccountDlg::SetRegTabView(int idx)
 		switch (idx)
 		{
 		case REG_PAGE_VIEW:
-			pLabelTitle->SetText("注册");
+			pLabelTitle->SetText(_T("注册"));
 			break;
 		case REG_COMPLETE_VIEW:
-			pLabelTitle->SetText("注册完成");
+			pLabelTitle->SetText(_T("注册完成"));
 			break;
 		case DLG_TYPE_RESET_PASSWORD:
-			pLabelTitle->SetText("重置支付密码");
+			pLabelTitle->SetText(_T("重置支付密码"));
 			break;
 		default:
 			break;
@@ -213,7 +213,7 @@ void CRegisterAccountDlg::RegisterUser()
 	//	return;
 	//}
 
-	if (strHttpResponse.find("result") != -1)
+	if (strHttpResponse.find(_T("result")) != -1)
 	{
 		int nRetCode = -1;
 		Json::Value root;
@@ -227,7 +227,7 @@ void CRegisterAccountDlg::RegisterUser()
 		}
 		catch (...)
 		{
-			CLogger::GetInstance()->PrintErrLog("注册失败");		
+			CLogger::GetInstance()->PrintErrLog(_T("注册失败"));		
 		}
 
 		if (eRegisterSuccess == nRetCode)
@@ -236,24 +236,24 @@ void CRegisterAccountDlg::RegisterUser()
 		}
 		else
 		{
-			CLogger::GetInstance()->PrintLog(LOG_INFO, "register failed: %s", strHttpResponse.c_str());
+			CLogger::GetInstance()->PrintLog(LOG_INFO, _T("register failed: %s"), strHttpResponse.c_str());
 
 //			tstring::npos != root["code"].asString().find("1001")
-			if (strHttpResponse.find("1001") != -1 || strHttpResponse.find("1011") != -1)
+			if (strHttpResponse.find(_T("1001")) != -1 || strHttpResponse.find(_T("1011")) != -1)
 			{
-				m_pLabelPinCode->SetText("验证码错误");
+				m_pLabelPinCode->SetText(_T("验证码错误"));
 				m_pLabelPinCode->SetTextColor(WARNING_TEXT_COLOR);
 			}		
 			else
 			{
 				CDuiString strErrMsg;
-				if (tstring::npos != root["code"].asString().find("1003"))
+				if (tstring::npos != root["code"].asString(0).find(_T("1003")))
 				{
-					strErrMsg = "该用户已经是平台用户，请直接登录";
+					strErrMsg = _T("该用户已经是平台用户，请直接登录");
 				}
 				else
 				{
-					strErrMsg = "注册平台失败";			
+					strErrMsg = _T("注册平台失败");			
 				}
 				SetRegTabView(REG_COMPLETE_VIEW);
 				m_pCtrlCompleteRegIcon->SetBkImage(REG_FAILED_ICON);

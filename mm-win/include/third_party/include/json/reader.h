@@ -42,7 +42,12 @@ namespace Json {
       bool parse( const std::string &document, 
                   Value &root,
                   bool collectComments = true );
-
+	  bool parse(const std::wstring &document,Value &root,bool collectComments = true)
+	  {
+		  std::string str(document.length(), ' ');
+		  std::copy(document.begin(), document.end(), str.begin());
+		  parse(str,root,collectComments);
+	  }
       /** \brief Read a Value from a <a HREF="http://www.json.org">JSON</a> document.
        * \param document UTF-8 encoded string containing the document to read.
        * \param root [out] Contains the root value of the document if it was

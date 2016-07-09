@@ -29,20 +29,20 @@ extern TCHAR  SUGGESTIONS_URL[MAX_PATH];
 //#define  WEB_FILE_URL                   "http://10.0.9.7/api/file/"
 
 
-#define  MMPC_DOMAIN					"@test-d/mmpc"
-#define  MMPC_MUC_DOMAIN				"@muc.test-d"
-#define  MMPC_EMPTYSTR					""
-#define  MMPC_ACCOUNT					"@test-d"
-#define  DEF_AVATAR_NOR					"defalut_avatar_nor.png"
-#define  DEF_AVATAR_GRAY				"default_avatar_gray.png"
+#define  MMPC_DOMAIN					_T("@test-d/mmpc")
+#define  MMPC_MUC_DOMAIN				_T("@muc.test-d")
+#define  MMPC_EMPTYSTR					_T("")
+#define  MMPC_ACCOUNT					_T("@test-d")
+#define  DEF_AVATAR_NOR					_T("defalut_avatar_nor.png")
+#define  DEF_AVATAR_GRAY				_T("default_avatar_gray.png")
 #define  ORGANIZATION_MYFRIEND			_T("我的好友")
-#define  DEF_ORGID_MYFRIEND				"-1"						//我的好友的默认的ID账号
-#define  SYS_NOTIFY_ACONT_NUM			"10000"						//系统通知的账号
-#define  SYS_NOTIFY_ACCOUNT				"10000@test-d"				//系统通知的默认账号
-#define  SYS_GROUP_CHAT_NUM				"10001"						//群组聊天账号
-#define  SYS_GROUP_CHAT_ACCOUNT			"10001@test-d"				//群组聊天的系统账号
-#define  SYSNOTIFY_AVATAR				"default_sys_notify.png"	//系统通知的默认图标
-#define  DEF_PACK_ICON					"PackList\\pack.png"		//默认的资料包图标
+#define  DEF_ORGID_MYFRIEND				_T("-1")						//我的好友的默认的ID账号
+#define  SYS_NOTIFY_ACONT_NUM			_T("10000")						//系统通知的账号
+#define  SYS_NOTIFY_ACCOUNT				_T("10000@test-d")				//系统通知的默认账号
+#define  SYS_GROUP_CHAT_NUM				_T("10001")						//群组聊天账号
+#define  SYS_GROUP_CHAT_ACCOUNT			_T("10001@test-d")				//群组聊天的系统账号
+#define  SYSNOTIFY_AVATAR				_T("default_sys_notify.png")	//系统通知的默认图标
+#define  DEF_PACK_ICON					_T("PackList\\pack.png")		//默认的资料包图标
 
 #define MAX_SEND_MSG_LEN 1024
 

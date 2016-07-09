@@ -16,7 +16,7 @@ public:
 	//注意：如果不加上const，就会报说该类仍然是虚类。
 	virtual LPCTSTR GetWindowClassName()const	{	return _T("MMMessageBox");			}
 	virtual CDuiString GetSkinFolder()			{	return _T("..\\MM\\res\\");				}
-	virtual CDuiString GetSkinFile()			{	return "MsgBoxMM.xml";		}
+	virtual CDuiString GetSkinFile()			{	return _T("MsgBoxMM.xml");		}
 	virtual void OnFinalMessage( HWND hWnd )	{	delete this;				}
 	virtual void Notify(TNotifyUI& msg);
 	virtual void InitWindow();
