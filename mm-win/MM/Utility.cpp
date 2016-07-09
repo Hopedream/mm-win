@@ -704,4 +704,46 @@ void ReplaceAllDistinct(tstring& str, const tstring& old_value, const tstring& n
 			break;  
 		}
 	}    
-}  
+}
+
+std::tstring StringToTstring(const string &str)
+{
+#ifdef UNICODE
+	std::wstring wstr(str.length(),L' ');
+	std::copy(str.begin(), str.end(), wstr.begin());
+	return wstr; 
+#else
+	std::string str_result(str);
+	return str_result;
+#endif
+	
+}
+
+//只拷贝低字节至string中
+std::tstring WStringToTString(const wstring &wstr)
+{
+#ifdef UNICODE
+	std::wstring str_result(wstr);
+	return str_result;
+#else
+	std::string str(wstr.length(), ' ');
+	std::copy(wstr.begin(), wstr.end(), str.begin());
+	return str; 
+#endif
+	
+}
+
+std::wstring StringToWstring(const string &str)
+{
+	std::wstring wstr(str.length(),L' ');
+	std::copy(str.begin(), str.end(), wstr.begin());
+	return wstr; 
+}
+
+//只拷贝低字节至string中
+std::string WStringToString(const wstring &wstr)
+{
+	std::string str(wstr.length(), ' ');
+	std::copy(wstr.begin(), wstr.end(), str.begin());
+	return str; 
+}
