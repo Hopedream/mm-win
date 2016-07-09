@@ -14,8 +14,8 @@
 //			//用完记得close窗口
 //			Close();
 
-#define BTNOPT_ENTER_SEND_MODE "btnOptEntreSend"
-#define BTNOPT_CTRL_ENTER_SEND_MODE "btnOptCtrlEntreSend"
+#define BTNOPT_ENTER_SEND_MODE _T("btnOptEntreSend")
+#define BTNOPT_CTRL_ENTER_SEND_MODE _T("btnOptCtrlEntreSend")
 
 #define BLUE_COLOR 0XFF21A7D4
 #define BLACK_COLOR 0XFF000000
@@ -264,22 +264,22 @@ void CDuiMenu::HandleWindowInitEvent( TNotifyUI& msg )
 {
 	if (eUIMenuSendMsgKeyDrop == m_eContextMenuType)
 	{
-		CControlUI* pCtrlOptEnter = static_cast<CControlUI*>(m_PaintManager.FindControl("optEntrlSend"));
-		CControlUI* pCtrlOptCtrlAndEnter = static_cast<CControlUI*>(m_PaintManager.FindControl("optCtrlEntrlSend"));
+		CControlUI* pCtrlOptEnter = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("optEntrlSend")));
+		CControlUI* pCtrlOptCtrlAndEnter = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("optCtrlEntrlSend")));
 		CButtonUI* pBtnOptEnter = static_cast<CButtonUI*>(m_PaintManager.FindControl(BTNOPT_ENTER_SEND_MODE));
 		CButtonUI* pBtnOptCtrlAndEnter = static_cast<CButtonUI*>(m_PaintManager.FindControl(BTNOPT_CTRL_ENTER_SEND_MODE));
 
 		if (CChatAndFilePage::Instance()->IsEnterSendMode()
 			||((CGroupChatPage*)(mainDlg::getInstance()->GetGroupPage()))->IsEnterSendMode())
 		{
-			pCtrlOptEnter->SetBkImage("send_menu_selected.png");
+			pCtrlOptEnter->SetBkImage(_T("send_menu_selected.png"));
 			pCtrlOptEnter->SetBkColor(BLUE_COLOR);
 			pBtnOptEnter->SetBkColor(BLUE_COLOR);
 			pBtnOptEnter->SetTextColor(WHITE_COLOR);		
 		}
 		else
 		{
-			pCtrlOptCtrlAndEnter->SetBkImage("send_menu_selected.png");
+			pCtrlOptCtrlAndEnter->SetBkImage(_T("send_menu_selected.png"));
 			pCtrlOptCtrlAndEnter->SetBkColor(BLUE_COLOR);
 			pBtnOptCtrlAndEnter->SetBkColor(BLUE_COLOR);
 			pBtnOptCtrlAndEnter->SetTextColor(WHITE_COLOR);
@@ -287,16 +287,16 @@ void CDuiMenu::HandleWindowInitEvent( TNotifyUI& msg )
 	}
 	else if (eUIMenuMsgEmpty == m_eContextMenuType)
 	{
-		(static_cast<CButtonUI*>(m_PaintManager.FindControl("btnMsg")))->SetText("不能发送空白消息");		
+		(static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btnMsg"))))->SetText(_T("不能发送空白消息"));		
 	}
 	else if (eUIMenuMsgTooLog == m_eContextMenuType)
 	{
-		(static_cast<CButtonUI*>(m_PaintManager.FindControl("btnMsg")))->SetText("发送消息内容超长");		
+		(static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btnMsg"))))->SetText(_T("发送消息内容超长"));		
 	}
 	else if (eUIMenuRichEditContextMenu == m_eContextMenuType && m_pRichEditUI)
 	{
-		(static_cast<CButtonUI*>(m_PaintManager.FindControl("richedit_cut")))->SetEnabled(!m_pRichEditUI->GetSelText().IsEmpty());
-		(static_cast<CButtonUI*>(m_PaintManager.FindControl("richedit_copy")))->SetEnabled(!m_pRichEditUI->GetSelText().IsEmpty());
+		(static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("richedit_cut"))))->SetEnabled(!m_pRichEditUI->GetSelText().IsEmpty());
+		(static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("richedit_copy"))))->SetEnabled(!m_pRichEditUI->GetSelText().IsEmpty());
 	}
 }
 

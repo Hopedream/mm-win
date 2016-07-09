@@ -535,30 +535,30 @@ void CFrameBusinessData::initTrans()
 				{
 					BDLstItemInfo oneInfo;
 					oneInfo.isFavorite = false;
-					oneInfo.strProName = root[i]["name"].asString();
-					oneInfo.strAttribute = root[i]["attribute"].asString();
-					oneInfo.strCollect = root[i]["create_by"].asString();
-					oneInfo.strPackSender = root[i]["cell_phone"].asString();
-					oneInfo.strTime = root[i]["create_time"].asString();
-					m_strOrgName = root[i]["org_name"].asString();
-					oneInfo.strPackId = root[i]["id"].asString();
+					oneInfo.strProName = root[i]["name"].asString(1);
+					oneInfo.strAttribute = root[i]["attribute"].asString(1);
+					oneInfo.strCollect = root[i]["create_by"].asString(1);
+					oneInfo.strPackSender = root[i]["cell_phone"].asString(1);
+					oneInfo.strTime = root[i]["create_time"].asString(1);
+					m_strOrgName = root[i]["org_name"].asString(1);
+					oneInfo.strPackId = root[i]["id"].asString(1);
 					int iStatus = root[i]["status"].asInt();
 					switch (iStatus)
 					{
 					case 0:
-						oneInfo.strStatus = "默认";
+						oneInfo.strStatus = _T("默认");
 						break;
 					case 1:
-						oneInfo.strStatus = "收藏";
+						oneInfo.strStatus = _T("收藏");
 						break;
 					case 2:
-						oneInfo.strStatus = "收发";
+						oneInfo.strStatus = _T("收发");
 						break;
 					case 3:
-						oneInfo.strStatus = "同意";
+						oneInfo.strStatus = _T("同意");
 						break;
 					case 4:
-						oneInfo.strStatus = "拒绝";
+						oneInfo.strStatus = _T("拒绝");
 						break;
 					default:
 						break;
@@ -569,10 +569,10 @@ void CFrameBusinessData::initTrans()
 					for (int j=0; j<iFilesize; j++)
 					{
 						fileInfo file;
-						file.strFileFullName = root[i]["file_lists"][j]["file_name"].asString();
-						file.strFileType = root[i]["file_lists"][j]["file_type"].asString();
-						file.strFileSz = root[i]["file_lists"][j]["file_size"].asString();
-						file.strFileUrl = root[i]["file_lists"][j]["ali_file_url"].asString();
+						file.strFileFullName = root[i]["file_lists"][j]["file_name"].asString(1);
+						file.strFileType = root[i]["file_lists"][j]["file_type"].asString(1);
+						file.strFileSz = root[i]["file_lists"][j]["file_size"].asString(1);
+						file.strFileUrl = root[i]["file_lists"][j]["ali_file_url"].asString(1);
 						oneInfo.m_vecFiles.push_back(file);
 					}
 					Node* pParentNode = m_pLstTrans->AddNode(oneInfo, NULL);
@@ -584,11 +584,11 @@ void CFrameBusinessData::initTrans()
 						oneInfo_child.folder = false;
 						oneInfo_child.itemId = GetNextItemID();
 
-						oneInfo_child.strFileFullName = root[i]["file_lists"][j]["file_name"].asString();
-						oneInfo_child.strFileType = root[i]["file_lists"][j]["file_type"].asString();
-						oneInfo_child.strSize = root[i]["file_lists"][j]["file_size"].asString();
-						oneInfo_child.strUrl = root[i]["file_lists"][j]["ali_file_url"].asString();
-						oneInfo_child.strPackId = root[i]["id"].asString();
+						oneInfo_child.strFileFullName = root[i]["file_lists"][j]["file_name"].asString(1);
+						oneInfo_child.strFileType = root[i]["file_lists"][j]["file_type"].asString(1);
+						oneInfo_child.strSize = root[i]["file_lists"][j]["file_size"].asString(1);
+						oneInfo_child.strUrl = root[i]["file_lists"][j]["ali_file_url"].asString(1);
+						oneInfo_child.strPackId = root[i]["id"].asString(1);
 						oneInfo_child.strPackName = oneInfo.strProName;
 						m_pLstTrans->AddNode(oneInfo_child, pParentNode);
 					}

@@ -55,5 +55,5 @@ void ReplaceAllDistinct(tstring& str, const tstring& old_value, const tstring& n
 
 std::tstring StringToTstring(const string &str);
 std::tstring WStringToTString(const wstring &wstr);
-std::wstring StringToWstring(const string &str);
+std::wstring StringToWString(const string &str);
 std::string WStringToString(const wstring &wstr);

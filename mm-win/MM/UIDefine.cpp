@@ -6,7 +6,7 @@
 int getFileSize( const tstring& strPath )
 {
 	DWORD sz = 0;
-	HANDLE handle = CreateFile(_T(strPath.c_str()), FILE_READ_EA, FILE_SHARE_READ, 0, OPEN_EXISTING, 0, 0);
+	HANDLE handle = CreateFile(strPath.c_str(), FILE_READ_EA, FILE_SHARE_READ, 0, OPEN_EXISTING, 0, 0);
 	if (handle != INVALID_HANDLE_VALUE)
 	{
 		sz = GetFileSize(handle, NULL);
