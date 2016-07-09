@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,32">
+    <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkimage="file=&apos;bg12.png&apos; corner=&apos;600,200,1,1&apos;">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="400" height="40">
+            <Label name="labelOppositeName" text="张三" float="true" pos="0,0,0,0" width="90" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="buttonClose" float="true" pos="359,0,0,0" width="39" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_close_normal.png" hotimage="btn_close_highlight.png" pushedimage="btn_close_down.png" />
+            <Button name="ButtonUI1" float="true" pos="331,0,0,0" width="28" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_max_normal.png" hotimage="btn_max_highlight.png" pushedimage="btn_max_down.png" />
+            <Button name="ButtonUI2" float="true" pos="303,0,0,0" width="28" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_mini_normal.png" hotimage="btn_mini_highlight.png" pushedimage="btn_mini_down.png" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" width="400" height="174">
+            <VerticalLayout name="VerticalLayoutUI4" width="10" height="174" />
+            <RichEdit name="outputEdit" bkcolor="#ffc0dcc0" multiline="true" vscrollbar="true" autovscroll="true" rich="true" readonly="true" />
+            <VerticalLayout name="VerticalLayoutUI5" width="10" height="174" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI3" width="397" height="30" />
+        <HorizontalLayout name="HorizontalLayoutUI5" width="400" height="115">
+            <VerticalLayout name="VerticalLayoutUI6" width="10" height="115" />
+            <RichEdit name="inputEdit" bkcolor="#ffc0dcc0" multiline="true" vscrollbar="true" autovscroll="true" enabled="true" rich="false" readonly="false" wantreturn="true" wantctrlreturn="false" />
+            <VerticalLayout name="VerticalLayoutUI7" width="10" height="115" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI4" width="395" height="30">
+            <Button name="buttonSend" text="Send" float="true" pos="332,3,0,0" width="60" height="30" bkimage="colour_002.bmp" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="colour_001highlight.bmp" hotimage="colour_001.bmp" pushedimage="colour_001highlight.bmp" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

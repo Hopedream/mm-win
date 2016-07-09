@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="193,193">
+    <ListContainerElement name="ListContainerElementUI1" width="193" height="193">
+        <VerticalLayout name="VerticalLayoutUI1" width="193" height="193" bkcolor="#FFE3F1F3">
+            <Container name="Containeroffer" width="173" height="157" padding="10,1,10,10">
+                <Container name="ContainerUI1" width="193" height="168" bkcolor="#FFFFFFFF">
+                    <Label name="LabelUI1" text="配件名称" float="true" pos="11,10,0,0" width="50" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI2" text="OE号" float="true" pos="11,34,0,0" width="50" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI3" text="所属类别" float="true" pos="11,57,0,0" width="50" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI4" text="所属组别" float="true" pos="11,80,0,0" width="50" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI5" text="采购数量" float="true" pos="11,130,0,0" width="50" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI6" text="所属子组" float="true" pos="10,105,0,0" width="50" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI7" text="xxxxxxxxxx" float="true" pos="74,10,0,0" width="90" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI8" text="xxxxxxxxxx" float="true" pos="74,34,0,0" width="90" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI9" text="xxxxxxxxxx" float="true" pos="74,57,0,0" width="90" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI10" text="xxxxxxxxxx" float="true" pos="74,83,0,0" width="90" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI11" text="xxxxxxxxxx" float="true" pos="74,106,0,0" width="90" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI12" text="xxxxxxxxxx" float="true" pos="74,130,0,0" width="90" height="21" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                </Container>
+            </Container>
+            <HorizontalLayout name="HorizontalLayoutUI1" width="193" height="25">
+                <Button name="buttonAccept" float="true" pos="105,2,0,0" width="36" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="accept.png" hotimage="accept2.png" pushedimage="accept3.png" />
+                <Button name="buttonReject" float="true" pos="145,2,0,0" width="36" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="refuse.png" hotimage="refuse2.png" pushedimage="refuse3.png" />
+            </HorizontalLayout>
+        </VerticalLayout>
+    </ListContainerElement>
+</Window>

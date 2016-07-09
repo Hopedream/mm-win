@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window size="240,560"  caption="0,0,0,30" roundcorner="4,4">
+	<!---Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16'&quot; button1hotimage=&quot;file='scrollbar.png' source='16,0,32,16,16'&quot; button1pushedimage=&quot;file='scrollbar.png' source='32,0,48,16'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,32,16,48'&quot; button2hotimage=&quot;file='scrollbar.png' source='16,32,32,48'&quot; button2pushedimage=&quot;file='scrollbar.png' source='32,32,48,48'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,48,16,64' corner='0,2,0,2'&quot; thumbhotimage=&quot;file='scrollbar.png' source='16,48,32,64' corner='0,2,0,2'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='32,48,48,64' corner='0,2,0,2'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,16,16,32'&quot;" /-->
+    <VerticalLayout width="240" height="560" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" bordersize="2" inset="1,0,1,0" >
+        <HorizontalLayout height="30" bkcolor="FF0389B6" >
+            <Label text="拨打电话" height="30" width="100" textcolor="#FFFFFFFF" padding="10,0,0,10" disabledtextcolor="#FFA7A6AA" showhtml="true" font="1"/>
+            <HorizontalLayout />            
+            <Button name="btnclose" width="30" normalimage="Call\close.PNG" hotimage="Call\close.PNG" pushedimage="Call\close.PNG" />
+        </HorizontalLayout>
+		<HorizontalLayout height="20" padding="65,10">                   
+            <Button name="btnCallHistory" width="55" text="通话记录" textcolor="#FFFFFFFF" align="center" bkcolor="FF21A7D4" bordersize="2" bordercolor="FF21A7D4" roundcorner="1,1" font="2"/>
+			<Button name="btnFriendsList" width="55" text="联系人" textcolor="#FF21A7D4" align="center" bkcolor="FFFFFFFF" bordersize="2" bordercolor="FF21A7D4" roundcorner="1,1" font="2"/>
+        </HorizontalLayout>
+		<HorizontalLayout height="1" padding="20,10,20" bkcolor="#FFE5E5E5"/>  
+		<HorizontalLayout height="23" padding="20,10,20"> 
+			<Edit name="txeSearchKeyword" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" roundcorner="1,1" text="请输入收索的关键字" bordersize="1" bordercolor="FFE5E5E5" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left"/>       
+			<Button name="btnFind" width="16" height="16" padding="2,4,0,6" textcolor="#FFFFFFFF" align="center" normalimage="Call\search.PNG" hotimage="Call\search.PNG" pushedimage="Call\search.PNG" />
+        </HorizontalLayout>
+        <HorizontalLayout padding="20,10,20">
+			<TabLayout name="switchLayout">
+				<VerticalLayout >
+					<recentContactsList name="recentContactsListUI" header="hidden" itemshowhtml="true" vscrollbar="true" />
+				</VerticalLayout>
+				<VerticalLayout>
+					<callFriendsList name="callFriendsListUI" header="hidden" itemshowhtml="true" vscrollbar="true" />
+				</VerticalLayout>
+			</TabLayout>			
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

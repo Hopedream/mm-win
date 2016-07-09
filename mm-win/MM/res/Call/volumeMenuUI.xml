@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="36,120">
+	<Default name="Slider" value="thumbsize=&quot;10,10&quot; foreimage=&quot;file='Call\fg.PNG' corner='0,6,0,6' mask='#FFFF00FF'&quot; thumbimage=&quot;file='Call\thumb.bmp' mask='#FFDAEBF9'&quot; thumbhotimage=&quot;file='Call\thumb.bmp' mask='#FFDAEBF9'&quot; " />
+    <VerticalLayout height="120" bkimage="Call\bg.bmp">
+		<Control height="10" />
+        <Slider name="volumeSlider" max="100" value="20" hor="false" height="100"/>
+		<Control height="10" />
+    </VerticalLayout>
+</Window>

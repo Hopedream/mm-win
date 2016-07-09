@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="560,500" caption="0,0,0,33" roundcorner="4,4">
+    <VerticalLayout bordersize="2" width="560" height="500" bkcolor="#FFE9E9E9" bordercolor="#FFE5E5E5" inset="1,0,1,0">
+        <HorizontalLayout height="30" bkcolor="#FF0389B6">
+            <Label text="视频通话" name="frmCaption" width="400" height="30" padding="10,0,0,10" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="1" showhtml="true" />
+            <Control />
+			<Button name="btnTopWnd" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\pin_default.PNG"/>
+            <Button name="minbtn" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\mini.PNG" hotimage="Call\mini.PNG" pushedimage="Call\mini.PNG" />
+            <Button name="btnCloseVoiceDlg" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\close.PNG" hotimage="Call\close.PNG" pushedimage="Call\close.PNG" />
+        </HorizontalLayout>
+		<TabLayout name="switchLayout">
+			<!-------------------语音通话----------------->
+			<VerticalLayout bkcolor="#FF3b3b3b">
+				<Control name="logo" width="100" height="100" padding="230,50,230,10" />
+				<Label name="nickname" height="30" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+				<Label name="orgname" height="30" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+				<Control height="50"/>
+				<Label name="callStatus" height="30" textcolor="#FFe9e9e9" disabledtextcolor="#FFA7A6AA" align="center" />
+			</VerticalLayout>
+
+			<!-------------------视频通话----------------->
+			<HorizontalLayout bkcolor="#FF3b3b3b">
+				<VerticalLayout name="dialing_container" float="true" pos="196,100,0,0" width="330" height="140">
+					<HorizontalLayout width="326" height="29">
+						<Control width="27" bkimage="Call\calling_bg.PNG" />
+						<Label name="txtCallStatus" text="正在呼叫....." width="191" height="29" padding="10,0,0,10" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="1" showhtml="true" />
+					</HorizontalLayout>
+					<Control />
+					<Control width="128" height="84" bkimage="Call\video_BG_icon.PNG" />
+					<Label name="CameraInfo" height="30" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+				</VerticalLayout>
+            <HorizontalLayout name="myViedo" float="true" pos="410,310,0,0" width="120" height="90" />
+			</HorizontalLayout>
+		</TabLayout>
+        <HorizontalLayout name="hangup_container" height="50" bkcolor="FFe9e9e9">
+			<Control width="20"/>
+			<Button name="btnGotoCurChatPage" width="24" height="24" padding="0,13,0,13" normalimage="Call\speech_grey.png" hotimage="Call\speech_blue.PNG" pushedimage="Call\speech_blue.PNG"/>
+			<Control width="20"/>
+			<Button name="btnVolume" width="24" height="24" padding="0,13,0,13" normalimage="Call\volume_grey.png" hotimage="Call\volume_blue.PNG" pushedimage="Call\volume_blue.PNG"/>
+			<Control width="20"/>
+			<Button name="btnSetVoice" width="24" height="24" padding="0,13,0,13" normalimage="Call\mic_grey.png" hotimage="Call\mic_blue.PNG" pushedimage="Call\mic_blue.PNG"/>
+			<Control width="20"/>
+			<Button name="btnSetCamera" width="24" height="24" padding="0,13,0,13" normalimage="Call\cam_blue.PNG" hotimage="Call\cam_grey.PNG" pushedimage="Call\cam_grey.PNG"/>
+			<Control width="20"/>
+			<Label width="150"  textcolor="#00808080" align="right" text="通话时长："/>
+            <Label name="callTime" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left" width="130"/>		
+			<Control />
+            <Button name="btnHangup" width="64" height="32" padding="0,9,0,9" normalimage="Call\Hang_up.PNG" hotimage="Call\Hang_up_pressed.PNG" pushedimage="Call\Hang_up_pressed.PNG"/>
+			<Control width="20"/>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,598">
+    <VerticalLayout width="745" height="598" bkcolor="#FFFFFFFF">
+        <HorizontalLayout width="745" height="30" bkcolor="#FFFFFFFF">
+            <Button name="btnClose_userpage" float="true" pos="715,1,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X3.png" pushedimage="X2.png" />
+        </HorizontalLayout>
+        <HorizontalLayout width="745" height="568" bkcolor="#FFFFFFFF">
+            <VerticalLayout width="453" height="568" bkcolor="#FFFFFFFF">
+                <Container width="453" height="568">
+                    <Control name="controlImage_userpage" float="true" pos="30,37,0,0" width="64" height="64" />
+                    <Label name="labelName_userpage" float="true" pos="117,44,0,0" width="60" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Text name="textSign_userpage" float="true" pos="117,78,0,0" width="201" height="22" textpadding="2,0,2,0" align="wrap" />
+                    <Label text="性别：" float="true" pos="115,119,0,0" width="36" height="22" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Label text="年龄：" float="true" pos="116,148,0,0" width="36" height="22" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Label text="地区：" float="true" pos="116,183,0,0" width="36" height="22" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Label text="电话：" float="true" pos="116,257,0,0" width="36" height="22" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Label text="邮箱：" float="true" pos="116,289,0,0" width="36" height="22" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Label text="地址：" float="true" pos="116,324,0,0" width="36" height="22" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Text name="textAge_userpage" float="true" pos="167,150,0,0" width="60" height="18" textpadding="2,0,2,0" align="wrap" />
+                    <Text name="textLocation_userpage" float="true" pos="166,185,0,0" width="241" height="18" textpadding="2,0,2,0" align="wrap" />
+                    <Text name="textPhone_userpage" float="true" pos="167,260,0,0" width="241" height="18" textpadding="2,0,2,0" align="wrap" />
+                    <Text name="textEmail_userpage" float="true" pos="167,293,0,0" width="241" height="18" textpadding="2,0,2,0" align="wrap" />
+                    <Text name="textAddress_userpage" float="true" pos="167,327,0,0" width="232" height="18" textpadding="2,0,2,0" align="wrap" />
+                    <Button name="btnSendmsg_Userpage" float="true" pos="149,468,0,0" width="63" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="userinfopage_sendmsg.png" />
+                    <Text name="textSex_userpage" float="true" pos="166,122,0,0" width="62" height="18" textpadding="2,0,2,0" align="wrap" />
+                </Container>
+            </VerticalLayout>
+            <Container width="292" height="568">
+                <Label text="组织" float="true" pos="12,32,0,0" width="30" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="身份" float="true" pos="12,67,0,0" width="30" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="成员" float="true" pos="12,102,0,0" width="30" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Text name="textOrgnize_userpage" float="true" pos="53,35,0,0" width="182" height="18" textpadding="2,0,2,0" align="wrap" />
+                <Text name="textIdentify_userpage" float="true" pos="52,71,0,0" width="168" height="18" textpadding="2,0,2,0" align="wrap" />
+                <Text float="true" pos="53,105,0,0" width="100" height="18" textpadding="2,0,2,0" align="wrap" />
+                <Button name="btnApply_userpage" float="true" pos="49,464,0,0" width="96" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="apply_contact_req.PNG" />
+            </Container>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

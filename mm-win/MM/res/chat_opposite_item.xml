@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="500,70">
+    <ListContainerElement name="ListContainerElementUI1">
+        <Container name="ContainerUI1" width="60" height="30" bkcolor="#FFFFFFFF">
+            <Control name="controlLogo" float="true" pos="10,19,0,0" width="32" height="32" bkimage="tx02.png" />
+            <Control name="ControlUI2" float="true" pos="55,19,0,0" width="10" height="32" bkimage="Bubble_left.png" />  
+			<RichEdit font="2" name="labelText" text="" float="true"  pos="65,18,464,50" width="200" height="32" bkcolor="#FFE2E2E2" textcolor="#FF222222" inset="15,8,15,7" multiline="true" autovscroll="false" enabled="true" readonly="true"/>
+        </Container>
+    </ListContainerElement>
+</Window>

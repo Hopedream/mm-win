@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="130,64">
+    <Container bordersize="1" width="130" height="64" bkcolor="#FFFFFFFF" bordercolor="#00D9F0F8">
+        <Control name="control_file_image" float="true" pos="4,5,0,0" width="40" height="40" bkimage="CreateProject\pdf.png" />
+        <Label name="label_askfile_name" text="配件清单" float="true" pos="48,5,0,0" width="60" height="15" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label name="label_askfile_size" text="2.51M" float="true" pos="48,29,0,0" width="60" height="15" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Button name="btn_delete_askfileitem" float="true" pos="114,1,0,0" width="16" height="16" bkimage="CreateProject\delete.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="CreateProject\delete.PNG" />
+        <Progress name="progress_res_file" float="true" pos="6,49,0,0" width="110" height="10" bkimage="progress bar_0.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="progress bar_100.PNG" min="0" max="100" value="0" hor="true" />
+    </Container>
+</Window>

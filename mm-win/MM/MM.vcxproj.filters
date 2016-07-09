@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgSessionMgr.cpp">
+      <Filter>Controller\MsgSession</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>Controller\Login</Filter>
+    </ClCompile>
+    <ClCompile Include="UserManager.cpp">
+      <Filter>Controller\UserInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="TrayMgr.cpp">
+      <Filter>Controller\TrayTask</Filter>
+    </ClCompile>
+    <ClCompile Include="TrayTaskModuleImpl.cpp">
+      <Filter>Controller\TrayTask</Filter>
+    </ClCompile>
+    <ClCompile Include="UserManager.cpp">
+      <Filter>Controller\UserInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgCenterModuleImpl.cpp">
+      <Filter>Controller\MsgCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgWnd.cpp">
+      <Filter>MsgWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="CppSQLite3.cpp">
+      <Filter>DBTask</Filter>
+    </ClCompile>
+    <ClCompile Include="DBTaskModuleImpl.cpp">
+      <Filter>DBTask</Filter>
+    </ClCompile>
+    <ClCompile Include="IMDB.cpp">
+      <Filter>DBTask</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite3.c">
+      <Filter>DBTask</Filter>
+    </ClCompile>
+    <ClCompile Include="UIContacts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="userInfoDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDataList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIChatList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDialogBuilderCallbackEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpClient.cpp">
+      <Filter>HttpClient</Filter>
+    </ClCompile>
+    <ClCompile Include="UIMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIChoseFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GdiPlusLib.cpp">
+      <Filter>GDILib</Filter>
+    </ClCompile>
+    <ClCompile Include="UIUpdateFiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="oss_interface.cpp">
+      <Filter>oss</Filter>
+    </ClCompile>
+    <ClCompile Include="UIUserInfoPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="registerAccountDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MMWinImplBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MD5Checksum.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="FileHelper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDefine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDownloadFiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UCSNetServiceCallBackInterface.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioCallIncomingDlg.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgBox.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Logger.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicKHelper.cpp">
+      <Filter>ImageMagick</Filter>
+    </ClCompile>
+    <ClCompile Include="UIFriendList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="systemSetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniDumper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DuiDialog.cpp">
+      <Filter>Refactor</Filter>
+    </ClCompile>
+    <ClCompile Include="MainDialog.cpp">
+      <Filter>Refactor</Filter>
+    </ClCompile>
+    <ClCompile Include="TabRecentChat.cpp">
+      <Filter>Refactor</Filter>
+    </ClCompile>
+    <ClCompile Include="TabProject.cpp">
+      <Filter>Refactor</Filter>
+    </ClCompile>
+    <ClCompile Include="CallFrame.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="CallRecentContactUI.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\regexHelper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="UICallFriends.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="UIListCommonDefine.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchBussinessPartnerPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SendAddRequestPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videoDlg.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="FileControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PartnerInfoPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewFoundPartnerInfoPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifyMemoWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIFriendListBase.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameChangePassword.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameChangeOrganization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameChangeOrganization.cpp" />
+    <ClCompile Include="volumeUI.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="SysMsgPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatAndFilePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SysMsgListCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEmployeeManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameSysAbout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="webClient.cpp">
+      <Filter>HttpClient</Filter>
+    </ClCompile>
+    <ClCompile Include="invitePartner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameSysQuit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameCreateOrg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameSysQuitOrg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameUserInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WkeWebkit.cpp">
+      <Filter>WebKit</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchDumpFile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="MUCRoomProcessor.cpp">
+      <Filter>MUC</Filter>
+    </ClCompile>
+    <ClCompile Include="MUCRoomMgr.cpp">
+      <Filter>MUC</Filter>
+    </ClCompile>
+    <ClCompile Include="MUCInvitationListener.cpp">
+      <Filter>MUC</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEmployeeManage1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sortHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameGuideUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameGuideOrg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectProcessor.cpp">
+      <Filter>Source Files\Project\项目列表</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectsListPage.cpp">
+      <Filter>Source Files\Project\项目列表</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateNewProjectStep1.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateNewProjectStep2.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayoutDestEmployeeList.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayoutDestEmployeeSelectedList.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayoutDestOrgList.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayoutLocalParticipant.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayoutResPacket.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="UIOrgMembersList.cpp">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChatPage.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChatLogic.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupMemberView.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayoutGroupMember.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="AddNewGroupMember.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="ListResPackets.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="base64_.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupPackFileDownloadWnd.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayoutGroupPackFileList.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectListView.cpp">
+      <Filter>Source Files\Project\项目列表</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBusinessData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIBussinessDataList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PubSubMgr.cpp">
+      <Filter>pubsub</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEmployee.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddNewGroupMemberEx.cpp">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RichEditUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CssWeb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jp_contract_select.cpp">
+      <Filter>Contract</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBussinessData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ControllerEvent_i.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgSessionMgr.h">
+      <Filter>Controller\MsgSession</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>Controller\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="UserManager.h">
+      <Filter>Controller\UserInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="TrayMgr.h">
+      <Filter>Controller\TrayTask</Filter>
+    </ClInclude>
+    <ClInclude Include="TrayTaskModuleImpl.h">
+      <Filter>Controller\TrayTask</Filter>
+    </ClInclude>
+    <ClInclude Include="UserManager.h">
+      <Filter>Controller\UserInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgCenterModuleImpl.h">
+      <Filter>Controller\MsgCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MsgCenterModule.h">
+      <Filter>Controller\MsgCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MsgCenterEvent_i.h">
+      <Filter>Controller\MsgCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TrayTaskModule.h">
+      <Filter>Controller\TrayTask</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MsgSessionMgrEvent_i.h">
+      <Filter>Controller\MsgSession</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgWnd.h">
+      <Filter>MsgWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MsgWndDefine.h">
+      <Filter>MsgWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="CppSQLite3.h">
+      <Filter>DBTask</Filter>
+    </ClInclude>
+    <ClInclude Include="DBTaskModuleImpl.h">
+      <Filter>DBTask</Filter>
+    </ClInclude>
+    <ClInclude Include="IMDB.h">
+      <Filter>DBTask</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite3.h">
+      <Filter>DBTask</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DBTaskModule.h">
+      <Filter>DBTask</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_define.h">
+      <Filter>DBTask</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TrayTaskEvent_i.h">
+      <Filter>Controller\TrayTask</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpClient.h">
+      <Filter>HttpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GDIPlusLib.h">
+      <Filter>GDILib</Filter>
+    </ClInclude>
+    <ClInclude Include="oss_interface.h">
+      <Filter>oss</Filter>
+    </ClInclude>
+    <ClInclude Include="oss_event.h">
+      <Filter>oss</Filter>
+    </ClInclude>
+    <ClInclude Include="MD5Checksum.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MD5ChecksumDefines.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="base64.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\MMDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\UserInfoDef.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioCallIncomingDlg.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="UCSNetServiceCallBackInterface.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgBox.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Logger.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="MagicKHelper.h">
+      <Filter>ImageMagick</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFriendList.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniDumper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DuiDialog.h">
+      <Filter>Refactor</Filter>
+    </ClInclude>
+    <ClInclude Include="MainDialog.h">
+      <Filter>Refactor</Filter>
+    </ClInclude>
+    <ClInclude Include="TabRecentChat.h">
+      <Filter>Refactor</Filter>
+    </ClInclude>
+    <ClInclude Include="TabProject.h">
+      <Filter>Refactor</Filter>
+    </ClInclude>
+    <ClInclude Include="CallRecentContactUI.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="CallFrame.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\regexHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="UIListCommonDefine.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="UICallFriends.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="videoDlg.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFriendListBase.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="volumeUI.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="webClient.h">
+      <Filter>HttpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="invitePartner.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameSysQuit.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDialogBuilderCallbackEx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewFoundPartnerInfoPage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatAndFilePage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileControl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameChangeOrganization.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameChangePassword.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEmployeeManage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameSysAbout.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loginDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBox.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MMWinImplBase.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModifyMemoWnd.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PartnerInfoPage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="registerAccountDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RegisterHelper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchBussinessPartnerPage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SendAddRequestPage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SysMsgListCtrl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SysMsgPage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="systemSetting.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIChatList.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIChoseFile.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIContacts.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDataList.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDefine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDownloadFiles.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMenu.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIUpdateFiles.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIUserInfoPage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="userInfoDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameChangeOrganization.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameUserInfo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameCreateOrg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameSysQuitOrg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wke.h">
+      <Filter>WebKit</Filter>
+    </ClInclude>
+    <ClInclude Include="WkeWebkit.h">
+      <Filter>WebKit</Filter>
+    </ClInclude>
+    <ClInclude Include="CatchDumpFile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MUCRoomProcessor.h">
+      <Filter>MUC</Filter>
+    </ClInclude>
+    <ClInclude Include="MUCRoomMgr.h">
+      <Filter>MUC</Filter>
+    </ClInclude>
+    <ClInclude Include="MUCInvitationListener.h">
+      <Filter>MUC</Filter>
+    </ClInclude>
+    <ClInclude Include="MUCInvitationListener.h">
+      <Filter>MUC</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEmployeeManage1.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sortHelper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomMgrEvent_i.h">
+      <Filter>MUC</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameGuideUser.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameGuideOrg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectProcessor.h">
+      <Filter>Source Files\Project\项目列表</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectsListPage.h">
+      <Filter>Source Files\Project\项目列表</Filter>
+    </ClInclude>
+    <ClInclude Include="UIOrgMembersList.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateNewProjectStep1.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateNewProjectStep2.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayoutDestEmployeeList.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayoutDestEmployeeSelectedList.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayoutDestOrgList.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayoutLocalParticipant.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayoutResPacket.h">
+      <Filter>Source Files\Project\新建项目</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupChatPage.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupChatLogic.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupMemberView.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayoutGroupMember.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="AddNewGroupMember.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="ListResPackets.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="base64_.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupPackFileDownloadWnd.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayoutGroupPackFileList.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectListView.h">
+      <Filter>Source Files\Project\项目列表</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBusinessData.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIBussinessDataList.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PubSubMgr.h">
+      <Filter>pubsub</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEmployee.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Global_Def.h" />
+    <ClInclude Include="..\include\UsrManagerEvent_i.h">
+      <Filter>Controller\UserInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="AddNewGroupMemberEx.h">
+      <Filter>Source Files\GroupChat</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IImageOle.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RichEditUtil.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CssWeb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="properties_resource.h" />
+    <ClInclude Include="jp_contract_select.h">
+      <Filter>Contract</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBussinessData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MM.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{1018943d-0f33-4541-8da5-aa9bb5fbe46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\MsgSession">
+      <UniqueIdentifier>{97af7b1c-b4fd-4470-a703-051dd2028526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\Login">
+      <UniqueIdentifier>{f1f0cda5-dbe0-4c3f-ba36-841292ac3f3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\UserInfo">
+      <UniqueIdentifier>{f76b9529-db7a-44d1-94d9-7715c5a845aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logger">
+      <UniqueIdentifier>{a47358c3-e93d-44d8-a236-a1d14fb08d68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\MsgCenter">
+      <UniqueIdentifier>{f5692761-1e33-4469-a2e5-4e2beccc914f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\TrayTask">
+      <UniqueIdentifier>{e16b4a8e-1f0b-48ff-8122-e680983a3c91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MsgWnd">
+      <UniqueIdentifier>{feb5c9cd-f2b6-4528-9c5b-1e2baa83371c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBTask">
+      <UniqueIdentifier>{b8af15cc-2a1b-43c5-a7ea-c43e3d8b14c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6924b86f-405e-4b14-8b27-5a7bbc83d1e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpClient">
+      <UniqueIdentifier>{8668a26a-a76a-4f8a-b0b4-b77252090984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{1ad8386c-6ba0-4ed4-91ce-711dc9696368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDILib">
+      <UniqueIdentifier>{24504c84-b35d-401e-8eb4-4714afc42efd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="oss">
+      <UniqueIdentifier>{a74d4bb0-2f17-42d8-bf3d-14196b15fbbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{0efdcaf4-3644-4310-ab58-61d07ab3397b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImageMagick">
+      <UniqueIdentifier>{b88afc28-7db2-4882-90e5-075ca825e397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Refactor">
+      <UniqueIdentifier>{42cf19b4-d373-45f9-b420-7b4f11ecbdbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="partner">
+      <UniqueIdentifier>{422a39e5-6028-497e-af6f-59ab3a2e5fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Project">
+      <UniqueIdentifier>{f9152a24-a8e9-40ef-8b8f-ef11a05180aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebKit">
+      <UniqueIdentifier>{2b780455-f2cd-46c1-81d6-99d73977f4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MUC">
+      <UniqueIdentifier>{74319578-8899-4214-9063-b498d7ea089f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Project\新建项目">
+      <UniqueIdentifier>{6ac0eac8-687f-402b-a0ff-2e8087ba4e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Project\项目列表">
+      <UniqueIdentifier>{31226073-4af9-4891-9d7c-74810a35f2b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GroupChat">
+      <UniqueIdentifier>{974c1e77-75fa-413a-9f15-1f0395f0b63f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pubsub">
+      <UniqueIdentifier>{a168a957-d091-4b72-b9d7-465809246043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contract">
+      <UniqueIdentifier>{3b3126fc-8e37-4797-b893-bea15c67cc7e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\mmonline.ico" />
+    <None Include="res\mmoffline.ico" />
+    <None Include="res\system_notify.ico" />
+    <None Include="res\Call\call_flash.ico" />
+    <None Include="res\mm-message.ico" />
+  </ItemGroup>
+</Project>

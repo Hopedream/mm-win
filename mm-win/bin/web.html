@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://60.173.242.117:9001/collection/index?key=7e47e54bb417a99b1765a638a071dc19 -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>收藏</title>
+
+    <link href="./web_files/bootstrap.css" rel="stylesheet">
+<link href="./web_files/site.css" rel="stylesheet">
+<link href="./web_files/font.css" rel="stylesheet">
+<link href="./web_files/imgareaselect-default.css" rel="stylesheet">
+<link href="./web_files/datepicker3.css" rel="stylesheet">
+<link href="./web_files/font-awesome.min.css" rel="stylesheet">    <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+    <link rel="icon" href="http://60.173.242.117:9001/image/ico.ico" type="image/x-icon">
+<style type="text/css"></style></head>
+<body>
+<style>
+    .top{height: 20%;min-width: 500px;background: #ffffff}
+    .top >div{padding: 20px 0 60px 0;width: 45%;margin: 0 auto;
+        clear: both;}
+    .top .logo{float: left;}
+    .top .title{float: left;height: 35px;margin-left: 5%;border-left: 1px solid #c0c0c0;padding-left:10px;line-height: 35px;font-size: 20px;font-weight: bold}
+
+    .contact{width: 100%;margin: 0 auto;border-top:1px solid #c0c0c0;color: #C2C2C2;font-size: 10px;clear: both}
+    .contact .bottom{width: 45%;margin: 0 auto}
+    @media (max-width:1920px) {
+        .contact{padding:1% 0 3% 0;}
+    }
+    @media (max-width:1600px) {
+        .contact{padding:1% 0 5% 0;}
+    }
+    @media(max-width:1280px) {
+        .contact .bottom{width: 70%;margin: 0 auto}
+
+
+    }
+</style>
+
+<div class="wrap">
+
+    <div class="container1" style="background: #f8f8f8">
+
+        <div class="top">
+            <div>
+                <div class="logo">
+                    <img src="./web_files/logo.PNG">
+                </div>
+                <div class="title">
+                                        收藏
+                                    </div>
+            </div>
+        </div>
+
+        <style>
+
+
+    .content{margin: 0 auto;padding: 2% 0 0 4%;width: 52%;min-width:850px;}
+
+    #select_click{height: 60px;width: 40%;margin: 0 auto}
+    #click-text,#click-img{margin-left: 10px;float: left;font-size: 16px; }
+    #click-text{border-bottom: 2px solid #ff6000}
+
+    #block-img{margin: 0 auto;clear: both;display: none}
+    #block-text{margin: 0 auto;clear: both;display: block}
+
+
+    #select-text,#select-img{width:20%;height: 40px;padding-left:2%;}
+    #text-value{  width: 50%;height: 40px;}
+
+    #adjust_text{display: none}
+    #adjust-name{height: 40px; width: 50%}
+    #adjust_img{display: none}
+    #adjust-img{height: 40px;}
+    .block_fill{background:#ffffff;padding: 40px;border: 1px solid #e9e9e9;position: relative}
+    .upload_img{  width: 150px;  cursor: pointer;  border-radius: 5px;background: url("../image/select.PNG") 30px 10px no-repeat;
+        position: absolute;left: 360px;top: 50px;height: 40px;background-color:#21a7d4;}
+
+
+    #img-value{cursor: pointer;  opacity: 0;  filter: alpha(opacity=0);  overflow: hidden;  font-size: 90px;  width: 150px;  height: 40px;}
+
+    .block_fill .select_filed{line-height: 40px;margin: 10px;font-size: 14px;clear: both}
+    .block_fill .select_button{width: 50%;margin: 0 auto}
+    #favorite_org{margin-left: 60px;}
+    #submit-text{background: #21a7d4;border: none;border-radius: 3px;width:112px;height: 40px;color: #f0f9ff}
+    #cancel-text{width: 112px;height: 40px;border: none;background: #e1e1e1;margin-left: 30px;}
+    #contain_thumb{display: none}
+
+    #submit-img{background: #21a7d4;border: none;border-radius: 3px;width:112px;height: 40px;color: #f0f9ff}
+    #cancel-img{width: 112px;height: 40px;border: none;background: #e1e1e1;margin-left: 30px;}
+    .block_show{padding-bottom: 20px;clear: both}
+    .block_show .info_type{clear: both;height: 30px;line-height: 30px;margin-top:30px;}
+    .info_type .org_info, .info_type .personal_info{text-align: center;float: left;border:1px solid #21a7d4;width: 90px;}
+
+    .info_value{clear:both;margin-top: 20px;}
+
+    .collect_text tr{width: 100%;height: 30px;line-height: 50px;border-top: 1px solid #e9e9e9}
+    .add_bg{background:#21a7d4;color: #ffffff}
+    .display_table{display: none}
+
+
+    .text_name{width: 20%;text-align: center}
+    .text_value{width: 50%;text-align: left}
+    .text_action{width:30%;opacity: 0;display: block;height: 40px;min-width: 100px;clear: both;position: relative;}
+
+    .delete_text{position: absolute;left: 0;top:15px;}
+    .edit_text{position: absolute;left: 50px;top:15px;}
+    .options{border: 1px solid #cccccc;height: 20px;width: 40px;font-size: 12px;text-align: center;line-height: 20px;cursor: pointer;}
+    .options:hover{color: #006dcc}
+    .thumb_list{list-style: none;clear:both;margin-top: 20px;padding: 20px;}
+    .thumb_list li{display: block;float: left;width: 130px;margin: 0 15px 15px 0;height: 165px;}
+
+    .thumb_img{width: 100px;margin: 10px auto}
+    .thumb_img img{width: 100px;height: 70px;}
+    .img_action{text-align: center;opacity: 0;position: relative}
+
+    .delete_img{position: absolute;left:15px;}
+    .edit_img{position: absolute;left: 65px;}
+
+    .contact{width: 100%;margin: 0 auto;border-top:1px solid #c0c0c0;color: #C2C2C2;font-size: 10px;clear: both}
+    .contact .bottom{width: 45%;margin: 0 auto}
+    @media (max-width:1920px) {
+        .contact{padding:1% 0 3% 0;}
+    }
+    @media (max-width:1600px) {
+        .contact{padding:1% 0 5% 0;}
+        .content{margin: 0 auto;padding: 4% 0 0 4%;width: 60%;}
+    }
+    @media(max-width:1280px) {
+        .contact .bottom{width: 70%;margin: 0 auto}
+        .block_fill .select_button{width: 80%;margin: 0 auto}
+        .content{margin: 0 auto;padding: 4% 0 0 4%;width: 80%;}
+        .block_fill .select_filed{font-size: 10px;}
+    }
+
+    .info{display: none}
+    .error{display: none;color: red}
+    .hint{color: #c0c0c0}
+
+    .imgli_click{border:1px solid #cccccc;background: #ecf9fe}
+    .texttr_click{background: #ecf9fe}
+    .opcity{opacity: 1}
+    .thumbnail_name{text-align: center;display: inline-block;width: 100%}
+</style>
+<div style="background: #f8f8f8;width: 100%">
+    <div class="content">
+        <div id="select_click">
+            <div id="click-text" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(255, 96, 0);">文字收藏</div>
+            <div id="click-img" style="border-bottom-style: none;">图片收藏</div>
+        </div>
+        <div id="block-text" style="display: block;">
+            <div class="block_fill">
+                <div class="select_filed">
+                    <div style="float: left;width: 15%">
+                        资料名称：
+                    </div>
+                    <div>
+                        <select id="select-text">
+                            <option value="0">请选择企业信息</option>
+                            <option value="企业开票名称">企业开票名称</option>
+                            <option value="企业银行账户">企业银行账户</option>
+                            <option value="企业收货地址">企业收货地址</option>
+                            <option value="企业法人信息">企业法人信息</option>
+                            <option value="企业联系方式">企业联系方式</option>
+                            <option value="999">自定义</option>
+                        </select>
+                        <span class="hint">
+                             请选择您要收藏的文字资料类型，如不在列表中，请选择“自定义”
+                        </span>
+
+                        <div class="error" id="select-text_hint" style="margin-left: 15%;height: 20px;line-height: 15px;font-size: 12px;">,,,,,</div>
+                    </div>
+
+                </div>
+                <form id="fm" method="post" novalidate="">
+                    <div class="select_filed " id="adjust_text">
+                        <div style="float: left;width:15%">
+                            自定义名称：
+                        </div>
+                        <div>
+                            <input type="text" id="adjust-name">
+                            <span class="hint">
+                                填写自定义资料名称
+                            </span>
+                            <div class="error" id="adjust-name_hint" style="margin-left: 15%;height: 20px;line-height: 15px;font-size: 12px;display: none">,,,,,</div>
+                        </div>
+
+
+                    </div>
+                    <div class="select_filed">
+                        <div style="float: left;width: 15%">
+                            资料内容：
+                        </div>
+                        <div>
+                            <input type="text" id="text-value">
+                            <span class="hint">
+                               请填写对应的内容
+                            </span>
+                            <div class="error" id="text-value_hint" style="margin-left: 15%;height: 20px;line-height: 15px;font-size: 12px;">,,,,,</div>
+                        </div>
+
+                    </div>
+
+                    <div class="select_filed">
+                        <input type="radio" id="person_fav" name="favorite_type" value="1" checked=""> 私有
+                        <input type="radio" id="org_fav" name="favorite_type" value="2"> 机构共有
+                    </div>
+
+                    <div class="select_filed info">
+                        <div class="message" style="margin-left: 20%;color: red"></div>
+                    </div>
+                    <div class="select_filed select_button">
+                        <input type="button" id="submit-text" value="保存">
+
+                        <input type="button" id="cancel-text" value="取消">
+                    </div>
+                </form>
+            </div>
+            <div class="block_show">
+                <div class="info_type">
+                    <div class="personal_info add_bg" id="personal_text">个人资料</div> <div class="org_info" id="org_text">机构资料</div>
+                </div>
+                <div class="info_value">
+                    <table class="collect_text display_table" width="100%" id="org_table">
+                                            </table>
+
+                    <table class="collect_text" width="100%" id="personal_table">
+                                            </table>
+                </div>
+            </div>
+        </div>
+        <div id="block-img" style="display: none;">
+            <div class="block_fill">
+
+                <div class="select_filed">
+
+                    <div style="float: left;width:15%">
+                        图片名称：
+                    </div>
+                    <div>
+                        <select id="select-img">
+                            <option value="0">请选择企业图片</option>
+                            <option value="企业税务登记证">企业税务登记证</option>
+                            <option value="企业营业执照证">企业营业执照</option>
+                            <option value="企业组织结构证">企业组织结构证</option>
+                            <option value="adjust-img">自定义</option>
+                        </select>
+                        <div class="error" id="select-img_hint" style="margin-left: 15%;height: 20px;line-height: 15px;font-size: 12px;">,,,,,</div>
+                    </div>
+
+
+                </div>
+
+                <form id="fm" method="post" enctype="multipart/form-data" novalidate="">
+
+                    <div class="upload_img">
+                        <input type="file" id="img-value" name="img-value" style="display: block;">
+                    </div>
+
+                    <div class="select_filed " id="adjust_img">
+                        <div style="float: left;width:15%">
+                            自定义名称：
+                        </div>
+                        <div>
+                            <input type="text" id="adjust-img">
+                             <span class="hint">
+                                填写自定义资料名称
+                            </span>
+                            <div class="error" id="adjust-img_hint" style="margin-left: 15%;height: 20px;line-height: 15px;font-size: 12px;">,,,,,</div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="select_filed" id="contain_thumb">
+                        <div style="float: left;width:15%">
+                            已选择：
+                        </div>
+
+                        <div style="float: left" id="show_thumb">
+                            <img id="thumbnail" style="width:100px;height:75px;" src="http://60.173.242.117:9001/collection/index?key=7e47e54bb417a99b1765a638a071dc19">
+
+                            <div id="thumb_name">企业税务登记证</div>
+                        </div>
+
+                    </div>
+
+                    <div class="select_filed">
+                        <input type="radio" id="img_personal" name="favorite_img" value="1" checked=""> 私有
+                        <input type="radio" id="img_org" name="favorite_img" value="2"> 机构共有
+                    </div>
+                    <div class="select_filed info">
+                        <div class="message" style="margin-left: 20%;color: red"></div>
+                    </div>
+                    <div class="select_filed select_button">
+                        <input type="button" id="submit-img" value="保存">
+
+                        <input type="button" id="cancel-img" value="取消">
+                    </div>
+                </form>
+
+            </div>
+
+
+            <div class="block_show">
+                <div class="info_type">
+                    <div class="personal_info add_bg" id="personal_img">个人资料</div>
+                    <div class="org_info " id="org_img">机构资料</div>
+                </div>
+                <ul class="thumb_list display_table" id="org_list">
+                                    </ul>
+
+                <ul class="thumb_list " id="personal_list">
+                                    </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<script>
+</script>
+
+
+        <div class="contact" style="background: #f8f8f8 ">
+            <div class="bottom">
+                <p>
+                    关于我们&nbsp;|&nbsp;联系我们&nbsp;|&nbsp;帮助中心&nbsp;|&nbsp;法律申明&nbsp;|&nbsp;会员协议&nbsp;|&nbsp;隐私策略&nbsp; |&nbsp;友情链接&nbsp;&nbsp;
+                    Email: service@jiaparts.com
+                </p>
+
+                <p>
+                    京ICP备12015715号-3北京嘉配科技有限公司版权所有 @ (2010-2016) 北京市海淀区花园东路10号11层1103
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+<script src="./web_files/jquery.js"></script>
+<script src="./web_files/yii.js"></script>
+<script src="./web_files/jquery.cookie.js"></script>
+<script src="./web_files/language.js"></script>
+<script src="./web_files/utils.js"></script>
+<script src="./web_files/avatar.js"></script>
+<script src="./web_files/ajaxfileupload.js"></script>
+<script src="./web_files/jquery.imgareaselect.min.js"></script>
+<script src="./web_files/jquery.lazyload.js"></script>
+<script src="./web_files/bootstrap-datepicker.js"></script>
+<script src="./web_files/bootstrap-datepicker.zh-CN.js"></script>
+<script src="./web_files/Chart.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+
+function NagivOut(index){
+	msgBox("这是赵有元写的js主动调用c++函数的例子","测试");
+}
+
+$('.collect_text').on('click','.tr',function(){
+
+    $(this).siblings().removeClass('texttr_click');
+    $(this).siblings().children('.text_action').removeClass('opcity');
+    $(this).addClass('texttr_click');
+    $(this).children('.text_action').addClass('opcity');
+});
+
+$('.thumb_list').on('click','.li',function(){
+    $(this).siblings().removeClass('imgli_click');
+    $(this).siblings().children('.img_action').removeClass('opcity');
+
+    $(this).addClass('imgli_click');
+    $(this).children('.img_action').addClass('opcity');
+
+
+});
+
+$('#click-text').click(function(){
+
+    $('#block-text').show();
+    $('#click-text').css("border-bottom","2px solid #ff6000");
+    $('#click-img').css("border-bottom","none");
+    $('#block-img').hide();
+});
+
+$('#click-img').click(function(){
+    $('#block-text').hide();
+    $('#block-img').show();
+    $('#click-img').css("border-bottom","2px solid #ff6000");
+    $('#click-text').css("border-bottom","none");
+});
+
+$('#person_fav').click(function(){
+    $('#personal_text').addClass('add_bg');
+    $('#org_text').removeClass('add_bg');
+    $('#personal_table').removeClass('display_table');
+    $('#org_table').addClass('display_table');
+});
+
+$('#org_fav').click(function(){
+    var oid='123';
+
+    if(!oid){
+       alert('您暂时不属于任何组织，无法添加组织');
+        return false;
+    }
+    $('#personal_text').removeClass('add_bg');
+    $('#org_text').addClass('add_bg');
+    $('#personal_table').addClass('display_table');
+    $('#org_table').removeClass('display_table');
+});
+
+$('#img_org').click(function(){
+
+    var oid='123';
+    if(!oid){
+        alert('您暂时不属于任何组织，无法添加组织');
+        return false;
+    }
+    $('#org_img').addClass('add_bg');
+    $('#personal_img').removeClass('add_bg');
+
+    $('#personal_list').addClass('display_table');
+    $('#org_list').removeClass('display_table');
+});
+
+$('#img_personal').click(function(){
+    $('#org_img').removeClass('add_bg');
+    $('#personal_img').addClass('add_bg');
+
+    $('#personal_list').removeClass('display_table');
+    $('#org_list').addClass('display_table');
+});
+
+$("#select-text").click(function(){
+   //$(this).children().eq(0).attr('disabled',true);
+});
+
+$("#select-img").click(function(){
+    //$(this).children().eq(0).attr('disabled',true);
+});
+$("#select-text").change(function(){
+    var text_name =$('#select-text').val();
+    if(text_name == "999"){
+        $("#adjust_text").show();
+    }
+    else
+    {
+        $("#adjust_text").hide();
+    }
+});
+
+$('#submit-text').click(function(){
+
+    var _this=this;
+
+    var text_name = $('#select-text').val();
+    var text_value =$('#text-value').val();
+    var favorite_type= $("input[name='favorite_type']:checked").val();
+//alert('');
+    if(text_name =="999"){
+        $('#select-text_hint').hide();
+        text_name =$('#adjust-name').val();
+        if(!text_name) {
+            $('#adjust-name_hint').html('自定义企业信息名称不能为空').show();
+            return false;
+        }else{
+            $('#adjust-name_hint').hide()
+        }
+    }else{
+
+        if(text_name==0) {
+            $('#select-text_hint').html('企业信息名称不能为空').show();
+            return false;
+        }else if(text_name==null){
+            $('#select-text_hint').html('企业信息名称不能为空').show();
+            return false;
+
+        }else{
+            $('#select-text_hint').hide()
+        }
+
+    }
+
+    if(text_name.length >10){
+        $('#adjust-name_hint').html('自定义企业信息名称不能过长，不能超过10个汉字').show();
+        //alert('自定义企业信息名称不能过长，不能超过10个汉字');
+        return false;
+    }else{
+        $('#adjust-name_hint').hide();
+    }
+    if(!text_value){
+        $('#text-value_hint').html('企业信息内容不能为空').show();
+        return false;
+    }else{
+        $('#text-value_hint').hide()
+    }
+
+    if(text_value.length >20){
+        $('#text-value_hint').html('企业资料内容不能过长，不能超过20个汉字').show();
+        //alert('企业资料内容不能过长，不能超过20个汉字');
+        return false;
+    }else{
+        $('#text-value_hint').hide();
+    }
+
+
+    $(this).attr("disabled",true);
+    var flag = 0;
+    var html='<tr class="tr"> <td class="text_name">'+ text_name +'</td> <td class="text_value" style="">'+ text_value +'<input type="hidden"/></td> <td class="text_action "> <div class="delete_text options">删除</div><div class="edit_text options">编辑</div></td></tr>';
+    $.ajax({
+        url:'/collection/save-text',
+        type: 'POST',
+        data: {text_name:text_name,text_value:text_value,type:favorite_type},
+        dataType: 'json',
+        success: function (info) {
+            if(info.result==1){
+                console.log(info);
+                if(favorite_type==1){
+                    $('#personal_text').addClass('add_bg');
+                    $('#org_text').removeClass('add_bg');
+                    $('#personal_table').removeClass('display_table');
+                    $('#org_table').addClass('display_table');
+
+                    $('#personal_table .text_name').each(function(){
+                        var text = $(this).html();
+                        if(text ==text_name ){
+
+                            $(this).parent('tr').children('.text_value').html(text_value);
+                            flag = 1
+                        }
+                    });
+                    if(!flag){
+                        html=html.replace('<input type="hidden"/>','<input type="hidden" value="'+info.data+'">');
+
+                        $('#personal_table').append(html);
+                    }
+
+                }else{
+                    $('#personal_text').removeClass('add_bg');
+                    $('#org_text').addClass('add_bg');
+                    $('#personal_table').addClass('display_table');
+                    $('#org_table').removeClass('display_table');
+
+                    $('#org_table .text_name').each(function(){
+                        var text = $(this).html();
+                        if(text ==text_name ){
+
+                            $(this).parent('tr').children('.text_value').html(text_value);
+                            flag = 1
+                        }
+                    });
+                    if(!flag){
+
+                        html=html.replace('<input type="hidden"/>','<input type="hidden" value="'+info.result+'">');
+                        $('#org_table').append(html);
+                    }
+
+                }
+               alert(info.message);
+                $('#select-text').val(0);
+                $('#text-value').val('');
+                $('#adjust-name').val('');
+                $('#adjust_text').hide();
+                $(_this).attr("disabled",false);
+
+            }
+            else{
+                alert(info.message);
+                $(_this).attr("disabled",false);
+            }
+
+        },
+        error: function () {
+            alert('异常');
+        }
+    })
+});
+
+$('#cancel-text').click(function(){
+    NagivOut(0);
+    $('#select-text').val(0);
+    $('#text-value').val('');
+    $('#adjust-name').val('');
+});
+
+$("#select-img").change(function(){
+    var img_name =$('#select-img').val();
+    if(img_name == "adjust-img"){
+        $("#adjust_img").show();
+    }
+    else
+    {
+        $("#adjust_img").hide();
+    }
+
+});
+
+$('#submit-img').click(function(){
+    var _this=this;
+    $(this).attr("disabled",true);
+
+    var img_name =$('#select-img').val();
+
+    if(img_name=='adjust-img') {
+        img_name= $('#adjust-img').val();
+
+        if(!img_name){
+            $('#select-img_hint').hide();
+            $('#adjust-img_hint').html('自定义企业信息名称不能为空').show();
+            $(this).attr("disabled",false);
+            return false;
+        }else{
+            $('#select-img_hint').hide();
+
+            $('#adjust-img_hint').hide();
+        }
+
+    }else{
+        if(img_name==0){
+            $('#select-img_hint').html('企业信息名称不能为空').show();
+            $(this).attr("disabled",false);
+            return false;
+        }else if(img_name==null){
+            $('#select-img_hint').html('企业信息名称不能为空').show();
+            $(this).attr("disabled",false);
+            return false;
+        }else{
+            $('#select-img_hint').hide();
+        }
+
+    }
+
+    if(img_name.length >10){
+        $('#adjust-img_hint').html('自定义名称不能过长，不能超过10个汉字').show();
+        //alert('自定义名称不能过长，不能超过10个汉字');
+        $(this).attr("disabled",false);
+        return false;
+    }else{
+        $('#adjust-img_hint').html('自定义名称不能过长，不能超过10个汉字').hide();
+    }
+
+
+    var flag = 0;
+    var favorite_type= $("input[name='favorite_img']:checked").val();
+    var thumbnail=$('#thumbnail').attr('src');
+    if(!thumbnail){
+        $('#select-img_hint').html('请选择图片').show();
+        $(this).attr("disabled",false);
+        return false;
+    }else{
+        $('#select-img_hint').html('请选择图片').hide();
+    }
+
+    var li_thumb= '<li class="li"> <div class="thumb_img"> <img style="width:100px;height:75px;" src="'+ thumbnail +'"> <span class="thumbnail_name">'+ img_name +'</span></div> '
+        + '<div class="img_action"> <div class="delete_img options">删除</div><div class="edit_img options">编辑</div><input type="hidden"/> </div></li>';
+
+
+
+    $.ajaxFileUpload({
+        url:'/collection/save-img',
+        type: 'post',
+        secureuri: false, //一般设置为false
+        fileElementId: 'img-value', // 上传文件的id、name属性名
+        dataType: 'json', //返回值类型，一般设置为json、application/json
+        data:{img_name:img_name,type:favorite_type},
+        success: function (info) {
+
+            if(info.result==1){
+                if(favorite_type==1){
+                    $('#org_img').removeClass('add_bg');
+                    $('#personal_img').addClass('add_bg');
+
+                    $('#personal_list').removeClass('display_table');
+                    $('#org_list').addClass('display_table');
+
+                    $('#personal_list .thumbnail_name').each(function(){
+                        var text = $(this).html();
+                        if(text ==img_name ){
+                            $(this).parent().children('img').attr('src',thumbnail);
+                            //$(this).parent('tr').children('.text_value').html(text_value);
+                            flag = 1
+                        }
+                    });
+                    if(!flag){
+                        //alert(info.result);
+                        li_thumb=li_thumb.replace('<input type="hidden"/>','<input type="hidden" value="'+info.data+'">');
+                        //console.log();
+                        $('#personal_list').append(li_thumb);
+                    }
+
+                }else{
+
+                    $('#org_img').addClass('add_bg');
+                    $('#personal_img').removeClass('add_bg');
+
+                    $('#personal_list').addClass('display_table');
+                    $('#org_list').removeClass('display_table');
+
+                    $('#org_list .thumbnail_name').each(function(){
+                        var text = $(this).html();
+                        if(text ==img_name ){
+                            $(this).parent().children('img').attr('src',thumbnail);
+                            //$(this).parent('tr').children('.text_value').html(text_value);
+                            flag = 1
+                        }
+                    });
+                    if(!flag){
+
+                        li_thumb=li_thumb.replace('<input type="hidden"/>','<input type="hidden" value="'+info.data+'">');
+
+                        $('#org_list').append(li_thumb);
+                    }
+                }
+                alert(info.message)
+                $('#select-img').val(0);
+                $('#adjust-img').val('');
+                $('#adjust_img').hide(0);
+
+                //$('#thumbnail').remove();
+                $('#contain_thumb').hide();
+                $(_this).attr("disabled",false);
+            }
+            else{
+                alert(info.message)
+                $(_this).attr("disabled",false);
+            }
+            $('#thumbnail').attr('src','')
+
+        },
+        error: function () {
+            alert('异常');
+        }
+    });
+
+});
+
+$('#cancel-img').click(function(){
+    $('#select-img').val(0);
+    $('#thumbnail').remove();
+    $('#contain_thumb').hide();
+    $('#adjust-img').val('');
+});
+
+$('#org_text').click(function(){
+    $(this).addClass('add_bg');
+    $('#personal_text').removeClass('add_bg');
+    $('#org_table').removeClass('display_table');
+    $('#personal_table').addClass('display_table');
+});
+
+$('#personal_text').click(function(){
+    $(this).addClass('add_bg');
+    $('#org_text').removeClass('add_bg');
+    $('#org_table').addClass('display_table');
+    $('#personal_table').removeClass('display_table');
+});
+
+$('#org_img').click(function(){
+    $(this).addClass('add_bg');
+    $('#personal_img').removeClass('add_bg');
+
+    $('#org_list').removeClass('display_table');
+    $('#personal_list').addClass('display_table');
+});
+
+$('#personal_img').click(function(){
+    $(this).addClass('add_bg');
+    $('#org_img').removeClass('add_bg');
+
+    $('#org_list').addClass('display_table');
+    $('#personal_list').removeClass('display_table');
+});
+
+$('.upload_img').click(function(){
+
+    var img_name =$('#select-img').val();
+    if(img_name == "adjust-img"){
+        img_name =$('#adjust-img').val();
+    }
+
+    if(img_name==0 || !img_name){
+
+        $('#select-img_hint').html('请先选择企业信息名称').show();
+        //alert('图片信息不能为空');
+        return false;
+    }
+    $("#img-value").unbind().change( function(){
+
+
+        var files = !!this.files ? this.files : [];     // If no files were selected, or no FileReader support, return
+        if (!files.length || !window.FileReader) return false;     // Only proceed if the selected file is an image
+        if (/^image/.test( files[0].type)){         // Create a new instance of the FileReader
+            var reader = new FileReader();
+            // Read the local file as a DataURL
+            reader.readAsDataURL(files[0]);         // When loaded, set image data as background of div
+            reader.onloadend = function(){
+                // var html = '<img id="thumbnail"  src="'+this.result +'">';
+                $("#contain_thumb").show();
+                $('#thumbnail').attr('src',this.result);
+                //$("#show_thumb").prepend(html);
+                $("#thumb_name").html(img_name);
+            }
+        }
+    });
+});
+
+$('.collect_text').on('click','.delete_text',function(){
+    var id = $(this).parents('tr').children().find('input').val();
+
+    var _this= this;
+    var status = confirm("您确定要删除当前信息?");
+    if(!status){
+        return false;
+    }
+    $.ajax({
+        url:'/collection/delete-text',
+        type: 'POST',
+        data: {id:id},
+        dataType: 'json',
+        success: function (info) {
+            if(info.status==1){
+                alert(info.result);
+                $(_this).parents('tr').remove();
+            }else{
+                alert(info.result)
+            }
+
+        },
+        error: function (info) {
+            alert(info.result);
+        }
+    })
+});
+
+$('.collect_text').on('click','.edit_text',function(){
+    var text_name = $(this).parents('tr').children('td').html();
+//    var text_value = $(this).parents('tr').children('.text_value').find('span').html();
+    var t_value = $(this).parents('tr').children('.text_value').html();
+    var pattern = /<span>(.*)<\/span>/;
+    var pattern1 = /(.*)<input.*/;
+    var t = t_value.match(pattern);
+    if(t == null) {
+        t = t_value.match(pattern1);
+    }
+    var text_value = t[1];
+
+    var arr=['企业开票名称','企业银行账户','企业收货地址','企业法人信息','企业联系方式'];
+    Array.prototype.S=String.fromCharCode(2);
+    Array.prototype.in_array=function(e){
+        var r=new RegExp(this.S+e+this.S);
+        return (r.test(this.S+this.join(this.S)+this.S));
+    };
+
+    if(arr.in_array(text_name)){
+
+        $('#select-text').val(text_name);
+        $('#text-value').val(text_value);
+        $("#adjust_text").hide();
+    }else{
+        $('#select-text').val(999);
+        $('#text-value').val(text_value);
+        $("#adjust_text").show();
+        $("#adjust-name").val(text_name);
+    }
+});
+
+$('.thumb_list').on('click','.delete_img',function(){
+    var id = $(this).parent().children('input').val();
+    var _this= this;
+    var status = confirm("您确定要删除当前信息?");
+    if(!status){
+        return false;
+    }
+    $.ajax({
+        url:'/collection/delete-img',
+        type: 'POST',
+        data: {id:id},
+        dataType: 'json',
+        success: function (info) {
+            if(info.status==1){
+                alert(info.result);
+                $(_this).parents('li').remove();
+            }
+        },
+        error: function (info) {
+            alert(info.result);
+        }
+    })
+});
+
+$('.thumb_list').on('click','.edit_img',function(){
+    var img_name = $(this).parents('li').children().find('span').html();
+
+    var arr=['企业税务登记证','企业营业执照证','企业组织结构证'];
+    Array.prototype.S=String.fromCharCode(2);
+    Array.prototype.in_array=function(e){
+        var r=new RegExp(this.S+e+this.S);
+        return (r.test(this.S+this.join(this.S)+this.S));
+    };
+
+    if(arr.in_array(img_name)){
+
+        $('#select-img').val(img_name);
+    }else{
+        $('#select-img').val('adjust-img');
+        $("#adjust_img").show();
+        $("#adjust-img").val(img_name);
+    }
+});
+
+
+});</script>
+
+</body></html>

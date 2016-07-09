@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="530,50">
+    <ListContainerElement width="530" height="50" bkcolor="#FFF7F7F7" inset="12,3,12,3" enabled="false">
+        <HorizontalLayout name="HorContainer" childpadding="4">
+            <HorizontalLayout />
+            <Container name="ConUIBubble" width="179" height="74" bkimage="file=&apos;IM\right_msg_bk.png&apos; corner=&apos;6,26,11,6&apos;" >
+                <Text name="TxtBubbleMsg" menu="true" textpadding="10,10,15,10" showhtml="true"/>
+            </Container>
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="240,40">
+    <ListContainerElement>
+        <HorizontalLayout height="40">
+            <VerticalLayout name="logo_container" width="24" height="24" padding="0,8,0,0">
+                <Control name="logo" width="24" height="24" />
+            </VerticalLayout>
+            <VerticalLayout name="VLayouGroup_container" float="true" pos="0,0,0,0" width="200" height="30">
+                <Label name="groupName" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" endellipsis="true" />
+            </VerticalLayout>
+            <VerticalLayout name="VLayouFriends_container" padding="5,4,0,0">
+                <Label name="nickname" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="2" endellipsis="true" />
+                <Label name="orgName" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="2" endellipsis="true" />
+            </VerticalLayout>
+            <HorizontalLayout name="callIconContainer" width="45" height="16" padding="0,12,0,12">
+                <Button name="VoIPCall" width="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\VoIP.PNG" />
+                <Button name="smartPhoneCall" width="16" padding="10,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\smartPhone.PNG" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

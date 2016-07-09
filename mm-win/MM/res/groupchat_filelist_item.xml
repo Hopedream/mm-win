@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,120">
+    <ListContainerElement>
+        <HorizontalLayout height="120">
+            <Control width="10" />
+            <VerticalLayout name="gm_logo_container" width="290" height="120" padding="0,8,0,0">
+                <Control name="gm_pack_dir_icon" float="true" pos="4,2,0,0" width="40" height="33" />
+                <Label name="gm_pack_name" float="true" pos="50,2,0,0" width="120" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true"/>
+                <Label name="gm_pack_time" float="true" pos="190,2,0,0" width="60" height="18" textcolor="#FF909090" disabledtextcolor="#FFA7A6AA" endellipsis="true" font="2" />
+                <Control name="gm_pack_expand" float="true" pos="255,2,0,0" width="16" height="16" />
+                <Label name="gm_pack_sender" float="true" pos="50,22,0,0" width="230" height="18" textcolor="#FF909090" disabledtextcolor="#FFA7A6AA" endellipsis="true"/>
+                <Label name="gm_pack_size" float="true" pos="50,42,0,0" width="60" height="18" textcolor="#FF909090" disabledtextcolor="#FFA7A6AA" />
+                <Label name="gm_pack_propety" float="true" pos="123,42,0,0" width="100" height="18" textcolor="#FF909090" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+                <Button name="gm_button_agree" text="同意" bordersize="1" float="true" pos="50,70,0,0" width="80" height="30" bordercolor="#FFA7A6AA" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_Press1.PNG" />
+                <Button name="gm_button_deny" text="拒绝" bordersize="1" float="true" pos="145,70,0,0" width="80" height="30" bordercolor="#FFA7A6AA" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_Press1.PNG" />
+                <Control name="gm_file_icon" float="true" pos="24,2,0,0" width="30" height="36" />
+                <Label name="gm_file_name" float="true" pos="70,2,0,0" width="160" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true"/>
+                <Label name="gm_file_size" text="0.10MB" float="true" pos="70,22,0,0" width="250" height="18" textcolor="#FF909090" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+                <Button name="gm_button_openfile" text="打开" bordersize="1" float="true" pos="230,5,0,0" width="40" height="20" bordercolor="#FFA7A6AA" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Label name="label_qianyue_state" text="已签约" bordersize="1" float="true" pos="233,42,0,0" width="50" height="20" bordercolor="#00C8C8C8" textcolor="#00C8C8C8" disabledtextcolor="#FFA7A6AA" />
+            </VerticalLayout>
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

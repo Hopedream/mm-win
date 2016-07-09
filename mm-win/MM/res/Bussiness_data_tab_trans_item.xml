@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="925,50">
+    <ListContainerElement name="ListContainerElementUI1" width="925" height="50">
+        <Container name="ContainerUI1" width="925" height="50" bkcolor="#FFFFFFFF">
+            <Control name="ControlUI0" float="true" pos="0,0,0,0" width="925" height="1" bkcolor="#FFCCCCCC" />
+            <Control name="Control_fileLog" float="true" pos="16,9,0,0" width="36" height="32" bkimage="pack.PNG" />
+            <Label name="Label_Name" float="true" pos="63,10,0,0" width="161" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            <Label name="Label_status" text="无" float="true" pos="225,10,0,0" width="90" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true" />
+            <Label name="Label_collect" float="true" pos="405,10,0,0" width="90" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true" />
+            <Label name="Label_time" float="true" pos="495,10,0,0" width="160" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true" />
+            <Button name="Button_send" text="发送" float="true" pos="810,13,0,0" width="50" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="01.PNG" hotimage="02.PNG" pushedimage="02.PNG" />
+            <Button name="Button_delete" text="删除" float="true" pos="865,13,0,0" width="50" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="01.PNG" hotimage="02.PNG" pushedimage="02.PNG" />
+            <Control name="ControlUI1" float="true" pos="0,49,0,0" width="925" height="1" bkcolor="#FFCCCCCC" />
+            <Label name="Label_state" float="true" pos="655,10,0,0" width="90" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true" />
+        </Container>
+    </ListContainerElement>
+</Window>

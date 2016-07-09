@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="500,390" caption="0,0,0,30" roundcorner="4,4" >    
+    <VerticalLayout bordersize="2" width="500" height="390" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" inset="1,0,1,0"> 
+		<HorizontalLayout height="30" bkcolor="FF0489B6">
+			<Control width="15"/>
+			<Label text="邀请商业伙伴" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="left" />
+			<Button name="minbtn" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_minize-normal.png" hotimage="main_dialog_button_minize_hover.png" pushedimage="main_dialog_button_minimize_pressed.png" />
+			<Button name="closebtn" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+		</HorizontalLayout>
+
+		<TabLayout name="SwitchLayout">
+			<VerticalLayout padding="100,35,100,0">  
+				<Label text="请输入手机号码邀请您的商业伙伴" height="30" font="4" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>
+
+				<HorizontalLayout height="30" padding="0,40">
+					<Label text="手机号码 1 ：" width="90" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left"/>
+					<HorizontalLayout name="HLayoutPhoneNo1" bordersize="1" bordercolor="#00CCCCCC">
+						<Edit name="txtPhoneNo1"  padding="1,1,1,1" width="180"  bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA"  maxchar="15" tooltip="请输入手机号码"/>
+						<Button name="btnClearPhoneNo1" width="16" height="16" padding="0,6"  normalimage="homePage\clear.PNG"/>
+					</HorizontalLayout>
+				</HorizontalLayout>
+
+				<HorizontalLayout height="30" padding="0,20">
+					<Label text="手机号码 2 ：" width="90" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left"/>
+					<HorizontalLayout name="HLayoutPhoneNo2" bordersize="1" bordercolor="#00CCCCCC">
+						<Edit name="txtPhoneNo2"  padding="1,1,1,1" width="180"  bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" maxchar="15" tooltip="请输入手机号码" />
+						<Button name="btnClearPhoneNo2" width="16" height="16" padding="0,6"  normalimage="homePage\clear.PNG"/>
+					</HorizontalLayout>
+				</HorizontalLayout>
+
+				<HorizontalLayout height="30" padding="0,20">
+					<Label text="手机号码 3 ：" width="90" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left"/>
+					<HorizontalLayout name="HLayoutPhoneNo3" bordersize="1" bordercolor="#00CCCCCC">
+						<Edit name="txtPhoneNo3"  padding="1,1,1,1" width="180"  bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" maxchar="15" tooltip="请输入手机号码" />
+						<Button name="btnClearPhoneNo3" width="16" height="16" padding="0,6" normalimage="homePage\clear.PNG"/>
+					</HorizontalLayout>
+				</HorizontalLayout>
+
+				<HorizontalLayout height="1" padding="-80,45,-80" bkcolor="#FFE5E5E5"/>			
+      
+				<HorizontalLayout height="30" padding="65,20">
+					<Button name="btnInvitePartner" text="立即邀请" width="80" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" hotimage="Press1.png" pushedimage="Press1.png" />
+					<Button name="closebtn" text="暂不邀请" textcolor="#FF000000" padding="10" width="80" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default2.PNG" hotimage="Press2.png" pushedimage="Press2.png" />
+				</HorizontalLayout>
+			</VerticalLayout>
+			<VerticalLayout padding="0,60,0,0">   
+				<VerticalLayout height="150">   
+				<HorizontalLayout height="30">
+					<Label name="txtPhone1Msg" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>					
+				</HorizontalLayout>
+
+				<HorizontalLayout height="30" padding="0,30">
+					<Label name="txtPhone2Msg" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>	
+				</HorizontalLayout>
+
+				<HorizontalLayout height="30" padding="0,30">
+					<Label name="txtPhone3Msg" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>	
+				</HorizontalLayout>
+				</VerticalLayout>      
+				<HorizontalLayout height="1" padding="20,70,20" bkcolor="#FFE5E5E5"/>			
+      
+				<HorizontalLayout height="30" padding="165,20">
+					<Button name="btnContinueInvitePartner" text="继续邀请" width="80" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" hotimage="Press1.png" pushedimage="Press1.png" />
+					<Button name="closebtn" text="暂不邀请" textcolor="#FF000000" padding="10" width="80" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default2.PNG" hotimage="Press2.png" pushedimage="Press2.png" />
+				</HorizontalLayout>
+			</VerticalLayout>       
+		</TabLayout>
+    </VerticalLayout>
+</Window>

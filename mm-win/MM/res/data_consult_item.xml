@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="193,110">
+    <ListContainerElement name="ListContainerElementUI1" width="193" height="110">
+        <VerticalLayout name="VerticalLayoutUI1" width="193" height="110" bkcolor="#FFE3F1F3">
+            <Container name="ContainerUI2" width="173" height="84" padding="10,1,10,0">
+                <Container name="ContainerUI1" width="60" height="30" bkcolor="#FFFFFFFF">
+                    <Control name="ControlUI1" float="true" pos="11,19,0,0" width="16" height="16" bkimage="audio(1).png" />
+                    <Control name="ControlUI2" float="true" pos="11,49,0,0" width="16" height="16" bkimage="image(1).png" />
+                    <Label name="LabelUI1" text="Audio_012011" float="true" pos="47,13,0,0" width="108" height="25" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                    <Label name="LabelUI2" text="DSC1215640" float="true" pos="47,46,0,0" width="108" height="25" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+                </Container>
+            </Container>
+            <HorizontalLayout name="HorizontalLayoutUI1" width="193" height="25">
+                <Button name="button_consult_reject" float="true" pos="144,2,0,0" width="36" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="refuse.png" hotimage="refuse2.png" pushedimage="refuse3.png" />
+                <Button name="button_consult_accept" float="true" pos="105,2,0,0" width="35" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="accept.png" hotimage="accept2.png" pushedimage="accept3.png" />
+            </HorizontalLayout>
+        </VerticalLayout>
+    </ListContainerElement>
+</Window>

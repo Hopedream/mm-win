@@ -1,0 +1,24 @@
+#### ingore file/folder list ####
+Debug/
+Release/
+ipch/
+DuiLib/Build/
+DuiLib/Debug/
+MM/Debug/
+*.pdb
+.lik
+.sdf
+.obj
+.user
+.APS
+.suo
+*.exp
+*.sdf
+*.opensdf
+*.user
+*.suo
+*.APS
+*.exe
+*.db
+*.dll
+*.lib

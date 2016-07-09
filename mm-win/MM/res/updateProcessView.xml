@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="503,400">
+    <VerticalLayout name="VerticalLayoutUI1" width="503" height="400" bkcolor="#FFFFFFFF">
+        <Container name="ContainerUI2" width="503" height="48">
+            <Label name="LabelUI1" float="true" pos="20,13,0,0" width="64" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Control name="ControlUI1" float="true" pos="20,46,0,0" width="463" height="1" bkimage="line.png" />
+            <Button name="buttonClose" float="true" pos="473,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="close1.png" hotimage="close2.png" pushedimage="close3.png" />
+        </Container>
+        <TileLayout name="TileLayoutUI1" width="503" height="300" inset="10,20,0,0" itemsize="100,0" vscrollbar="true" hscrollbar="false"/>
+		<Container name="ContainerUI1" width="503" height="52">
+			<Button name="buttonCancel" float="true" pos="345,20,385,33" width="40" height="13" textcolor="#FF4FB6C7" align="center" hotimage="underline(1).png" text="取消"/>
+			<Button name="buttonAdd" float="true" pos="390,20,430,33" width="40" height="13" textcolor="#FF4FB6C7" align="center" hotimage="underline(1).png" text="添加"/>
+			<Button name="buttonSend" float="true" pos="435,20,475,33" width="40" height="13" textcolor="#FF4FB6C7" align="center" hotimage="underline(1).png" text="发送"/>
+			<Button name="buttonOpenFile" text="打开文件位置" float="true" pos="250,20,0,0" width="90" height="13" textcolor="#004FB6C7" hotimage="underline(1).png" align="center" />
+		</Container>
+    </VerticalLayout>
+</Window>

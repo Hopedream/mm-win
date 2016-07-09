@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement>
+        <HorizontalLayout height="32">
+			<VerticalLayout name="logo_container" width="40">
+				<Control name="logo" width="32" height="32" />
+			</VerticalLayout>
+            <HorizontalLayout >
+				<Label name="orgname" bordersize="0" width="60" aglin="left" />
+				<Label name="nickname" aglin="right" />
+            </HorizontalLayout>
+			<HorizontalLayout name="callIconContainer" height="15" width="40" padding="0,7">
+				<Button name="btnLauchVedioCall" width="15" normalimage="Call\video.PNG" />
+				<Button name="btnLauchVioceCall" width="15" normalimage="Call\voice.PNG"/>		
+            </HorizontalLayout>
+        </HorizontalLayout>
+  </ListContainerElement>
+</Window>

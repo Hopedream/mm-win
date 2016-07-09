@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,598">
+    <VerticalLayout width="300" height="598" bkcolor="#FFF0F0F0">
+        <Container bordersize="1" float="true" pos="0,0,0,0" width="300" height="598" bordercolor="#00F0F0F0">
+            <Label text="编辑合约文件" float="true" pos="6,5,0,0" width="100" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="合约名称：" float="true" pos="6,36,0,0" width="80" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Edit name="gm_edit_contract_name" bordersize="1" float="true" pos="95,36,0,0" width="193" height="26" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="我的身份：" float="true" pos="6,67,0,0" width="80" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Option name="OptionIn" text="收款方" float="true" pos="95,72,0,0" enabled="true" width="72" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;selected1.PNG&apos; dest=&apos;0,0,16,16&apos;" group="identity" selected="true" selectedimage="file=&apos;selected2.PNG&apos; dest=&apos;0,0,16,16&apos;" />
+            <Option name="OptionOut" text="付款方" float="true" pos="165,72,0,0" enabled="true" width="72" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;selected1.PNG&apos; dest=&apos;0,0,16,16&apos;" group="identity" selectedimage="file=&apos;selected2.PNG&apos; dest=&apos;0,0,16,16&apos;" />
+            <Label text="合约金额：" float="true" pos="6,98,0,0" width="80" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Edit name="gm_edit_money" bordersize="1" float="true" pos="95,98,0,0" width="193" height="26" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="支付方式：" float="true" pos="6,129,0,0" width="80" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Option name="OptionNone" text="不委托平台记账" float="true" pos="95,134,0,0" enabled="true" width="130" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;selected1.PNG&apos; dest=&apos;0,0,16,16&apos;" group="option" selectedimage="file=&apos;selected2.PNG&apos; dest=&apos;0,0,16,16&apos;" />
+			<Option name="OptionSure" text="担保交易" float="true" pos="94,154,0,0" enabled="true" width="95" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;selected1.PNG&apos; dest=&apos;0,0,16,16&apos;" group="option" selectedimage="file=&apos;selected2.PNG&apos; dest=&apos;0,0,16,16&apos;" />
+			<Option name="OptionAgree" text="协议支付(周结)" float="true" pos="95,174,0,0" enabled="true" width="130" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;selected1.PNG&apos; dest=&apos;0,0,16,16&apos;" group="option" selected="true" selectedimage="file=&apos;selected2.PNG&apos; dest=&apos;0,0,16,16&apos;" />
+			<Option name="OptionLogistics" text="物流代收" float="true" pos="95,194,0,0" enabled="true" width="95" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;selected1.PNG&apos; dest=&apos;0,0,16,16&apos;" group="option" selected="true" selectedimage="file=&apos;selected2.PNG&apos; dest=&apos;0,0,16,16&apos;" />			
+			<Label text="文件工具条：" float="true" pos="6,214,0,0" width="80" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Button name="gm_btn_contract_file" text="文件" float="true" pos="6,245,0,0" width="56" height="26" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG"/>
+            <Button name="gm_btn_contract_shoot" text="截图" float="true" pos="63,245,0,0" width="56" height="26" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG"/>
+            <Button name="gm_btn_contract_data" text="资料" float="true" pos="121,245,0,0" width="56" height="26" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG"/>
+            <Button name="gm_btn_contract_car" text="车型" float="true" pos="179,245,0,0" width="56" height="26" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG"/>
+            <Button name="gm_btn_contract_vin" text="VIN码" float="true" pos="237,245,0,0" width="56" height="26" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG"/>
+			<Label text="备注：" float="true" pos="6,276,0,0" width="80" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<RichEdit name="gm_richedit_contract_info" float="true" pos="6,307,0,0" width="288" height="70" bordersize="1" bordercolor="#00D4D4D4" focusbordercolor="#0093CEE2" bkcolor="#FFFFFFFF" multiline="true" vscrollbar="true" autovscroll="true" enabled="true" rich="false" readonly="false" wantreturn="true" wantctrlreturn="false" />
+        </Container>
+		<Container bordersize="1" float="true" pos="0,382,0,0" width="300" height="170" bordercolor="#00F0F0F0">
+			<Label text="文件清单：" float="true" pos="6,4,0,0" width="80" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Control float="true" pos="0,2,0,0" width="300" height="1" bkcolor="#FFD7D7D7" />
+            <Container name="Container_ask_price_order" inset="3,3,3,3" bordersize="1" float="true" pos="1,31,0,0" width="290" height="135" bordercolor="#FFF0F0F0">
+					<ListResourcePacket name="gm_contractpackets" bkcolor="#FFFFFFFF" vscrollbar="true" />
+			</Container>
+            <Control float="true" pos="0,186,0,0" width="300" height="1" bkcolor="#FFD7D7D7" />
+		</Container>
+		<Button name="gm_btn_contract_send" text="发送合约" float="true" pos="75,557,0,0" width="150" height="36" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG" />
+    </VerticalLayout>
+</Window>

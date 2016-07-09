@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="925,50">
+    <ListContainerElement name="ListContainerElementUI1" width="925" height="50">
+        <Container name="ContainerUI1" width="925" height="50" bkcolor="#FFFFFFFF">
+            <Control name="Control_fileLog" float="true" pos="57,9,0,0" width="36" height="32" bkimage="pack.PNG" />
+            <Label name="Label_Name" float="true" pos="104,10,0,0" width="161" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            <Label name="Label_size" float="true" pos="315,10,0,0" width="90" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true" />
+            <Button name="Button_open" text="打开" float="true" pos="865,13,0,0" width="50" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="01.PNG" hotimage="02.PNG" pushedimage="02.PNG" />
+        </Container>
+    </ListContainerElement>
+</Window>

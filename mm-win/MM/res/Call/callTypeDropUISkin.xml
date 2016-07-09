@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="100,70">
+    <VerticalLayout width="100" height="70" bkcolor="#FFFFFFFF">
+        <Button name="callIpPhone" text="拨打网络电话" height="25" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="2"/>
+        <Control height="1" padding="10,0,10,0" bkcolor="#FFF3F3F3" />
+        <Button name="callSmartPhone" text="拨打智能手机" height="25" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="2"/>
+        <Control height="1" padding="10,0,10,0" bkcolor="#FFF3F3F3" />
+        <Button name="callBack" text="双向回拨" height="25" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="2"/>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,15 @@
+[HOST_URL]
+TEST_HOST=124.206.140.155
+DOMAIN=http://124.206.140.155:9001/
+SERVER_BASE=http://124.206.140.155:9001/api/
+SERVER_SITE=http://124.206.140.155:9001/api/site/
+GET_PASSWORD=http://124.206.140.155:9001/site/reset-pwd
+WALLET_URL=http://124.206.140.155:9001/payment
+FILE_URL=http://124.206.140.155:9001/api/file/
+WEB_ROOT=http://124.206.140.155:80/
+REFER_EXECUTE = execute/sale/index
+REFER_FACE_DEAL = facedeal/list/index
+REFER_FINANCE = finance/index/index
+REFER_MOTOR_TYPE = finance/index/index
+REFER_VIN = finance/index/index
+SUGGESTIONS_URL=https://github.com/Hopedream/duilib

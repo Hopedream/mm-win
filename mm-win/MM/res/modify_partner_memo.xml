@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="231,168" caption="0,0,0,30">
+    <VerticalLayout width="231" height="168">
+        <HorizontalLayout width="231" height="30" bkcolor="#FF0489B6">
+            <Button name="btn_memo_close" float="true" pos="201,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+            <Label text="修改备注名" float="true" pos="8,0,0,0" width="79" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+        </HorizontalLayout>
+        <HorizontalLayout width="231" height="137" bkcolor="#FFFFFFFF">
+            <Label text="请输入备注名：" float="true" pos="32,31,0,0" width="128" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Edit name="edit_memo_content" bordersize="1" float="true" maxchar="10" pos="34,56,0,0" width="154" height="23" bkcolor="#FFFFFFFF" bordercolor="#00DBDBDB" focusbordercolor="#001583DD" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_memo_ok" text="确定" float="true" pos="144,99,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default1.PNG" pushedimage="btn_Press1.PNG" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="250,100">
+    <ListContainerElement width="250" height="100">
+	<HorizontalLayout width="250" height="90">
+	<VerticalLayout />
+	<VerticalLayout width="250" height="100">
+        <HorizontalLayout width="250" height="90">    
+            <VerticalLayout width="190" height="90"  bordersize="1" bordercolor="#00ff7d53" >
+				<Container  width="190" height="70" bkcolor="#ffff7d53"><!--注意：#00ff7d53是一个错误值，透明了-->
+					<Control float="true" pos="10,11,0,0" width="40" height="35" bkimage="package_groupfile.png" />
+					<Label name="label_pack_proproty" text="资料包属性" float="true" pos="86,8,0,0" width="100" height="20" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+					<Label name="label_pack_name" text="资料包名称" float="true" pos="63,39,0,0" width="120" height="20" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+				</Container>
+				<Container width="190" height="20" bordersize="1" bordercolor="#00ff7d53"  bkcolor="#FFFFFFFF">
+					<Button name="btn_shoucang_packfiles" text="收藏" float="true" pos="100,1,0,0" width="40" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="btn_open_packfiles" text="查看" float="true" pos="147,1,0,0" width="40" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+				</Container>				
+            </VerticalLayout>
+            <VerticalLayout width="60" height="90" bkcolor="#FFFFFFFF">
+                <Container width="60" height="90">
+                    <Control name="controlLogo" float="true" pos="20,19,0,0" width="32" height="32" bkimage="tx02.png" />
+                    <Control float="true" pos="0,45,0,0" width="9" height="8" bkimage="bubble-right-ex.png" />
+                </Container>
+            </VerticalLayout>
+        </HorizontalLayout>
+		<HorizontalLayout width="250" height="10" >
+		</HorizontalLayout>
+    </VerticalLayout>
+	</HorizontalLayout>
+	</ListContainerElement>
+</Window>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="510,360" caption="0,0,0,30" roundcorner="4,4">
+    <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" bordersize="1">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="510" height="30" bkcolor="#FF0289B6">
+            <Label name="LabelUI1" text="完善个人信息" float="true" pos="5,0,0,0" width="158" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_close" float="true" pos="480,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+        </HorizontalLayout>
+        <VerticalLayout name="VerticalLayoutUI2" width="510" height="330">
+            <Label name="LabelUI2" text="*" float="true" pos="120,61,0,0" width="28" height="30" textcolor="#00FF6000" disabledtextcolor="#FFA7A6AA" align="right" />
+            <Label name="LabelUI3" text="用户名称：" float="true" pos="151,61,0,0" width="65" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Edit name="edt_user_name" float="true" pos="230,61,0,0" width="160" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" textpadding="10,3,4,3" bordercolor="#00CCCCCC" bordersize="1" focusbordercolor="#FF76C1DB" maxchar="20" endellipsis="true"/>
+            <Label name="LabelUI4" text="*" float="true" pos="120,113,0,0" width="28" height="30" textcolor="#00FF6000" disabledtextcolor="#FFA7A6AA" align="right" />
+            <Label name="LabelUI5" text="所属行业：" float="true" pos="151,113,0,0" width="65" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Combo normalimage="userinfocomb.PNG" hotimage="userinfocomb_select.PNG" pushedimage="userinfocomb_select.PNG" dropboxsize="0,150" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="cmb_vocation" float="true" pos="230,113,0,0" width="160" height="30" itemtextpadding="10,0,0,0">
+				<ListLabelElement text="汽车配件" selected="true"/>
+			</Combo>
+            <Button name="btn_ok" text="完成" float="true" pos="150,174,0,0" width="80" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" pushedimage="Press1.PNG" />
+            <Button name="btn_cancel" text="继续创建机构" float="true" pos="240,173,0,0" width="120" height="30" textcolor="#00222222" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default4.PNG" pushedimage="btn_Press4.PNG" />
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

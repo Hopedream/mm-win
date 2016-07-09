@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,598">
+    <VerticalLayout width="300" height="598" bkcolor="#FFF0F0F0">
+        <Container bordersize="1" float="true" pos="0,0,0,0" width="300" height="598" bordercolor="#00F0F0F0">
+            <Label text="编辑资料" float="true" pos="10,4,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="资料包属性：" float="true" pos="9,39,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="资料包名称：" float="true" pos="8,74,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="本地文件：" float="true" pos="11,111,0,0" width="70" height="21" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="工具集文件：" float="true" pos="11,152,0,0" width="80" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Combo name="gm_combo_res_property" bordersize="1" float="true" pos="93,38,0,0" width="193" height="30" bordercolor="#00DCDCDC" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="file=&apos;CreateProject\normal.PNG&apos;" hotimage="file=&apos;CreateProject\selected.PNG&apos;" pushedimage="file=&apos;CreateProject\selected.PNG&apos;" dropboxsize="0,150" />
+            <Edit name="gm_edit_res_name" bordersize="1" float="true" pos="93,75,0,0" width="193" height="30" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="gm_btn_new_proj_record" text="录音" float="true" pos="90,111,0,0" width="40" height="20" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_new_proj_takephoto" text="拍照" float="true" pos="131,111,0,0" width="40" height="20" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_new_proj_files" text="文件" float="true" pos="167,112,0,0" width="40" height="20" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_new_proj_capture" text="截图" float="true" pos="206,112,0,0" width="40" height="20" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_new_proj_collection" text="收藏" float="true" pos="249,112,0,0" width="40" height="20" bordercolor="#FFE0E0E0" bordersize="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_tool_selectcar" float="true" pos="97,139,0,0" width="42" height="42" bkimage="CreateProject\TOOLS01.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_tool_VIN" float="true" pos="146,139,0,0" width="42" height="42" bkimage="CreateProject\TOOLS02.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_tool_bjd" float="true" pos="194,139,0,0" width="42" height="42" bkimage="CreateProject\TOOLS03.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="gm_btn_tool_xqd" float="true" pos="245,139,0,0" width="42" height="42" bkimage="CreateProject\TOOLS04.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Text text="VIN码识别" float="true" pos="147,184,0,0" width="46" height="46" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+            <Label text="选车型" float="true" pos="99,176,0,0" width="42" height="30" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="报价单" float="true" pos="195,175,0,0" width="42" height="30" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="需求单" float="true" pos="247,176,0,0" width="42" height="30" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="备注：" float="true" pos="16,221,0,0" width="60" height="18" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <RichEdit name="gm_richedit_create_newproj_memo" float="true" pos="18,241,0,0" width="275" height="105" bordersize="1" bordercolor="#00D4D4D4" focusbordercolor="#0093CEE2" bkcolor="#FFFFFFFF" multiline="true" vscrollbar="true" autovscroll="true" enabled="true" rich="false" readonly="false" wantreturn="true" wantctrlreturn="false" />
+            <Button name="gm_Buttongroupchat_save" text="保存" float="true" pos="59,553,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG" />
+            <Button name="gm_Buttongroupchat_send" text="发送" float="true" pos="164,551,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG" />
+        </Container>
+        <Container bordersize="1" float="true" pos="0,358,0,0" width="300" height="180" bordercolor="#00F0F0F0">
+            <Control float="true" pos="0,2,0,0" width="300" height="1" bkcolor="#FFD7D7D7" />
+            <Label text="编辑资料" float="true" pos="19,4,0,0" width="60" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+             <Container name="Container_ask_price_order" inset="3,3,3,3" bordersize="1" float="true" pos="1,21,0,0" width="290" height="160" bordercolor="#00F0F0F0">
+					<ListResourcePacket name="gm_tileListRespackets" bkcolor="#FFFFFFFF" vscrollbar="true" />
+			</Container>
+            <Control float="true" pos="0,178,0,0" width="300" height="1" bkcolor="#FFD7D7D7" />
+        </Container>
+    </VerticalLayout>
+</Window>

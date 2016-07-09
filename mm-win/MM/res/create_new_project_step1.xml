@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="680,585" caption="0,0,0,30">
+    <VerticalLayout width="680" height="585" bkcolor="#FFFFFFFF">
+        <HorizontalLayout width="680" height="30" bkcolor="#FF0489B6">
+            <Label text="新业务" float="true" pos="6,0,0,0" width="60" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_close_create_proj" float="true" pos="650,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+        </HorizontalLayout>
+        <HorizontalLayout width="680" height="555" bkcolor="#FFFFFFFF">
+            <Label text="业务信息" font="1" float="true" pos="30,15,0,0" width="65" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Control bordersize="1" float="true" pos="20,49,0,0" width="646" height="42" bordercolor="#00F0F0F0" />
+            <Label text="业务名称：" float="true" pos="30,60,0,0" width="70" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Edit name="edit_new_project_name" bordersize="1" float="true" pos="98,56,0,0" width="245" height="30" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" maxchar="50" />
+            <Label text="编辑资料区" font="1" float="true" pos="30,100,0,0" width="80" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Container bordersize="1" float="true" pos="17,130,0,0" width="315" height="373" bordercolor="#00F0F0F0">
+                <Label text="资料包属性：" float="true" pos="15,12,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="资料包名称：" float="true" pos="14,52,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="本地文件：" float="true" pos="16,90,0,0" width="70" height="21" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="工具集文件：" float="true" pos="15,121,0,0" width="80" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Combo name="combo_res_property" bordersize="1" float="true" pos="97,13,0,0" width="206" height="30" bordercolor="#00DCDCDC" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="file=&apos;CreateProject\normal.PNG&apos;" hotimage="file=&apos;CreateProject\selected.PNG&apos;" pushedimage="file=&apos;CreateProject\selected.PNG&apos;" dropboxsize="0,150" />
+                <Edit name="edit_res_name" bordersize="1" float="true" pos="97,53,0,0" width="206" height="30" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Button name="btn_new_proj_record" text="录音" float="true" pos="96,89,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+				<Button name="btn_new_proj_takephoto" text="拍照" float="true" pos="140,89,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="btn_new_proj_files" text="文件" float="true" pos="184,89,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="btn_new_proj_capture" text="截图" float="true" pos="228,89,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="btn_new_proj_collection" text="收藏" float="true" pos="272,89,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="btn_tool_selectcar" float="true" pos="97,121,0,0" width="42" height="42" bkimage="CreateProject\TOOLS01.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="btn_tool_VIN" float="true" pos="151,121,0,0" width="42" height="42" bkimage="CreateProject\TOOLS02.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="btn_tool_bjd" float="true" pos="205,121,0,0" width="42" height="42" bkimage="CreateProject\TOOLS03.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="btn_tool_xqd" float="true" pos="260,121,0,0" width="42" height="42" bkimage="CreateProject\TOOLS04.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Text text="VIN码识别" float="true" pos="155,168,0,0" width="50" height="60" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+                <Label text="选车型" float="true" pos="98,168,0,0" width="50" height="30" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="报价单" float="true" pos="206,168,0,0" width="50" height="30" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="需求单" float="true" pos="262,168,0,0" width="50" height="30" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="备注：" float="true" pos="15,205,0,0" width="60" height="18" bkcolor="#00F0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <RichEdit name="richedit_create_newproj_memo" float="true" pos="18,231,0,0" width="282" height="105" bordersize="1" bordercolor="#00D4D4D4" focusbordercolor="#0093CEE2" bkcolor="#FFFFFFFF" multiline="true" vscrollbar="true" autovscroll="true" enabled="true" rich="false" readonly="false" wantreturn="true" wantctrlreturn="false" />
+            </Container>
+            <Container bordersize="1" float="true" pos="351,129,0,0" width="315" height="374" bordercolor="#00F0F0F0">
+               <Label text="资料清单" float="true" pos="8,8,0,0" width="80" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Button name="btn_delete_select_res" text="清空" float="true" pos="267,7,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Label bordersize="1" float="true" pos="11,33,0,0" width="290" height="1" bkcolor="#FFDCDCDC" bordercolor="#00DCDCDC" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Container name="Container_ask_price_order" inset="3,3,3,3" bordersize="1" float="true" pos="10,40,0,0" width="290" height="300" bordercolor="#00F0F0F0">
+					<ListResourcePacket name="tileListRespackets" bkcolor="#FFFFFFFF" vscrollbar="true" />
+				</Container>
+            </Container>
+            <Label text="资料包列表" font="1" float="true" pos="358,103,0,0" width="80" height="22" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_save_resource" text="保存" float="true" pos="252,513,0,0" width="80" height="30" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_select_friend" text="选择接收人" float="true" pos="350,513,0,0" width="120" height="30" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default1.PNG" hotimage="btn_Press1.PNG" pushedimage="btn_Press1.PNG" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

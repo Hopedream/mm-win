@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="720,40">
+    <ListContainerElement width="6" height="70">
+        <HorizontalLayout width="720" height="40" bkcolor="#FFFFFFFF">
+            <Control name="controlboard" float="true" pos="0,39,0,0" width="720" height="1" bkcolor="#FFD9D9D9" />
+            <Container width="150" height="39">
+                <Label name="labelcellphone" text="15855199941" float="true" pos="0,4,0,0" width="150" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </Container>
+            <Container width="170" height="39">
+                <Control name="controlLogo" float="true" pos="10,7,0,0" width="25" height="25" bkimage="tx01.png" />
+                <Label name="labelNick" text="小刘" float="true" pos="42,4,0,0" width="120" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            </Container>
+            <Container width="140" height="39">
+                <Option name="option_recipient" float="true" pos="32,11,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="selected1.PNG" group="recipient" selectedimage="selected2.PNG" />
+            </Container>
+            <Container width="260" height="39">
+                <Button name="buttonremove" text="解除关系" bordersize="1" float="true" pos="36,8,0,0" width="65" height="22" bkcolor="#FFF7F7F7" bordercolor="#FFD9D9D9" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Button name="buttonTransfer" text="老板权限转让" bordersize="1" float="true" pos="140,8,0,0" width="95" height="22" bkcolor="#FFF7F7F7" bordercolor="#FFD9D9D9" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            </Container>
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

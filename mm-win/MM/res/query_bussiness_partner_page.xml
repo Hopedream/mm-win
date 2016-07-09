@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="700,520" caption="0,0,0,30">
+    <VerticalLayout width="700" height="520">
+        <HorizontalLayout width="700" height="30" bkcolor="#FF0489B6">
+            <Label text="添加商业伙伴" float="true" pos="7,0,0,0" width="90" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="qbpp_btn_minize" float="true" pos="640,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_minize-normal.png" hotimage="main_dialog_button_minize_hover.png" pushedimage="main_dialog_button_minimize_pressed.png" />
+            <Button name="qbpp_btn_close" float="true" pos="669,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+        </HorizontalLayout>
+        <HorizontalLayout width="700" height="490" bkcolor="#FFFFFFFF">
+            <VerticalLayout width="2" height="490" bkimage="shadow_horizontal.PNG" />
+            <VerticalLayout width="696" height="490" bkcolor="#FFFFFFFF">
+                <Edit name="qbpp_edit_phone_number" bordersize="1" float="true" pos="42,37,0,0" width="226" height="27" bkcolor="#FFFFFFFF" bordercolor="#00D4D4D4" focusbordercolor="#0093CEE2" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Button name="qbpp_btn_query" text="查询" float="true" pos="286,36,0,0" width="80" height="30" bkcolor="#FFFFFFFF" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" pushedimage="Press1.PNG" />
+                <Label float="true" pos="3,72,0,0" width="700" height="1" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true"/>
+                <Button name="qbpp_btn_user_avatar" float="true" pos="39,124,0,0" width="50" height="50" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Label name="qbpp_label_user_nickname" float="true" pos="105,123,0,0" width="200" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true"/>
+                <Label name="qbpp_label_user_company" float="true" pos="105,143,0,0" width="200" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true"/>
+                <Button name="qbpp_btn_add_friend" text="+ 添加" float="true" pos="104,163,0,0" width="60" height="19" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" pushedimage="Press1.PNG" />
+            </VerticalLayout>
+            <VerticalLayout width="2" height="490" bkimage="shadow_horizontal.PNG" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

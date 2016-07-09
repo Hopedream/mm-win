@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,60">
+    <ListContainerElement name="ListContainerElementUI1">
+        <HorizontalLayout name="ContainerUI1" width="631" height="60" bkcolor="#FFFFFFFF" focusbordercolor="#00C0DCC0">
+            <Label name="LabelUI1" text="机构信息" float="true" pos="10,10,0,0" width="60" height="15" bkcolor="#FFFFFFFF" textcolor="#00A0A0A4" disabledtextcolor="#FFA7A6AA" />
+            <Label name="labelRequestTips" float="true" pos="37,32,0,0" width="550" height="21" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="labelRecvtime" float="true" pos="577,3,0,0" width="143" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="right" endellipsis="true" />
+            <Button name="ButtonAgreedOrg" text=" 同意" float="true" pos="626,34,0,0" width="40" height="20" bkcolor="#FFFF7A53" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="ButtonDeny" text="拒绝" float="true" pos="681,34,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Control name="ControlUI1" float="true" pos="0,59,0,0" width="745" height="1" bkcolor="#FFC0C0C0" />
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

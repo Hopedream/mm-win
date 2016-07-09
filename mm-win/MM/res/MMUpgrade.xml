@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="540,87" caption="0,0,0,120">
+    <Container enabled="true" width="540" height="106">
+        <VerticalLayout enabled="true" width="540" height="110" bkimage="bg.bmp">
+            <Progress name="ProgressU" float="true" pos="26,25,0,0" enabled="true" width="485" height="9" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="progress_full.png" min="0" max="100" value="0" hor="true" />
+            <Label name="LabelU" text="正在获取更新文件列表..." float="true" pos="29,44,0,0" enabled="true" width="342" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        </VerticalLayout>
+    </Container>
+</Window>

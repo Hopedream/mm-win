@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,598">
+    <Container name="ContainerUI1" width="745" height="598" bkcolor="#FFFFFFFF">
+        <Label name="LabelUI1" text="您可以" float="true" pos="224,199,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="right" />
+        <Button name="btn_chose_business" text="选择商业伙伴" float="true" pos="295,199,0,0" width="99" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default4.PNG" hotimage="btn_Press4.PNG" pushedimage="btn_Press4.PNG" />
+        <Label name="LabelUI2" text="开始业务沟通。" float="true" pos="403,199,0,0" width="118" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label name="LabelUI3" text="如您暂无商业伙伴，建议先" float="true" pos="221,241,0,0" width="189" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="right" />
+        <Button name="btn_add_business" text="添加商业伙伴" float="true" pos="419,241,0,0" width="124" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default4.PNG" hotimage="btn_Press4.PNG" pushedimage="btn_Press4.PNG" />
+    </Container>
+</Window>

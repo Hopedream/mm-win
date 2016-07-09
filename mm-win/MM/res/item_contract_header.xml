@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="275,86">
+    <ListContainerElement name="contract_element" width="275" height="86">
+		<VerticalLayout width="275" height="86" bkcolor="#FFFFFFFF">
+			<Control float="true" pos="0,85,0,0" width="275" height="1" bkcolor="#FFD7D7D7" />
+			<Container height="21">
+				<HorizontalLayout height="21">
+					<Control width="5" />
+					<Label name="item_contract_who" font="7" text="XXXXXXXXXXXXXXXXXXXXXX" width="275" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+				</HorizontalLayout>
+			</Container>
+			
+			<Container height="21">
+				<HorizontalLayout height="21">
+					<Control width="5" />
+					<Label text="合约名称："  font="8" width="70"/>
+					<Label name="item_label_contract_name"  font="8" text="XXX" width="200"/>
+				</HorizontalLayout>
+			</Container>
+
+			<Container height="21">
+				<HorizontalLayout height="21">
+					<Control width="5" />
+					<Label text="合约金额："  font="8" width="70"/>
+					<Label name="item_label_contract_money"  font="8" text="" width="200"/>
+				</HorizontalLayout>
+			</Container>
+
+			<Container height="21">
+				<HorizontalLayout height="21">
+					<Control width="5" />
+					<Label text="签约时间：" font="8" width="70"/>
+					<Label name="item_label_contract_time"  font="8" text="" width="200"/>
+				</HorizontalLayout>
+			</Container>
+		</VerticalLayout>
+	</ListContainerElement>
+</Window>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="215,50">
+    <ListContainerElement>
+        <HorizontalLayout width="215" height="52">
+            <Button name="btnLogo" float="true" pos="10,10,0,0" width="32" height="32" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Label name="lblNickName" float="true" pos="44,7,0,0" width="100" height="19" textcolor="#00222222" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            <Label name="lblLastMsg" float="true" pos="44,26,0,0" width="131" height="19" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" font="2" endellipsis="true" />
+            <Label name="lblLastTm" float="true" pos="144,7,0,0" width="53" height="15" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" font="2" align="right" />
+            <Label name="lblMsgCount" float="true" pos="179,26,0,0" width="18" height="18" bkimage="new.png" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="0" align="center" />
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,12 @@
+[HOST_URL]
+TEST_HOST=60.173.242.117
+DOMAIN=http://60.173.242.117:9001/
+SERVER_BASE=http://60.173.242.117:9001/api/
+SERVER_SITE=http://60.173.242.117:9001/api/site/
+GET_PASSWORD=http://60.173.242.117:9001/site/reset-pwd
+WALLET_URL=http://60.173.242.117:9001/payment
+FILE_URL=http://60.173.242.117:9001/api/file/
+WEB_ROOT=http://192.168.8.14:80/
+REFER_FINANCE = finance/index/index
+REFER_MOTOR_TYPE = finance/index/index
+REFER_VIN = finance/index/index

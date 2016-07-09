@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="960,598" caption="0,0,0,30">
+    <VerticalLayout width="960" height="598" bkcolor="#FFFFFFFF">
+        <HorizontalLayout width="960" height="30" bkcolor="#FF0489B6">
+            <Label text="查看业务往来" float="true" pos="33,1,0,0" width="154" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_bnlist_mini" float="true" pos="900,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="-1.png" hotimage="-2.png" pushedimage="-3.png" />
+            <Button name="btn_bnlist_close" float="true" pos="930,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="close1.png" hotimage="close2.png" pushedimage="close3.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="30" />
+        <HorizontalLayout width="960" height="480">
+            <VerticalLayout width="20" height="480" />
+            <VerticalLayout width="920" height="480">
+                <List name="listProjs_ex" float="true" pos="0,0,0,0" width="920" height="480" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true">
+                    <ListHeader name="ListProjectHeader" bordersize="1" bkcolor="#FFF7F7F7" bordercolor="#FFD9D9D9">
+                        <ListHeaderItem text="业务名称" width="230" height="30" minwidth="16" textcolor="#FF828282" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="商业伙伴名称" width="230" height="30" minwidth="16" textcolor="#FF828282" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="时间" width="230" height="30" minwidth="16" textcolor="#FF828282" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="操作" width="230" height="30" minwidth="16" textcolor="#FF828282" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                    </ListHeader>
+                </List>
+            </VerticalLayout>
+            <VerticalLayout width="20" height="480" />
+        </HorizontalLayout>
+        <HorizontalLayout width="960" height="58">
+            <Button name="btn_page_1" text="1" float="true" pos="240,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_2" text="2" float="true" pos="275,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_3" text="3" float="true" pos="310,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_4" text="4" float="true" pos="345,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_5" text="5" float="true" pos="380,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_6" text="6" float="true" pos="415,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_7" text="7" float="true" pos="450,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_8" text="8" float="true" pos="485,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_9" text="9" float="true" pos="520,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_10" text="10" float="true" pos="555,13,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_first" text="&lt;&lt;第一页" float="true" pos="111,19,0,0" width="60" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_prev" text="&lt;上一页" float="true" pos="174,18,0,0" width="55" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_next" text="下一页&gt;" float="true" pos="595,18,0,0" width="55" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="btn_page_end" text="尾页&gt;&gt;" float="true" pos="655,18,0,0" width="50" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

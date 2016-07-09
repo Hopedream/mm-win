@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="992,540" caption="0,0,0,32">
+    <HorizontalLayout name="bglayout" width="992" height="540" bkcolor="#FFFFFFFF">
+        <VerticalLayout name="left0" width="32" height="540" bkcolor="#FF84DBE9">
+            <Option name="optionChat" group="true" selected="true" float="true" pos="0,0,0,0" width="32" height="46" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="message_normal.png" hotimage="message_hot.png" selectedimage="message_pushed.png" />
+            <Option name="optionRoster" float="true" group="true" pos="0,46,0,0" width="32" height="46" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="contacts_normal.png" hotimage="contacts_hot.png" selectedimage="contacts_pushed.png" />
+            <Option name="optionFriendster" float="true" group="true" pos="0,92,0,0" width="32" height="46" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="circle_normal.png" hotimage="circle_hot.png" selectedimage="circle_pushed.png" />
+            <Control name="ControlUI1" float="true" pos="0,321,0,0" width="32" height="159" bkimage="logo.png" />
+            <Button name="btnSystemSetting" float="true" pos="2,493,0,0" width="32" height="46" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="setting_normal.png" hotimage="setting_hot.png" pushedimage="setting_pushed.png" />
+        </VerticalLayout>
+		
+		<TabLayout name="tabRecentChat" width="264" height="540">
+			<VerticalLayout name="left1" width="264" height="540" bkcolor="#FFF4F9FA">
+				<HorizontalLayout name="HorizontalLayoutUI3" width="264" height="46">
+					<Edit name="EditUI1" text="搜索对话框和联系人" float="true" pos="46,20,0,0" width="208" height="26" bkimage="search.png" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+					<Control name="ControlUI2" float="true" pos="17,20,0,0" width="29" height="26" bkimage="search_icon.png" />
+				</HorizontalLayout>
+				<HorizontalLayout name="HorizontalLayoutUI5" width="264" height="46">
+					<Combo dropboxsize="0,150" itemtextcolor="#FF4FB6C7" itemselectedtextcolor="#FF4FB6C7" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="combTime" float="true" pos="17,10,0,0" width="65" height="26" >
+						<ListLabelElement text="发送时间" selected="true" />
+						<ListLabelElement text="测试1" />
+						<ListLabelElement text="测试2" />
+					</Combo>
+					<Combo dropboxsize="0,150" itemtextcolor="#FF4FB6C7" itemselectedtextcolor="#FF4FB6C7" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="combType" float="true" pos="99,11,0,0" width="65" height="26">
+						<ListLabelElement text="主题类型" selected="true" />
+						<ListLabelElement text="测试1" />
+						<ListLabelElement text="测试2" />
+					</Combo>
+					<Combo dropboxsize="0,150" itemtextcolor="#FF4FB6C7" itemselectedtextcolor="#FF4FB6C7" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="combGroup" float="true" pos="179,11,0,0" width="65" height="26">
+						<ListLabelElement text="所属群组" selected="true" />
+						<ListLabelElement text="测试1" />
+						<ListLabelElement text="测试2" />
+					</Combo>
+				</HorizontalLayout>
+				<VerticalLayout name="VerticalLayoutUI1" width="264" height="444">
+					 <ContactList name="listRecentChat" width="264" height="420" header="hidden" menu="true">
+						<ListHeader />
+					</ContactList>
+				</VerticalLayout>
+			</VerticalLayout>
+			
+		</TabLayout>
+		
+		<TabLayout name="tabChatAndFileList" width="696" height="540">
+			<HorizontalLayout name="HorizontalLayoutUI10" width="696" height="540">
+		<VerticalLayout name="chatlayout" width="503" height="540" bkcolor="#FFFFFFFF">
+            <Container name="ContainerUI1" width="503" height="46">
+                <Button name="buttonContactName" text="" float="true" pos="154,9,0,0" width="195" height="30" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" align="center" />
+            </Container>
+            <Container name="ContainerUI2" width="503" height="354">
+				<ChatList name="listChatControl" width="503" height="354"  vscrollbar="true" autovscroll="fasle" header="hidden">
+                    <ListHeader />
+                </ChatList>
+			</Container> 
+		
+            <Container name="ContainerUI3" width="503" height="35" bkimage="tools.png">
+                <Button name="ButtonUI8" float="true" pos="20,9,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="emoji.png" pushedimage="emoji2.png" />
+                <Button name="ButtonUI9" float="true" pos="60,9,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="image.png" pushedimage="image2.png" />
+                <Button name="buttonFile" float="true" pos="100,9,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file.png" pushedimage="file2.png" />
+                <Button name="ButtonUI11" float="true" pos="140,9,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="audio.png" pushedimage="audio2.png" />
+                <Button name="ButtonUI12" float="true" pos="180,9,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="inquiry.png" pushedimage="inquiry2.png" />
+				<Button name="btnVoiceCall" float="true" pos="220,9,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\voice.png" pushedimage="Call\voice1.png" />
+                <Button name="btnVideoCall" float="true" pos="260,9,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\video.png" pushedimage="Call\video1.png" />
+            </Container>
+            <Container name="ContainerUI4" width="503" height="70">
+				 <RichEdit name="inputEdit" bkcolor="#FFFFFFFF" multiline="true" vscrollbar="true" autovscroll="true" enabled="true" rich="false" readonly="false" wantreturn="true" wantctrlreturn="false" />
+			</Container>
+            <Container name="ContainerUI5" width="503" height="35">
+                <Button name="buttonSend" float="true" pos="411,1,0,0" width="68" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="send.png" />
+            </Container>
+        </VerticalLayout>
+        <VerticalLayout name="right" width="193" height="540" bkcolor="#FFF4F9FA">
+            <Container name="ContainerUI6" width="193" height="40">
+                <Button name="buttonMin" float="true" pos="103,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="mini1.png" hotimage="mini2.png" pushedimage="mini3.png" />
+                <Button name="buttonMax" float="true" pos="133,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="max1.png" hotimage="max2.png" pushedimage="max3.png" />
+                <Button name="buttonClose" float="true" pos="163,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="close1.png" hotimage="close2.png" pushedimage="close3.png" />
+            </Container>
+            <Container name="ContainerUI8" width="193" height="23">
+                <Label name="LabelUI1" text="资料清单" float="true" pos="0,0,0,0" width="193" height="23" bkcolor="#FF84DBE9" textpadding="20,0,0,0" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            </Container>
+            <Container name="ContainerUI7" width="193" height="477">
+	    	<DataList name="treeDataList" width="193" height="477" bkcolor="#00000000" header="hidden">
+ 			<ListHeader />
+			<ListContainerElement name="Nodetoday" width="193" height="23">
+				<Container name="ContainerToday" bkcolor="#ffe3f1f3" width="193" height="23">
+					<Button text="今天" float="true" pos="20,7,50,23" textcolor="#ff9e9e9e" width="30" height="23" align="left"/>
+					<Button pos="50,11,58,15" float="true" width="8" height="4" normalimage="arrow3.png"/>
+				</Container>
+			</ListContainerElement>
+			<ListContainerElement  name="Nodeweek" width="193" height="23">
+				<Container name="ContainerWeek" bkcolor="#ffe3f1f3" width="193" height="23">
+					<Button text="本周" float="true" pos="20,7,50,23" textcolor="#ff9e9e9e" width="30" height="23" align="left"/>
+					<Button pos="50,11,58,15" float="true" width="8" height="4" normalimage="arrow3.png"/>
+				</Container>
+			</ListContainerElement>
+		</DataList>
+            </Container>
+        </VerticalLayout>
+		</HorizontalLayout>
+		</TabLayout>
+		
+		
+    </HorizontalLayout>
+</Window>

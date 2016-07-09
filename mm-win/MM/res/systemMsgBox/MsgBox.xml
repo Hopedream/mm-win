@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="400,180" caption="0,0,0,30" roundcorner="4,4">
+    <VerticalLayout name="VerticalLayoutUI1" width="400" height="180">
+        <HorizontalLayout name="HorizontalLayoutUI1" height="30" bkcolor="#FF0389B6">
+            <Label name="LabelTitle" width="300" padding="10,0,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Control name="ControlUI1" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" bkcolor="#FFF7F7F7" inset="1,2,1,2">
+            <Button name="BnOK" float="true" pos="160,100,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.png" hotimage="Press1.png" pushedimage="Press1.png" />
+            <Button name="BnYes" float="true" pos="100,100,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.png" hotimage="Press1.png" pushedimage="Press1.png" />
+            <Button name="BnNo" float="true" pos="220,100,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.png" hotimage="Press1.png" pushedimage="Press1.png" />
+            <Control name="FlagCtrl" float="true" pos="40,30,0,0" width="60" height="60" bkimage="ok.png" />
+            <Text name="TxtTips" float="true" pos="127,37,0,0" width="252" height="49" textpadding="2,0,2,0" textcolor="#FF3C3C3C" font="0" align="wrap" endellipsis="true" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

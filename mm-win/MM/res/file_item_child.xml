@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="225,30">
+    <ListContainerElement name="ListContainerElementUI1" bkcolor="#FFFFFFFF">
+        <Container name="ContainerUI1" width="60" height="30">
+            <Control name="controlFileLogo" float="true" pos="16,7,0,0" width="16" height="16" bkimage="audio(1).png" />
+            <Label name="labelFileName" text="Audio_012011" float="true" pos="46,0,0,0" width="113" height="30" textcolor="#00222222" disabledtextcolor="#FFA7A6AA" font="0" endellipsis="true" />
+        </Container>
+    </ListContainerElement>
+</Window>

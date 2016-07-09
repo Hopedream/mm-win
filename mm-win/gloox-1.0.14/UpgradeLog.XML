@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="gloox">
+</Property><Property Name="Solution File" Value="E:\gloox\gloox-1.0.14\gloox.sln">
+</Property><Property Name="User Options File" Value="E:\gloox\gloox-1.0.14\gloox.suo">
+</Property><Property Name="Date" Value="2015年12月14日">
+</Property><Property Name="Time" Value="10:18">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="gloox.sln" Description="File successfully backed up as E:\gloox\gloox-1.0.14\gloox.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="gloox.suo" Description="File successfully backed up as E:\gloox\gloox-1.0.14\gloox.suo.old">
+</Event><Event ErrorLevel="0" Project="gloox" Source="gloox.vcproj" Description="Converting project file 'E:\gloox\gloox-1.0.14\gloox.vcproj'.">
+</Event><Event ErrorLevel="1" Project="gloox" Source="gloox.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="gloox" Source="gloox.vcproj" Description="MSB8012: $(TargetPath) ('E:\gloox\gloox-1.0.14\..\gloox-1.0\Debug\gloox-1.0.dll') does not match the Linker's OutputFile property value '..\gloox-1.0\Debug\gloox-1.0.dll' ('E:\gloox\gloox-1.0\Debug\gloox-1.0.dll') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="gloox" Source="gloox.vcproj" Description="Done converting to new project file 'E:\gloox\gloox-1.0.14\gloox.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="gloox" Source="gloox.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="adhoc_example" Source="..\adhoc_example\adhoc_example.vcproj" Description="Converting project file 'E:\gloox\adhoc_example\adhoc_example.vcproj'.">
+</Event><Event ErrorLevel="1" Project="adhoc_example" Source="..\adhoc_example\adhoc_example.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="adhoc_example" Source="..\adhoc_example\adhoc_example.vcproj" Description="MSB8012: $(TargetPath) ('E:\gloox\adhoc_example\..\gloox-1.0\Debug\adhoc_example.exe') does not match the Linker's OutputFile property value '..\gloox-1.0\Debug\adhoc_example.exe' ('E:\gloox\gloox-1.0\Debug\adhoc_example.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="adhoc_example" Source="..\adhoc_example\adhoc_example.vcproj" Description="Done converting to new project file 'E:\gloox\adhoc_example\adhoc_example.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="adhoc_example" Source="..\adhoc_example\adhoc_example.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="gloox.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="gloox.sln" Description="Converted">
+</Event></UpgradeLog>

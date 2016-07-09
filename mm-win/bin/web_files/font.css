@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'HelveticaNeueLTPro-Lt';
+	src: url('./fonts/HelveticaNeueLTPro-Lt.eot');
+	src: url('./fonts/HelveticaNeueLTPro-Lt.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/HelveticaNeueLTPro-Lt.woff') format('woff'),
+	url('./fonts/HelveticaNeueLTPro-Lt.ttf') format('truetype'),
+	url('./fonts/HelveticaNeueLTPro-Lt.svg#HelveticaNeueLTPro-Lt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTPro-Roman';
+	src: url('./fonts/HelveticaNeueLTPro-Roman.eot');
+	src: url('./fonts/HelveticaNeueLTPro-Roman.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/HelveticaNeueLTPro-Roman.woff') format('woff'),
+	url('./fonts/HelveticaNeueLTPro-Roman.ttf') format('truetype'),
+	url('./fonts/HelveticaNeueLTPro-Roman.svg#HelveticaNeueLTPro-Roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvantGardeITCbyBT-Book';
+	src: url('./fonts/AvantGardeITCbyBT-Book.eot');
+	src: url('./fonts/AvantGardeITCbyBT-Book.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/AvantGardeITCbyBT-Book.woff') format('woff'),
+	url('./fonts/AvantGardeITCbyBT-Book.ttf') format('truetype'),
+	url('./fonts/AvantGardeITCbyBT-Book.svg#AvantGardeITCbyBT-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FZLTXHK';
+	src: url('./fonts/FZLTXHK--GBK1-0.eot');
+	src: url('./fonts/FZLTXHK--GBK1-0.eot?#font-spider') format('embedded-opentype'),
+	url('./fonts/FZLTXHK--GBK1-0.woff') format('woff'),
+	url('./fonts/FZLTXHK--GBK1-0.ttf') format('truetype'),
+	url('./fonts/FZLTXHK--GBK1-0.svg#FZLTXHK--GBK1-0') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.SYfont {
+	font-family: 'HelveticaNeueLTPro-Lt', 'HelveticaNeueLTPro-Roman', 'FZLTXHK';
+}

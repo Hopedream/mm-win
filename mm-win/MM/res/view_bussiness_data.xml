@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1000,508" caption="0,0,0,30" roundcorner="4,4">
+    <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkcolor="#FFFFFFFF">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="1000" height="30" bkcolor="#FF0289B6">
+            <Label name="LabelUI1" text="查找业务资料" float="true" pos="5,0,0,0" width="115" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="buttonClose" float="true" pos="970,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+        </HorizontalLayout>
+        <VerticalLayout name="VerticalLayoutUI2" width="1000" height="478">
+            <HorizontalLayout name="HorizontalLayoutUI2" width="1000" height="115">
+                <Label name="LabelUI2" text="文件号：" float="true" pos="28,22,0,0" width="50" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="edit_fileName" float="true" pos="83,22,0,0" width="138" height="28" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="10,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" bordersize="1"/>
+                <Label name="LabelUI3" text="业务号：" float="true" pos="28,62,0,0" width="50" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="edit_Bid" float="true" pos="83,62,0,0" width="138" height="28" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="LabelUI4" text="发送机构：" float="true" pos="243,22,0,0" width="55" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="edit_SendOrg" float="true" pos="303,22,0,0" width="138" height="28" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="LabelUI5" text="接收机构：" float="true" pos="243,62,0,0" width="60" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="edit_RecvOrg" float="true" pos="303,62,0,0" width="138" height="28" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="LabelUI6" text="发送人：" float="true" pos="463,22,0,0" width="50" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="edit_Sender" float="true" pos="518,22,0,0" width="113" height="28" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="LabelUI7" text="发送时间：" float="true" pos="653,22,0,0" width="55" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <DateTime name="date_Send_begin" float="true" pos="713,22,0,0" width="120" height="28" bkcolor="#FFFFFFFF" padding="5,5,0,0" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="10,0,0,0"/>
+                <Label name="LabelUI8" text="-" float="true" pos="833,22,0,0" width="15" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>
+                <DateTime name="date_Send_end" float="true" pos="848,22,0,0" width="120" height="28" bkcolor="#FFFFFFFF" padding="5,5,0,0" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="10,0,0,0"/>
+                <Label name="LabelUI9" text="接收时间：" float="true" pos="463,62,0,0" width="55" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <DateTime name="date_Recv_begin" text="" float="true" pos="523,62,0,0" width="120" height="28" bkcolor="#FFFFFFFF" padding="5,5,0,0" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="10,0,0,0"/>
+                <Label name="LabelUI10" text="-" float="true" pos="643,62,0,0" width="15" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>
+				<DateTime name="date_Recv_end" text="" float="true" pos="658,62,0,0" width="120" height="28" bkcolor="#FFFFFFFF" padding="5,5,0,0" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="10,0,0,0"/>
+                <Button name="buttonFind" float="true" pos="800,62,0,0" width="49" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="search_button.png" />
+            </HorizontalLayout>
+            <HorizontalLayout name="HorizontalLayoutUI3" width="1000" height="363">
+                <List name="lstHead" float="true" pos="20,0,0,0" width="960" height="32" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true">
+                    <ListHeader name="lstEmployeeHeader" bkcolor="#FFF7F7F7" bordercolor="#FFD9D9D9">
+                        <ListHeaderItem text="文件名" width="110" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="业务号" width="120" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="发送机构" width="120" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="发送人" width="80" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="发送时间" width="150" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="接收机构" width="130" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="接受时间" width="150" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                        <ListHeaderItem text="操作" width="100" height="32" minwidth="16" textcolor="#FF000000" sepwidth="1" dragable="false" align="center" sepimage="list_sepline.PNG" />
+                    </ListHeader>
+                </List>
+                <List name="lstEmployee" float="true" pos="20,32,0,0" width="960" height="240" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" header="hidden" vscrollbar="true">
+                    <ListHeader />
+                </List>
+            </HorizontalLayout>
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

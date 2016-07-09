@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="680,260" caption="0,0,0,30">
+    <VerticalLayout width="680" height="260" bkcolor="#FFFFFFFF">
+        <HorizontalLayout width="680" height="30" bkcolor="#FF0489B6">
+            <Label text="添加参与人" float="true" pos="21,0,0,0" width="80" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_new_proj_step2_close" float="true" pos="650,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+        </HorizontalLayout>
+        <HorizontalLayout width="680" height="230" bkcolor="#FFFFFFFF">
+            <VerticalLayout width="680" height="230">
+                <HorizontalLayout width="680" height="130">
+                    <VerticalLayout width="680" height="130">
+                        <HorizontalLayout width="680" height="40">
+                            <Label text="选择本方参与人" float="true" pos="21,10,0,0" width="110" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" />
+                        </HorizontalLayout>
+                        <HorizontalLayout width="680" height="90">
+                            <VerticalLayout width="20" height="90" />
+                            <VerticalLayout bordersize="1" width="640" height="90" bordercolor="#00DCDCDC">
+                                <ListLocalParticipant bkcolor="#FFFFFFFF" name="newProjectLocalParticipants" padding="2,2,2,2" vscrollbar="true" />
+                            </VerticalLayout>
+                            <VerticalLayout width="20" height="90" />
+                        </HorizontalLayout>
+                    </VerticalLayout>
+                </HorizontalLayout>
+                <HorizontalLayout width="680" height="100">
+                    <Button name="btn_send_toserver" text="发送" float="true" pos="300,26,0,0" width="80" height="30" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default1.PNG" hotimage="btn_Press1.PNG" pushedimage="btn_Press1.PNG" />
+                    <Button name="btn_add_newMember" text="添加" float="true" pos="300,26,0,0" width="80" height="30" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default1.PNG" hotimage="btn_Press1.PNG" pushedimage="btn_Press1.PNG" />
+                </HorizontalLayout>
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="960,598">
+    <HorizontalLayout bkcolor="#FFFFFFFF">
+        <VerticalLayout width="215" bkcolor="#FFF0F0F0">
+            <HorizontalLayout height="35">
+                <Button name="btnAddBPartner" text="添加商业伙伴" float="true" pos="6,8,0,0" width="90" height="20" bkcolor="#FFFF7D53" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+            </HorizontalLayout>
+            <VerticalLayout>
+                <AllFriendsList header="hidden" name="allFriendList" vscrollbar="true" />
+            </VerticalLayout>
+        </VerticalLayout>
+        <VerticalLayout>
+            <TabLayout name="BussinessPartnerTabLayout" bkcolor="#FFFFFFFF" selectedid="-1" />
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

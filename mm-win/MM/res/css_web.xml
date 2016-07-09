@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="680,585" caption="0,0,0,30" roundcorner="4,4">
+    <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="680" height="30" bkcolor="#FF0289B6">
+            <Label name="LabelUI1" text="web" float="true" pos="9,0,0,0" width="72" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="buttonClose" float="true" pos="650,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+        </HorizontalLayout>
+        <VerticalLayout name="VerticalLayoutUI2" width="680" height="555">
+        	<wkeWebkit name="ie" bkcolor="#FFFFFFFF" visible="true" vscrollbar="true" hscrollbar="true" />
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

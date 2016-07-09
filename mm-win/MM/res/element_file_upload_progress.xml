@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,70">
+    <ListContainerElement name="ListContainerElementUI1" width="500" height="70">
+        <Container name="ContainerUI1" width="60" height="30" bkcolor="#FFF0F0F0">
+            <Control name="controlFileLogo" float="true" pos="10,9,0,0" width="42" height="42" bkimage="thumbnail_photo.PNG" />
+            <Label name="labelFileName" float="true" pos="60,12,0,0" width="200" height="18" textcolor="#00222222" disabledtextcolor="#FFA7A6AA" font="0" endellipsis="true" />
+            <Progress name="progress_file_upload" float="true" pos="60,33,0,0" width="220" height="11" bkimage="progress_empty.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="progress_full.png" min="0" max="100" value="0" hor="true" />
+            <Button name="button_element_send" text="发送" float="true" pos="202,45,0,0" width="36" height="20" textcolor="#0021A7D4" disabledtextcolor="#FFA7A6AA" font="2" align="center" />
+            <Button name="button_element_cancel" text="取消" float="true" pos="243,45,0,0" width="36" height="20" textcolor="#0021A7D4" disabledtextcolor="#FFA7A6AA" font="2" align="center" />
+        </Container>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="980,540">
+    <VerticalLayout name="VerticalLayoutUI1" width="980" height="540" bkcolor="#FFFFFFFF">
+		<Control name="ControlUI1" float="true" pos="20,0,0,0" width="940" height="1" bkcolor="#FFCCCCCC" />
+        <List name="ListUI1" float="true" pos="10,1,0,0" width="960" height="529" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true" header="hidden"/>
+    </VerticalLayout>
+</Window>

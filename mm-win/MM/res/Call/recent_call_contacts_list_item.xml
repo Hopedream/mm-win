@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="240,40">
+    <ListContainerElement>
+        <HorizontalLayout height="40">
+            <Control name="logo" width="24" height="24" padding="0,8,0,0" />
+            <VerticalLayout padding="5,0,0,0">
+                <HorizontalLayout width="161" height="20">
+                    <Label name="nickname" width="80" height="12" padding="0,8,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="2"/>
+                    <Control name="dialIndicateLogo" width="16" height="16" padding="5,4,0,0" bkimage="Call\call1.png" />
+                    <Control />
+                </HorizontalLayout>
+                <Label name="orgName" text="" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="2"/>
+            </VerticalLayout>
+            <HorizontalLayout width="45" height="16" padding="0,12,0,12">
+                <Button name="VoIPCall" width="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\VoIP.PNG" />
+                <Button name="smartPhoneCall" width="16" padding="10,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\smartPhone.PNG" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

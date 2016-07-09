@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="100,130">
+    <VerticalLayout name="VerticalLayoutUI1" width="100" height="130">
+        <Container name="ContainerUI1" width="100" height="100" bkimage="image03.jpg">
+            <Progress name="progressUpload" float="true" pos="10,81,0,0" width="80" height="11" bkimage="progress_empty.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="progress_full.png" min="0" max="100" value="0" hor="true" />
+        </Container>
+        <Container name="ContainerUI2" width="100" height="30">
+            <Label name="labelFile" float="true" pos="0,0,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </Container>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,598">
+    <HorizontalLayout bkcolor="#FFFFFFFF">
+		<InviteFriendList name="invitefriendListctrl" header="hidden" width="739" height="598" menu="true"  vscrollbar="true"bkcolor="#FFF5F5F5" >
+			<ListHeader />
+		</InviteFriendList>
+    </HorizontalLayout>
+</Window>

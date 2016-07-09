@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="560,40">
+    <ListContainerElement name="ListContainerElementUI1" width="6" height="70">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="560" height="40" bkcolor="#FFFFFFFF">
+            <Control name="controlboard" float="true" pos="0,39,0,0" width="560" height="1" bkcolor="#FFD9D9D9" />
+            <Container name="ContainerUI1" width="110" height="39">
+                <Label name="labelcellphone" text="15855199941" float="true" pos="10,4,0,0" width="90" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </Container>
+            <Container name="ContainerUI2" width="120" height="39">
+                <Control name="controlLogo" float="true" pos="9,7,0,0" width="25" height="25" bkimage="tx01.png" />
+                <Label name="labelNick" text="小刘" float="true" pos="41,4,0,0" width="70" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            </Container>
+            <Container name="ContainerUI3" width="90" height="39">
+                <Option name="option_recipient" float="true" pos="37,11,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="selected1.PNG" group="recipient" selectedimage="selected2.PNG" enabled="false"/>
+            </Container>
+            <Container name="ContainerUI4" width="240" height="39">
+                <Option name="Option_requirement" float="true" pos="13,11,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="√1.png" selectedimage="√.png" enabled="false"/>
+                <Label name="LabelUI1" text="需求" float="true" pos="33,4,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Option name="Option_engage" float="true" pos="68,11,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="√1.png" selectedimage="√.png" enabled="false"/>
+                <Label name="LabelUI2" text="订约" float="true" pos="88,4,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Option name="Option_execute" float="true" pos="123,11,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="√1.png" selectedimage="√.png" enabled="false"/>
+                <Label name="LabelUI3" text="执行" float="true" pos="143,4,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Option name="Option_aftersale" float="true" pos="178,11,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="√1.png" selectedimage="√.png" enabled="false"/>
+                <Label name="LabelUI4" text="售后" float="true" pos="198,4,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </Container>
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

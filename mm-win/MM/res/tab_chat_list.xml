@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,598">
+    <HorizontalLayout bkcolor="#FFFFFFFF">
+        <VerticalLayout>
+            <Container>
+               <ChatList name="listChatControl" vscrollbar="true" autovscroll="fasle" header="hidden">
+                    <ListHeader />
+                </ChatList>
+            </Container>
+            <Container height="30" bkimage="tools.png">
+                <Button float="true" pos="13,7,29,23" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="emotion2.png" pushedimage="emoji2.png" enabled="false"/>
+                <Button float="true" pos="41,7,57,23" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="pic2.png" pushedimage="image2.png" enabled="false"/>
+                <Button name="buttonFile" float="true" pos="69,7,85,23" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="files1.png" pushedimage="files3.png" tooltip="选择发送文件"/>
+                <Button name="buttonClip" float="true" pos="97,7,113,23" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="cap2.png" pushedimage="audio2.png" tooltip="截屏" />
+                <Button float="true" pos="125,7,141,23" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="fav2.png" pushedimage="inquiry2.png" enabled="false"/>                
+            </Container>
+            <Container height="80">
+                <RichEdit name="inputEdit_maindlg" bkcolor="#FFFFFFFF" multiline="true" vscrollbar="true" autovscroll="true" enabled="true" rich="false" readonly="false" wantreturn="true" wantctrlreturn="true" />
+            </Container>
+            <HorizontalLayout height="30">
+				<Control />
+				<HorizontalLayout width="100" bkimage="send_Complete.PNG">
+					<Button name="buttonSend"  width="80" text="发送" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="btnChooseSendtype" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>
+				</HorizontalLayout>                
+            </HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout name="VerticalLayoutUI3" width="300" bkcolor="#FFF0F0F0">
+            <TabLayout name="TabFileSend" width="300" height="598" bkcolor="#FFF0F0F0" selectedid="0" >
+				<TabLayout name="TabFileSend_roster" width="300" height="598" bkcolor="FFF0F0F0" selectedid="-1" />
+			</TabLayout>
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="960,598">
+    <VerticalLayout name="VerticalLayoutPage" width="960" height="598" bkcolor="#FFFFFFFF">
+		<HorizontalLayout height="40" bkimage = "btn_default1.png">
+			<Option name="option_payee" text="我是收款方" float="true" pos="10,10,0,0" enabled="true" width="125" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;id_select.PNG&apos;" group="iden" selected="true" selectedimage="file=&apos;id_select2.PNG&apos;" />
+			<Option name="option_drawee" text="我是付款方" float="true" pos="123,10,0,0" enabled="true" width="125" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;id_select.PNG&apos;" group="iden" selectedimage="file=&apos;id_select2.PNG&apos;" />
+        </HorizontalLayout>
+		
+		<HorizontalLayout height="10"/>
+		
+		<HorizontalLayout height="30">
+			<Control width="5" />
+			<Label text="关键字：" width="60" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Edit name="edit_key_word" bordersize="1" width="200" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Control width="15" />
+			<Label text="签约时间：" width="70" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<!-- RichEdit name="edit_start_time" rich="false" multiline="false" bordersize="1" width="140" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" /-->
+			<DateTime name="date_start_time" width="120" bkcolor="#FFFFFFFF" padding="5,5,0,0" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="10,0,0,0"/>
+			<Label text="-" width="10" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>
+			<Control width="10" />
+			<DateTime name="date_end_time" width="120" bkcolor="#FFFFFFFF" padding="5,5,0,0" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" bordersize="1" textpadding="10,0,0,0"/>
+			<!-- RichEdit name="edit_end_time" rich="false" multiline="false" bordersize="1" width="140" bkcolor="#FFFFFFFF" bordercolor="#00DCDCDC" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" /-->
+			<Control width="10" />
+			<Label text="支付方式：" width="70" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Combo name="combo_pay_type" bordersize="1" width="130" bordercolor="#00DCDCDC" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="file=&apos;CreateProject\normal.PNG&apos;" hotimage="file=&apos;CreateProject\selected.PNG&apos;" pushedimage="file=&apos;CreateProject\selected.PNG&apos;" dropboxsize="0,150">
+				<ListLabelElement text=" 全部" selected="true" />
+				<ListLabelElement text=" 不委托平台记账" />
+				<ListLabelElement text=" 担保交易" />
+				<ListLabelElement text=" 协议支付(周结)" />
+			</Combo>
+			<Control width="20" />
+			<Button name="button_search" text="查询" width="90" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG" />
+		</HorizontalLayout>
+		
+		<HorizontalLayout height="10"/>
+		<HorizontalLayout height="1">
+			<Control bkcolor="#FFD7D7D7" />
+		</HorizontalLayout>
+		<HorizontalLayout height="507">
+			<VerticalLayout width="275">
+				<HorizontalLayout height="453">
+					<List header="hidden" name="contract_list" vscrollbar="false" />
+				</HorizontalLayout>
+				<HorizontalLayout height="30">
+					<Button name="_btn_page_prev" text="上一页" float="true" pos="8,0,0,0" enabled="true" width="55" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_first" text="..." textcolor="#FF000000" float="true" pos="63,0,0,0" enabled="true" width="20" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_1" text="1" textcolor="#FF000000" float="true" pos="83,0,0,0" enabled="true" width="20" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_2" text="2" textcolor="#FF000000" float="true" pos="103,0,0,0" enabled="true" width="20" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_3" text="3" textcolor="#FF000000" float="true" pos="123,0,0,0" enabled="true" width="20" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_4" text="4" textcolor="#FF000000" float="true" pos="143,0,0,0" enabled="true" width="20" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_5" text="5" textcolor="#FF000000" float="true" pos="163,0,0,0" enabled="true" width="20" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_end" text="..." textcolor="#FF000000" float="true" pos="183,0,0,0" enabled="true" width="20" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Button name="_btn_page_next" text="下一页" textcolor="#FF000000" float="true" pos="203,0,0,0" enabled="true" width="55" height="30" disabledtextcolor="#FFA7A6AA" align="center" />
+					<!-- VerticalLayout width="8" />
+					<VerticalLayout width="55">
+						<Button name="_btn_page_prev" text="上一页" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="20">
+						<Button name="_btn_page_first" text="..." textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="20">
+						<Button name="_btn_page_1" text="1" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="20">
+						<Button name="_btn_page_2" text="2" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="20">
+						<Button name="_btn_page_3" text="3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="20">
+						<Button name="_btn_page_4" text="4" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="20">
+						<Button name="_btn_page_5" text="5" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="20">
+						<Button name="_btn_page_end" text="..." textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout>
+					<VerticalLayout width="55">
+						<Button name="_btn_page_next" text="下一页" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					</VerticalLayout -->
+				</HorizontalLayout>
+            </VerticalLayout>
+			<VerticalLayout width="1">
+                <Control bkcolor="#FFD7D7D7" />
+            </VerticalLayout>
+			<VerticalLayout name="VerticalLayoutPag_1" width="688" >
+				<HorizontalLayout height="15"/>
+				
+				<HorizontalLayout height="20">
+					<Control width="10" />
+					<Label width="5" height="20" bkimage = "btn_default1.png" />
+					<Control width="5" />
+					<Label text="合约详情" font="6" width="200" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+				</HorizontalLayout>
+				
+				<HorizontalLayout height="15"/>
+				
+				<HorizontalLayout height="30">
+					<Control width="20" />
+					<Label text="合约单号：" width="70"/>
+					<Label name="label_contract_id" text="XXXXX" width="240"/>
+					<Control width="28" />
+					<Label text="合约名称：" width="70"/>
+					<Label name="label_contract_name" text="XXXXX" width="260"/>
+				</HorizontalLayout>
+				
+				<HorizontalLayout height="15"/>
+				
+				<HorizontalLayout height="30">
+					<Control width="20" />
+					<Label name="label_contract_identity_tag" text="收/付款人：" width="70"/>
+					<Label name="label_contract_identity" text="XXX" width="240"/>
+					<Control width="28" />
+					<Button name="btn_contract_msg" width="30" bordersize="1" disabledtextcolor="#FFA7A6AA" normalimage="message.PNG"/>
+					<Control width="10" />
+					<Button name="btn_contract_phone" width="30" bordersize="1" disabledtextcolor="#FFA7A6AA" normalimage="telphone.PNG"/>
+				</HorizontalLayout>
+				
+				<HorizontalLayout height="15"/>
+				
+				<HorizontalLayout height="30">
+					<Control width="20" />
+					<Label text="合约金额：" width="70"/>
+					<Label name="label_contract_money" text="XXX" width="240"/>
+					<Control width="28" />
+					<Label text="支付方式：" width="70"/>
+					<Label name="label_contract_pay_type" text="XXXXX" width="100"/>
+					<Control width="30" />
+				</HorizontalLayout>
+				
+				<HorizontalLayout height="15"/>
+				
+				<HorizontalLayout height="30">
+					<Control width="20" />
+					<Label text="签约时间：" width="70"/>
+					<Label name="label_contract_time" text="XXXX XXXXXX" width="215"/>
+				</HorizontalLayout>
+				
+				<HorizontalLayout height="15"/>
+				
+				<HorizontalLayout height="30">
+					<Control width="20" />
+					<Label text="备注：" width="100"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="30">
+					<Control width="20" />
+					<Label name="label_contract_remark" width="600" />
+				</HorizontalLayout>
+				<HorizontalLayout height="15"/>
+				
+				<HorizontalLayout height="30">
+					<Control width="20" />
+					<Label text="合约资料列表：" width="100"/>
+				</HorizontalLayout>
+				
+				<HorizontalLayout height="170">
+					<Control width="20" />
+					<ListResourcePacket name="list_contract_files" bkcolor="#FFF0F0F0" vscrollbar="true" />
+				</HorizontalLayout>
+			</VerticalLayout>
+		</HorizontalLayout>
+    </VerticalLayout>
+</Window>

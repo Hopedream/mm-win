@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="503,400">
+    <Container name="ContainerUI1" width="60" height="30" bkcolor="#FFFFFFFF">
+        <Label name="LabelUI1" text="文件选取" float="true" pos="20,13,0,0" width="64" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Control name="ControlUI1" float="true" pos="20,46,0,0" width="463" height="1" bkimage="line.png" />
+        <Button name="buttonClose" float="true" pos="473,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="close1.png" hotimage="close2.png" pushedimage="close3.png" />
+        <Button name="buttonChose" float="true" pos="76,102,0,0" width="350" height="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="select.png" />
+    </Container>
+</Window>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="290,50">
+    <VerticalLayout name="container_friend" width="290" height="50" bkcolor="#FFFFFFFF">
+        <Control name="groupmember_avatar" float="true" pos="8,9,0,0" width="32" height="32" />
+        <Label name="groupmember_nickname" text="黄丽" float="true" pos="44,7,0,0" width="107" height="15" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Label name="groupmem_destduty_1" visible="false" float="true" pos="152,7,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="groupmem_destduty_2" visible="false" float="true" pos="184,7,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="groupmem_destduty_3" visible="false" float="true" pos="216,7,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="groupmem_destduty_4" visible="false" float="true" pos="248,7,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="groupmem_orgname" float="true" pos="43,26,0,0" width="180" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Label name="LabelUI1" float="true" pos="0,49,0,0" width="290" height="1" bkcolor="#FFC0C0C0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+    </VerticalLayout>
+</Window>

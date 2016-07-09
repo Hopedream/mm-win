@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="445,30">
+    <ListContainerElement name="ListContainerElementUI1">
+        <Container name="ContainerUI1" height="70" bkcolor="#FFFFFFFF">
+            <RichEdit font="2" name="labelText" text="" float="true"  pos="10,2,360,50" width="400" height="66" textcolor="#009E9E9E"  inset="15,8,15,7" multiline="true"  enabled="true" readonly="true" autovscroll="false" align="center"/>
+        </Container>
+    </ListContainerElement>
+</Window>

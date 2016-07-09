@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="960,191">
+	<ListContainerElement name="ListContainerElementUI1" width="960" height="191">
+		<Container name="ContainerUI1" width="60" height="30" bkcolor="#FFFFFFFF">
+			<Label name="LabelUI1" text="名称：" float="true" pos="31,28,0,0" width="45" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Label name="LabelUI2" text="属性：" float="true" pos="31,63,0,0" width="45" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Label name="LabelUI3" text="时间：" float="true" pos="31,98,0,0" width="45" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Label name="LabelUI4" text="发送人：" float="true" pos="31,133,0,0" width="45" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<List name="List_Files" float="true" pos="420,10,0,0" width="530" height="171" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true" header="hidden"/>
+			<Label name="Label_Name" float="true" pos="83,28,0,0" width="262" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+			<Label name="Label_Attribute" float="true" pos="83,63,0,0" width="262" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+			<Label name="Label_Create_time" float="true" pos="82,98,0,0" width="262" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+			<Label name="Label_Org_name" float="true" pos="82,133,0,0" width="262" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+			<Control name="ControlUI1" float="true" pos="10,190,0,0" width="940" height="1" bkcolor="#FFCCCCCC" />
+		</Container>
+	</ListContainerElement>
+</Window>

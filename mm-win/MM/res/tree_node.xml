@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="193,29">
+	<ListContainerElement>
+		<Container name="ContainerUI1" width="193" height="29" bkcolor="#FFE3F1F3">
+        		<Button name="buttonType" float="true" pos="12,6,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        		<Label name="labelType" float="true" pos="36,0,0,0" width="60" height="29" textcolor="#ff9e9e9e" disabledtextcolor="#FFA7A6AA" />
+        		<Label name="labelTime" float="true" pos="135,0,0,0" width="33" height="29" textcolor="#ff9e9e9e" disabledtextcolor="#FFA7A6AA" />
+        		<Control name="controlShow" float="true" pos="174,12,0,0" width="8" height="5" />
+   		 </Container>
+	</ListContainerElement>	
+</Window>

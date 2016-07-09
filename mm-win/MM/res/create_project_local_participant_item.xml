@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="248,37">
+    <Container name="ContainerUI1" width="200" height="41" bkcolor="#FFFFFFFF">
+        <Option name="local_participant_option" float="true" pos="8,4,0,0" width="16" height="15" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="√1.png" selectedimage="√.png" />
+        <Label name="local_participant_name" text="黄丽" float="true" pos="30,5,0,0" width="156" height="15" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label name="local_participant_property_1" text="需求" visible="false" float="true" pos="30,23,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#00CEEFEF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="local_participant_property_2" text="订约" visible="false" float="true" pos="62,23,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#00CEEFEF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="local_participant_property_3" text="执行" visible="false" float="true" pos="94,23,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#00CEEFEF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="local_participant_property_4" text="售后" visible="false" float="true" pos="126,23,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#00CEEFEF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+    </Container>
+</Window>

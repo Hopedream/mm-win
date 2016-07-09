@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="700,520" caption="0,0,0,32">
+    <VerticalLayout width="700" height="520">
+        <HorizontalLayout width="700" height="30" bkcolor="#FF0489B6">
+            <Label text="发送请求" float="true" pos="6,1,0,0" width="60" height="28" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="sarp_btn_close" float="true" pos="670,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+            <Button name="sarp_btn_minize" float="true" pos="641,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_minize-normal.png" hotimage="main_dialog_button_minize_hover.png" pushedimage="main_dialog_button_minimize_pressed.png" />
+        </HorizontalLayout>
+        <HorizontalLayout width="700" height="490">
+            <VerticalLayout width="215" height="490" bkcolor="#FFF0F0F0">
+                <Label name="sarp_button_avatar" float="true" pos="52,68,0,0" width="100" height="100" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="sarp_label_nick" float="true" pos="45,177,0,0" width="115" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true"/>
+                <Label text="企业：" float="true" pos="25,240,0,0" width="38" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="行业：" float="true" pos="25,270,0,0" width="38" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="手机号码：" float="true" pos="25,302,0,0" width="70" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="sarp_label_company" float="true" pos="92,241,0,0" width="110" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+                <Label name="sarp_label_hangye" float="true" pos="93,271,0,0" width="110" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="sarp_label_phone" float="true" pos="93,302,0,0" width="110" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </VerticalLayout>
+            <VerticalLayout bordersize="1" width="485" height="490" bkcolor="#FFFFFFFF">
+                <Label text="请输入验证信息：" float="true" pos="60,52,0,0" width="120" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="RicheditaddPartnerTips" text="woshi..." bordersize="1" float="true" pos="59,83,0,0" width="372" height="43" bkcolor="#FFFFFFFF" bordercolor="#00D4D4D4" focusbordercolor="#0093CEE2" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" maxchar="25" />
+                <Button name="sarp_button_send" text="发送" float="true" pos="272,444,0,0" width="80" height="30" bkimage="default1.PNG" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" pushedimage="Press1.PNG" />
+                <Button name="sarp_button_close" text="关闭" float="true" pos="367,444,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" pushedimage="btn_Press2.PNG" />
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

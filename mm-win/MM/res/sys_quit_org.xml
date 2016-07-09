@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,220" caption="0,0,0,30" roundcorner="4,4">
+    <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" bordersize="1">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="350" height="30" bkcolor="#FF0289B6">
+            <Label name="LabelUI1" text="退出机构" float="true" pos="9,0,0,0" width="61" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="button_close" float="true" pos="320,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" width="350" height="140">
+			 <Control name="ControlUI1" float="true" pos="46,40,0,0" width="60" height="60" bkimage="notice_icon5.PNG" />
+            <Label name="LabelUI2" text="是否确定退出您当前所属的机构？" float="true" pos="121,45,0,0" width="210" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Label name="LabelUI3" text="退出后将与机构解除关联。" float="true" pos="121,72,0,0" width="180" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI3" width="350" height="50">
+            <Container name="ContainerUI1" float="true" pos="30,0,0,0" width="290" height="1" bkcolor="#FFCCCCCC" />
+            <Button name="button_ok" text="确定" float="true" pos="79,10,0,0" width="80" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" pushedimage="Press1.PNG" />
+            <Button name="button_cancel" text="取消" float="true" pos="190,10,0,0" width="80" height="30" textcolor="#00222222" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default2.PNG" pushedimage="Press2.PNG" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

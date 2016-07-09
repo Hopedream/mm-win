@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="250,153" caption="0,0,0,30" roundcorner="4,4">
+    <Font name="微软雅黑" size="18" bold="false" italic="false" />
+    <VerticalLayout width="250" height="153">
+        <HorizontalLayout height="30" bkcolor="#FF21A7D4">
+            <HorizontalLayout />
+            <Button name="btnClose" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\closeIncomming.PNG" hotimage="Call\closeIncomming.PNG" pushedimage="Call\closeIncomming.PNG" />
+        </HorizontalLayout>
+        <HorizontalLayout width="250" height="71" bkcolor="#FF21A7D4" inset="1,2,1,2">
+            <Control width="40" />
+            <Control name="incommingLogo" height="54" bkimage="Call\voice_incomming.PNG" />
+            <VerticalLayout width="156">
+                <Label name="nickname" height="20" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="0" endellipsis="true" />
+                <Label name="TxtTips" height="20" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="0" endellipsis="true" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout bkcolor="#FF21A7D4" />
+        <HorizontalLayout height="38" bkcolor="#FFFFFFFF" inset="1,2,1,2">
+            <Control />
+            <Button name="BnAnswer" width="60" height="24" padding="0,5,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\Answer1.png" hotimage="Call\Answer2.png" pushedimage="Call\Answer2.png" />
+            <Button name="BnHangUp" width="60" height="24" padding="10,5,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\refuse1.png" hotimage="Call\refuse2.png" pushedimage="Call\refuse2.png" />
+			<Control width="10"/>
+		</HorizontalLayout>
+    </VerticalLayout>
+</Window>

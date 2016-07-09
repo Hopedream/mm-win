@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="980,540">
+     <VerticalLayout name="VerticalLayoutUI1" width="980" height="540" bkcolor="#FFFFFFFF">
+		<HorizontalLayout name="HorizontalLayoutUI2" width="980" height="30">
+			 <List name="lstTmp" float="true" pos="43,0,0,0" width="925" height="30" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" >
+                <ListHeader name="lstHeader" bordercolor="#FFD9D9D9" bordersize="1" bkcolor="#FFF7F7F7">
+                    <ListHeaderItem text="名称" width="225" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                    <ListHeaderItem text="属性" width="90" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                    <ListHeaderItem text="大小" width="90" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                    <ListHeaderItem text="收藏人" width="90" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                    <ListHeaderItem text="收藏时间" width="160" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+					<ListHeaderItem text="状态" width="90" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+					 <ListHeaderItem text="操作" width="180" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                </ListHeader>
+            </List>
+        </HorizontalLayout>
+		<HorizontalLayout name="HorizontalLayoutUI2" width="980" height="510">
+			<BussinessDataList name="ListTrans" float="true" pos="43,0,0,0" width="925" height="500" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true" header="hidden">	
+			</BussinessDataList>
+		</HorizontalLayout>
+    </VerticalLayout>
+</Window>

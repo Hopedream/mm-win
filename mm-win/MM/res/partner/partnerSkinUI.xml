@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <HorizontalLayout width="800" height="800" bkcolor="#FFE1E1E1">        
+        <VerticalLayout width="300">
+			<HorizontalLayout height="30">                
+                <Button name="btnShowFindDlg" text="添加商业伙伴" width="80" padding="10"/>
+				<Button name="btnShowFindDlg" text="管理分组" width="80" padding="10"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="30">
+                <Label text="关键字查找" width="80" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="txtKeyword" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Button normalimage="Call\ok.png" name="btnShowFindDlg" width="20" height="20" padding="10,5,20"/>
+            </HorizontalLayout>
+			<VerticalLayout name="containe_FindDlg" height="30" visible="false">
+				<Label text="请选择查找方式。。。。"/>
+			</VerticalLayout>
+			<VerticalLayout>
+				<partnerListUI name="partnerList"/>
+			</VerticalLayout>
+        </VerticalLayout>
+		<VerticalLayout width="1" bkcolor="ffff0000" />
+		<VerticalLayout padding="10">
+			<Control height="50"/>
+			<Label text="修理厂名称" height="50"/>
+			<Label text="个人信息等。。。" height="50"/>
+		</VerticalLayout>
+    </HorizontalLayout>
+</Window>

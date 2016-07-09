@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="103,120">
+    <Container name="ContainerUI1" width="114" height="120" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5">
+        <Button name="buttonSendMsg" text="发消息" float="true" pos="0,0,0,0" width="103" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" hottextcolor="#FFFFFFFF" align="left" />
+        <Button name="buttonNetPhone" text="网络电话（免费）" float="true" pos="0,30,0,0" width="103" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" hottextcolor="#FFFFFFFF" align="left" />
+        <Button name="buttonMobilePhone" text="手机电话" float="true" pos="0,60,0,0" width="103" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" hottextcolor="#FFFFFFFF" align="left" />
+        <Button name="buttonDeleteFriend" text="删除好友" float="true" pos="0,90,0,0" width="103" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" hottextcolor="#FFFFFFFF" align="left" />
+    </Container>
+</Window>

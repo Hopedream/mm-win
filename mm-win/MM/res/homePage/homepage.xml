@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,598">  
+	<HorizontalLayout>
+	<Control />
+    <VerticalLayout name="homepageBkImg" bkimage="homepage\bg0.png" bkcolor="#FFFFFFFF" width="745" height="600">
+        <HorizontalLayout height="30">
+            <Control />
+            <Control width="30" height="30" bkimage="homepage\INFO.png" />
+            <Button text="{u}使用帮助{/u}" width="60" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" showhtml="true" align="left" />
+        </HorizontalLayout>
+        <HorizontalLayout height="120" padding="130,360,0,0">
+            <VerticalLayout width="100">
+                <Button name="btnhomePageAddPartner" width="80" height="80" padding="10,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="homepage\A01.png" hotimage="homepage\A02.png" pushedimage="homepage\A03.png" />
+                <Label text="添加商业伙伴" height="40" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" align="center" />
+            </VerticalLayout>
+            <VerticalLayout width="100" padding="50,0,0,0">
+                <Button name="btnhomePageCreateOrg" width="80" height="80" padding="10,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="homepage\B01.png" hotimage="homepage\B02.png" pushedimage="homepage\B03.png" />
+                <Label text="创建机构" height="40" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" align="center" />
+            </VerticalLayout>
+            <VerticalLayout width="100" padding="50,0,0,0">
+                <Button name="btnhomePageBusiness" width="80" height="80" padding="10,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="homepage\C01.png" hotimage="homepage\C02.png" pushedimage="homepage\C03.png" />
+                <Label text="业务沟通" height="40" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" align="center" />
+            </VerticalLayout>
+            <VerticalLayout width="100" padding="50,0,0,0">
+                <Button name="btnhomePageNetCall" width="80" height="80" padding="10,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="homepage\D01.png" hotimage="homepage\D02.png" pushedimage="homepage\D03.png" />
+                <Label text="免费电话" height="40" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" align="center" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="110" padding="130,20,50,0">
+            <Text name="txthomePageTip" width="500" height="59" textcolor="#00CCCCCC" disabledtextcolor="#FFA7A6AA" text="商业伙伴是您进行买卖的对象，分为机构和个人两种，您可以使用MM Android版轻松的将手机联系人添加入商业伙伴。"/>
+			<Control />
+		</HorizontalLayout>
+    </VerticalLayout>
+	<Control />
+	</HorizontalLayout>
+</Window>

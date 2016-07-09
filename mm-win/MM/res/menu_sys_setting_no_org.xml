@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="90,150">
+    <Container name="ContainerUI1" width="60" height="30" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" bordersize="1">
+        <Button name="btn_change_password" text="修改密码" float="true" pos="0,0,0,0" width="90" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" align="left" hottextcolor="#FFffffff" />
+        <Button name="btn_create_org" text="创建机构" float="true" pos="0,30,0,0" width="90" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" align="left" hottextcolor="#FFffffff" />
+        <Button name="btn_view_user_info" text="查看用户信息" float="true" pos="0,60,0,0" width="90" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" align="left" hottextcolor="#FFffffff" />
+        <Button name="btn_change_user_info" text="修改用户信息" float="true" pos="0,90,0,0" width="90" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" align="left" hottextcolor="#FFffffff" />
+        <Button name="button_about" text="关于" float="true" pos="0,120,0,0" width="90" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" align="left" hottextcolor="#FFffffff" />
+        <Button name="button_log_off" text="注销" float="true" pos="0,150,0,0" width="90" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" align="left" hottextcolor="#FFffffff" />
+        <Button name="button_quit" text="退出登录" float="true" pos="0,180,0,0" width="90" height="30" textpadding="5,5,0,0" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" font="2" hotimage="menu_click.PNG" pushedimage="menu_click.PNG" align="left" hottextcolor="#FFffffff" />
+    </Container>
+</Window>

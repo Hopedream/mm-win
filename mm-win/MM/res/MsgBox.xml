@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="398,200" sizebox="4,4,6,6" caption="0,0,560,20" roundcorner="4,4">
+    <Font name="微软雅黑" size="13" bold="false" italic="false" />
+    <VerticalLayout name="VerticalLayoutUI1" width="274" height="560" bkimage="msg_box_bk.png">
+        <HorizontalLayout name="HorizontalLayoutUI1" height="40">
+            <Label name="LabelTitle" float="true" pos="9,6,0,0" width="142" height="30" textcolor="#FF3C3C3C" disabledtextcolor="#FFA7A6AA" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" inset="1,2,1,2">
+            <Button name="BnOK" float="true" pos="149,114,0,0" width="90" height="32" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="bn_ok_nor.png" hotimage="bn_ok_hov.png" pushedimage="bn_ok_click.png" />
+            <Button name="BnYes" visible="false" float="true" pos="34,109,0,0" width="104" height="32" align="center" normalimage="bn_ok_nor.png" hotimage="bn_ok_hov.png" pushedimage="bn_ok_click.png" />
+            <Button name="BnNo" visible="false" float="true" pos="252,109,0,0" width="104" height="32" align="center" normalimage="bn_cancel_nor.png" hotimage="bn_cancel_hov.png" pushedimage="bn_cancel_click.png" />
+            <Control name="FlagCtrl" float="true" pos="53,39,0,0" width="50" height="50" bkimage="ok.png" />
+            <Text name="TxtTips" float="true" pos="166,35,0,0" width="238" height="56" textpadding="2,0,2,0" textcolor="#FF3C3C3C" font="0" align="wrap" endellipsis="true" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

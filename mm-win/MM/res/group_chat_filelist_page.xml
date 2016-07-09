@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,598">
+    <VerticalLayout width="300" height="598" bkcolor="#FFF0F0F0">
+        <HorizontalLayout width="300" height="40">
+            <Label text="业务资料" float="true" pos="13,6,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        </HorizontalLayout>
+        <HorizontalLayout>
+            <GroupFileList header="hidden" name="groupchatpacketfiles" vscrollbar="true" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

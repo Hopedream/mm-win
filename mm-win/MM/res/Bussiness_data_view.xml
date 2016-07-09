@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="980,620" caption="0,0,0,30" roundcorner="4,4" >
+    <VerticalLayout name="VerticalLayoutUI1" width="980" height="620" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" bordersize="2">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="980" height="30" bkcolor="#FF0289B6">
+            <Label name="LabelUI1" text="业务资料" float="true" pos="15,0,0,0" width="82" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Label name="Label_Title" float="true" pos="75,0,0,0" width="782" height="30" textcolor="#0070CEF0" disabledtextcolor="#FFA7A6AA" />
+            <Button name="buttonClose" float="true" pos="950,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" width="980" height="50">
+            <Option name="Option_Contract" text="签约资料" float="true" pos="370,13,0,0" width="80" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="BG-left.PNG" selected="true" selectedimage="left.PNG" selectedtextcolor="#FFFFFFFF" group="0"/>
+            <Option name="Option_Favorite" text="收藏资料" float="true" pos="450,13,0,0" width="80" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="BG-middle.PNG" selectedimage="middle.PNG" selectedtextcolor="#FFFFFFFF" group="0"/>
+            <Option name="Option_Trans" text="收发资料" float="true" pos="530,13,0,0" width="80" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="BG-right.PNG" selectedimage="right.PNG" selectedtextcolor="#FFFFFFFF" group="0"/>
+        </HorizontalLayout>
+        <TabLayout name="TabLayoutUI1" width="980" height="540" selectedid="-1" />
+    </VerticalLayout>
+</Window>

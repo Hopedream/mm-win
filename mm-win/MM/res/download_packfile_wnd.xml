@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="500,400" caption="0,0,0,30">
+    <VerticalLayout width="500" height="400" bkcolor="#FFFFFFFF">
+        <HorizontalLayout width="500" height="30" bkcolor="#FF0489B6">
+            <Button name="btn_close_downloadwnd" float="true" pos="468,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="close1.png" hotimage="close2.png" pushedimage="close3.png" />
+            <Label name="label_gc_packname" float="true" pos="25,0,0,0" width="120" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        </HorizontalLayout>
+        <HorizontalLayout width="500" height="320">
+            <VerticalLayout bordersize="1" bordercolor="#00DCDCDC">
+                <DownLoadPackFileList bkcolor="#FFFFFFFF" name="list_downloaded_packfiles" padding="2,2,2,2" vscrollbar="true" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout width="500" height="50">
+            <Button name="btn_download_packfiles" text="下载" bordersize="1" float="true" pos="42,18,0,0" width="60" height="20" bordercolor="#FFA7A6AA" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" hotimage="btn_default1.PNG" pushedimage="btn_default1.PNG" />
+            <Button name="btn_open_downloaded_packfiles" text="打开所在位置" bordersize="1" float="true" pos="126,19,0,0" width="100" height="20" bordercolor="#FFA7A6AA" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default4.PNG" hotimage="btn_default3.PNG" pushedimage="btn_default3.PNG" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

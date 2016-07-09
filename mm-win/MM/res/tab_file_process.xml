@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,598">
+    <VerticalLayout name="VerticalLayoutUI1" width="300" height="598" bkcolor="#FFF0F0F0">
+        <Container name="ContainerUI1" width="300" height="30" bkcolor="#FFAFAFAF">
+            <Label name="LabelUI1" text="发送文件" float="true" pos="12,0,0,0" width="58" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="1" />
+        </Container>
+        <VerticalLayout name="VerticalLayoutUI2" width="300" height="568">
+            <List name="listfileProcess" width="300" height="568" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true">
+                <ListHeader />
+            </List>
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

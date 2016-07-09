@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="445,70">
+    <ListContainerElement name="ListContainerElementUI1" width="445" height="70">
+        <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkcolor="#FFFFFFFF">
+            <HorizontalLayout name="HorizontalLayoutUI1" width="445" height="30">
+                <Label name="LabelUI2" text="我发送了一个文件" float="true" pos="220,0,0,0" width="166" height="30" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" font="2" />
+            </HorizontalLayout>
+            <HorizontalLayout name="HorizontalLayoutUI2" width="445" height="40">
+                <Container name="ContainerUI1" width="135" height="40" />
+                <Container name="ContainerUI2" width="225" height="40" bkcolor="#FF84DBE9">
+                    <Container name="ContainerUI4" width="215" height="60">
+                        <List name="lstFiles" float="true" pos="5,5,0,0" width="215" height="30" padding="7,7,7,7" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" header="hidden">
+                            <ListHeader />
+                        </List>
+                    </Container>
+                </Container>
+                <Container name="ContainerUI3" width="85" height="40">
+                    <Control name="controlLogo" float="true" pos="24,4,0,0" width="32" height="32" bkimage="tx02.png" />
+                    <Control name="ControlUI3" float="true" pos="0,4,0,0" width="10" height="32" bkimage="Bubble_right.png" />
+                </Container>
+            </HorizontalLayout>
+        </VerticalLayout>
+    </ListContainerElement>
+</Window>

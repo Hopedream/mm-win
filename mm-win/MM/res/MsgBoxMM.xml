@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="320,210" sizebox="4,4,6,6" caption="0,0,320,20" roundcorner="4,4">
+    <Font name="微软雅黑" size="13" bold="false" italic="false" />
+    <VerticalLayout width="320" height="210">
+        <HorizontalLayout width="320" height="30" bkcolor="#FF0489B6">
+            <Button name="btn_msgbox_close" float="true" pos="290,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+            <Button name="btn_msgbox_minize" float="true" pos="261,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_minize-normal.png" hotimage="main_dialog_button_minize_hover.png" pushedimage="main_dialog_button_minimize_pressed.png" />
+        </HorizontalLayout>
+        <HorizontalLayout width="320" height="180" bkcolor="#FFFFFFFF">
+            <Label float="true" pos="52,50,0,0" width="60" height="60" bkimage="notice_icon1.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_msgbox_close_2" text="关闭" float="true" pos="120,138,0,0" width="80" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default2.PNG" />
+            <Text name="text_msgbox_tips" float="true" pos="126,50,0,0" width="165" height="62" textpadding="2,0,2,0" align="wrap" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

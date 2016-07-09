@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Container name="ContainerUI1" width="60" height="30" />
+</Window>

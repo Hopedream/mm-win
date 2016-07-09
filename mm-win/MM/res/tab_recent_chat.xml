@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="960,598">
+    <HorizontalLayout bkcolor="#FFFFFFFF">
+        <VerticalLayout width="215" bkcolor="#FFF0F0F0">
+             <ContactList header="hidden" height="598" menu="true" name="listRecentChat" width="215" vscrollbar="true">
+				<ListHeader />
+			</ContactList>
+        </VerticalLayout>
+       <VerticalLayout>
+            <TabLayout name="RecentChatTabLayout" bkcolor="#FFFFFFFF" selectedid="-1" />
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1000,696" caption="0,0,0,30" roundcorner="2,2">
+    <VerticalLayout bordersize="5" width="1000" height="696" bkcolor="#FFFFFFFF" bordercolor="#FF21A7D4" inset="1,0,1,0">
+        <HorizontalLayout height="98">
+            <VerticalLayout bkimage="main_dialog_head_background.PNG">
+                <HorizontalLayout height="30">
+                    <Control />
+                    <Button name="BtnFeadbackSujection" text="反馈意见" bordersize="1" width="60" textcolor="#FFA5D9EA" disabledtextcolor="#FFA7A6AA" font="2" align="center" />
+                    <Button name="ButtonMinize" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_minize-normal.png" hotimage="main_dialog_button_minize_hover.png" pushedimage="main_dialog_button_minimize_pressed.png" />
+                    <Button name="ButtonClose" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+                </HorizontalLayout>
+                <Button name="ButtonMySelfAvatar" bordersize="1" float="true" pos="13,15,0,0" width="50" height="50" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_avatar.png" />
+                <Label name="LabelMySelfNickName" text="" float="true" pos="69,15,0,0" width="148" height="20" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="1" />
+                <Label name="LabelMySelfCompany" text="" float="true" pos="69,36,0,0" width="149" height="22" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" font="2" />
+                <Label name="txtBusinessName"  visible="false" text="" float="true" pos="266,12,0,0" width="212" height="20" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+                
+				<HorizontalLayout float="true" pos="260,43,0,0" width="300" height="32" name="VLayoutContactInfo" visible="false">
+					<Button width="10" name="btn_show_groupMember" normalimage="businessMaterial_arrow.png" hotimage="businessMaterial_arrow2.PNG" pushedimage="businessMaterial_arrow2.PNG"/>
+					<Control width="4"/>
+					<Button name="ButtonFriendAvatar" width="32" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+					<Control width="4"/>
+					<VerticalLayout>
+						<HorizontalLayout height="16">
+							<Label name="LabelFriendNickname" width="120" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="1" />
+							<Label name="lable_groupmem_count" width="50" text="" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" font="2" />
+							<Label name="lable_duty_1" text="需求" width="25" bkimage="subject_bk.png" textcolor="#FFA5D9EA" disabledtextcolor="#FFA7A6AA" font="2" visible="false"/>
+							<Label name="lable_duty_2" text="订约" width="25" padding="2,0,0,0" bkimage="subject_bk.png" textcolor="#FFA5D9EA" disabledtextcolor="#FFA7A6AA" font="2" visible="false"/>
+							<Label name="lable_duty_3" text="执行" width="25" padding="2,0,0,0" bkimage="subject_bk.png" textcolor="#FFA5D9EA" disabledtextcolor="#FFA7A6AA" font="2" visible="false"/>
+							<Label name="lable_duty_4" text="售后" width="25" padding="2,0,0,0" bkimage="subject_bk.png" textcolor="#FFA5D9EA" disabledtextcolor="#FFA7A6AA" font="2" visible="false"/>
+							<Control />
+						</HorizontalLayout>
+						<Label name="LabelFriendCompany" height="16" textcolor="#FF87E0FE" disabledtextcolor="#FFA7A6AA" font="2" />
+					</VerticalLayout>
+					<Label name="orgName" float="true" pos="307,43,0,0" width="243" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+				</HorizontalLayout>				
+                
+                
+                <HorizontalLayout name="HLayoutNetCall" float="true" pos="600,55,0,0" width="134" height="24" visible="false">
+                    <Button name="ButtonNetCall" tooltip="语音通话" width="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\maindlgVoice.png" hotimage="Call\maindlgVoice2.PNG" pushedimage="Call\maindlgVoice2.PNG"/>
+                    <Button name="btnCallTypeDrop" tooltip="选中语音通话方式" width="8" height="5" padding="0,5,0,10" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\arrow1.png" />
+                    <Control width="20" />
+                    <Button name="ButtonVideo" tooltip="视频通话" width="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="Call\maindlgVideo.png" hotimage="Call\maindlgVideo2.PNG" pushedimage="Call\maindlgVideo2.PNG" />
+                    <Control width="30" />
+                    <Button name="btnBusinessMaterial" tooltip="业务资料" width="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="businessMaterial.png" hotimage="businessMateria2.PNG" pushedimage="businessMaterial2.PNG"/>
+                    <Control width="30" />
+                    <Button name="btnBusinessQuit" tooltip="退出群聊" width="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="quit.png" hotimage="quit2.PNG" pushedimage="quit2.PNG" />                    
+                </HorizontalLayout>
+                <HorizontalLayout float="true" pos="59,70,0,0" width="132" height="18">
+                    <Button name="btnHomePage" tooltip="主页" width="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="homepage.png" hotimage="homepage2.PNG" pushedimage="homepage2.PNG"/>
+                    <Control width="20" />
+                    <Button name="ButtonDialPhone" tooltip="打电话" width="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btnCallphone.png" hotimage="btnCallphone2.PNG" pushedimage="btnCallphone2.PNG"/>
+                    <Control width="20" />
+                    <Button name="ButtonCreateNewProject" tooltip="新建业务" width="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="newBusiness.png" hotimage="newBusiness2.PNG" pushedimage="newBusiness2.PNG"/>
+					 <Control width="20" />
+					<Button name="ButtonQueryFiles" tooltip="资料查询" width="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="dataSearch.png" hotimage="dataSearch2.PNG" pushedimage="dataSearch2.PNG"/>
+                </HorizontalLayout>                
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout>
+            <VerticalLayout width="40" bkcolor="#FF21A7D4">
+                <Option name="TabRecentChatList" text="消息" tooltip="消息" height="60" textpadding="0,20,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FF87E0FE" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" selected="true" foreimage="main_dialog_sidebar_recent_chatlist.png" selectedimage="sidebar_selected.PNG" />
+                <Option name="TabBusinessPartner" text="好友" tooltip="商业伙伴" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_bussinessPartner.png&apos; dest=&apos;8,10,32,34&apos;" selectedimage="sidebar_selected.PNG" />
+                <Option name="TabProject" text="业务" tooltip="业务" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_project.png&apos; dest=&apos;8,10,32,34&apos;" selectedimage="sidebar_selected.PNG" />
+				<Option name="opt_maidlg_contract" text="签约" tooltip="签约" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_contract.png&apos; dest=&apos;8,10,32,34&apos;" selectedimage="sidebar_selected.PNG" />
+                <!-- Option name="TabMoney" text="钱包" tooltip="钱包" height="70" textpadding="0,40,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_money.png&apos; dest=&apos;10,10,34,34&apos;" selectedimage="sidebar_selected.PNG" / -->
+                <Option name="TabExecute" text="执行" tooltip="执行" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_execute.png&apos; dest=&apos;8,10,32,34&apos;" selectedimage="sidebar_selected.PNG" />				
+				<Option name="TabFaceDeal" text="交易" tooltip="交易" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_face_deal.png&apos; dest=&apos;8,10,32,34&apos;" selectedimage="sidebar_selected.PNG" />
+                <Option name="TabFinance" text="财务" tooltip="财务" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected.PNG" pushedimage="sidebar_selected.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_finance.png&apos; dest=&apos;8,10,32,34&apos;" selectedimage="sidebar_selected.PNG" />
+                <Control />
+				<Option name="TabCollection" text="收藏" tooltip="收藏" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="toolbar_normal.png" hotimage="sidebar_selected_2.PNG" pushedimage="sidebar_selected_2.PNG" group="quickbar" foreimage="file=&apos;main_dialog_sidebar_collection.png&apos; dest=&apos;8,10,32,34&apos;" selectedimage="sidebar_selected.PNG" />
+                <Button name="TabSysSetting" text="设置" tooltip="系统设置" height="60" textpadding="0,25,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;main_dialog_sidebar_syssetting.png&apos; dest=&apos;10,10,34,34&apos;" pushedimage="sidebar_selected_3.PNG" foreimage="file=&apos;main_dialog_sidebar_syssetting.png&apos; dest=&apos;8,10,32,34&apos;"/>
+            </VerticalLayout>
+            <VerticalLayout>
+                <TabLayout name="SidebarTabContainer" width="955" height="592" bkcolor="#FFFFFFFF" selectedid="-1" />
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="750,508" caption="0,0,0,30" roundcorner="4,4">
+    <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" bordersize="1">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="750" height="30" bkcolor="#FF0289B6">
+            <Label name="LabelUI1" text="员工管理" float="true" pos="5,0,0,0" width="90" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="buttonClose" float="true" pos="720,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+        </HorizontalLayout>
+        <VerticalLayout name="VerticalLayoutUI2" width="750" height="418">
+            <List name="lstHead" float="true" pos="15,30,0,0" width="720" height="30" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true">
+                <ListHeader name="lstEmployeeHeader" bordercolor="#FFD9D9D9" bordersize="1" bkcolor="#FFF7F7F7">
+                    <ListHeaderItem text="手机号码" width="150" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                    <ListHeaderItem text="员工" width="170" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                    <ListHeaderItem text="默认接收人" width="140" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                    <ListHeaderItem text="操作" width="260" height="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" sepimage="list_sepline.PNG" dragable="false"/>
+                </ListHeader>
+            </List>
+			<List name="lstEmployee" float="true" pos="15,60,0,0" width="720" height="240" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" vscrollbar="true" header="hidden">
+            </List>
+            <Edit name="editPhone" text="请输入手机号" float="true" pos="30,315,0,0" width="150" height="30" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" textpadding="10,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" bordersize="1" focusbordercolor="#FF76c1db"/>
+            <Button name="buttonAdd" text="添加新员工" float="true" pos="201,315,0,0" width="109" height="30" bkcolor="#FF5EC56C" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+        </VerticalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" width="750" height="60">
+            <Button name="buttonOK" text="确定" float="true" pos="266,17,0,0" width="80" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" pushedimage="Press1.PNG" />
+            <Button name="buttonCancel" text="取消" float="true" pos="405,17,0,0" width="80" height="30" textcolor="#00222222" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default2.PNG" pushedimage="Press2.PNG" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

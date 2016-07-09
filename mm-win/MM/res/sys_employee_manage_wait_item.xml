@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="640,30">
+    <ListContainerElement name="ListContainerElementUI1" width="500" height="70">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="640" height="30" bkcolor="#FFFFFFFF">
+            <Container name="ContainerUI1" width="90" height="30">
+                <Label name="labelcellphone" text="15855199941" float="true" pos="0,0,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </Container>
+            <Container name="ContainerUI2" width="273" height="30">
+                <Control name="controlLogo" float="true" pos="11,0,0,0" width="30" height="30" bkimage="tx01.png" />
+                <Label name="labelNick" text="小刘" float="true" pos="49,0,0,0" width="70" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+                <Label name="LabelUI1" text="（等待对方同意）" float="true" pos="122,0,0,0" width="110" height="30" textcolor="#00FF6000" disabledtextcolor="#FFA7A6AA" />
+            </Container>
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

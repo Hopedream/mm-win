@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1000,696" caption="0,0,0,35" roundcorner="5,5">
+    <Font name="SimSun" size="12" bold="false" italic="false" default="true" />
+    <VerticalLayout bordersize="5" width="1000" height="696" bkcolor="#FFFFFFFF" bordercolor="#FF21A7D4" inset="1,0,1,0">
+        <VerticalLayout height="35" bkimage="register\head.png">
+            <HorizontalLayout height="30">
+                <Control width="50" />
+                <Label name="lableTitle" text="注册" width="890" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" />
+                <Button name="minbtn" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_minize-normal.png" hotimage="main_dialog_button_minize_hover.png" pushedimage="main_dialog_button_minimize_pressed.png" />
+                <Button name="btnclose" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+            </HorizontalLayout>
+            <Control />
+        </VerticalLayout>
+        <TabLayout name="regSwitchLayout">
+            <VerticalLayout padding="307,120,305,0">
+                <HorizontalLayout height="30">
+                    <Label text="手机号码：" width="85" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Edit name="editUserName" bordersize="1" width="170" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Control width="10" />
+                    <Button name="btnGetPinCode" text="发送验证码" width="120" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default4.png" />
+                </HorizontalLayout>
+                <Label name="labelPhoneNoTip" text="请输入电话号码进行注册" height="30" padding="85,0,0,0" textpadding="2,0,2,0" textcolor="#00808080" disabledtextcolor="#FFA7A6AA" />
+                <HorizontalLayout height="30" padding="0,15,0,0">
+                    <Label text="验证码：" width="85" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Edit name="editPinCode" bordersize="1" width="170" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                </HorizontalLayout>
+                <Label name="labelPinCodeTip" text="请输入验证码" height="30" padding="85,0,0,0" textpadding="2,0,2,0" textcolor="#00808080" disabledtextcolor="#FFA7A6AA" />
+                <HorizontalLayout height="30" padding="0,15,0,0">
+                    <Label text="设置密码：" width="85" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <HorizontalLayout name="HLayoutPasswd" bordersize="1" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB">
+                        <Edit name="editPasswd" width="275" padding="1,1,1,1" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" password="true" />
+                        <Button name="btnPasswdMode" width="24" height="24" padding="0,3,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="register\password-off.PNG" />
+                    </HorizontalLayout>
+                </HorizontalLayout>
+                <Label name="labelPasswdTip" text="密码为6-12位数字、大小写字母" height="30" padding="85,0,0,0" textpadding="2,0,2,0" textcolor="#00808080" disabledtextcolor="#FFA7A6AA" />
+                <HorizontalLayout height="30" padding="0,15,0,0">
+                    <Label text="确认密码：" width="85" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    <Edit name="editConfirmPasswd" bordersize="1" width="300" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" password="true" />
+                </HorizontalLayout>
+                <Label name="labelRePasswdTip" text="密码为6-12位数字、大小写字母" height="30" padding="85,0,0,0" textpadding="2,0,2,0" textcolor="#00808080" disabledtextcolor="#FFA7A6AA" />
+                <HorizontalLayout height="16" padding="85,20,0,0">
+                    <Option name="optAcceptAgreement" width="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="√1.png" selectedimage="√.png" />
+                    <Label name="editAccptAgree" text="点击确定即视为您已同意" width="160" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>
+                    <Button text="{u}MM用户协议{/u}" width="85" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="left" />
+                    <Control />
+                </HorizontalLayout>
+                <HorizontalLayout height="30" padding="85,20,0,0">
+                    <Button name="btnRegisterNewUser" text="确定" width="80" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" hotimage="Press1.png" pushedimage="Press1.png" />
+                    <Button name="btnclose" text="取消" width="80" padding="10,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default2.PNG" hotimage="Press2.png" pushedimage="Press2.png" />
+                </HorizontalLayout>
+            </VerticalLayout>
+            <VerticalLayout padding="365,180,0,0">
+                <HorizontalLayout height="60">
+                    <Control name="ctrlCompleteRegImg" width="60" bkimage="systemMsgBox\MsgIcon0.png" />
+                    <VerticalLayout padding="20,0,0,0">
+                        <Label name="labelRegResult" text="注册成功！" height="40" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="5" />
+                        <Label name="labelRegDescription" text="现在就开始您的买卖之旅吧！" height="20" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                    </VerticalLayout>
+                </HorizontalLayout>
+                <Button name="btnCompleteReg" text="立即登录" width="120" height="30" padding="60,65,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default3.PNG" hotimage="btn_Press3.png" pushedimage="btn_Press3.png" />
+            </VerticalLayout>
+        </TabLayout>
+    </VerticalLayout>
+</Window>

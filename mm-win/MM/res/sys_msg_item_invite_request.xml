@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,60">
+    <ListContainerElement name="ListContainerElementUI1">
+        <HorizontalLayout name="ContainerUI1" width="745" height="60" bkcolor="#FFFFFFFF" focusbordercolor="#00C0DCC0">
+			<Control name="ControlUI1" float="true" pos="0,8,0,0" width="300" height="1" bkcolor="#FFC0C0C0" />
+			<Control name="ControlUI2" float="true" pos="445,8,0,0" width="300" height="1" bkcolor="#FFC0C0C0" />
+            <Label name="labelType" text="好友信息" float="true" pos="10,10,0,0" width="60" height="15" bkcolor="#FFFFFFFF" textcolor="#00A0A0A4" disabledtextcolor="#FFA7A6AA" />
+            <Label name="labelRequestTips" float="true" pos="37,32,0,0" width="550" height="21" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="labelRecvtime" float="true" pos="300,0,0,0" width="140" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="right" endellipsis="true" />
+            <Button name="ButtonAgreed" text=" 同意" float="true" pos="623,34,0,0" width="40" height="20" bkcolor="#FFFF7A53" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="ButtonDeny" text="拒绝" float="true" pos="678,34,0,0" width="40" height="20" bkcolor="#FFF0F0F0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </HorizontalLayout>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="90,78">
+    <VerticalLayout width="90" bkcolor="#FFFFFFFF">
+        <Button name="richedit_cut" text="剪切" height="25" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="2"/>
+        <Control height="1" padding="10,0,10,0" bkcolor="#FFF3F3F3" />
+        <Button name="richedit_copy" text="复制" height="25" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="2"/>
+		<Control height="1" padding="10,0,10,0" bkcolor="#FFF3F3F3" />
+        <Button name="richedit_paste" text="粘贴" height="25" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="2"/>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="90,30">
+    <Container name="ContainerUI1" width="90" height="30" bkcolor="#FFFFFFFF">
+        <Button name="buttonDelete" text="删除联系人" float="true" pos="0,0,0,0" width="90" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+    </Container>
+</Window>

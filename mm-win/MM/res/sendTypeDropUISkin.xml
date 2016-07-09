@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="154,50">
+    <VerticalLayout width="154" height="50" bkcolor="#FFFFFFFF">
+		<HorizontalLayout height="25">
+			<Control name="optEntrlSend" width="25"/>
+			<Button name="btnOptEntreSend" font="2" text="Enter键发送信息" textpadding="0,4" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left" />
+		</HorizontalLayout>
+        
+        <HorizontalLayout height="25">
+			<Control name="optCtrlEntrlSend" width="25"/>
+			<Button name="btnOptCtrlEntreSend" font="2" text="Ctrl+Enter键发送信息" textpadding="0,4" bkcolor="#FFFFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left" />
+		</HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="450,580" caption="0,0,0,30" roundcorner="4,4">
+    <VerticalLayout name="VerticalLayoutUI1" width="60" height="30" bkcolor="#FFFFFFFF" bordercolor="#FFE5E5E5" bordersize="1">
+        <HorizontalLayout name="HorizontalLayoutUI1" width="450" height="30" bkcolor="#FF0289B6">
+            <Label name="LabelUI1" text="创建机构" float="true" pos="5,0,0,0" width="70" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_close" float="true" pos="420,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="X1.png" hotimage="X2.png" pushedimage="X3.png" />
+        </HorizontalLayout>
+        <VerticalLayout name="VerticalLayoutUI2" width="450" height="490">
+            <Label name="LabelUI2" text="机构头像:" float="true" pos="40,10,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btn_select_avatar" float="true" pos="111,18,0,0" width="100" height="100" bkimage="Avatar_100x100.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="11" align="center" normalimage="mask1.PNG" pushedimage="mask2.PNG"/>
+            <Label name="LabelUI3" text="企业名称:" float="true" pos="40,135,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="LabelUI4" text="所属地区:" float="true" pos="40,180,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="LabelUI5" text="手机号码:" float="true" pos="40,360,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="LabelUI6" text="机构电话:" float="true" pos="40,405,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="LabelUI7" text="详细地址:" float="true" pos="40,450,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			<Label name="LabelUI8" text="机构属性:" float="true" pos="40,315,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Edit name="edit_org_name" float="true" pos="111,135,0,0" width="300" height="30" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="10,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" bordersize="1"/>
+			
+			<Combo normalimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" pushedimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" dropboxsize="0,150" itemtextpadding="10,0,0,0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="CombProvince" tooltip="省份" float="true" pos="111,180,0,0" width="210" height="30" bordercolor="#00CCCCCC" bordersize="1" vscrollbar="true" focusbordercolor="#FF76C1DB"/>
+           
+		    <Combo normalimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" pushedimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" dropboxsize="0,150" itemtextpadding="10,0,0,0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="CombCity" tooltip="城市" float="true" pos="111,225,0,0" width="210" height="30" bordercolor="#00CCCCCC" bordersize="1" vscrollbar="true" focusbordercolor="#FF76C1DB"/>
+		   
+             <Combo normalimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" pushedimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" dropboxsize="0,150" itemtextpadding="10,0,0,0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="CombDistrict" tooltip="区域" float="true" pos="111,270,0,0" width="210" height="30" bordercolor="#00CCCCCC" bordersize="1" vscrollbar="true" focusbordercolor="#FF76C1DB"/>
+			
+             <Combo normalimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" pushedimage="file=&apos;drop_down_arrow.png&apos; dest=&apos;180,0,210,30&apos; source=&apos;0,0,30,30&apos;" dropboxsize="0,150" itemtextpadding="10,0,0,0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" name="CombProperty" tooltip="机构属性" float="true" pos="111,315,0,0" width="210" height="30" bordercolor="#00CCCCCC" bordersize="1" vscrollbar="true" focusbordercolor="#FF76C1DB"/>
+			
+            <Edit name="edit_cellphone" float="true" pos="111,360,0,0" width="300" height="30" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="10,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" bordersize="1"/>
+            <Edit name="edit_phone" float="true" pos="111,405,0,0" width="300" height="30" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="10,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" bordersize="1"/>
+            <Edit name="edit_address" float="true" pos="111,450,0,0" width="300" height="30" bkcolor="#FFFFFFFF" bordercolor="#00CCCCCC" focusbordercolor="#FF76C1DB" textpadding="10,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" bordersize="1"/>
+			
+            <Label name="LabelUI9" text="*" float="true" pos="7,135,0,0" width="28" height="30" textcolor="#00FF6000" disabledtextcolor="#FFA7A6AA" align="right" />
+            <Label name="LabelUI10" text="*" float="true" pos="7,180,0,0" width="28" height="30" textcolor="#00FF6000" disabledtextcolor="#FFA7A6AA" align="right" />
+        </VerticalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" width="450" height="60">
+            <Button name="btn_ok" text="确定" float="true" pos="139,15,0,0" width="80" height="30" textcolor="#FFffffff" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default1.PNG" pushedimage="Press1.PNG" />
+            <Button name="btn_cancel" text="取消" float="true" pos="231,15,0,0" width="80" height="30" textcolor="#FF222222" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default2.PNG" pushedimage="Press2.PNG" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

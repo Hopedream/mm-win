@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="360,490" caption="0,0,0,32">
+    <HorizontalLayout name="HorizontalLayoutUI1" width="360" height="600" bkimage="file=&apos;bg12.png&apos; corner=&apos;600,200,1,1&apos;">
+        <HorizontalLayout name="HorizontalLayoutUI2" width="111" height="35">
+            <Label name="LabelUI1" text="MM1.0" float="true" pos="0,0,0,0" width="40" height="17" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HorizontalLayoutUI3" width="122" height="35" />
+        <HorizontalLayout name="HorizontalLayoutUI4" width="134" height="35">
+            <Button name="buttonMin" float="true" pos="31,0,0,0" width="28" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_mini_normal.png" hotimage="btn_mini_highlight.png" pushedimage="btn_mini_down.png" />
+            <Button name="buttonMax" float="true" pos="59,0,0,0" width="28" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_max_normal.png" hotimage="btn_max_highlight.png" pushedimage="btn_max_down.png" />
+            <Button name="buttonClose" float="true" pos="87,0,0,0" width="39" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_close_normal.png" hotimage="btn_close_highlight.png" pushedimage="btn_close_down.png" />
+        </HorizontalLayout>
+        <Label name="LabelUI2" text="昵称" float="true" pos="45,112,0,0" width="60" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Edit name="nickNameEdit" float="true" pos="140,112,0,0" width="176" height="25" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label name="LabelUI3" text="手机" float="true" pos="45,208,0,0" width="60" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Label name="LabelUI4" text="公司" float="true" pos="45,256,0,0" width="60" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Label name="LabelUI5" text="邮箱" float="true" pos="45,306,0,0" width="60" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Label name="LabelUI6" text="性别" float="true" pos="45,160,0,0" width="60" height="25" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Edit name="sexEdit" float="true" pos="140,159,0,0" width="176" height="25" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="mobileEdit" float="true" pos="140,206,0,0" width="176" height="25" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="companyEdit" float="true" pos="140,255,0,0" width="176" height="25" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="emailEdit" float="true" pos="140,306,0,0" width="176" height="25" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Button name="buttonCancel" text="取消" float="true" pos="91,388,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="colour_001highlight.bmp" hotimage="colour_001.bmp" pushedimage="colour_001highlight.bmp" />
+        <Button name="buttonOK" text="确定" float="true" pos="209,388,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="colour_001highlight.bmp" hotimage="colour_001.bmp" pushedimage="colour_001highlight.bmp" />
+    </HorizontalLayout>
+</Window>

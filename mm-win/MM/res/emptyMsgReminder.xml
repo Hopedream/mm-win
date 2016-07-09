@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="122,43" roundcorner="4,4">
+    <VerticalLayout width="122" height="43" bkcolor="#FFFFFFFF" inset="1,0,1,0">
+        <Button name="btnMsg" text="不能发送空白信息" width="120" height="41" textpadding="0,0,0,5" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="pubble.png" />
+    </VerticalLayout>
+</Window>

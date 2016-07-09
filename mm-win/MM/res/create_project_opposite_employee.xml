@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="185,50">
+    <VerticalLayout name="container_friend" width="185" height="50" bkcolor="#FFFFFFFF">
+        <Option name="option_oppo_employe_selected" float="true" pos="3,6,0,0" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="√1.png" selectedimage="√.png" />
+        <Control name="control_oppo_unselect_avatar" float="true" pos="23,3,0,0" width="22" height="22" />
+        <Label name="label_oppo_unselect_name" text="黄丽" float="true" pos="47,8,0,0" width="120" height="15" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Label name="label_oppo_unselect_isDefault" text="默认接收人" visible="false" float="true" pos="102,8,0,0" width="70" height="15" textcolor="#00C8C8C8" disabledtextcolor="#FFA7A6AA" />
+        <Label name="destduty_1" visible="false" bordersize="1" float="true" pos="23,29,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="destduty_2" visible="false" bordersize="1" float="true" pos="63,29,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="destduty_3" visible="false" bordersize="1" float="true" pos="103,29,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+        <Label name="destduty_4" visible="false" bordersize="1" float="true" pos="145,29,0,0" width="30" height="16" bkcolor="#FFF1FAFF" bordercolor="#FFC7E7FF" textcolor="#FF0389B6" disabledtextcolor="#FFA7A6AA" />
+    </VerticalLayout>
+</Window>

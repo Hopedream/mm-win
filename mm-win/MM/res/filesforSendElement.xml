@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="140,55">
+    <Container name="ContainerUI1" width="130" height="55" bkcolor="#FFF0F0F0">
+        <Control name="ControlUI1" float="true" pos="9,9,0,0" width="37" height="37" bkimage="thumbnail_photo.PNG" />
+        <Label name="labelFileName" text="配置清单" float="true" pos="52,6,0,0" width="85" height="22" textcolor="#00222222" disabledtextcolor="#FFA7A6AA" />
+        <Label name="labelFileSize" text="1.25M" float="true" pos="52,29,0,0" width="85" height="16" textcolor="#009E9E9E" disabledtextcolor="#FFA7A6AA" />
+    </Container>
+</Window>

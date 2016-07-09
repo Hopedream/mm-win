@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="745,598">
+    <HorizontalLayout name="HLayoutPartnerPage" width="745" height="598" bkcolor="#FFFFFFFF">
+        <Label name="LabelBussinessPartnerAvatar" float="true" pos="151,124,0,0" width="100" height="100" bkimage="bussiness_partner_default.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Label text="行业：" float="true" pos="287,124,0,0" width="60" height="30" textcolor="#009C9C9C" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Label text="手机号码：" float="true" pos="287,168,0,0" width="70" height="30" textcolor="#009C9C9C" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Label name="label_hangye" text="汽车配件" float="true" pos="363,124,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Label name="label_phonenumber" text="18012113458" float="true" pos="363,167,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        <Button name="btn_send_message" text="发消息" float="true" pos="151,343,0,0" width="80" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default1.PNG" pushedimage="btn_Press1.PNG" />
+        <Button name="btn_netcall_free" text="网络通话(免费)" float="true" pos="245,343,0,0" width="120" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default3.PNG" pushedimage="btn_Press3.PNG" />
+        <Button name="btn_callbyphone" text="手机通话" float="true" pos="379,343,0,0" width="80" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default1.PNG" pushedimage="btn_Press1.PNG" />
+        <Label name="parnter_nick" float="true" pos="124,229,0,0" width="155" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true" />
+        <Button name="btn_check_projectlist" text="查看业务往来" float="true" pos="473,343,0,0" width="120" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default3.PNG" pushedimage="btn_Press3.PNG" />
+    </HorizontalLayout>
+</Window>

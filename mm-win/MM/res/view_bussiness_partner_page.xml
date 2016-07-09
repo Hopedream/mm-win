@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="700,520" caption="0,0,0,32">
+    <VerticalLayout width="700" height="520">
+        <HorizontalLayout width="745" height="30" bkcolor="#FF0489B6">
+            <Label text="查看资料" float="true" pos="6,1,0,0" width="60" height="28" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" />
+            <Button name="vbp_btn_close" float="true" pos="670,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_close_normal.png" hotimage="main_dialog_button_close_hover.png" pushedimage="main_dialog_button_close_pressed.png" />
+            <Button name="vbp_btn_minize" float="true" pos="641,0,0,0" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="main_dialog_button_minize-normal.png" hotimage="main_dialog_button_minize_hover.png" pushedimage="main_dialog_button_minimize_pressed.png" />
+        </HorizontalLayout>
+        <HorizontalLayout width="700" height="490" bkcolor="#FFFFFFFF">
+            <Label name="vbp_LabelBussinessPartnerAvatar" float="true" pos="155,123,0,0" width="100" height="100" bkimage="bussiness_partner_default.PNG" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="行业：" float="true" pos="291,148,0,0" width="60" height="20" textcolor="#009C9C9C" disabledtextcolor="#FFA7A6AA" />
+            <Label text="手机号码：" float="true" pos="291,176,0,0" width="65" height="20" textcolor="#009C9C9C" disabledtextcolor="#FFA7A6AA" />
+            <Label text="机构电话：" float="true" pos="291,207,0,0" width="65" height="20" textcolor="#009C9C9C" disabledtextcolor="#FFA7A6AA" />
+            <Label text="地址：" float="true" pos="291,237,0,0" width="60" height="20" textcolor="#009C9C9C" disabledtextcolor="#FFA7A6AA" />
+            <Label name="vbp_label_hangye" text="汽车配件" float="true" pos="367,150,0,0" width="100" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="vbp_label_phonenumber" text="18012113458" float="true" pos="367,178,0,0" width="100" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="vbp_label_comp_phone" float="true" pos="367,206,0,0" width="100" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label name="vbp_label_address" float="true" pos="367,236,0,0" width="322" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Label text="企业：" float="true" pos="291,122,0,0" width="60" height="20" textcolor="#009C9C9C" disabledtextcolor="#FFA7A6AA" />
+            <Label name="vbp_label_partner_company" float="true" pos="367,122,0,0" width="200" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            <Button name="vbp_btn_add_partner" text="加为好友" float="true" pos="212,311,0,0" width="80" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="btn_default1.PNG" pushedimage="btn_Press1.PNG" />
+            <Label name="vbp_parnter_nick" float="true" pos="156,230,0,0" width="100" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" endellipsis="true" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

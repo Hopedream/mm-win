@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="920,50">
+	<ListContainerElement>
+		<HorizontalLayout width="960" height="50" bkcolor="#FFFFFFFF">
+			<Control float="true" pos="0,49,0,0" width="920" height="1" bkcolor="#FFD7D7D7" />
+			<Container width="230" height="49" bordersize="1" bordercolor="#FFD7D7D7">
+				<Label name="lable_project_name" float="true" pos="17,10,0,0" width="180" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			</Container>
+			<Container width="230" height="49" bordersize="1" bordercolor="#FFD7D7D7" >
+				<Label name="label_orgnization_name" float="true" pos="19,10,0,0" width="180" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			</Container>
+			<Container width="230" height="49" bordersize="1" bordercolor="#FFD7D7D7" >
+				<Label name="label_project_time" float="true" pos="18,10,0,0" width="180" height="31" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			</Container>
+			<Container width="230" height="49" bordersize="1" bordercolor="#FFD7D7D7" >
+				<Button name="btn_get_project_info" text="查看业务资料" float="true" pos="9,10,0,0" width="120" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="default_button_normal.PNG" hotimage="default_button_pressed.PNG" pushedimage="default_button_pressed.PNG" />
+				<Button name="btn_bussiness_chat" text="业务沟通" float="true" pos="138,10,0,0" width="80" height="31" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="button1_80x24.PNG" hotimage="button2_80x24.PNG" pushedimage="button2_80x24.PNG" />
+			</Container>
+		</HorizontalLayout>
+	</ListContainerElement>
+</Window>
