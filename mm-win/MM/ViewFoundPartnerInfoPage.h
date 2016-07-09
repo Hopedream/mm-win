@@ -11,7 +11,7 @@ public:
 
 	virtual LPCTSTR GetWindowClassName()const	{	return _T("ViewFoundPartnerInfoPage");			}
 	virtual CDuiString GetSkinFolder()			{	return _T("..\\MM\\res\\");						}
-	virtual CDuiString GetSkinFile()			{	return "view_bussiness_partner_page.xml";		}
+	virtual CDuiString GetSkinFile()			{	return _T("view_bussiness_partner_page.xml");		}
 	virtual void OnFinalMessage( HWND hWnd )	{	delete this;				}
 	virtual void Notify(TNotifyUI& msg);
 	virtual void InitWindow();

@@ -18,9 +18,9 @@ std::tstring GetFullTimeString(time_t t)
 
 	std::tstring strTime;
 	struct tm * now = localtime( & t );
-	char chBuf[100];
+	TCHAR chBuf[100];
 	memset(chBuf, 0, 100);
-	sprintf(chBuf, "%u-%02u-%02u %02u:%02u:%02u", 
+	_stprintf(chBuf, _T("%u-%02u-%02u %02u:%02u:%02u"), 
 			now->tm_year + 1900, now->tm_mon + 1, now->tm_mday,
 			now->tm_hour, now->tm_min, now->tm_sec);
 
@@ -81,9 +81,9 @@ bool IsLegalAccount(tstring& str)
 	}
 	if (bSucc)
 	{
-		if(tstring::npos == str.find_first_not_of("0123456789"))
+		if(tstring::npos == str.find_first_not_of(_T("0123456789")))
 		{
-			unsigned long dwValue = strtoul(str.c_str(), NULL, 10);
+			unsigned long dwValue = _tcstoul(str.c_str(), NULL, 10);
 			if (dwValue>0)
 			{
 				return true;
@@ -103,7 +103,7 @@ tstring ExtractPhoneNo(const tstring strAccount)
 
 CDuiString ExtractPhoneNo(const CDuiString strAccount)
 {
-	return strAccount.Left(strAccount.Find("@"));
+	return strAccount.Left(strAccount.Find(_T("@")));
 }
 
 tstring GetFileSizeFormat(int nFileSize)
@@ -123,19 +123,19 @@ tstring GetFileSizeFormat(int nFileSize)
 	else if (nFileSize>=1024 && nFileSize<1024*1024)
 	{
 		double dKB = double(nFileSize) / (1024.0);
-		strSize.Format("%.2f", dKB);
+		strSize.Format(_T("%.2f"), dKB);
 		strSize += _T("KB");
 	}
 	else if (nFileSize>= 1024*1024 && nFileSize<1024*1024*1024)
 	{
 		double dMB = double(nFileSize) / (1024.0*1024.0);
-		strSize.Format("%.2f", dMB);
+		strSize.Format(_T("%.2f"), dMB);
 		strSize += _T("MB");
 	}
 	else
 	{
 		double dGB  = double(nFileSize)/(1024*1024*1024);
-		strSize.Format("%.2f", dGB);
+		strSize.Format(_T("%.2f"), dGB);
 		strSize += _T("GB");
 	}
 	
@@ -149,63 +149,63 @@ tstring GetDefaultFileIcon(tstring& strFileType)
 	tstring strType = strFileType;
 	tstring strFileName = _T("CreateProject\\006.png");
 	std::transform(strType.begin(), strType.end(),strType.begin(), ::tolower);
-	if (strType.find("pdf") != -1)
+	if (strType.find(_T("pdf")) != -1)
 	{
 		strFileName = _T("CreateProject\\pdf.png");
 	}
-	else if(strType.find("png") != -1)
+	else if(strType.find(_T("png")) != -1)
 	{
 		strFileName = _T("CreateProject\\png.png");
 	}
-	else if (strType.find("mp3") != -1)
+	else if (strType.find(_T("mp3")) != -1)
 	{
 		strFileName = _T("CreateProject\\mp3.png");
 	}
-	else if (strType.find("zip") != -1)
+	else if (strType.find(_T("zip")) != -1)
 	{
 		strFileName = _T("CreateProject\\zip.png");
 	}
-	else if (strType.find("exe") != -1)
+	else if (strType.find(_T("exe")) != -1)
 	{
 		strFileName = _T("CreateProject\\exe.png");
 	}
-	else if (strType.find("bmp") != -1)
+	else if (strType.find(_T("bmp")) != -1)
 	{
 		strFileName = _T("CreateProject\\bmp.png");
 	}
-	else if (strType.find("doc") != -1)
+	else if (strType.find(_T("doc")) != -1)
 	{
 		strFileName = _T("CreateProject\\doc.png");
 	}
-	else if (strType.find("docx") != -1)
+	else if (strType.find(_T("docx")) != -1)
 	{
 		strFileName = _T("CreateProject\\docx.png");
 	}
-	else if (strType.find("xls") != -1)
+	else if (strType.find(_T("xls")) != -1)
 	{
 		strFileName = _T("CreateProject\\xls.png");
 	}
-	else if (strType.find("xlsx") != -1)
+	else if (strType.find(_T("xlsx")) != -1)
 	{
 		strFileName = _T("CreateProject\\xlsx.png");
 	}
-	else if (strType.find("txt") != -1)
+	else if (strType.find(_T("txt")) != -1)
 	{
 		strFileName = _T("CreateProject\\txt.png");
 	}
-	else if (strType.find("mp4") != -1)
+	else if (strType.find(_T("mp4")) != -1)
 	{
 		strFileName = _T("CreateProject\\mp4.png");
 	}
-	else if (strType.find("jpg") != -1)
+	else if (strType.find(_T("jpg")) != -1)
 	{
 		strFileName = _T("CreateProject\\jpg.png");
 	}
-	else if (strType.find("html") != -1)
+	else if (strType.find(_T("html")) != -1)
 	{
 		strFileName = _T("CreateProject\\html.png");
 	}
-	else if (strType.find("gif") != -1)
+	else if (strType.find(_T("gif")) != -1)
 	{
 		strFileName = _T("CreateProject\\gif.png");
 	}
@@ -218,47 +218,47 @@ tstring GetPackFileIcon(tstring& strFileType)
 	tstring strType = strFileType;
 	tstring strFileName = _T("ProjectFile\\file.png");
 	std::transform(strType.begin(), strType.end(),strType.begin(), ::tolower);
-	if (strType.find("pdf") != -1)
+	if (strType.find(_T("pdf")) != -1)
 	{
 		strFileName = _T("ProjectFile\\pdf.png");
 	}
-	else if(strType.find("png") != -1)
+	else if(strType.find(_T("png")) != -1)
 	{
 		strFileName = _T("ProjectFile\\image.png");
 	}
-	else if (strType.find("mp3") != -1)
+	else if (strType.find(_T("mp3")) != -1)
 	{
 		strFileName = _T("ProjectFile\\audio.png");
 	}
-	else if (strType.find("bmp") != -1)
+	else if (strType.find(_T("bmp")) != -1)
 	{
 		strFileName = _T("ProjectFile\\png.png");
 	}
-	else if (strType.find("doc") != -1)
+	else if (strType.find(_T("doc")) != -1)
 	{
 		strFileName = _T("ProjectFile\\doc.png");
 	}
-	else if (strType.find("docx") != -1)
+	else if (strType.find(_T("docx")) != -1)
 	{
 		strFileName = _T("ProjectFile\\doc.png");
 	}
-	else if (strType.find("xls") != -1)
+	else if (strType.find(_T("xls")) != -1)
 	{
 		strFileName = _T("ProjectFile\\excel.png");
 	}
-	else if (strType.find("xlsx") != -1)
+	else if (strType.find(_T("xlsx")) != -1)
 	{
 		strFileName = _T("ProjectFile\\excel.png");
 	}
-	else if (strType.find("mp4") != -1)
+	else if (strType.find(_T("mp4")) != -1)
 	{
 		strFileName = _T("ProjectFile\\video.png");
 	}
-	else if (strType.find("jpg") != -1)
+	else if (strType.find(_T("jpg")) != -1)
 	{
 		strFileName = _T("ProjectFile\\image.png");
 	}
-	else if (strType.find("gif") != -1)
+	else if (strType.find(_T("gif")) != -1)
 	{
 		strFileName = _T("ProjectFile\\image.png");
 	}
@@ -268,12 +268,12 @@ tstring GetPackFileIcon(tstring& strFileType)
 
 bool IsQingyuePack(tstring& strProperty)
 {
-	if (_tcsicmp(strProperty.c_str(), "报价单") == 0
-		|| _tcsicmp(strProperty.c_str(), "合同补充条款") == 0
-		|| _tcsicmp(strProperty.c_str(), "合约补充条款") == 0
-		|| _tcsicmp(strProperty.c_str(), "合约条款修改与替换") == 0
-		|| _tcsicmp(strProperty.c_str(), "合约中规定的交付文档") == 0
-		|| _tcsicmp(strProperty.c_str(), "合约文件") == 0)
+	if (_tcsicmp(strProperty.c_str(), _T("报价单")) == 0
+		|| _tcsicmp(strProperty.c_str(), _T("合同补充条款")) == 0
+		|| _tcsicmp(strProperty.c_str(), _T("合约补充条款")) == 0
+		|| _tcsicmp(strProperty.c_str(), _T("合约条款修改与替换")) == 0
+		|| _tcsicmp(strProperty.c_str(), _T("合约中规定的交付文档")) == 0
+		|| _tcsicmp(strProperty.c_str(), _T("合约文件")) == 0)
 	{
 		return true;
 	}

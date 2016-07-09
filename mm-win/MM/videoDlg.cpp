@@ -706,7 +706,7 @@ void CVideoDlg::HandleIncomming(stUcsIncommingCall* lpUcsCallInfo)
 		GetDBTaskModule()->SaveCallHistoryList(userInfo.strAccount, eDialCallIn);
 		if (CUcPaasClient::Instance()->GetCameraNum() == 0)
 		{
-			CLogger::GetInstance()->PrintLog(LOG_INFO, "local camera don't exist.");
+			CLogger::GetInstance()->PrintLog(LOG_INFO, _T("local camera don't exist."));
 			CUcPaasClient::Instance()->SendExCallStatus(strPhoneNo, eLackCamera);
 		}
 

@@ -29,7 +29,7 @@ public:
 	void OnShowPartnerInfoPage();
 
 	virtual void OnVCardReturned(tstring& strAccount, sUserVCard& oneInfo);
-	virtual CDuiString GetSkinFile()			{	return "query_bussiness_partner_page.xml";		}
+	virtual CDuiString GetSkinFile()			{	return _T("query_bussiness_partner_page.xml");		}
 	//virtual void OnFinalMessage( HWND hWnd )	{	delete this;				}
 	virtual void HandleClickEvent(TNotifyUI& msg);
 	virtual void InitWindow();
