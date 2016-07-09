@@ -52,19 +52,19 @@ loginDlg::loginDlg()
 	, re_connect_response_(false)
 {
 	InitUCSNetServiceCallBackInterface();
-	strcpy(WEB_DOMAIN_URL , gloox_get_addr("DOMAIN"));
-	strcpy(WEB_SERVER_BASE_URL , gloox_get_addr("SERVER_BASE"));
-	strcpy(WEB_SERVER_SITE_URL , gloox_get_addr("SERVER_SITE"));
-	strcpy(WEB_GET_PASSWORD_URL , gloox_get_addr("GET_PASSWORD"));
-	strcpy(WEB_WALLET_URL , gloox_get_addr("WALLET_URL"));
-	strcpy(WEB_FILE_URL , gloox_get_addr("FILE_URL"));
-	strcpy(WEB_ROOT, gloox_get_addr("WEB_ROOT"));
-	strcpy(REFER_EXECUTE, gloox_get_addr("REFER_EXECUTE"));
-	strcpy(REFER_FACE_DEAL, gloox_get_addr("REFER_FACE_DEAL"));
-	strcpy(REFER_FINANCE, gloox_get_addr("REFER_FINANCE"));	
-	strcpy(REFER_MOTOR_TYPE, gloox_get_addr("REFER_MOTOR_TYPE"));
-	strcpy(REFER_VIN, gloox_get_addr("REFER_VIN"));
-	strcpy(SUGGESTIONS_URL, gloox_get_addr("SUGGESTIONS_URL"));
+	_tcscpy(WEB_DOMAIN_URL , gloox_get_addr("DOMAIN"));
+	_tcscpy(WEB_SERVER_BASE_URL , gloox_get_addr("SERVER_BASE"));
+	_tcscpy(WEB_SERVER_SITE_URL , gloox_get_addr("SERVER_SITE"));
+	_tcscpy(WEB_GET_PASSWORD_URL , gloox_get_addr("GET_PASSWORD"));
+	_tcscpy(WEB_WALLET_URL , gloox_get_addr("WALLET_URL"));
+	_tcscpy(WEB_FILE_URL , gloox_get_addr("FILE_URL"));
+	_tcscpy(WEB_ROOT, gloox_get_addr("WEB_ROOT"));
+	_tcscpy(REFER_EXECUTE, gloox_get_addr("REFER_EXECUTE"));
+	_tcscpy(REFER_FACE_DEAL, gloox_get_addr("REFER_FACE_DEAL"));
+	_tcscpy(REFER_FINANCE, gloox_get_addr("REFER_FINANCE"));	
+	_tcscpy(REFER_MOTOR_TYPE, gloox_get_addr("REFER_MOTOR_TYPE"));
+	_tcscpy(REFER_VIN, gloox_get_addr("REFER_VIN"));
+	_tcscpy(SUGGESTIONS_URL, gloox_get_addr("SUGGESTIONS_URL"));
 }
 
 loginDlg::~loginDlg()

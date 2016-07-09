@@ -4,7 +4,7 @@
 #include <map>
 #include <string>
 #include <list>
-
+#include <tchar.h>
 using namespace std;
 
 typedef struct tagFileInfo{

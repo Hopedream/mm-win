@@ -452,7 +452,7 @@ void CWkeWebkitUI::SetFile( tstring strValue)
 tstring CWkeWebkitUI::RunJS(tstring strValue)
 {
 	jsValue jsRet = m_pWindow->m_pWebView->runJS(strValue.c_str());
-	return jsToString(m_pWindow->m_pWebView->globalExec(), jsRet);
+	return jsToStringW(m_pWindow->m_pWebView->globalExec(), jsRet);
 }
 
 // jsValue JS_CALL CWkeWebkitUI::js_msgBox(jsExecState es)

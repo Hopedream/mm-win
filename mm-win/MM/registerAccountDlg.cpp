@@ -267,7 +267,7 @@ void CRegisterAccountDlg::RegisterUser()
 	}
 	else
 	{
-		CMsgBox* pMsgBox = new CMsgBox("´íÎó","·¢ËÍÍøÂç×¢²áÇëÇóÊ§°Ü£¬ÇëÉÔºòÖØÊÔ£¡", MSGBOX_ICON_ERROR);
+		CMsgBox* pMsgBox = new CMsgBox(_T("´íÎó"),_T("·¢ËÍÍøÂç×¢²áÇëÇóÊ§°Ü£¬ÇëÉÔºòÖØÊÔ£¡"), MSGBOX_ICON_ERROR);
 		pMsgBox->ShowModal();
 	}
 
@@ -325,7 +325,7 @@ void CRegisterAccountDlg::InitRegDlg()
 	//m_pPasswdEditUI->SetPasswordChar(249);
 	m_pConfirmPasswdEditUI->SetPasswordMode(true);
 
-	m_pBtnPasswdMode->SetNormalImage("register\\password-off.PNG");
+	m_pBtnPasswdMode->SetNormalImage(_T("register\\password-off.PNG"));
 
 	if (DLG_TYPE_RESET_PASSWORD == dlg_type_)
 	{
@@ -387,7 +387,7 @@ bool CRegisterAccountDlg::CheckRegisterInfo()
 	
 	if (!m_pAcceptAgree->GetCheck())
 	{
-		CMsgBox::MsgBox(this->GetHWND(), "×¢²á", "×¢²áÖ®Ç°ÇëÈÏÕæÔÄ¶ÁMMÊ¹ÓÃÐ­Òé", MSGBOX_ICON_WARNING);
+		CMsgBox::MsgBox(this->GetHWND(), _T("×¢²á"), _T("×¢²áÖ®Ç°ÇëÈÏÕæÔÄ¶ÁMMÊ¹ÓÃÐ­Òé"), MSGBOX_ICON_WARNING);
 		return false;
 	}
 
@@ -401,13 +401,13 @@ void CRegisterAccountDlg::SwitchPasswdMode()
 	{
 		m_pPasswdEditUI->SetPasswordMode(false);
 		m_pConfirmPasswdEditUI->SetPasswordMode(false);
-		m_pBtnPasswdMode->SetNormalImage("register\\password-on.PNG");
+		m_pBtnPasswdMode->SetNormalImage(_T("register\\password-on.PNG"));
 	}
 	else 
 	{
 		m_pPasswdEditUI->SetPasswordMode(true);
 		m_pConfirmPasswdEditUI->SetPasswordMode(true);
-		m_pBtnPasswdMode->SetNormalImage("register\\password-off.PNG");
+		m_pBtnPasswdMode->SetNormalImage(_T("register\\password-off.PNG"));
 	}
 }
 
@@ -472,7 +472,7 @@ void CRegisterAccountDlg::GetVerifyCode()
 	if (CWebClient::IsValidUser(strPhone))
 	{
 		
-		m_pLabelPhoneTip->SetText("¸ÃÊÖ»úºÅÂëÒÑ¾­±»×¢²á£¬ÇëÖ±½ÓµÇÂ¼");
+		m_pLabelPhoneTip->SetText(_T("¸ÃÊÖ»úºÅÂëÒÑ¾­±»×¢²á£¬ÇëÖ±½ÓµÇÂ¼"));
 		m_pLabelPhoneTip->SetTextColor(WARNING_TEXT_COLOR);
 		return;
 				
@@ -489,16 +489,16 @@ void CRegisterAccountDlg::GetVerifyCode()
 	CHttpClient httpClient;
 	tstring strHttpResponse;
 	int retCode = httpClient.Post(strUrl, strPost,strHttpResponse);
-	CLogger::GetInstance()->PrintLog(LOG_INFO, "get register pin code:%s", strHttpResponse.c_str());
+	CLogger::GetInstance()->PrintLog(LOG_INFO, _T("get register pin code:%s"), strHttpResponse.c_str());
 
 	if (strHttpResponse.empty())
 	{
-		m_pLabelPhoneTip->SetText("ÍøÂç³¬Ê±£¬»ñÈ¡ÑéÖ¤ÂëÊ§°Ü£¬ÇëÖØÊÔ£¡");
+		m_pLabelPhoneTip->SetText(_T("ÍøÂç³¬Ê±£¬»ñÈ¡ÑéÖ¤ÂëÊ§°Ü£¬ÇëÖØÊÔ£¡"));
 		m_pLabelPhoneTip->SetTextColor(WARNING_TEXT_COLOR);
 		return;
 	}
 
-	if (strHttpResponse.find("result") != -1)
+	if (strHttpResponse.find(_T("result")) != -1)
 	{
 		bool bSucc = false;
 		Json::Reader reader;
@@ -507,17 +507,17 @@ void CRegisterAccountDlg::GetVerifyCode()
 		{
 //			int nResult = root["result"].asInt();
 //			if (nResult == 1)
-			if (strHttpResponse.find("\"result\":1") != -1)
+			if (strHttpResponse.find(_T("\"result\":1")) != -1)
 			{
 				bSucc = true;
 			}
-			else if(strHttpResponse.find("\"result\":0") != -1)
+			else if(strHttpResponse.find(_T("\"result\":0")) != -1)
 			{
 				if (!root["code"].isNull())
 				{
-					if (tstring::npos != root["code"].asString().find("1003"))
+					if (tstring::npos != root["code"].asString(0).find(_T("1003")))
 					{
-						m_pLabelPhoneTip->SetText("¸ÃÊÖ»úºÅÂëÒÑ¾­±»×¢²á£¬ÇëÖ±½ÓµÇÂ¼");
+						m_pLabelPhoneTip->SetText(_T("¸ÃÊÖ»úºÅÂëÒÑ¾­±»×¢²á£¬ÇëÖ±½ÓµÇÂ¼"));
 						m_pLabelPhoneTip->SetTextColor(WARNING_TEXT_COLOR);
 						return;
 					}
@@ -538,7 +538,7 @@ void CRegisterAccountDlg::GetVerifyCode()
 			SetTimer(m_PaintManager.GetPaintWindow(), TIMERID_VERIFY_CODE, TIMER_UNIT_SECOND, NULL);
 			m_nPinLifecycle = PIN_CODE_VALID_TIME;
 			CDuiString strMsg;
-			strMsg.Format("Ê£Óà%dÃë", m_nPinLifecycle);
+			strMsg.Format(_T("Ê£Óà%dÃë"), m_nPinLifecycle);
 			m_pBtnGetPinCode->SetText(strMsg);
 			m_pBtnGetPinCode->SetEnabled(false);
 			m_pBtnGetPinCode->SetNormalImage(IMG_GET_PIN_BKIMG);
@@ -546,7 +546,7 @@ void CRegisterAccountDlg::GetVerifyCode()
 	}
 	else
 	{
-		m_pLabelPhoneTip->SetText("·¢ËÍÍøÂçÇëÇóÊ§°Ü£¬ÇëÖØÊÔ£¡");
+		m_pLabelPhoneTip->SetText(_T("·¢ËÍÍøÂçÇëÇóÊ§°Ü£¬ÇëÖØÊÔ£¡"));
 		m_pLabelPhoneTip->SetTextColor(WARNING_TEXT_COLOR);
 		return;
 	}
@@ -557,8 +557,8 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 {
 	//////////////////////////////////////////////////////////////////////////
 	//´ÓCSS»ñÈ¡ÑéÖ¤Âë
-	tstring ret_verify_code("123456");
-	tstring strUrl("124.206.140.155:8090/commonApi/cssapi.do?txid=jam0011");
+	tstring ret_verify_code(_T("123456"));
+	tstring strUrl(_T("124.206.140.155:8090/commonApi/cssapi.do?txid=jam0011"));
 	//	strUrl += _T("sign-up");
 
 	orgInfo info;
@@ -581,23 +581,23 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 	CHttpClient httpClient;
 
 	tstring strUTF8Url;
-	CChineseCode::GB2312ToUTF_8(strUTF8Url, strUrl.c_str(), strUrl.length());
-
+	//CChineseCode::GB2312ToUTF_8(strUTF8Url, strUrl.c_str(), strUrl.length());
+	strUTF8Url = CChineseCode::EncodeUTF8(strUrl);
 	tstring strUTF8Post;
-	CChineseCode::GB2312ToUTF_8(strUTF8Post, strPost.c_str(), strPost.length());
-
+	//CChineseCode::GB2312ToUTF_8(strUTF8Post, strPost.c_str(), strPost.length());
+	strUTF8Post = CChineseCode::EncodeUTF8(strPost);
 	int retCode = httpClient.CSSPost(strUrl, strPost, strHttpResponse);
 
 	strHttpResponse = CChineseCode::DecodeUTF8(strHttpResponse);
 
-	ReplaceAll(strHttpResponse, "\\", "");
+	ReplaceAll(strHttpResponse, _T("\\"), _T(""));
 
 
 	strHttpResponse = strHttpResponse.substr(1, strHttpResponse.length());
 	strHttpResponse = strHttpResponse.substr(0, strHttpResponse.length()-1);
 
-	if (strHttpResponse.find("retcode") != -1 && strHttpResponse.find("retmsg") != -1
-		&& strHttpResponse.find("vcode") != -1)
+	if (strHttpResponse.find(_T("retcode")) != -1 && strHttpResponse.find(_T("retmsg")) != -1
+		&& strHttpResponse.find(_T("vcode")) != -1)
 	{
 		tstring ret_code;
 		tstring ret_string;
@@ -607,19 +607,19 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 		{
 			if (reader.parse(strHttpResponse,root))
 			{
-				ret_code =  root["retcode"].asString();
-				ret_string =  root["retmsg"].asString();
-				ret_verify_code = root["vcode"].asString();
+				ret_code =  root["retcode"].asString(0);
+				ret_string =  root["retmsg"].asString(0);
+				ret_verify_code = root["vcode"].asString(0);
 			}
 		}
 		catch (...)
 		{
 			tstring str;
-			str = "´ÓCSS»ñÈ¡ÑéÖ¤ÂëÊ§°Ü,HttpÓ¦´ð:  " + strHttpResponse;
+			str = _T("´ÓCSS»ñÈ¡ÑéÖ¤ÂëÊ§°Ü,HttpÓ¦´ð:  ") + strHttpResponse;
 			CLogger::GetInstance()->PrintErrLog(str.c_str());		
 		}
 
-		if ("0" == ret_code)
+		if (_T("0") == ret_code)
 		{
 //			CMsgBox* pMsgBox = new CMsgBox("ÖØÖÃÖ§¸¶ÃÜÂë","ÖØÖÃÖ§¸¶ÃÜÂë³É¹¦£¡", MSGBOX_ICON_ERROR);
 //			pMsgBox->ShowModal();
@@ -627,8 +627,8 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 		else
 		{
 			tstring str;
-			str = "²éÑ¯ÖØÖÃÑéÖ¤Âë´íÎó£¬´íÎó´úÂë£º" + ret_code;
-			CMsgBox* pMsgBox = new CMsgBox("´íÎó", str, MSGBOX_ICON_ERROR);
+			str = _T("²éÑ¯ÖØÖÃÑéÖ¤Âë´íÎó£¬´íÎó´úÂë£º") + ret_code;
+			CMsgBox* pMsgBox = new CMsgBox(_T("´íÎó"), str, MSGBOX_ICON_ERROR);
 			pMsgBox->ShowModal();
 			return;
 		}
@@ -636,8 +636,8 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 	else
 	{
 		tstring str;
-		str = "·¢ËÍÍøÂçÇëÇóÊ§°Ü£¬" + strHttpResponse;
-		CMsgBox* pMsgBox = new CMsgBox("´íÎó", str, MSGBOX_ICON_ERROR);
+		str = _T("·¢ËÍÍøÂçÇëÇóÊ§°Ü£¬") + strHttpResponse;
+		CMsgBox* pMsgBox = new CMsgBox(_T("´íÎó"), str, MSGBOX_ICON_ERROR);
 		pMsgBox->ShowModal();
 //		return;
 	}
@@ -657,17 +657,17 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 	
 	strHttpResponse=(_T(""));
 	retCode = httpClient.Post(strUrl, strPost,strHttpResponse);
-	CLogger::GetInstance()->PrintLog(LOG_INFO, "get register pin code:%s", strHttpResponse.c_str());
+	CLogger::GetInstance()->PrintLog(LOG_INFO, _T("get register pin code:%s"), strHttpResponse.c_str());
 
 	if (strHttpResponse.empty())
 	{
-		m_pLabelPhoneTip->SetText("ÍøÂç³¬Ê±£¬»ñÈ¡ÑéÖ¤ÂëÊ§°Ü£¬ÇëÖØÊÔ£¡");
+		m_pLabelPhoneTip->SetText(_T("ÍøÂç³¬Ê±£¬»ñÈ¡ÑéÖ¤ÂëÊ§°Ü£¬ÇëÖØÊÔ£¡"));
 		m_pLabelPhoneTip->SetTextColor(WARNING_TEXT_COLOR);
 		return;
 	}
 
 	//if (strHttpResponse.find("code") != -1)
-	if (strHttpResponse.find("result") != -1)
+	if (strHttpResponse.find(_T("result")) != -1)
 	{
 		bool bSucc = false;
 		Json::Reader reader;
@@ -686,7 +686,7 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 				{
 					if (tstring::npos != root["code"].asString().find("1003"))
 					{
-						m_pLabelPhoneTip->SetText("¸ÃÊÖ»úºÅÂëÒÑ¾­±»×¢²á£¬ÇëÖ±½ÓµÇÂ¼");
+						m_pLabelPhoneTip->SetText(_T("¸ÃÊÖ»úºÅÂëÒÑ¾­±»×¢²á£¬ÇëÖ±½ÓµÇÂ¼"));
 						m_pLabelPhoneTip->SetTextColor(WARNING_TEXT_COLOR);
 						return;
 					}
@@ -707,7 +707,7 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 			SetTimer(m_PaintManager.GetPaintWindow(), TIMERID_VERIFY_CODE, TIMER_UNIT_SECOND, NULL);
 			m_nPinLifecycle = PIN_CODE_VALID_TIME;
 			CDuiString strMsg;
-			strMsg.Format("Ê£Óà%dÃë", m_nPinLifecycle);
+			strMsg.Format(_T("Ê£Óà%dÃë"), m_nPinLifecycle);
 			m_pBtnGetPinCode->SetText(strMsg);
 			m_pBtnGetPinCode->SetEnabled(false);
 			m_pBtnGetPinCode->SetNormalImage(IMG_GET_PIN_BKIMG);
@@ -715,7 +715,7 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 	}
 	else
 	{
-		m_pLabelPhoneTip->SetText("·¢ËÍÍøÂçÇëÇóÊ§°Ü£¬ÇëÖØÊÔ£¡");
+		m_pLabelPhoneTip->SetText(_T("·¢ËÍÍøÂçÇëÇóÊ§°Ü£¬ÇëÖØÊÔ£¡"));
 		m_pLabelPhoneTip->SetTextColor(WARNING_TEXT_COLOR);
 		return;
 	}
@@ -755,7 +755,7 @@ void CRegisterAccountDlg::ResetPassword()
 	
 //	body {"userid":"123","orgname":"orgname","appcode":"UNIPEI","orgid":"2"}
 
-	tstring strUrl("124.206.140.155:8090/commonApi/cssapi.do?txid=jam012");
+	tstring strUrl(_T("124.206.140.155:8090/commonApi/cssapi.do?txid=jam012"));
 //	strUrl += _T("sign-up");
 
 	orgInfo info;
@@ -781,22 +781,22 @@ void CRegisterAccountDlg::ResetPassword()
 	CHttpClient httpClient;
 
 	tstring strUTF8Url;
-	CChineseCode::GB2312ToUTF_8(strUTF8Url, strUrl.c_str(), strUrl.length());
-
+	//CChineseCode::GB2312ToUTF_8(strUTF8Url, strUrl.c_str(), strUrl.length());
+	strUTF8Url = CChineseCode::EncodeUTF8(strUrl);
 	tstring strUTF8Post;
-	CChineseCode::GB2312ToUTF_8(strUTF8Post, strPost.c_str(), strPost.length());
-
+	//CChineseCode::GB2312ToUTF_8(strUTF8Post, strPost.c_str(), strPost.length());
+	strUTF8Post = CChineseCode::EncodeUTF8(strPost);
 	int retCode = httpClient.CSSPost(strUrl, strPost, strHttpResponse);
 
 	strHttpResponse = CChineseCode::DecodeUTF8(strHttpResponse);
 
-	ReplaceAll(strHttpResponse, "\\", "");
+	ReplaceAll(strHttpResponse, _T("\\"), _T(""));
 
 
 	strHttpResponse = strHttpResponse.substr(1, strHttpResponse.length());
 	strHttpResponse = strHttpResponse.substr(0, strHttpResponse.length()-1);
 
-	if (strHttpResponse.find("retcode") != -1 && strHttpResponse.find("retmsg") != -1)
+	if (strHttpResponse.find(_T("retcode")) != -1 && strHttpResponse.find(_T("retmsg")) != -1)
 	{
 		tstring ret_code;
 		tstring ret_string;
@@ -806,30 +806,30 @@ void CRegisterAccountDlg::ResetPassword()
 		{
 			if (reader.parse(strHttpResponse,root))
 			{
-				ret_code =  root["retcode"].asString();
-				ret_string =  root["retmsg"].asString();
+				ret_code =  root["retcode"].asString(0);
+				ret_string =  root["retmsg"].asString(0);
 			}
 		}
 		catch (...)
 		{
 			tstring str;
-			str = "×¢²áÊ§°Ü,HttpÓ¦´ð:  " + strHttpResponse;
+			str = _T("×¢²áÊ§°Ü,HttpÓ¦´ð:  ") + strHttpResponse;
 			CLogger::GetInstance()->PrintErrLog(str.c_str());		
 		}
 
-		if ("0" == ret_code)
+		if (_T("0") == ret_code)
 		{
-			CMsgBox* pMsgBox = new CMsgBox("ÖØÖÃÖ§¸¶ÃÜÂë","ÖØÖÃÖ§¸¶ÃÜÂë³É¹¦£¡", MSGBOX_ICON_ERROR);
+			CMsgBox* pMsgBox = new CMsgBox(_T("ÖØÖÃÖ§¸¶ÃÜÂë"),_T("ÖØÖÃÖ§¸¶ÃÜÂë³É¹¦£¡"), MSGBOX_ICON_ERROR);
 			pMsgBox->ShowModal();
 		}
 		else
 		{
 			//ÕâÀïÔÝÊ±ÆÁ±Î
- 			CLogger::GetInstance()->PrintLog(LOG_INFO, "reset password failed: %s", strHttpResponse.c_str());
+ 			CLogger::GetInstance()->PrintLog(LOG_INFO, _T("reset password failed: %s"), strHttpResponse.c_str());
 
 			tstring str;
-			str = "ÖØÖÃÖ§¸¶ÃÜÂë´íÎó£¬´íÎó´úÂë£º" + ret_code;
-			CMsgBox* pMsgBox = new CMsgBox("´íÎó", str, MSGBOX_ICON_ERROR);
+			str = _T("ÖØÖÃÖ§¸¶ÃÜÂë´íÎó£¬´íÎó´úÂë£º") + ret_code;
+			CMsgBox* pMsgBox = new CMsgBox(_T("´íÎó"), str, MSGBOX_ICON_ERROR);
 			pMsgBox->ShowModal();
 
 			return;
@@ -837,7 +837,7 @@ void CRegisterAccountDlg::ResetPassword()
 	}
 	else
 	{
-		CMsgBox* pMsgBox = new CMsgBox("´íÎó","·¢ËÍÍøÂç×¢²áÇëÇóÊ§°Ü£¬ÇëÉÔºòÖØÊÔ£¡", MSGBOX_ICON_ERROR);
+		CMsgBox* pMsgBox = new CMsgBox(_T("´íÎó"),_T("·¢ËÍÍøÂç×¢²áÇëÇóÊ§°Ü£¬ÇëÉÔºòÖØÊÔ£¡"), MSGBOX_ICON_ERROR);
 		pMsgBox->ShowModal();
 	}
 }

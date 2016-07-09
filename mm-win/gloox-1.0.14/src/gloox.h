@@ -1266,6 +1266,6 @@ namespace gloox
 extern "C"
 {
   GLOOX_API const char* gloox_version();
-  GLOOX_API const char* gloox_get_addr(const char * strKey);
+  GLOOX_API const TCHAR* gloox_get_addr(const char * strKey);
 }
 #endif // GLOOX_H__

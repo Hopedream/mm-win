@@ -6,16 +6,16 @@
 
 using namespace std;
 
-const TCHAR* vbp_btn_avatar			= "vbp_LabelBussinessPartnerAvatar";
-const TCHAR* vbp_label_nick			= "vbp_parnter_nick";
-const TCHAR* vbp_label_company		= "vbp_label_partner_company";
-const TCHAR* vbp_label_hangye		= "vbp_label_hangye";
-const TCHAR* vbp_label_phone		= "vbp_label_phonenumber";
-const TCHAR* vbp_company_phone		= "vbp_label_comp_phone";
-const TCHAR* vbp_address			= "vbp_label_address";
-const TCHAR* vbp_add_partner		= "vbp_btn_add_partner";
-const TCHAR* vbp_btn_min			= "vbp_btn_minize";
-const TCHAR* vbp_btn_close			= "vbp_btn_close";
+const TCHAR* vbp_btn_avatar			= _T("vbp_LabelBussinessPartnerAvatar");
+const TCHAR* vbp_label_nick			= _T("vbp_parnter_nick");
+const TCHAR* vbp_label_company		= _T("vbp_label_partner_company");
+const TCHAR* vbp_label_hangye		= _T("vbp_label_hangye");
+const TCHAR* vbp_label_phone		= _T("vbp_label_phonenumber");
+const TCHAR* vbp_company_phone		= _T("vbp_label_comp_phone");
+const TCHAR* vbp_address			= _T("vbp_label_address");
+const TCHAR* vbp_add_partner		= _T("vbp_btn_add_partner");
+const TCHAR* vbp_btn_min			= _T("vbp_btn_minize");
+const TCHAR* vbp_btn_close			= _T("vbp_btn_close");
 
 
 CViewFoundPartnerInfoPage::CViewFoundPartnerInfoPage(WindowImplBase* pParent/*=NULL*/)
@@ -106,7 +106,7 @@ bool CViewFoundPartnerInfoPage::Initialize(sUserVCard* pUserInfo)
 	CLabelUI* pHangYe = static_cast<CLabelUI*>(m_PaintManager.FindControl(vbp_label_hangye));
 	if (NULL != pHangYe)
 	{
-		pHangYe->SetText("汽车配件");
+		pHangYe->SetText(_T("汽车配件"));
 	}
 
 	CLabelUI* pPhone= static_cast<CLabelUI*>(m_PaintManager.FindControl(vbp_label_phone));
