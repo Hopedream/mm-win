@@ -417,7 +417,7 @@ int ossInterface::uploadPartFromFileEx(std::tstring& strObject, std::tstring& st
 		return s->code;
 	}
 	upload_file = oss_create_upload_file(m_pPool);
-	aos_str_set(&upload_file->filename, _T(strFilePath.c_str()));
+	aos_str_set(&upload_file->filename, (strFilePath.c_str());
 	upload_file->file_pos = 0;
 	upload_file->file_last = 0;
 	while(1)

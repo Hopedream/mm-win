@@ -733,7 +733,7 @@ std::tstring WStringToTString(const wstring &wstr)
 	
 }
 
-std::wstring StringToWstring(const string &str)
+std::wstring StringToWString(const string &str)
 {
 	std::wstring wstr(str.length(),L' ');
 	std::copy(str.begin(), str.end(), wstr.begin());

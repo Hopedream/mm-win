@@ -1,5 +1,6 @@
 
 #include "StringHelper.h"
+#include "Utility.h"
 
 void CChineseCode::UTF_8ToUnicode(wchar_t* pOut,const char *pText)
 {
@@ -35,7 +36,7 @@ void CChineseCode::Gb2312ToUnicode(wchar_t* pOut, const char *gbBuffer)
 	return ;
 }
 
-void CChineseCode::GB2312ToUTF_8(tstring& pOut,const char *pText, int pLen)
+void CChineseCode::GB2312ToUTF_8(string& pOut,const char *pText, int pLen)
 {
 	if (pLen ==0)
 		return;
@@ -80,7 +81,7 @@ void CChineseCode::GB2312ToUTF_8(tstring& pOut,const char *pText, int pLen)
 	return;
 }
 
-void CChineseCode::UTF_8ToGB2312(tstring &pOut, const char *pText, int pLen)
+void CChineseCode::UTF_8ToGB2312(string &pOut, const char *pText, int pLen)
 {
 	char * newBuf = new char[pLen+1];
 	memset(newBuf, 0, pLen+1);
@@ -119,18 +120,34 @@ void CChineseCode::UTF_8ToGB2312(tstring &pOut, const char *pText, int pLen)
 }  
 
 
-tstring CChineseCode::EncodeUTF8(const tstring strInput)
+tstring CChineseCode::EncodeUTF8(tstring strInput)
 {
+#ifdef UNICODE
+	string input_temp = WStringToString(strInput);
+	string out_temp;
+	GB2312ToUTF_8(out_temp, input_temp.c_str(), strInput.length());
+	wstring sOut =  StringToWString(out_temp);
+	return sOut;
+#else
 	tstring strOut;
 	GB2312ToUTF_8(strOut, strInput.c_str(), strInput.length());
 	return strOut;
+#endif	
 }
 
-std::tstring CChineseCode::DecodeUTF8( const tstring strUtf8 )
+std::tstring CChineseCode::DecodeUTF8(tstring strUtf8 )
 {
+#ifdef UNICODE
+	string input_temp = WStringToString(strUtf8);
+	string out_temp;
+	UTF_8ToGB2312(out_temp, input_temp.c_str(), input_temp.length());
+	wstring sOut =  StringToWString(out_temp);
+	return sOut;
+#else
 	tstring strOut;
 	UTF_8ToGB2312(strOut, strUtf8.c_str(), strUtf8.length());
 	return strOut;
+#endif
 }
 
 //std::tstring CChineseCode::str2HexStr( tstring str )

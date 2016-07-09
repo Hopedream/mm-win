@@ -321,21 +321,21 @@ bool IMDB::SetDBPath(IM_UID uid)
 		tstring uinstr = uid;
 		//m_ModuleUinPath=m_ModulePath.substr(0,index);
 		//m_ModuleUinPath += _T(TEXT_SLASH);
-		m_ModuleUinPath = m_ModulePath + "User\\";
+		m_ModuleUinPath = m_ModulePath + _T("User\\");
 
 		if (!PathFileExists(m_ModuleUinPath.c_str()))
 		{
 			CreateDirectory(m_ModuleUinPath.c_str(), NULL);
 		}
 
-		m_ModuleUinPath += uinstr + _T(TEXT_SLASH);
+		m_ModuleUinPath += uinstr + TEXT_SLASH;
 		if (!PathFileExists(m_ModuleUinPath.c_str()))
 		{
 			m_bFirstLogin = true;
 			CreateDirectory(m_ModuleUinPath.c_str(), NULL);
 		}
 
-		m_ModuleUinPath += "DB\\";
+		m_ModuleUinPath += _T("DB\\");
 		if (!PathFileExists(m_ModuleUinPath.c_str()))
 		{
 			CreateDirectory(m_ModuleUinPath.c_str(), NULL);
