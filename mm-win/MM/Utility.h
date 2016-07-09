@@ -52,3 +52,8 @@ bool MoveControllers(CLabelUI* head, RECT head_pos, SIZE head_size,
 
 void ReplaceAll(tstring& str, const tstring& old_value, const tstring& new_value);
 void ReplaceAllDistinct(tstring& str, const tstring& old_value, const tstring& new_value);
+
+std::tstring StringToTstring(const string &str);
+std::tstring WStringToTString(const wstring &wstr);
+std::wstring StringToWstring(const string &str);
+std::string WStringToString(const wstring &wstr);
