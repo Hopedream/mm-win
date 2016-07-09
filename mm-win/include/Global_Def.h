@@ -1,19 +1,19 @@
 #pragma once
 
 
-extern char  WEB_DOMAIN_URL[MAX_PATH];
-extern char  WEB_SERVER_BASE_URL[MAX_PATH];
-extern char  WEB_SERVER_SITE_URL[MAX_PATH];
-extern char  WEB_GET_PASSWORD_URL[MAX_PATH];
-extern char  WEB_WALLET_URL[MAX_PATH];
-extern char  WEB_FILE_URL[MAX_PATH];
-extern char  WEB_ROOT[MAX_PATH];
-extern char  REFER_EXECUTE[MAX_PATH];
-extern char  REFER_FACE_DEAL[MAX_PATH];
-extern char  REFER_FINANCE[MAX_PATH];
-extern char  REFER_MOTOR_TYPE[MAX_PATH];
-extern char  REFER_VIN[MAX_PATH];
-extern char  SUGGESTIONS_URL[MAX_PATH];
+extern TCHAR  WEB_DOMAIN_URL[MAX_PATH];
+extern TCHAR  WEB_SERVER_BASE_URL[MAX_PATH];
+extern TCHAR  WEB_SERVER_SITE_URL[MAX_PATH];
+extern TCHAR  WEB_GET_PASSWORD_URL[MAX_PATH];
+extern TCHAR  WEB_WALLET_URL[MAX_PATH];
+extern TCHAR  WEB_FILE_URL[MAX_PATH];
+extern TCHAR  WEB_ROOT[MAX_PATH];
+extern TCHAR  REFER_EXECUTE[MAX_PATH];
+extern TCHAR  REFER_FACE_DEAL[MAX_PATH];
+extern TCHAR  REFER_FINANCE[MAX_PATH];
+extern TCHAR  REFER_MOTOR_TYPE[MAX_PATH];
+extern TCHAR  REFER_VIN[MAX_PATH];
+extern TCHAR  SUGGESTIONS_URL[MAX_PATH];
 //#define  WEB_DOMAIN_URL					"http://60.173.242.117:9001/"
 //#define  WEB_SERVER_BASE_URL			"http://60.173.242.117:9001/api/"
 //#define  WEB_SERVER_SITE_URL			"http://60.173.242.117:9001/api/site/"
@@ -101,13 +101,13 @@ const int CONST_RECENT_TAB_GROUPCHAT_PAGE= 3;		//群聊天页面
 const int CONST_GROUPCHAT_FILE_EDIT_PAGE = 0;		//编辑资料页面
 const int CONST_GROUPCHAT_FILE_LIST_PAGE = 1;		//资料包列表页面
 const int CONST_GROUPCHAT_CONTRACT_PAGE  = 2;       //合约编辑页面
-#define CONTRACT_IDENTITY_PAYEE			 "1"       //收款人
-#define CONTRACT_IDENTITY_DRAWEE         "2"       //付款人
-#define CONTRACT_PAY_TYPE_NONE			 "1"		 //不委托平台记账
-#define CONTRACT_PAY_TYPE_SURE           "2"       //担保交易
-#define CONTRACT_PAY_TYPE_AGREE			 "3"      //协议支付
-#define CONTRACT_PAY_TYPE_LOGISTICS      "4"
+#define CONTRACT_IDENTITY_PAYEE			 _T("1")       //收款人
+#define CONTRACT_IDENTITY_DRAWEE         _T("2")       //付款人
+#define CONTRACT_PAY_TYPE_NONE			 _T("1")		 //不委托平台记账
+#define CONTRACT_PAY_TYPE_SURE           _T("2")       //担保交易
+#define CONTRACT_PAY_TYPE_AGREE			 _T("3")      //协议支付
+#define CONTRACT_PAY_TYPE_LOGISTICS      _T("4")
 
 
 #define ORG_PROPERTY_LENGTH 4
-const TCHAR g_OrgProperty[ORG_PROPERTY_LENGTH][MAX_PATH] = {"物流商", "修理厂", "经销商", "批发商"};
+const TCHAR g_OrgProperty[ORG_PROPERTY_LENGTH][MAX_PATH] = {_T("物流商"), _T("修理厂"), _T("经销商"), _T("批发商")};

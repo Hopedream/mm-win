@@ -16,14 +16,14 @@ namespace CatchDumpFile
 	void CDumpCatch::MyPureCallHandler(void)
 	{    
 		//simple_log(L"MyPureCallHandler");
-		throw std::invalid_argument("");
+		throw std::invalid_argument(_T(""));
 	}
 
 	void CDumpCatch::MyInvalidParameterHandler(const wchar_t* expression, const wchar_t* function, const wchar_t* file, unsigned int line, uintptr_t pReserved)
 	{
 		//simple_log(L"MyPureCallHandler");
 		//The parameters all have the value NULL unless a debug version of the CRT library is used.
-		throw std::invalid_argument("");
+		throw std::invalid_argument(_T(""));
 	}
 
 	void CDumpCatch::SetInvalidHandle()

@@ -12,7 +12,7 @@ UIUPdateFiles::UIUPdateFiles( LPCTSTR pszXMLPath ):
 		m_iTaskNum(0),
 		m_iCurTaskNum(0),
 		m_bAdd(false),
-		m_strPackID(""),
+		m_strPackID(_T("")),
 		m_bStarted(false)
 {
 	m_pTileLayout=NULL; 
@@ -92,7 +92,7 @@ void UIUPdateFiles::addItem( vector<tstring>& lstfiles)
 			tstring strUrl(WEB_SERVER_BASE_URL);
 			strUrl += "file/create-file-pack?identifier=";
 			strUrl += strIdentifier;
-			//tstring strPost;//("");
+			//tstring strPost;//(_T(""));
 			tstring strResponse;
 			CHttpClient HttpClient;
 			HttpClient.Get(strUrl, strToken, strResponse);
@@ -296,7 +296,7 @@ void UIUPdateFiles::uploadSignalFile(fileInfo& infoFile)
 	tstring strIdentifier = mainDlg::getInstance()->getCurIdentifier();
 	//获取packid
 	tstring strpack = infoFile.strPackID;
-	tstring strPost;//("");
+	tstring strPost;//(_T(""));
 	tstring strResponse;
 	CHttpClient HttpClient;
 	//上传至服务器

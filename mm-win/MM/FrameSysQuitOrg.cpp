@@ -82,7 +82,7 @@ void CFrameSysQuitOrg::quitOrg()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/sign-out-org");
-	//tstring strPost = _T("");
+	//tstring strPost = (_T(""));
 	//strPost += _T("oid=");
 	//tstring strNameDefault = m_strOid;
 	//strPost += strNameDefault;

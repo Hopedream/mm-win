@@ -17,19 +17,19 @@
 // #include "MainDialog.h"
 // #include "CDialogBuilderCallbackEx.h"
 
-char  WEB_DOMAIN_URL[MAX_PATH] = {0};
-char  WEB_SERVER_BASE_URL[MAX_PATH] = {0};
-char  WEB_SERVER_SITE_URL[MAX_PATH] = {0};
-char  WEB_GET_PASSWORD_URL[MAX_PATH] = {0};
-char  WEB_WALLET_URL[MAX_PATH] = {0};
-char  WEB_FILE_URL[MAX_PATH] = {0};
-char  WEB_ROOT[MAX_PATH] = {0};
-char  REFER_EXECUTE[MAX_PATH] = {0};
-char  REFER_FACE_DEAL[MAX_PATH] = {0};
-char  REFER_FINANCE[MAX_PATH] = {0};
-char  REFER_MOTOR_TYPE[MAX_PATH] = {0};
-char  REFER_VIN[MAX_PATH] = {0};
-char  SUGGESTIONS_URL[MAX_PATH] = {0};
+TCHAR  WEB_DOMAIN_URL[MAX_PATH] = {0};
+TCHAR  WEB_SERVER_BASE_URL[MAX_PATH] = {0};
+TCHAR  WEB_SERVER_SITE_URL[MAX_PATH] = {0};
+TCHAR  WEB_GET_PASSWORD_URL[MAX_PATH] = {0};
+TCHAR  WEB_WALLET_URL[MAX_PATH] = {0};
+TCHAR  WEB_FILE_URL[MAX_PATH] = {0};
+TCHAR  WEB_ROOT[MAX_PATH] = {0};
+TCHAR  REFER_EXECUTE[MAX_PATH] = {0};
+TCHAR  REFER_FACE_DEAL[MAX_PATH] = {0};
+TCHAR  REFER_FINANCE[MAX_PATH] = {0};
+TCHAR  REFER_MOTOR_TYPE[MAX_PATH] = {0};
+TCHAR  REFER_VIN[MAX_PATH] = {0};
+TCHAR  SUGGESTIONS_URL[MAX_PATH] = {0};
 
 const TCHAR* const kLoginButtonControlName	= _T("buttonLogin");
 const TCHAR* const kUserEditControlName		= _T("editUser");
@@ -335,7 +335,7 @@ void loginDlg::Notify(TNotifyUI& msg)
 			CEditUI * pEditUser =static_cast<CEditUI*>(m_PaintManager.FindControl("editPassword"));
 			if (pEditUser != NULL)
 			{
-				pEditUser->SetText("");
+				pEditUser->SetText(_T(""));
 			}
 		}
 	}

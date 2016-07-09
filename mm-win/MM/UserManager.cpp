@@ -281,7 +281,7 @@ void CUserInfoManager::handleRoster( const Roster& roster )
 		{
 			sRosterItemLocal oneRoster;
 			oneRoster.strAccount = it->first;
-			oneRoster.strMemo = "";//取消了备注！！//(*it).second->name() == ExtractPhoneNo(oneRoster.strAccount) ? "" : CChineseCode::DecodeUTF8((*it).second->name());
+			oneRoster.strMemo=(_T(""));//取消了备注！！//(*it).second->name() == ExtractPhoneNo(oneRoster.strAccount) ? "" : CChineseCode::DecodeUTF8((*it).second->name());
 			//oneRoster.eStatus = it->second->online()? enmState_Online : enmState_Offline;
 
 			// 		SubscriptionType type = (*it).second->subscription();

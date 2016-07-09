@@ -60,7 +60,7 @@ void CFrameEmployeeManage::HandleClickEvent( TNotifyUI& msg )
 		CHttpClient httpClient;
 		tstring strUrl(WEB_SERVER_BASE_URL);
 		strUrl += _T("org/del-member?");
-		tstring strPost = _T("");
+		tstring strPost = (_T(""));
 		strPost += _T("oid=");
 		tstring strNameDefault = m_strOrgId;
 		strPost += strNameDefault;
@@ -128,7 +128,7 @@ void CFrameEmployeeManage::HandleClickEvent( TNotifyUI& msg )
 		CHttpClient httpClient;
 		tstring strUrl(WEB_SERVER_BASE_URL);
 		strUrl += _T("org/add-members?");
-		tstring strPost = _T("");
+		tstring strPost = (_T(""));
 		strPost += _T("oid=");
 		tstring strNameDefault = m_strOrgId;
 		strPost += strNameDefault;
@@ -198,7 +198,7 @@ bool CFrameEmployeeManage::createDefaultOrg()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/create-org?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("name=");
 	tstring strNameDefault = _T("Ä¬ÈÏ×éÖ¯");
 	strPost += strNameDefault;
@@ -225,7 +225,7 @@ bool CFrameEmployeeManage::getOrgInfo(tstring& strOrgId)
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-org");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Post(strUrl, strPost, strToken, strHttpResponse);
@@ -487,7 +487,7 @@ bool CFrameEmployeeManage::TransferOwnerPermissions( tstring strPhone )  //todo
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/transfer-admin?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOrgId;
 	strPost += _T("&cell_phone=");
@@ -576,7 +576,7 @@ bool CFrameEmployeeManage::getDuty( OrgMemberInfo &oneInfo )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-duty?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOrgId;
 	strPost += _T("&cell_phone=");
@@ -618,7 +618,7 @@ bool CFrameEmployeeManage::getRecipient()                 //todo
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOrgId;
 	strUrl += strPost;
@@ -641,7 +641,7 @@ bool CFrameEmployeeManage::setRecipient( tstring strPhone )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/set-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOrgId;
 	strPost += _T("&cell_phone=");
@@ -665,13 +665,13 @@ bool CFrameEmployeeManage::setDuty( OrgMemberInfo &oneInfo )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/set-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOrgId;
 	strPost += _T("&cell_phone=");
 	strPost += oneInfo.strPhone;
 	strPost += _T("&duty=");
-	tstring strDuty("");
+	tstring strDuty(_T(""));
 	if (oneInfo.brequirement)
 		strDuty += _T("1");
 	if (oneInfo.bengage)

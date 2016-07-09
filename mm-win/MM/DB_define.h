@@ -102,8 +102,8 @@ struct sLoginUser
 	bool bAutoLogin;
 	sLoginUser()
 	{
-		strPhoneNum="";
-		strPwd="";
+		strPhoneNum=(_T(""));
+		strPwd=(_T(""));
 		timeLogin=0;
 		bRemPwd = false;
 		bAutoLogin = false;

@@ -13,7 +13,7 @@ public:
 
 	//注意：如果不加上const，就会报说该类仍然是虚类。
 	virtual LPCTSTR GetWindowClassName()const	{	return _T("UserInfoPage");	}
-	virtual CDuiString GetSkinFolder()			{	return _T("");				}
+	virtual CDuiString GetSkinFolder()			{	return (_T(""));				}
 	virtual CDuiString GetSkinFile()			{	return m_strXmlFile;		}
 	virtual void OnFinalMessage( HWND hWnd )	{	delete this;				}
 	virtual void Notify(TNotifyUI& msg);

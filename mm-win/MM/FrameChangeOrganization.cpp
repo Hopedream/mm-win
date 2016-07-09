@@ -94,7 +94,7 @@ void CFrameChangeOrganization::HandleItemSelectEvent( TNotifyUI& msg )
 		CDuiString strProvinceName = m_pCombProvince->GetText();
 		/*if (IsMunicipalities(strProvinceName))
 		{
-			m_pCombDistrict->SetText("");
+			m_pCombDistrict->SetText(_T(""));
 			m_pCombDistrict->SetEnabled(false);
 		}
 		else */
@@ -268,7 +268,7 @@ void CFrameChangeOrganization::initDistrictComb(CDuiString strCityName)
 
 void CFrameChangeOrganization::clearwindow()
 {
-	//m_plblTips->SetText("");
+	//m_plblTips->SetText(_T(""));
 }
 
 void CFrameChangeOrganization::showFocus()
@@ -365,7 +365,7 @@ bool CFrameChangeOrganization::getOrgAvatar()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-org-avatar?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	tstring strNameDefault = m_strOid;
 	strPost += strNameDefault;
@@ -413,7 +413,7 @@ bool CFrameChangeOrganization::setOrgInfo(orgInfo &oneinfo)
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/modify-org?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	tstring strNameDefault = m_strOid;
 	strPost += strNameDefault;

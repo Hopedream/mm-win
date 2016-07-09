@@ -30,7 +30,7 @@ public:
 	~CProjectProcessor();
 
 	//如果strTime为空，表示取全部项目。
-	bool GetProject(const std::tstring& strTime, std::vector<sProjectItem>& vecProjs,const std::tstring& strSearch = "");
+	bool GetProject(const std::tstring& strTime, std::vector<sProjectItem>& vecProjs,const std::tstring& strSearch=(_T("")));
 
 	bool GetProjectsByOrgId(const std::tstring& strOrgId, std::vector<sProjectItem>& vecProjs);
 

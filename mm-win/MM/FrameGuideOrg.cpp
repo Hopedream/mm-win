@@ -69,7 +69,7 @@ void CFrameGuideOrg::HandleItemSelectEvent( TNotifyUI& msg )
 		//if (IsMunicipalities(strProvinceName))
 		//{
 			//todo
-			//m_pCombDistrict->SetText("");
+			//m_pCombDistrict->SetText(_T(""));
 			//m_pCombDistrict->SetEnabled(false);
 		//}
 		//else 
@@ -132,11 +132,11 @@ CFrameGuideOrg* CFrameGuideOrg::Instance()
 
 void CFrameGuideOrg::clearFrame()
 {
-	m_pEditAddress->SetText("");
-	//m_pEditAreacode->SetText("");
-	m_pEditCellphone->SetText("");
-	m_pEditTelephone->SetText("");
-	m_pEdtName->SetText("");
+	m_pEditAddress->SetText(_T(""));
+	//m_pEditAreacode->SetText(_T(""));
+	m_pEditCellphone->SetText(_T(""));
+	m_pEditTelephone->SetText(_T(""));
+	m_pEdtName->SetText(_T(""));
 }
 
 bool CFrameGuideOrg::createOrg()
@@ -211,7 +211,7 @@ bool CFrameGuideOrg::apiCreateOrg( orgInfo & info)
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/create-org?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("name=");
 	tstring strNameDefault = info.strName;
 	strPost += strNameDefault;
@@ -304,7 +304,7 @@ bool CFrameGuideOrg::deleteorg()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/del-org?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strUrl += strPost;

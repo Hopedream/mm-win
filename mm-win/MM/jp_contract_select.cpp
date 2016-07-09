@@ -104,14 +104,14 @@ void JPContractSelect::SelectItem(int nIndex,bool isSearch)
 {
 	CleanPage();
 	CEditUI* pEditKey = static_cast<CEditUI *>(m_PaintManager->FindControl(EDIT_SEARCH_KEY_WORD));
-	tstring strKey="";
+	tstring strKey=(_T(""));
 	if(NULL != pEditKey)
 	{
 		strKey = pEditKey->GetText();
 	}
 
 	CDateTimeUI* pDatesTime = static_cast<CDateTimeUI *>(m_PaintManager->FindControl(DATE_SEARCH_START_TIME));
-	tstring strSTime="";
+	tstring strSTime=(_T(""));
 	if(NULL != pDatesTime)
 	{
 		strSTime = pDatesTime->GetText();
@@ -119,7 +119,7 @@ void JPContractSelect::SelectItem(int nIndex,bool isSearch)
 	}
 
 	CDateTimeUI* pDateeTime = static_cast<CDateTimeUI *>(m_PaintManager->FindControl(DATE_SEARCH_END_TIME));
-	tstring strETime="";
+	tstring strETime=(_T(""));
 	if(NULL != pDateeTime)
 	{
 		strETime = pDateeTime->GetText();
@@ -127,7 +127,7 @@ void JPContractSelect::SelectItem(int nIndex,bool isSearch)
 	}
 
 	CComboUI* pCombType = static_cast<CComboUI *>(m_PaintManager->FindControl(COMB_SEARCH_PAY_TYPE));
-	tstring strType="";
+	tstring strType=(_T(""));
 	if(NULL != pCombType)
 	{
 		int nIndex = pCombType->GetCurSel();
@@ -497,43 +497,43 @@ void JPContractSelect::CleanPage()
 	CLabelUI* pLabelID = static_cast<CLabelUI *>(m_PaintManager->FindControl(LABEL_CONTRACT_ID));
 	if(NULL != pLabelID)
 	{
-		pLabelID->SetText("");
+		pLabelID->SetText(_T(""));
 	}
 
 	CLabelUI* pLabelName = static_cast<CLabelUI *>(m_PaintManager->FindControl(LABEL_CONTRACT_NAME));
 	if(NULL != pLabelName)
 	{
-		pLabelName->SetText("");
+		pLabelName->SetText(_T(""));
 	}
 
 	CLabelUI* pLabelIdent = static_cast<CLabelUI *>(m_PaintManager->FindControl(LABEL_CONTRACT_IDENTITY));
 	if(NULL != pLabelIdent)
 	{
-		pLabelIdent->SetText("");
+		pLabelIdent->SetText(_T(""));
 	}
 
 	CLabelUI* pLabelType = static_cast<CLabelUI *>(m_PaintManager->FindControl(LABEL_CONTRACT_PAY_TYPR));
 	if(NULL != pLabelType)
 	{
-		pLabelType->SetText("");
+		pLabelType->SetText(_T(""));
 	}
 
 	CLabelUI* pLabelMoney = static_cast<CLabelUI *>(m_PaintManager->FindControl(LABEL_CONTRACT_MONEY));
 	if(NULL != pLabelMoney)
 	{
-		pLabelMoney->SetText("");
+		pLabelMoney->SetText(_T(""));
 	}
 
 	CLabelUI* pLabelTime = static_cast<CLabelUI *>(m_PaintManager->FindControl(LABEL_CONTRACT_TIME));
 	if(NULL != pLabelTime)
 	{
-		pLabelTime->SetText("");
+		pLabelTime->SetText(_T(""));
 	}
 
 	CLabelUI* pLabelRemark = static_cast<CLabelUI *>(m_PaintManager->FindControl(LABEL_CONTRACT_REMARK));
 	if(NULL != pLabelRemark)
 	{
-		pLabelRemark->SetText("");
+		pLabelRemark->SetText(_T(""));
 	}
 }
 void JPContractSelect::GotoPage(int nPageIndex)
@@ -614,7 +614,7 @@ bool JPContractSelect::IsFirstPage()
 
 	return false;
 }
-bool JPContractSelect::GetContractInfo(vector<JP_CONSTRACT_INFO>& vecInfo,const tstring status /* = "1" */,const tstring type /* = "" */,const tstring& stime/* ="" */,const tstring& etime/* ="" */,const tstring& key/* ="" */)
+bool JPContractSelect::GetContractInfo(vector<JP_CONSTRACT_INFO>& vecInfo,const tstring status /* = "1" */,const tstring type /*=(_T("")) */,const tstring& stime/* =(_T("")) */,const tstring& etime/* =(_T("")) */,const tstring& key/* =(_T("")) */)
 {
 	tstring strRespons;
 

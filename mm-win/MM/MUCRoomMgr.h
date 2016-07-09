@@ -71,7 +71,7 @@ public:
 
 
 	//请求server唯一的RoomID
-	void PreCreateRoom(vector<tstring>& vecParticipants, tstring& strRoomName, const std::tstring nick="" );
+	void PreCreateRoom(vector<tstring>& vecParticipants, tstring& strRoomName, const std::tstring nick=(_T("")));
 
 	//进群
 	void EnterRoom(const tstring& strRoomID, const tstring& strMyNickname);	

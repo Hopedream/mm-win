@@ -14,10 +14,10 @@
 class CMsgBox : public MMWindowImplBase
 {
 public:	
-	CMsgBox(const tstring strTile = "", const tstring strText = "", UINT icon = MSGBOX_ICON_NORMAL, UINT uMsgBoxType = MSGBOX_IDOK);
+	CMsgBox(const tstring strTile = (_T("")), const tstring strText = (_T("")), UINT icon = MSGBOX_ICON_NORMAL, UINT uMsgBoxType = MSGBOX_IDOK);
 	UINT ShowModal(HWND hParen = NULL);
 	void ShowWindow(HWND hParen = NULL);
-	static int MsgBox(HWND hParen, const tstring strTile = "", const tstring strText = "", UINT icon = MSGBOX_ICON_NORMAL, UINT uMsgBoxType = MSGBOX_IDOK);
+	static int MsgBox(HWND hParen, const tstring strTile = (_T("")), const tstring strText = (_T("")), UINT icon = MSGBOX_ICON_NORMAL, UINT uMsgBoxType = MSGBOX_IDOK);
 protected:	
 	virtual CDuiString GetSkinFile() {return _T("systemMsgBox\\MsgBox.xml");}
 	void InitWindow();

@@ -447,7 +447,7 @@ double CppSQLite3Query::getFloatField(const char* szField, double fNullValue/*=0
 }
 
 
-const char* CppSQLite3Query::getStringField(int nField, const char* szNullValue/*=""*/)
+const char* CppSQLite3Query::getStringField(int nField, const char* szNullValue/*=(_T(""))*/)
 {
 	if (fieldDataType(nField) == SQLITE_NULL)
 	{
@@ -460,7 +460,7 @@ const char* CppSQLite3Query::getStringField(int nField, const char* szNullValue/
 }
 
 
-const char* CppSQLite3Query::getStringField(const char* szField, const char* szNullValue/*=""*/)
+const char* CppSQLite3Query::getStringField(const char* szField, const char* szNullValue/*=(_T(""))*/)
 {
 	int nField = fieldIndex(szField);
 	return getStringField(nField, szNullValue);
@@ -807,7 +807,7 @@ double CppSQLite3Table::getFloatField(const char* szField, double fNullValue/*=0
 }
 
 
-const char* CppSQLite3Table::getStringField(int nField, const char* szNullValue/*=""*/)
+const char* CppSQLite3Table::getStringField(int nField, const char* szNullValue/*=(_T(""))*/)
 {
 	if (fieldIsNull(nField))
 	{
@@ -820,7 +820,7 @@ const char* CppSQLite3Table::getStringField(int nField, const char* szNullValue/
 }
 
 
-const char* CppSQLite3Table::getStringField(const char* szField, const char* szNullValue/*=""*/)
+const char* CppSQLite3Table::getStringField(const char* szField, const char* szNullValue/*=(_T(""))*/)
 {
 	if (fieldIsNull(szField))
 	{

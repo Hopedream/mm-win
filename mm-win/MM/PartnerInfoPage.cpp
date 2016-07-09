@@ -36,7 +36,7 @@ const TCHAR* bpp_del_orgFriend = "btn_del_orgfriend";
 CPartnerInfoPage::CPartnerInfoPage(DuiLib::CPaintManagerUI* ppm)
 {
 	m_PaintManager = ppm;
-	m_strCurAccount="";
+	m_strCurAccount=(_T(""));
 	m_pLabelBeizhu = NULL;
 	//m_strMyOrgID = 
 	CDialogBuilder DlgBuilder1;

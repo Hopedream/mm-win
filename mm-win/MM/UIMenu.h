@@ -33,7 +33,7 @@ public:
 
 	virtual CDuiString GetSkinFolder()
 	{
-		return _T("");
+		return (_T(""));
 	}
 
 protected:

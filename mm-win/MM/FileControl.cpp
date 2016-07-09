@@ -148,7 +148,7 @@ bool CFileControl::uploadSignalFile( fileInfo infoFile, IOssEventBase* pEventHan
 	//tstring strIdentifier = mainDlg::getInstance()->getCurIdentifier();
 	//获取packid
 	tstring strpack = infoFile.strPackID;
-	tstring strPost;//("");
+	tstring strPost;//(_T(""));
 	tstring strResponse;
 	CHttpClient HttpClient;
 	//上传至服务器

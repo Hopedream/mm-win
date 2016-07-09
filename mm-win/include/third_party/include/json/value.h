@@ -226,6 +226,13 @@ namespace Json {
 
       const char *asCString() const;
       std::string asString() const;
+	  std::wstring asString(int isUnicode) const
+	  {
+		  string str = asString();
+		  wstring wstr(str.length(),L' ');
+		  std::copy(str.begin(), str.end(), wstr.begin());
+		  return wstr;
+	  }
 # ifdef JSON_USE_CPPTL
       CppTL::ConstString asConstString() const;
 # endif

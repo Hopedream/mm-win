@@ -59,29 +59,29 @@ struct stUcsIncommingCall{
 
 
 const stUcsErrorCodeMap g_stUcsErrCodeMap[] = {
-	{UCS_ILLEGAL_ACCOUNT, "开发者账号或者密码为非法"}, 
-	{UCS_NAME_PASSWORD_ERROR, "用户名或者密码错误"}, 
-	{UCS_CLIENT_ILLEGAL, "Client用户不存在"}, 
-	{UCS_CLIENT_CLOSED, "Client状态非法(Client状态为关闭状态)  "}, 
-	{UCS_LOGIN_FAILED, " 登录被拒绝（开发者账号状态关闭） "},    
-	{UCS_LOGIN_TOKEN_ERROR , "密文登录时Token错误"},
-	{ UCS_LOGIN_CONFLICT, "用户登录冲突"},
-	{ UCS_LOGIN_EXCCEPTION_FAILED, "登录异常失败，需要重新登录"},
-	{UCS_SERVER_OFFLINE , "服务器强制下线"},
-	{UCS_INSUFFICIENT_FUNDS , "余额不足"},
-	{ UCS_CALLED_BUSY, "被叫忙"},
-	{ UCS_CALLED_OFFLINE, "被叫号码不存在或不在线"},
-	{UCS_PHONENUM_ERROR , "号码错误"},
-	{UCS_CALLED_REPLY_TIMEOUT , "被叫超时不应答"},
-	{ UCS_CALLED_ANSWER_TIMEOUT, "被叫接听超时"},
-	{UCS_DISABLE_CALL , "禁止呼叫"},
-	{ UCS_ACCOUNT_SUSPENDED, "账户冻结"},
-	{ UCS_CALLER_HANGUP, "主叫挂断"},
-	{ UCS_CALLED_REFUSED, "被叫拒接"},
-	{ UCS_CALLED_HANGUP, "被叫挂断"},
-	{ UCS_ARREARAGE_HANGUP, "余额不足挂断"},
-	{UCS_UPLOAD_FAILED , "上传失败"},
-	{UCS_DOWNLOAD_FAILED , "下载失败"},
+	{UCS_ILLEGAL_ACCOUNT, _T("开发者账号或者密码为非法")}, 
+	{UCS_NAME_PASSWORD_ERROR, _T("用户名或者密码错误")}, 
+	{UCS_CLIENT_ILLEGAL, _T("Client用户不存在")}, 
+	{UCS_CLIENT_CLOSED, _T("Client状态非法(Client状态为关闭状态)  ")}, 
+	{UCS_LOGIN_FAILED, _T(" 登录被拒绝（开发者账号状态关闭） ")},    
+	{UCS_LOGIN_TOKEN_ERROR , _T("密文登录时Token错误")},
+	{ UCS_LOGIN_CONFLICT, _T("用户登录冲突")},
+	{ UCS_LOGIN_EXCCEPTION_FAILED, _T("登录异常失败，需要重新登录")},
+	{UCS_SERVER_OFFLINE , _T("服务器强制下线")},
+	{UCS_INSUFFICIENT_FUNDS , _T("余额不足")},
+	{ UCS_CALLED_BUSY, _T("被叫忙")},
+	{ UCS_CALLED_OFFLINE, _T("被叫号码不存在或不在线")},
+	{UCS_PHONENUM_ERROR , _T("号码错误")},
+	{UCS_CALLED_REPLY_TIMEOUT , _T("被叫超时不应答")},
+	{ UCS_CALLED_ANSWER_TIMEOUT, _T("被叫接听超时")},
+	{UCS_DISABLE_CALL , _T("禁止呼叫")},
+	{ UCS_ACCOUNT_SUSPENDED, _T("账户冻结")},
+	{ UCS_CALLER_HANGUP, _T("主叫挂断")},
+	{ UCS_CALLED_REFUSED, _T("被叫拒接")},
+	{ UCS_CALLED_HANGUP, _T("被叫挂断")},
+	{ UCS_ARREARAGE_HANGUP, _T("余额不足挂断")},
+	{UCS_UPLOAD_FAILED , _T("上传失败")},
+	{UCS_DOWNLOAD_FAILED , _T("下载失败")},
 };
 
 
@@ -124,7 +124,7 @@ class CUcPaasClient
 {
 public:	
 	static CUcPaasClient* Instance();
-	bool ConnectUcPaas(const tstring strPhone = "");	
+	bool ConnectUcPaas(const tstring strPhone=(_T("")));	
 	bool IsUcPaasContact(const tstring strContactPhone);
 	tstring GetPhoneFromCallId(const tstring strCallId);
 	 static tstring GetUcsErrInfo( int nErrCode );

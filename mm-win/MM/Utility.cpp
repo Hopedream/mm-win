@@ -13,7 +13,7 @@ std::tstring GetFullTimeString(time_t t)
 {
 	if (t == 0)
 	{
-		return tstring("");
+		return tstring(_T(""));
 	}
 
 	std::tstring strTime;
@@ -33,7 +33,7 @@ std::tstring GetYMDTimeString(time_t t)
 {
 	if (t == 0)
 	{
-		return tstring("");
+		return tstring(_T(""));
 	}
 
 	std::tstring strTime;
@@ -52,7 +52,7 @@ std::tstring GetHMSTimeString(time_t t)
 {
 	if (t == 0)
 	{
-		return tstring("");
+		return tstring(_T(""));
 	}
 
 	std::tstring strTime;
@@ -443,7 +443,7 @@ bool GetDuty(const tstring& strOrgID, const tstring& strAccount, vector<tstring>
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-duty?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += strOrgID;
 	strPost += _T("&cell_phone=");
@@ -489,7 +489,7 @@ bool GetRecipient(const tstring& organization_id, tstring& recipient)
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += organization_id;
 	strUrl += strPost;

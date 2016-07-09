@@ -14,13 +14,13 @@
 bool CWebClient::IsValidUser( const tstring& strPhoneNo )
 {
 	tstring strhttpUrl(WEB_SERVER_SITE_URL);
-	strhttpUrl += "is-user-existed?cell_phone=";
+	strhttpUrl += _T("is-user-existed?cell_phone=");
 	strhttpUrl += strPhoneNo;
 
 	tstring strResponse;
 	CHttpClient reqClient;
 	reqClient.Get(strhttpUrl.c_str(), strResponse);
-	if(strResponse.find("result") != -1)
+	if(strResponse.find(_T("result")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
@@ -33,7 +33,7 @@ bool CWebClient::IsValidUser( const tstring& strPhoneNo )
 		}
 		catch (...)
 		{
-			CLogger::GetInstance()->PrintErrLog( "parse http Response exception: %s", strResponse.c_str());	
+			CLogger::GetInstance()->PrintErrLog( _T("parse http Response exception: %s"), strResponse.c_str());	
 		}	
 	}
 	
@@ -52,23 +52,23 @@ bool CWebClient::GetMyOrg(orgInfo& org)
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Post(strUrl, strPost, strToken, strHttpResponse);
-	if (strHttpResponse.find("name") != -1 && strHttpResponse.find("detail_address") != -1)
+	if (strHttpResponse.find(_T("name")) != -1 && strHttpResponse.find(_T("detail_address")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
 		try{
 			if (reader.parse(CChineseCode::DecodeUTF8(strHttpResponse), root) && root["result"].isNull())
 			{
-				org.strId =  root["id"].asString();
-				org.strMemberId = root["mem_id"].asString();
-				org.strName =  root["name"].asString();
-				org.strAddress =  root["address"].asString();
-				org.strDetailAddr =  root["detail_address"].asString();
-				org.strTelephone =  root["telephone"].asString();
+				org.strId =  root["id"].asString(0);
+				org.strMemberId = root["mem_id"].asString(0);
+				org.strName =  root["name"].asString(0);
+				org.strAddress =  root["address"].asString(0);
+				org.strDetailAddr =  root["detail_address"].asString(0);
+				org.strTelephone =  root["telephone"].asString(0);
 				return true;
 			}
 		}catch(...){
-			CLogger::GetInstance()->PrintErrLog("parse http response exception: %s", strHttpResponse.c_str());
+			CLogger::GetInstance()->PrintErrLog(_T("parse http response exception: %s"), strHttpResponse.c_str());
 		}
 	}
 	
@@ -79,18 +79,18 @@ bool CWebClient::GetMyOrg(orgInfo& org)
 bool CWebClient::InviteBussinessParter(const tstring& strPhoneNo, tstring& strErrDescription)
 {
 	tstring strhttpUrl(WEB_SERVER_BASE_URL);
-	strhttpUrl += "user/invite";
+	strhttpUrl += _T("user/invite");
 
-	tstring strPost = "phones=[\"";
+	tstring strPost = _T("phones=[\"");
 	strPost += strPhoneNo;
-	strPost += "\"]";
+	strPost += _T("\"]");
 
 
 	tstring strResponse;
 	CHttpClient reqClient;
 	int nResult = reqClient.Post(strhttpUrl, strPost, CController::Instance()->GetToken(),strResponse);
 
-	if (strResponse.find("result") != -1)
+	if (strResponse.find(_T("result")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
@@ -100,7 +100,7 @@ bool CWebClient::InviteBussinessParter(const tstring& strPhoneNo, tstring& strEr
 				return root["result"].asInt() == 1;
 			}
 		}catch(...){
-			CLogger::GetInstance()->PrintErrLog("parse http response exception: %s", strResponse.c_str());
+			CLogger::GetInstance()->PrintErrLog(_T("parse http response exception: %s"), strResponse.c_str());
 		}
 	}
 	
@@ -118,18 +118,18 @@ bool CWebClient::GetOrgByPhone( tstring strPhone, orgInfo& _orgInfo, tstring str
 		return true;
 	}
 
-	if (tstring::npos != strPhone.find("@"))
+	if (tstring::npos != strPhone.find(_T("@")))
 	{
 		strPhone = ExtractPhoneNo(strPhone);
 	}
 	tstring strhttpUrl(WEB_SERVER_SITE_URL);
-	strhttpUrl += "get-org-by-cell?cell_phone=";
+	strhttpUrl += _T("get-org-by-cell?cell_phone=");
 	strhttpUrl += strPhone;
 
 	tstring strResponse;
 	CHttpClient reqClient;
 	reqClient.Get(strhttpUrl.c_str(), strResponse);
-	if (strResponse.find("name") != -1 && strResponse.find("telephone") != -1)
+	if (strResponse.find(_T("name")) != -1 && strResponse.find(_T("telephone")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
@@ -137,19 +137,19 @@ bool CWebClient::GetOrgByPhone( tstring strPhone, orgInfo& _orgInfo, tstring str
 		{
 			if (reader.parse(CChineseCode::DecodeUTF8(strResponse), root) && root["result"].isNull())
 			{
-				_orgInfo.strName = root["name"].asString();
-				_orgInfo.strTelephone = root["telephone"].asString();
-				_orgInfo.strId = root["id"].asString();
-				_orgInfo.strMemberId = root["mem_id"].asString();
-				_orgInfo.strDetailAddr = root["detail_address"].asString();
+				_orgInfo.strName = root["name"].asString(0);
+				_orgInfo.strTelephone = root["telephone"].asString(0);
+				_orgInfo.strId = root["id"].asString(0);
+				_orgInfo.strMemberId = root["mem_id"].asString(0);
+				_orgInfo.strDetailAddr = root["detail_address"].asString(0);
 			}
-			if (_orgInfo.strId != "")
+			if (_orgInfo.strId != _T(""))
 				m_orgMap.insert(make_pair(_orgInfo.strId, _orgInfo));
 			return true;
 		}
 		catch (...)
 		{
-			CLogger::GetInstance()->PrintErrLog( "parse http Response exception: %s", strResponse.c_str());	
+			CLogger::GetInstance()->PrintErrLog( _T("parse http Response exception: %s"), strResponse.c_str());	
 		}	
 	}
 	
@@ -166,12 +166,12 @@ bool CWebClient::api_getRegions()
 {
 	m_strRegions.clear();
 	tstring strhttpUrl(WEB_SERVER_SITE_URL);
-	strhttpUrl += "get-regions";
+	strhttpUrl += _T("get-regions");
 
 	//tstring strResponse;
 	CHttpClient reqClient;
 	int nResult = reqClient.Get(strhttpUrl,m_strRegions);
-	if (m_strRegions.find("result") != -1)
+	if (m_strRegions.find(_T("result")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
@@ -181,7 +181,7 @@ bool CWebClient::api_getRegions()
 				return !root["result"].asInt() == 0;
 			}
 		}catch(...){
-			CLogger::GetInstance()->PrintErrLog("parse http response exception: %s", m_strRegions.c_str());
+			CLogger::GetInstance()->PrintErrLog(_T("parse http response exception: %s"), m_strRegions.c_str());
 		}
 	}
 	
@@ -196,9 +196,9 @@ std::tstring CWebClient::getRegions()
 std::tstring CWebClient::api_getPacks( tstring& strBid, tstring& strStatus )
 {
 	tstring strhttpUrl(WEB_FILE_URL);
-	strhttpUrl += "get-packs-by-status?bid=";
+	strhttpUrl += _T("get-packs-by-status?bid=");
 	strhttpUrl += strBid;
-	strhttpUrl += "&status=";
+	strhttpUrl += _T("&status=");
 	strhttpUrl += strStatus;
 	tstring strResponse;
 	CHttpClient reqClient;
@@ -217,18 +217,18 @@ bool CWebClient::getBidByRid(tstring& strRid, tstring& strBid)
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
-	if (strHttpResponse.find("bid") != -1)
+	if (strHttpResponse.find(_T("bid")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
 		try{
 			if (reader.parse(strHttpResponse, root))
 			{
-				strBid =  root["bid"].asString();
+				strBid =  root["bid"].asString(0);
 				return true;
 			}
 		}catch(...){
-			CLogger::GetInstance()->PrintErrLog("parse http response exception: %s", strHttpResponse.c_str());
+			CLogger::GetInstance()->PrintErrLog(_T("parse http response exception: %s"), strHttpResponse.c_str());
 			return false;
 		}
 	}
@@ -255,17 +255,17 @@ bool CWebClient::GetOrgById( tstring strId, orgInfo& org )
 		try{
 			if (reader.parse(CChineseCode::DecodeUTF8(strHttpResponse), root) && root["result"].isNull())
 			{
-				org.strId =  root["id"].asString();
-				org.strMemberId = root["mem_id"].asString();
-				org.strName =  root["name"].asString();
-				org.strAddress =  root["address"].asString();
-				org.strCellPhone = root["phone"].asString();
-				org.strDetailAddr =  root["detail_address"].asString();
-				org.strTelephone =  root["telephone"].asString();
+				org.strId =  root["id"].asString(0);
+				org.strMemberId = root["mem_id"].asString(0);
+				org.strName =  root["name"].asString(0);
+				org.strAddress =  root["address"].asString(0);
+				org.strCellPhone = root["phone"].asString(0);
+				org.strDetailAddr =  root["detail_address"].asString(0);
+				org.strTelephone =  root["telephone"].asString(0);
 				return true;
 			}
 		}catch(...){
-			CLogger::GetInstance()->PrintErrLog("parse http response exception: %s", strHttpResponse.c_str());
+			CLogger::GetInstance()->PrintErrLog(_T("parse http response exception: %s"), strHttpResponse.c_str());
 		}
 	}
 
@@ -286,7 +286,7 @@ bool CWebClient::updatePackStatus( tstring& strPackId, tstring &strStatus )
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
 
-	if (strHttpResponse.find("result") != -1)
+	if (strHttpResponse.find(_T("result")) != -1)
 	{
 		Json::Reader reader;
 		Json::Value root;
@@ -297,7 +297,7 @@ bool CWebClient::updatePackStatus( tstring& strPackId, tstring &strStatus )
 				return true;
 			}
 		}catch(...){
-			CLogger::GetInstance()->PrintErrLog("parse http response exception: %s", strHttpResponse.c_str());
+			CLogger::GetInstance()->PrintErrLog(_T("parse http response exception: %s"), strHttpResponse.c_str());
 		}
 	}
 	
@@ -335,7 +335,7 @@ bool CWebClient::getOrgAvatar( tstring strOrgId, tstring& strOutFilePath )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-org-avatar?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	tstring strNameDefault = strOrgId;
 	strPost += strNameDefault;
@@ -343,7 +343,7 @@ bool CWebClient::getOrgAvatar( tstring strOrgId, tstring& strOutFilePath )
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
-	if (strHttpResponse.find("\"result\":0") != -1)
+	if (strHttpResponse.find(_T("\"result\":0")) != -1)
 	{
 		return false;
 	}
@@ -352,9 +352,9 @@ bool CWebClient::getOrgAvatar( tstring strOrgId, tstring& strOutFilePath )
 		tstring strAva;
 		Json::Reader reader;
 		Json::Value root;
-		if (reader.parse(strHttpResponse, root) && strHttpResponse.find("avatar") != -1)
+		if (reader.parse(strHttpResponse, root) && strHttpResponse.find(_T("avatar")) != -1)
 		{
-			strAva = root["avatar"].asString();
+			strAva = root["avatar"].asString(0);
 		}
 		else
 		{
@@ -389,14 +389,14 @@ bool CWebClient::addOrgFriend(const tstring& strOrgId)
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org-buddy/buddy-request?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("to_org_id=");
 	strPost += strOrgId;
 	strUrl += strPost;
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Get(strUrl, strToken, strHttpResponse);
-	if (strHttpResponse.find("\"result\":0") != -1)
+	if (strHttpResponse.find(_T("\"result\":0")) != -1)
 	{
 		return false;
 	}
@@ -414,7 +414,7 @@ bool CWebClient::delOrgFriend( tstring strOrgId )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org-buddy/remove-org-buddy?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("to_oid=");
 	strPost += strOrgId;
 	strUrl += strPost;
@@ -439,7 +439,7 @@ bool CWebClient::isOrgBuddy( tstring strOrgId, tstring strOrgidDest )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("site/is-org-buddy?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid1=");
 	strPost += strOrgId;
 	strPost += "&oid2=";
@@ -465,7 +465,7 @@ bool CWebClient::approveOrgBuddyRequest( tstring strReqId,bool isAgree)
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org-buddy/approve-request?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("request_id=");
 	strPost += strReqId;
 	strPost += _T("&approve_result=");
@@ -561,7 +561,7 @@ bool CWebClient::getContractFiles(tstring& strRespons,const tstring& strPackId,c
 
 	return retCode;
 }
-bool CWebClient::getContractInfo(tstring& strResponsInfo,const tstring& status /* = 1 */,const tstring& type /* = "" */,const tstring& stime/* ="" */,const tstring& etime/* ="" */,const tstring& key/* ="" */)
+bool CWebClient::getContractInfo(tstring& strResponsInfo,const tstring& status /* = 1 */,const tstring& type /*=(_T("")) */,const tstring& stime/* =(_T("")) */,const tstring& etime/* =(_T("")) */,const tstring& key/* =(_T("")) */)
 {
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
@@ -774,7 +774,7 @@ tstring CWebClient::getFindFiles( tstring strFileName, tstring strbid, tstring s
 		strPost += "receive_etime=";
 		strPost += strRecvEtime;
 	}
-	//strPost = "";
+	//strPost=(_T(""));
 	tstring strHttpResponse;
 	int retCode = httpClient.Post(strUrl, strPost,CController::Instance()->GetToken(),strHttpResponse);
 	if (retCode == 0)

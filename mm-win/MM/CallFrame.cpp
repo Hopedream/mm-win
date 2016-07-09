@@ -69,7 +69,7 @@ void CCallFrame::SetFocusRearchEditBox(bool bFocus)
 	if (bFocus)
 	{
 		m_pRearchEdit->SetTextColor(COLOR_BLANK);
-		m_pRearchEdit->SetText("");
+		m_pRearchEdit->SetText(_T(""));
 	}
 	else
 	{
@@ -238,7 +238,7 @@ void CCallFrame::UpdateCallHistory(const sFriendListItem friendItem, EDialIndica
 
 	recentCallContactItem item;
 	item.m_strNickName = friendItem.strShowName.c_str();
-	item.m_strOrgName = "";
+	item.m_strOrgName=(_T(""));
 	item.m_strLogo = friendItem.strAvatar.c_str();
 	item.nItemID = friendItem.nItemID;
 	item.dialIndicate = eDialIndicate;

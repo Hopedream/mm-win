@@ -689,13 +689,13 @@ void CGroupChatPage::ClearEditInfo()
 	CControlUI* pResPackName = (CControlUI*)static_cast<CControlUI*>(m_pPaintManager->FindControl("gm_edit_res_name"));
 	if (NULL != pResPackName)
 	{
-		pResPackName->SetText("");
+		pResPackName->SetText(_T(""));
 	}
 
 	CControlUI* pControlMemo = (CControlUI*)static_cast<CControlUI*>(m_pPaintManager->FindControl("gm_richedit_create_newproj_memo"));
 	if (NULL != pControlMemo)
 	{
-		pControlMemo->SetText("");
+		pControlMemo->SetText(_T(""));
 	}
 
 
@@ -718,7 +718,7 @@ void CGroupChatPage::OnSendMessage()
 	bool bIsEmptyMsg = CRegexHelper::IsEmptyString(pEditInput->GetText().GetData());
 	if (bIsEmptyMsg || pEditInput->GetTextLength() > MAX_SEND_MSG_LEN)
 	{
-		if (bIsEmptyMsg) pEditInput->SetText("");
+		if (bIsEmptyMsg) pEditInput->SetText(_T(""));
 
 		RECT rect;
 		GetClientRect(mainDlg::getInstance()->GetHWND(), &rect);
@@ -734,7 +734,7 @@ void CGroupChatPage::OnSendMessage()
 	CDuiString strValue = pEditInput->GetText();
 
 	//clear input.
-	pEditInput->SetText(_T(""));
+	pEditInput->SetText((_T("")));
 	
 	//send mesage
 	if (NULL != CController::Instance()->GetRoomManager())
@@ -1686,7 +1686,7 @@ bool CGroupChatPage::uploadSignalFile( tstring& strProjectID, tstring& strPackID
 	::LeaveCriticalSection(&m_csUploadFile);
 
 
-	int res = pOssControl->uploadPartFromFileEx(strObject, strOut, sz, uploadName/*strObject*/, tstring(""));
+	int res = pOssControl->uploadPartFromFileEx(strObject, strOut, sz, uploadName/*strObject*/, tstring(_T("")));
 	if (res == OSS_SUCCESS)
 	{
 		//获取阿里云 url
@@ -2805,7 +2805,7 @@ void CGroupChatPage::OnSendContract()
 	mainDlg::getInstance()->GetCurrGroupOrgID(strOrgID);
 	info.push_back(strOrgID);
 	info.push_back(strMemo);
-//	info.push_back("");
+//	info.push_back(_T(""));
 
 	///
 	int nFileCount = m_pContractFiles->GetCount();
@@ -2937,7 +2937,7 @@ void CGroupChatPage::ClearContractPage()
 	CControlUI* pContractName = (CControlUI*)static_cast<CControlUI*>(m_pPaintManager->FindControl(EDIT_CONTRACT_PAGE_NAME));
 	if (NULL != pContractName)
 	{
-		pContractName->SetText("");
+		pContractName->SetText(_T(""));
 	}
 	// 收款方/付款方
 	COptionUI* OptionIn = static_cast<COptionUI*>(m_pPaintManager->FindControl(RADIO_CONTRACT_PAGE_IN));
@@ -2950,7 +2950,7 @@ void CGroupChatPage::ClearContractPage()
 	CControlUI* pContractMoney = (CControlUI*)static_cast<CControlUI*>(m_pPaintManager->FindControl(EDIT_CONTRACT_PAGE_MONEY));
 	if (NULL != pContractMoney)
 	{
-		pContractMoney->SetText("");
+		pContractMoney->SetText(_T(""));
 	}
 
 	// 付款方式
@@ -2965,7 +2965,7 @@ void CGroupChatPage::ClearContractPage()
 	tstring strMemo;
 	if (NULL != pControlMemo)
 	{
-		pControlMemo->SetText("");
+		pControlMemo->SetText(_T(""));
 	}
 	m_pContractFiles->RemoveAll();
 }

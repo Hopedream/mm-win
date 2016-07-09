@@ -482,7 +482,7 @@ void CRegisterAccountDlg::GetVerifyCode()
 	tstring strUrl(WEB_SERVER_SITE_URL);
 	strUrl += _T("create-verify-code");
 
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("cell_phone=");
 	strPost += m_pUserNameEditUI->GetText().GetData();	
 
@@ -651,11 +651,11 @@ void CRegisterAccountDlg::GetVerifyCodeFromCss()
 	strUrl += _T("&code=");
 	strUrl += ret_verify_code;
 
-	strPost = _T("");
+	strPost = (_T(""));
 	strPost += _T("cell_phone=");
 	strPost += m_pUserNameEditUI->GetText().GetData();	
 	
-	strHttpResponse = "";
+	strHttpResponse=(_T(""));
 	retCode = httpClient.Post(strUrl, strPost,strHttpResponse);
 	CLogger::GetInstance()->PrintLog(LOG_INFO, "get register pin code:%s", strHttpResponse.c_str());
 

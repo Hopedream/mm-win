@@ -55,7 +55,7 @@ void CMUCRoomManager::RemoveHandler(IRoomManagerEvent* pHandler)
 	}
 }
 
-void CMUCRoomManager::PreCreateRoom(vector<tstring>& vecParticipants, tstring& strRoomName, const std::tstring nick/*="" */)
+void CMUCRoomManager::PreCreateRoom(vector<tstring>& vecParticipants, tstring& strRoomName, const std::tstring nick/*=(_T("")) */)
 {
 	tstring strTmpname("mmgroupname");
 	strTmpname += tstring(MMPC_MUC_DOMAIN);

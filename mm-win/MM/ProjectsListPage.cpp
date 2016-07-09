@@ -195,7 +195,7 @@ void CProjectInfoPage::Notify( TNotifyUI& msg )
 	}
 	else if (_tcsicmp(strName.GetData(), "OptionAll") == 0)
 	{
-		FetchProjects(tstring(""));
+		FetchProjects(tstring(_T("")));
 	}
 	else if (msg.pSender->GetName() == "btn_get_project_info")
 	{
@@ -264,7 +264,7 @@ void CProjectInfoPage::Notify( TNotifyUI& msg )
 		COptionUI* OptionMonth = static_cast<COptionUI*>(m_PaintManager->FindControl("OptionMonth"));
 		COptionUI* OptionAll = static_cast<COptionUI*>(m_PaintManager->FindControl("OptionAll"));
 
-		tstring sSelectedTime = "";
+		tstring sSelectedTime=(_T(""));
 		if (OptionToday->IsSelected())
 		{
 			time_t tToday = time(0);

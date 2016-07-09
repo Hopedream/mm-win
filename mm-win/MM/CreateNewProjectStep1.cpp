@@ -701,7 +701,7 @@ bool CCreateNewProjStep1::uploadSignalFile( tstring& strProjectID, tstring& strP
 	::LeaveCriticalSection(&m_csUploadFile);
 
 
-	int res = pOssControl->uploadPartFromFileEx(strObject, strOut, sz, uploadName/*strObject*/, tstring(""));
+	int res = pOssControl->uploadPartFromFileEx(strObject, strOut, sz, uploadName/*strObject*/, tstring(_T("")));
 	if (res == OSS_SUCCESS)
 	{
 		//ªÒ»°∞¢¿Ô‘∆ url

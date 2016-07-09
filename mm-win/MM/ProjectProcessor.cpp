@@ -29,7 +29,7 @@ bool CProjectProcessor::GetProject(const std::tstring& strTime, std::vector<sPro
 {
 	vecProjs.clear();
 
-	tstring endtime("");
+	tstring endtime(_T(""));
 	while(true)
 	{
 		

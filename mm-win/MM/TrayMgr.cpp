@@ -95,7 +95,7 @@ LRESULT CTrayMgr::TrayWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 		}
 		else
 		{
-			////TRACE("");
+			////TRACE(_T(""));
 		}
 	}
 	else if (message == WM_TIMER)

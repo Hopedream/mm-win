@@ -113,7 +113,7 @@ void CVideoDlg::OnBtnClickHangup(void)
 	StopUpdateCallTime();
 
 	SetCallStatus(CALL_END);
-	Ucs_hangUp("");
+	Ucs_hangUp(_T(""));
 	EnableHangUp(false);
 	ActiveVoiceDlg(false);
 	//mainDlg::getInstance()->EnableCallBtn(true);	
@@ -218,8 +218,8 @@ void CVideoDlg::InitWindow()
 	::GetClientRect(*this, &rc);
 	CHorizontalLayoutUI* lpHLayoutUI = static_cast<CHorizontalLayoutUI*>(m_PaintManager.FindControl(_T("myViedo")));
 	
-	m_remoteVideo  = CreateWindow(_T("STATIC"), _T(""), WS_VISIBLE | WS_CHILD , rc.left, rc.top+30, (rc.right - rc.left), (rc.bottom-30-50), m_PaintManager.GetPaintWindow(), NULL, NULL, NULL);
-	m_localVideo = CreateWindow(_T("STATIC"), _T(""), WS_VISIBLE | WS_CHILD, 410, 310, 120, 90, m_PaintManager.GetPaintWindow(), NULL, NULL, NULL);
+	m_remoteVideo  = CreateWindow(_T("STATIC"), (_T("")), WS_VISIBLE | WS_CHILD , rc.left, rc.top+30, (rc.right - rc.left), (rc.bottom-30-50), m_PaintManager.GetPaintWindow(), NULL, NULL, NULL);
+	m_localVideo = CreateWindow(_T("STATIC"), (_T("")), WS_VISIBLE | WS_CHILD, 410, 310, 120, 90, m_PaintManager.GetPaintWindow(), NULL, NULL, NULL);
 	
 	ShowVideoWnd(false);
 	SetMicMuteStatus(false);
@@ -251,7 +251,7 @@ void CVideoDlg::HandleAnswerEvent()
 {	
 	if (CALL_END == GetCallStatus())
 	{
-		Ucs_hangUp(""); //收到alert之前主叫方挂电话不起作用，再次挂掉
+		Ucs_hangUp(_T("")); //收到alert之前主叫方挂电话不起作用，再次挂掉
 		return;
 	}
 
@@ -277,7 +277,7 @@ void CVideoDlg::HandleAlertingEvent()
 {
 	if (CALL_END == GetCallStatus())
 	{
-		Ucs_hangUp(""); //收到alert之前主叫方挂电话不起作用，再次挂掉
+		Ucs_hangUp(_T("")); //收到alert之前主叫方挂电话不起作用，再次挂掉
 		return;
 	}
 	EnableHangUp(true);
@@ -500,9 +500,9 @@ void CVideoDlg::ActiveVoiceDlg(bool bActive)
 	m_bIsActive = bActive;	
 	if (!bActive)
 	{
-		SetCallTipInfo("");
-		m_pCallTime->SetText("");
-		m_pCaneraInfo->SetText("");
+		SetCallTipInfo(_T(""));
+		m_pCallTime->SetText(_T(""));
+		m_pCaneraInfo->SetText(_T(""));
 		SetMicMuteStatus(false);
 		SetLocalVideoStatus(true);
 	}	
@@ -657,7 +657,7 @@ void CVideoDlg::Destroy()
 {
 	if (CALL_END != m_spInstant->GetCallStatus())
 	{
-		Ucs_hangUp(""); 
+		Ucs_hangUp(_T("")); 
 	}
 	CController::Instance()->GetUserInfoMgr()->RemoveEventHandler((IUserManagerEvent*)m_spInstant);
 	delete m_spInstant;
@@ -668,7 +668,7 @@ void CVideoDlg::OnUserStateUpdated( tstring& strAccount, EUsrState eState, tstri
 	if (m_bIsActive && tstring::npos != strAccount.find(m_strPhone) && enmState_Offline == eState)
 	{
 		CMsgBox::MsgBox(GetHWND(), "下线通知", "对方已经下线，通话终止", MSGBOX_ICON_WARNING);
-		Ucs_hangUp("");
+		Ucs_hangUp(_T(""));
 		ActiveVoiceDlg(false);
 	}
 }
@@ -710,7 +710,7 @@ void CVideoDlg::HandleIncomming(stUcsIncommingCall* lpUcsCallInfo)
 			CUcPaasClient::Instance()->SendExCallStatus(strPhoneNo, eLackCamera);
 		}
 
-		CUcPaasClient::Instance()->AnswerCall("");
+		CUcPaasClient::Instance()->AnswerCall(_T(""));
 		SetCallStatus(CALL_CALLING);
 		ActiveVoiceDlg(true);
 		SetVideoView(lpUcsCallInfo->eCallType == VIDEO_CALL);

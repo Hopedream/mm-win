@@ -37,7 +37,7 @@ int RichEdit_GetWindowText(HWND hWnd, tstring& strText)
 
 int RichEdit_GetTextRange(HWND hWnd, CHARRANGE * lpchrg, tstring& strText)
 {
-	strText = _T("");
+	strText = (_T(""));
 
 	if (NULL == lpchrg || lpchrg->cpMax <= lpchrg->cpMin)
 		return 0;
@@ -643,7 +643,7 @@ int RichEdit_GetWindowText(ITextServices * pTextServices, tstring& strText)
 
 int RichEdit_GetTextRange(ITextServices * pTextServices, CHARRANGE * lpchrg, tstring& strText)
 {
-	strText = _T("");
+	strText = (_T(""));
 
 	if (NULL == lpchrg || lpchrg->cpMax <= lpchrg->cpMin)
 		return 0;

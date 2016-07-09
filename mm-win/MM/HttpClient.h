@@ -38,7 +38,7 @@ public:
     */  
     int Get(const std::tstring & strUrl, std::tstring & strResponse);  
   
-	int CSSGet(const std::tstring & strUrl, std::tstring & strResponse,const std::tstring strToken="");  
+	int CSSGet(const std::tstring & strUrl, std::tstring & strResponse,const std::tstring strToken=(_T("")));  
     /** 
     * @brief HTTPS POST请求,无证书版本 
     * @param strUrl 输入参数,请求的Url地址,如:https://www.alipay.com 

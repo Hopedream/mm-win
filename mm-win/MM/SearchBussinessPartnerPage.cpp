@@ -214,19 +214,19 @@ void CSearchBussinessPartnerPage::ClearSearchResult()
 	CButtonUI* pBtnAvatar = static_cast<CButtonUI*>(m_PaintManager.FindControl(btn_avatar));
 	if (NULL != pBtnAvatar)
 	{	
-		pBtnAvatar->SetBkImage("");
+		pBtnAvatar->SetBkImage(_T(""));
 	}
 
 	CLabelUI* pLabelNickname = static_cast<CLabelUI*>(m_PaintManager.FindControl(label_nick));
 	if (NULL != pLabelNickname)
 	{
-		pLabelNickname->SetText("");
+		pLabelNickname->SetText(_T(""));
 	}
 
 	CLabelUI* pLabelCompany = static_cast<CLabelUI*>(m_PaintManager.FindControl(label_company));
 	if (NULL != pLabelCompany)
 	{
-		pLabelCompany->SetText("");
+		pLabelCompany->SetText(_T(""));
 	}
 
 	CButtonUI* pAddFriend = static_cast<CButtonUI*>(m_PaintManager.FindControl(btn_add_friend));

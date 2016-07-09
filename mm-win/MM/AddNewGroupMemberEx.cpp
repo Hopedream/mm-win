@@ -191,7 +191,7 @@ bool CAddNewGroupMemberEx::GetDefaultAccountByOrgID(tstring& strOrgID, tstring& 
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += strOrgID;
 	strUrl += strPost;

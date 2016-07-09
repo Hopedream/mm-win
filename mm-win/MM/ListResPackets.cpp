@@ -542,7 +542,7 @@
 							//显示 同意，拒绝
 							SetAgreeDenyBtnState(pListElement, true);	
 							//隐藏状态
-							SetQianyueState(pListElement, false, tstring(""));
+							SetQianyueState(pListElement, false, tstring(_T("")));
 
 						}
 						else //没有权限 同意拒绝。就显示 未处理。
@@ -559,7 +559,7 @@
 			{
 				//普通的数据包：隐藏->同意 拒绝 状态按钮
 				SetAgreeDenyBtnState(pListElement, false);
-				SetQianyueState(pListElement, false, tstring(""));
+				SetQianyueState(pListElement, false, tstring(_T("")));
 			}
 		}
 		else

@@ -6,7 +6,7 @@
 BOOL WriteMiniDump(PEXCEPTION_POINTERS excpInfo, CDuiString strFileName)
 {
 	MINIDUMP_EXCEPTION_INFORMATION eInfo;
-	CDuiString strDumpFilePath = _T("");
+	CDuiString strDumpFilePath = (_T(""));
 	//TCHAR szTemp[1024] = {0};
 	BOOL bRet = FALSE;
 	HANDLE hFile = NULL;
@@ -79,13 +79,13 @@ LONG MiniDump_Handled( PEXCEPTION_POINTERS excpInfo,const TCHAR  *szErrorMsg )
 	strDumpFileName = _T("MM");
 	strDumpFileName += GetCurrentAppVer();
 	strDumpFileName += _T("_Minidump.dmp");
-	CDuiString strErrMsg = _T("");
+	CDuiString strErrMsg = (_T(""));
 	try
 	{
 		BOOL bRet = WriteMiniDump(excpInfo, strDumpFileName);
 		if (bRet)
 		{
-			CDuiString strDmpPath = _T("");			
+			CDuiString strDmpPath = (_T(""));			
 			// Get DebugLog folder path.
 			strDmpPath= CFileHelper::GetCurrentAppPath();	
 			strDmpPath += strDumpFileName;
@@ -115,7 +115,7 @@ CDuiString GetCurrentAppVer()
 {
 	DWORD dummy;
 	TCHAR szTemp[1024];
-	CDuiString strVersion = _T("");
+	CDuiString strVersion = (_T(""));
 	::GetModuleFileName(NULL, szTemp, 1024);
 	DWORD dwSize = GetFileVersionInfoSize(szTemp, &dummy);
 	if (dwSize != 0)

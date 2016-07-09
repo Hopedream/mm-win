@@ -39,8 +39,8 @@ public:
 	virtual void OnMessage(UINT uMsg, WPARAM w, LPARAM l);
 
 	//CUserManagerEventBase
-	virtual void OnRecvAddFriendReq(tstring& strFriend, const tstring& strMsg = "", const tstring& strSenderNick="");
-	virtual void OnRecvAcceptAddFriendReq(tstring& strFriend, const tstring& strSenderNick="");
+	virtual void OnRecvAddFriendReq(tstring& strFriend, const tstring& strMsg=(_T("")), const tstring& strSenderNick=(_T("")));
+	virtual void OnRecvAcceptAddFriendReq(tstring& strFriend, const tstring& strSenderNick=(_T("")));
 	virtual void OnRecvOrgReq(tstring strFromJid, tstring strFromNick, tstring strOrgId, 
 		tstring strOrgName, tstring strMsgType,tstring strReqId, tstring strDestJid, tstring strDestNick);
 private:

@@ -41,7 +41,7 @@ public:
 	explicit UIDownloadFiles(LPCTSTR pszXMLPath);
 
 	virtual LPCTSTR    GetWindowClassName()const{ return _T("UIChoseFile "); }
-	virtual CDuiString GetSkinFolder()          { return _T("");            }
+	virtual CDuiString GetSkinFolder()          { return (_T(""));            }
 	virtual CDuiString GetSkinFile()            { return m_strXMLPath;      }
 	virtual void       OnFinalMessage(HWND hWnd){ delete this;              }
 	virtual void Notify(TNotifyUI& msg);

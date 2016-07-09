@@ -148,8 +148,8 @@ public:
     double getFloatField(int nField, double fNullValue=0.0);
     double getFloatField(const char* szField, double fNullValue=0.0);
 
-    const char* getStringField(int nField, const char* szNullValue="");
-    const char* getStringField(const char* szField, const char* szNullValue="");
+    const char* getStringField(int nField, const char* szNullValue=(_T("")));
+    const char* getStringField(const char* szField, const char* szNullValue=(_T("")));
 
     const unsigned char* getBlobField(int nField, int& nLen);
     const unsigned char* getBlobField(const char* szField, int& nLen);
@@ -204,8 +204,8 @@ public:
     double getFloatField(int nField, double fNullValue=0.0);
     double getFloatField(const char* szField, double fNullValue=0.0);
 
-    const char* getStringField(int nField, const char* szNullValue="");
-    const char* getStringField(const char* szField, const char* szNullValue="");
+    const char* getStringField(int nField, const char* szNullValue=(_T("")));
+    const char* getStringField(const char* szField, const char* szNullValue=(_T("")));
 
     bool fieldIsNull(int nField);
     bool fieldIsNull(const char* szField);

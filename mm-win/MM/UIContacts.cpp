@@ -343,7 +343,7 @@ namespace DuiLib
 		CLabelUI *pLblMsgCount = static_cast<CLabelUI*>(m_pPaintManager->FindSubControlByName(pElem, kLabelMsgCountControlName));
 		if (strNum == "0")
 		{
-			//pLblMsgCount->SetBkImage("");
+			//pLblMsgCount->SetBkImage(_T(""));
 			pLblMsgCount->SetVisible(false);
 		}
 		else

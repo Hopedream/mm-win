@@ -82,7 +82,7 @@ bool CModifyMemoWnd::InitMemo(tstring& strAccount, tstring& strMemo)
 
 UINT CModifyMemoWnd::ShowModal(HWND hParnt)
 {
-	Create(m_hWnd, _T(""), UI_WNDSTYLE_DIALOG, UI_WNDSTYLE_EX_FRAME, 0, 0, 0, 0, NULL);		
+	Create(m_hWnd, (_T("")), UI_WNDSTYLE_DIALOG, UI_WNDSTYLE_EX_FRAME, 0, 0, 0, 0, NULL);		
 	CenterWindow();
 
 	//³õÊ¼»¯±¸×¢

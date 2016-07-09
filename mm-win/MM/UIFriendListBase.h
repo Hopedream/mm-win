@@ -15,7 +15,7 @@ struct FriendListItemInfo
 	tstring strOrgID;
 	tstring nick_name;
 	tstring account;//added by zyy为了得到该friend的属性，需要加此字段，可能会导致一些未发现的问题。默认设为空
-	FriendListItemInfo(bool _folder = false, bool _empty = false, UINT _itemId = 0, tstring _account = "", tstring _logo = "", tstring _strOrgName  = "", tstring _nick_name  = "")
+	FriendListItemInfo(bool _folder = false, bool _empty = false, UINT _itemId = 0, tstring _account = (_T("")), tstring _logo = (_T("")), tstring _strOrgName  = (_T("")), tstring _nick_name  = (_T("")))
 	{
 		folder = _folder;
 		empty = _empty;

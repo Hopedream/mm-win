@@ -89,10 +89,10 @@ public:
 	//IUsrManagerEvent
 	//自己的在线状态改变
 	virtual void OnMySelfStateUpdate(tstring& strAccount, EUsrState eState, 
-		tstring strRes, tstring strBusyInfo = "");   
+		tstring strRes, tstring strBusyInfo=(_T("")));   
 	//用户在线状态改变了
 	virtual void OnUserStateUpdated(tstring& strAccount, EUsrState eState, 
-		tstring strRes, tstring strBusyInfo = "");   
+		tstring strRes, tstring strBusyInfo=(_T("")));   
 	//Server下发获取全部联系人
 	virtual void OnRosterAvalible(MapAllRosters& listUserInfos);   
 	//自己的VCard信息

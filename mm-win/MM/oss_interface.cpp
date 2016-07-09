@@ -7,12 +7,12 @@
 HANDLE ossInterface::m_hEventExit = NULL;
 HANDLE ossInterface::m_hThreadExit=NULL;
 ossInterface::ossInterface():
-	m_strAcessID(""),
-	m_strAcessIDSecret(""),
-	m_strEndpoint(""),
+	m_strAcessID(_T("")),
+	m_strAcessIDSecret(_T("")),
+	m_strEndpoint(_T("")),
 	m_iossdomain(1),
 	m_iossport(80),
-	m_strBucketName(""),
+	m_strBucketName(_T("")),
 	m_pOptions(NULL),
 	m_pPool(NULL)
 {

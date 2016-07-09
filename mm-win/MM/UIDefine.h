@@ -22,15 +22,15 @@ typedef struct tagFileInfo{
 	tstring strDuration;
 	tagFileInfo()
 	{
-		strFilePath = "";
-		strFileName= "";
-		strFileType= "";
-		strFileFullName= "";
-		strPackID= "";
-		strFileUrl= "";
+		strFilePath = _T("");
+		strFileName= _T("");
+		strFileType= _T("");
+		strFileFullName= _T("");
+		strPackID= _T("");
+		strFileUrl= _T("");
 		dwFileSize= 0;
-		strKey= "";
-		stropposite= "";   
+		strKey= _T("");
+		stropposite= _T("");   
 	}
 } fileInfo;
 

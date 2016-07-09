@@ -39,17 +39,17 @@ void CInvitePartner::HandleClickEvent( TNotifyUI& msg )
 {
 	if (msg.pSender == m_pBtnClearPhoneNo1)
 	{
-		m_pTxtPhoneNo1->SetText("");
+		m_pTxtPhoneNo1->SetText(_T(""));
 		m_pBtnClearPhoneNo1->SetVisible(false);
 	}
 	else if (msg.pSender == m_pBtnClearPhoneNo2)
 	{
-		m_pTxtPhoneNo2->SetText("");
+		m_pTxtPhoneNo2->SetText(_T(""));
 		m_pBtnClearPhoneNo2->SetVisible(false);
 	}
 	else if (msg.pSender == m_pBtnClearPhoneNo3)
 	{
-		m_pTxtPhoneNo3->SetText("");
+		m_pTxtPhoneNo3->SetText(_T(""));
 		m_pBtnClearPhoneNo3->SetVisible(false);
 	}
 	else if (msg.pSender == m_pBtnContinueInvite)
@@ -208,9 +208,9 @@ void CInvitePartner::SetTabView(int idx)
 	}	
 	if (INVITE_PAGE_VIEW == idx)
 	{
-		m_pTxtPhoneNo1->SetText("");
-		m_pTxtPhoneNo2->SetText("");
-		m_pTxtPhoneNo3->SetText("");
+		m_pTxtPhoneNo1->SetText(_T(""));
+		m_pTxtPhoneNo2->SetText(_T(""));
+		m_pTxtPhoneNo3->SetText(_T(""));
 		m_pBtnClearPhoneNo1->SetVisible(false);
 		m_pBtnClearPhoneNo2->SetVisible(false);
 		m_pBtnClearPhoneNo3->SetVisible(false);

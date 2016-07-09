@@ -134,7 +134,7 @@ void CFrameUserInfo::onSelectAvatar()
 	ofn.nMaxFile = sizeof( szOpenFileNames );
 	ofn.lpstrFilter = lpFilter;
 	ofn.Flags = OFN_EXPLORER |OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
-	tstring strPath = "";
+	tstring strPath=(_T(""));
 	if( GetOpenFileName( &ofn ) )
 	{
 		strPath = ofn.lpstrFile;
@@ -149,7 +149,7 @@ void CFrameUserInfo::onSelectAvatar()
 			//m_strUpdateLogo = CFileHelper::GetHeadCacheDir() + "tmp.jpeg" ;	
 
 
-			m_strUpdateLogo = "";
+			m_strUpdateLogo=(_T(""));
 			tstring strID = getTmpFileId();
 			m_strUpdateLogo += CFileHelper::GetHeadCacheDir();
 			m_strUpdateLogo +=  strID.c_str();//

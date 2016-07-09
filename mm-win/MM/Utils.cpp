@@ -319,23 +319,23 @@ tstring GetBetweenString(const TCHAR * pStr, TCHAR cStart, TCHAR cEnd)
 	tstring strText;
 
 	if (NULL == pStr)
-		return _T("");
+		return (_T(""));
 
 	const TCHAR * p1 = _tcschr(pStr, cStart);
 	if (NULL == p1)
-		return _T("");
+		return (_T(""));
 
 	const TCHAR * p2 = _tcschr(p1+1, cEnd);
 	if (NULL == p2)
-		return _T("");
+		return (_T(""));
 
 	int nLen = p2-(p1+1);
 	if (nLen <= 0)
-		return _T("");
+		return (_T(""));
 	
 	TCHAR * lpText = new TCHAR[nLen+1];
 	if (NULL == lpText)
-		return _T("");
+		return (_T(""));
 
 	memset(lpText, 0, (nLen+1)*sizeof(TCHAR));
 	_tcsncpy(lpText, p1+1, nLen);
@@ -362,25 +362,25 @@ tstring GetBetweenString(const WCHAR * pStr, const WCHAR * pStart, const WCHAR *
 	tstring strText;
 
 	if (NULL == pStr || NULL == pStart || NULL == pEnd)
-		return _T("");
+		return (_T(""));
 
 	int nStartLen = wcslen(pStart);
 
 	const WCHAR * p1 = wcsstr(pStr, pStart);
 	if (NULL == p1)
-		return _T("");
+		return (_T(""));
 
 	const WCHAR * p2 = wcsstr(p1+nStartLen, pEnd);
 	if (NULL == p2)
-		return _T("");
+		return (_T(""));
 
 	int nLen = p2-(p1+nStartLen);
 	if (nLen <= 0)
-		return _T("");
+		return (_T(""));
 	
 	WCHAR * lpText = new WCHAR[nLen+1];
 	if (NULL == lpText)
-		return _T("");
+		return (_T(""));
 	
 	memset(lpText, 0, (nLen+1)*sizeof(TCHAR));
 	wcsncpy(lpText, p1+nStartLen, nLen);

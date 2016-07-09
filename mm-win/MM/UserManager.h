@@ -110,7 +110,7 @@ public:
 	
 	//subscriptionHandler:加好友请求结果回调
 	//virtual void handleSubscription( const Subscription& subscription ) ;
-	virtual void handleItemSubscribed( const JID& jid , const std::tstring& strSendNick = "");
+	virtual void handleItemSubscribed( const JID& jid , const std::tstring& strSendNick=(_T("")));
 	virtual void handleItemUnsubscribed( const JID& jid );
 	virtual void handleItemUpdated( const JID& jid );
 
@@ -152,7 +152,7 @@ public:
 	* 2:return false(拒绝)=>发送unsubscribed jid给server,我拒绝对方，
 	    并调用ackSubscriptionRequest(jid, false);
 	*/
-	virtual bool handleSubscriptionRequest( const JID& jid, const std::tstring& msg ,const std::tstring& strSendNick = "");
+	virtual bool handleSubscriptionRequest( const JID& jid, const std::tstring& msg ,const std::tstring& strSendNick=(_T("")));
 	virtual bool handleUnsubscriptionRequest( const JID& jid, const std::tstring& msg);
 	virtual void handleNonrosterPresence( const Presence& presence );
 

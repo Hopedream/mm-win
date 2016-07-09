@@ -29,7 +29,7 @@ public:
 	void SetCallTipInfo(const tstring strTipsInfo);
 	void OnLauchNetCall(const CDuiString strAccount, int type);
 	virtual void OnUserStateUpdated(tstring& strAccount, EUsrState eState, 
-		tstring strRes, tstring strBusyInfo = "");
+		tstring strRes, tstring strBusyInfo=(_T("")));
 	void SetCallStatus(int nStatus);
 		virtual void OnDbClickCallIncomeMessage(tstring strNewUser);
 private:

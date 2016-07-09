@@ -345,7 +345,7 @@ void CMsgCenterModuleImpl::RemoveLatestUnReadMsg(tstring& strFrombare, __int64 u
 	}
 }
 
-void CMsgCenterModuleImpl::OnRecvAcceptAddFriendReq( tstring& strFriend, const tstring& strSenderNick/*=""*/ )
+void CMsgCenterModuleImpl::OnRecvAcceptAddFriendReq( tstring& strFriend, const tstring& strSenderNick/*=(_T(""))*/ )
 {
 	time_t curtime = time(0);
 	tstring strPhone = CFileHelper::GetUserName(strFriend);

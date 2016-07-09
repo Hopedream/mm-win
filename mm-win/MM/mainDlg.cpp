@@ -247,7 +247,7 @@ mainDlg::mainDlg()
 ,m_pUpdateFiles(NULL)
 ,m_pDownFiles(NULL)
 ,m_bAddFiles(false)
-,m_strPackID("")
+,m_strPackID(_T(""))
 ,pWebKitUI(NULL)
 ,m_pHomePageHelpText(NULL)
 ,m_pHomePageVLBkImg(NULL)
@@ -522,7 +522,7 @@ void mainDlg::CacheRecentGroupChat()
 				info.m_strOrgName  = oneGroup.strOrgName.c_str();
 				info.m_strOrgID    = oneGroup.strOrgID.c_str();
 				info.m_strRoomID   = oneGroup.strRoomID.c_str();
-				info.m_strLastMsg  = "";
+				info.m_strLastMsg =(_T(""));
 				info.m_strLastTm   = GetFullTimeString(time(0)).c_str();//"2016-04-05 16:27:23";
 				info.nItemID	   = GetNextItemID();				
 				info.m_strLogo     = oneGroup.strAvatarPath.c_str();				
@@ -1210,10 +1210,10 @@ LRESULT mainDlg::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, BO
 			EUsrState eUsrState = (EUsrState)lParam;
 
 			//1.Update friend list cache + ui
-			UpdateFriendListPresence(strAccount,eUsrState,  tstring(""));
+			UpdateFriendListPresence(strAccount,eUsrState,  tstring(_T("")));
 
 			//2.在聊天框的顶部用户昵称后显示在线状态
-			UpdateUserInfoAtWndTop(strAccount, eUsrState, tstring(""));
+			UpdateUserInfoAtWndTop(strAccount, eUsrState, tstring(_T("")));
 
 			//重新排序好友列表
 			RefreshGroupList(strAccount);		
@@ -1576,9 +1576,9 @@ void mainDlg::OnShowGroupChatWnd_Personal(tstring& strCellPhone, tstring& strRoo
 		info.m_strLogo = strAvatarPath.c_str();
 		info.m_strNickName = strNickName.c_str();
 		info.m_strOrgName  = strNickName.c_str();//没有机构，就用昵称
-		info.m_strOrgID    = "";
+		info.m_strOrgID   =(_T(""));
 		info.m_strRoomID   = strRoomId.c_str();
-		info.m_strLastMsg  = "";
+		info.m_strLastMsg =(_T(""));
 		info.m_strLastTm   = GetFullTimeString(time(0)).c_str();//"2016-04-05 16:27:23";
 		info.nItemID	   = GetNextItemID();
 
@@ -1588,8 +1588,8 @@ void mainDlg::OnShowGroupChatWnd_Personal(tstring& strCellPhone, tstring& strRoo
 
 		RecentGroupItem oneGroup;
 		oneGroup.strRoomID = strRoomId;
-		oneGroup.strGroupNick = "";//OnRoomnameArrived回调会更新
-		oneGroup.strOrgID = "";
+		oneGroup.strGroupNick=(_T(""));//OnRoomnameArrived回调会更新
+		oneGroup.strOrgID=(_T(""));
 		oneGroup.strOrgName = strNickName.c_str();
 		oneGroup.strParticipant = strCellPhone;//对方的账号。
 
@@ -1722,7 +1722,7 @@ void mainDlg::OnShowGroupChatWnd(tstring& strOrgID, tstring&strOrgName, tstring&
 		info.m_strOrgName  = strOrgName.c_str();
 		info.m_strOrgID    = strOrgID.c_str();
 		info.m_strRoomID   = strRoomID.c_str();
-		info.m_strLastMsg  = "";
+		info.m_strLastMsg =(_T(""));
 		info.m_strLastTm   = GetFullTimeString(time(0)).c_str();//"2016-04-05 16:27:23";
 		info.nItemID	   = GetNextItemID();
 
@@ -1840,7 +1840,7 @@ void mainDlg::OnShowChatWnd(tstring& strAccount)
 
 		RECENTITEM oneItem;
 		oneItem.strUid = strAccount;
-		oneItem.strTime = "";
+		oneItem.strTime=(_T(""));
 		GetDBTaskModule()->SaveRecentFriendList(oneItem);
 	}
 
@@ -2423,7 +2423,7 @@ void mainDlg::Notify(TNotifyUI& msg)   //控件消息响应
 			CWebClient::GetMyOrg(org);
 			if(!org.strId.empty() || _tcsicmp(org.strId.c_str(),_T("-1")) != 0)
 			{
-				tstring strMsg = "";
+				tstring strMsg=(_T(""));
 				strMsg += "您已经拥有机构(";
 				strMsg += org.strName;
 				strMsg += ")！";
@@ -2733,7 +2733,7 @@ void mainDlg::Notify(TNotifyUI& msg)   //控件消息响应
 			//pEditInput->SetBkImage("d:\\test.png");
 			
 			//pEditInput->EnableScrollBar(true,false);
-			//tstring sUserData = "";
+			//tstring sUserData=(_T(""));
 			//CMagicKHelper::Instance()->GetPhotoBinval("d:\\test.png", sUserData);
 			//pImage->SetUserData(sUserData.c_str());
 		}
@@ -3176,23 +3176,23 @@ void mainDlg::OnRecentChatListSelected()
 		CLabelUI *pFriendNickname = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendNickName));
 		if (NULL != pFriendNickname)
 		{
-			pFriendNickname->SetText("");
+			pFriendNickname->SetText(_T(""));
 		}
 
 		CLabelUI *pFriendOrgname = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendCompany));
 		if (NULL != pFriendOrgname) 
 		{
-			pFriendOrgname->SetText("");
+			pFriendOrgname->SetText(_T(""));
 		}
 		CButtonUI* pBtnFriendAvatar = static_cast<CButtonUI*>(m_PaintManager.FindControl(kButtonFriendAvatar));
 		if (NULL != pBtnFriendAvatar)
 		{
-			pBtnFriendAvatar->SetNormalImage("");
+			pBtnFriendAvatar->SetNormalImage(_T(""));
 		}
 		CLabelUI *pGroupMemCount = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelGroupMemCount));
 		if (NULL != pGroupMemCount)
 		{
-			pGroupMemCount->SetText("");
+			pGroupMemCount->SetText(_T(""));
 		}
 		m_pVideoBtn->SetVisible(false);
 		m_pVoiceBtn->SetVisible(false);
@@ -3264,7 +3264,7 @@ void mainDlg::OnRecentChatListSelected()
 		{
 			return;
 		}
-		pEditInput->SetText("");
+		pEditInput->SetText(_T(""));
 
 		//如果有切换，就刷新聊天记录。
 		m_pGroupChatPage->SetCurrentRoom(tstring(m_CurItem.m_strRoomID.GetData()));
@@ -3367,7 +3367,7 @@ void mainDlg::OnRecentChatListSelected()
 		}
 		if (NULL != pEditInput)
 		{
-			pEditInput->SetText(_T(""));
+			pEditInput->SetText((_T("")));
 		}
 
 		if (NULL != pOutput)
@@ -3880,16 +3880,16 @@ void mainDlg::UpdateGroupLastMessage(sGroupChatItem* pOneGroupChat, bool bTextMs
 			if (nTypeValue == 1 || bOrgGroup)//实际上两个条件等价
 			{
 				info.m_strLogo = strOrgAvatarPath.empty()?  DEF_AVATAR_NOR : strOrgAvatarPath.c_str();
-				info.m_strNickName = "";//strOrgName.c_str();
+				info.m_strNickName=(_T(""));//strOrgName.c_str();
 				info.m_strOrgName  = strOrgName.c_str();
 				info.m_strOrgID    = strOrgID.c_str();
 			}
 			else if(nTypeValue == 2 || !bOrgGroup)//实际上两个条件等价
 			{
 				info.m_strLogo = DEF_AVATAR_NOR;
-				info.m_strNickName = "";
+				info.m_strNickName=(_T(""));
 				info.m_strOrgName  = strDestNickName.c_str();//"";
-				info.m_strOrgID    = "";
+				info.m_strOrgID   =(_T(""));
 			}
 
 			info.m_strRoomID   = pOneGroupChat->strRoomID.c_str();
@@ -3908,7 +3908,7 @@ void mainDlg::UpdateGroupLastMessage(sGroupChatItem* pOneGroupChat, bool bTextMs
 			//保存到数据库
 			RecentGroupItem oneGroup;
 			oneGroup.strRoomID = pOneGroupChat->strRoomID;
-			oneGroup.strGroupNick = "";
+			oneGroup.strGroupNick=(_T(""));
 			oneGroup.strOrgID = bOrgGroup ? strOrgID : "";
 			oneGroup.strOrgName = bOrgGroup? strOrgName : strDestNickName;
 			oneGroup.strParticipant = nTypeValue == 2 ? strDestPhone : CController::Instance()->GetXmppClient()->jid().username();
@@ -4180,7 +4180,7 @@ void mainDlg::ProcessChatMsg(CTextMsg* pRecvMsg, int nItemIndex, bool& bProcesse
 		//缓存到本地数据库。
 		RECENTITEM oneItem;
 		oneItem.strUid = pRecvMsg->strFromBare;
-		oneItem.strTime = "";
+		oneItem.strTime=(_T(""));
 		GetDBTaskModule()->SaveRecentFriendList(oneItem);
 	}
 }
@@ -4718,7 +4718,7 @@ void mainDlg::UpdateFriendListPresence(tstring& strAccount, EUsrState eState, ts
 }
 
 void mainDlg::OnUserStateUpdated(tstring& strAccount, EUsrState eState, 
-	tstring strRes, tstring strBusyInfo/* = ""*/)
+	tstring strRes, tstring strBusyInfo/*=(_T(""))*/)
 {
 	//1.Update recent cache + ui===>取消了，只有联系人列表会更新状态信息
 	//UpdateRecentListPresence(strAccount,eState, strBusyInfo);	
@@ -4758,7 +4758,7 @@ void mainDlg::UpdateUserInfoAtWndTop(tstring& strAccount, EUsrState eState, tstr
 			CLabelUI *pGroupMemCount = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelGroupMemCount));
 			if (NULL != pGroupMemCount)
 			{
-				pGroupMemCount->SetText("");
+				pGroupMemCount->SetText(_T(""));
 			}
 			CButtonUI* pBtnShowMem = static_cast<CButtonUI*>(m_PaintManager.FindControl("btn_show_groupMember"));
 			if (NULL != pBtnShowMem)
@@ -4934,7 +4934,7 @@ void mainDlg::MMsendMessage()
 	bool bIsEmptyMsg = CRegexHelper::IsEmptyString(pEditInput->GetText().GetData());
 	if (bIsEmptyMsg || pEditInput->GetTextLength() > MAX_SEND_MSG_LEN)
 	{
-		if (bIsEmptyMsg) pEditInput->SetText("");
+		if (bIsEmptyMsg) pEditInput->SetText(_T(""));
 		RECT rect;
 		GetClientRect(this->GetHWND(), &rect);
 		POINT pt;
@@ -4972,7 +4972,7 @@ void mainDlg::MMsendMessage()
 	}
 	CDuiString strValue = pEditInput->GetText();
 	//clear input.
-	pEditInput->SetText(_T(""));
+	pEditInput->SetText((_T("")));
 	CChatListUI *pChatlst = static_cast<CChatListUI*>(m_PaintManager.FindControl(kListChatControlName));
 
 	chatinfo.m_strRawMsg = strValue;
@@ -5211,7 +5211,7 @@ void mainDlg::OnAddFriendSucc(tstring& strFriend)
 			oneFriend.nItemID	 = GetNextItemID();
 			oneFriend.strAccount = strFriend.c_str();
 			oneFriend.strAvatar = DEF_AVATAR_NOR;
-			oneFriend.strSignatrue = "";
+			oneFriend.strSignatrue=(_T(""));
 			oneFriend.strShowName  = m_pUsrMgrAdapter->GetMemo(strFriend);//"";
 			oneFriend.strOrgnization = oneRoster.strOrgnization;
 			oneFriend.strOrgID = oneRoster.strOrgID;
@@ -5335,22 +5335,22 @@ void mainDlg::OnDeleteContact()
 		if(nIdex>=0)
 		{
 			//清空？还是选择最近联系人里面的最上面的一个联系人信息呢？===to do...
-			pFriendNickname->SetText("");
+			pFriendNickname->SetText(_T(""));
 			//清空用户头像
 			CButtonUI* pBtnFriendAvatar = static_cast<CButtonUI*>(m_PaintManager.FindControl(kButtonFriendAvatar));
 			if (NULL != pBtnFriendAvatar)
 			{
-				pBtnFriendAvatar->SetNormalImage("");
+				pBtnFriendAvatar->SetNormalImage(_T(""));
 			}
 			//清空用户机构信息
 			CLabelUI* pLabelFriendCompany = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendCompany));
 			if (NULL != pLabelFriendCompany)
 			{
-				pLabelFriendCompany->SetText("");
+				pLabelFriendCompany->SetText(_T(""));
 			}
 
 			CLabelUI *pFriendOrgname = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendCompany));
-			if (NULL != pFriendOrgname) pFriendOrgname->SetText("");
+			if (NULL != pFriendOrgname) pFriendOrgname->SetText(_T(""));
 
 			//清空聊天记录和输入框内容
 			CChatListUI* pOutput = static_cast<CChatListUI*>(m_PaintManager.FindControl(kListChatControlName));
@@ -5361,13 +5361,13 @@ void mainDlg::OnDeleteContact()
 			}
 			if (NULL != pEditInput)
 			{
-				pEditInput->SetText(_T(""));
+				pEditInput->SetText((_T("")));
 			}
 
 			CLabelUI *pGroupMemCount = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelGroupMemCount));
 			if (NULL != pGroupMemCount)
 			{
-				pGroupMemCount->SetText("");
+				pGroupMemCount->SetText(_T(""));
 			}
 
 			CButtonUI* pBtnShowMem = static_cast<CButtonUI*>(m_PaintManager.FindControl("btn_show_groupMember"));
@@ -5488,22 +5488,22 @@ void mainDlg::OnDeleteContact()
 // 			if(nIdex>=0)
 // 			{
 // 				//清空？还是选择最近联系人里面的最上面的一个联系人信息呢？===to do...
-// 				pFriendNickname->SetText("");
+// 				pFriendNickname->SetText(_T(""));
 // 				//清空用户头像
 // 				CButtonUI* pBtnFriendAvatar = static_cast<CButtonUI*>(m_PaintManager.FindControl(kButtonFriendAvatar));
 // 				if (NULL != pBtnFriendAvatar)
 // 				{
-// 					pBtnFriendAvatar->SetNormalImage("");
+// 					pBtnFriendAvatar->SetNormalImage(_T(""));
 // 				}
 // 				//清空用户机构信息
 // 				CLabelUI* pLabelFriendCompany = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendCompany));
 // 				if (NULL != pLabelFriendCompany)
 // 				{
-// 					pLabelFriendCompany->SetText("");
+// 					pLabelFriendCompany->SetText(_T(""));
 // 				}
 // 
 // 				CLabelUI *pFriendOrgname = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendCompany));
-// 				if (NULL != pFriendOrgname) pFriendOrgname->SetText("");
+// 				if (NULL != pFriendOrgname) pFriendOrgname->SetText(_T(""));
 // 
 // 				//清空聊天记录和输入框内容
 // 				CChatListUI* pOutput = static_cast<CChatListUI*>(m_PaintManager.FindControl(kListChatControlName));
@@ -5514,7 +5514,7 @@ void mainDlg::OnDeleteContact()
 // 				}
 // 				if (NULL != pEditInput)
 // 				{
-// 					pEditInput->SetText(_T(""));
+// 					pEditInput->SetText((_T("")));
 // 				}
 // 			}
 // 		}
@@ -6022,22 +6022,22 @@ void mainDlg::UpdateCacheAndUiAfterFriendDeleted(tstring& strDeletedAccount)
 			if(nIdex>=0)
 			{
 				//清空？还是选择最近联系人里面的最上面的一个联系人信息呢？===to do...
-				pFriendNickname->SetText("");
+				pFriendNickname->SetText(_T(""));
 				//清空用户头像
 				CButtonUI* pBtnFriendAvatar = static_cast<CButtonUI*>(m_PaintManager.FindControl(kButtonFriendAvatar));
 				if (NULL != pBtnFriendAvatar)
 				{
-					pBtnFriendAvatar->SetNormalImage("");
+					pBtnFriendAvatar->SetNormalImage(_T(""));
 				}
 				//清空用户机构信息
 				CLabelUI* pLabelFriendCompany = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendCompany));
 				if (NULL != pLabelFriendCompany)
 				{
-					pLabelFriendCompany->SetText("");
+					pLabelFriendCompany->SetText(_T(""));
 				}
 
 				CLabelUI *pFriendOrgname = static_cast<CLabelUI*>(m_PaintManager.FindControl(kLabelFriendCompany));
-				if (NULL != pFriendOrgname) pFriendOrgname->SetText("");
+				if (NULL != pFriendOrgname) pFriendOrgname->SetText(_T(""));
 
 				//清空聊天记录和输入框内容
 				CChatListUI* pOutput = static_cast<CChatListUI*>(m_PaintManager.FindControl(kListChatControlName));
@@ -6048,7 +6048,7 @@ void mainDlg::UpdateCacheAndUiAfterFriendDeleted(tstring& strDeletedAccount)
 				}
 				if (NULL != pEditInput)
 				{
-					pEditInput->SetText(_T(""));
+					pEditInput->SetText((_T("")));
 				}
 			}
 		}
@@ -6361,7 +6361,7 @@ int mainDlg::apiGetUserIdentity()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-status?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("cell_phone=");
 	strPost += m_myselfInfo.strPhone;
 	strUrl += strPost;
@@ -6996,10 +6996,10 @@ void mainDlg::OnUpdateRoomName(tstring& strRoomID, tstring& strRoomNickName)
 			info.m_strAccount = SYS_GROUP_CHAT_ACCOUNT;
 			info.m_strLogo = DEF_AVATAR_NOR;
 			info.m_strNickName = strRoomNickName.c_str();//strOrgName.c_str();
-			info.m_strOrgName  = "";//strOrgName.c_str();
-			info.m_strOrgID    = "";//strOrgID.c_str();
+			info.m_strOrgName =(_T(""));//strOrgName.c_str();
+			info.m_strOrgID   =(_T(""));//strOrgID.c_str();
 			info.m_strRoomID   = strRoomID.c_str();
-			info.m_strLastMsg  = "";
+			info.m_strLastMsg =(_T(""));
 			info.m_strLastTm   = GetFullTimeString(time(0)).c_str();
 			info.nItemID	   = GetNextItemID();
 
@@ -7008,8 +7008,8 @@ void mainDlg::OnUpdateRoomName(tstring& strRoomID, tstring& strRoomNickName)
 			RecentGroupItem oneGroup;
 			oneGroup.strRoomID = strRoomID;
 			oneGroup.strGroupNick = strRoomNickName;
-			oneGroup.strOrgID = "";//strOrgID;
-			oneGroup.strOrgName = "";//strOrgName;
+			oneGroup.strOrgID=(_T(""));//strOrgID;
+			oneGroup.strOrgName=(_T(""));//strOrgName;
 			oneGroup.strParticipant = CController::Instance()->GetXmppClient()->jid().username();
 			oneGroup.strAvatarPath = info.m_strLogo;
 			GetDBTaskModule()->SaveRecentGroupItem(oneGroup);

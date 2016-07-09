@@ -213,7 +213,7 @@ bool CFrameEmployeeManage1::getOrgInfo()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-org");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Post(strUrl, strPost, strToken, strHttpResponse);
@@ -319,7 +319,7 @@ bool CFrameEmployeeManage1::getRecipient()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strUrl += strPost;
@@ -343,7 +343,7 @@ bool CFrameEmployeeManage1::getDuty( OrgMemberInfo &oneInfo )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-duty?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strPost += _T("&cell_phone=");
@@ -563,7 +563,7 @@ bool CFrameEmployeeManage1::setRecipient( tstring strPhone )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/set-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strPost += _T("&cell_phone=");
@@ -589,13 +589,13 @@ bool CFrameEmployeeManage1::setDuty( OrgMemberInfo &oneInfo )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/set-duty?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strPost += _T("&cell_phone=");
 	strPost += oneInfo.strPhone;
 	strPost += _T("&duties=");
-	tstring strDuty("");
+	tstring strDuty(_T(""));
 
 //	(a>=0)?vecProperty.push_back("需求"):NULL;
 //	(b>=0)?vecProperty.push_back("订约"):NULL;
@@ -669,7 +669,7 @@ bool CFrameEmployeeManage1::AddMember( tstring strPhone )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/add-members?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	tstring strNameDefault = m_strOid;
 	strPost += strNameDefault;
@@ -724,7 +724,7 @@ bool CFrameEmployeeManage1::MemRemove( tstring strPhone )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/del-member?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	tstring strNameDefault = m_strOid;
 	strPost += strNameDefault;
@@ -762,7 +762,7 @@ bool CFrameEmployeeManage1::TransferOwnerPermissions( tstring strPhone )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/transfer-admin?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strPost += _T("&cell_phone=");
@@ -816,7 +816,7 @@ void CFrameEmployeeManage1::updateWindow()
 	m_plstEmployee->RemoveAll();
 
 	if (!getRecipient())
-		m_strRecipient = "";
+		m_strRecipient=(_T(""));
 	//2. 获取个人职责
 	for (int i=0; i<m_vctMembers.size(); i++)
 	{

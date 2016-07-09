@@ -12,7 +12,7 @@ UIDownloadFiles::UIDownloadFiles( LPCTSTR pszXMLPath ):
 		m_strXMLPath(pszXMLPath),
 		m_iTaskNum(0),
 		m_iCurTaskNum(0),
-		m_strFilePath("")
+		m_strFilePath(_T(""))
 {
 	m_pTileLayout=NULL; 
 	//initOSS();

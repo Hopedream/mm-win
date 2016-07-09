@@ -32,8 +32,8 @@ void CFrameBussinessData::HandleClickEvent( TNotifyUI& msg )
 	{
 		if (m_date_Recv_begin != NULL && m_date_Recv_end != NULL)
 		{
-			m_date_Recv_begin->SetText("");
-			m_date_Recv_end->SetText("");
+			m_date_Recv_begin->SetText(_T(""));
+			m_date_Recv_end->SetText(_T(""));
 		}
 		
 		ShowWindow(false);
@@ -83,55 +83,55 @@ void CFrameBussinessData::onButtonFind()
 {
 	if (m_plstBussData != NULL)
 		m_plstBussData->RemoveAll();
-	tstring strFileName = "";
+	tstring strFileName=(_T(""));
 	if (m_pedit_fileName != NULL)
 	{
 		strFileName = m_pedit_fileName->GetText();
 	}
 
-	tstring strBid = "";
+	tstring strBid=(_T(""));
 	if (m_pedit_Bid != NULL)
 	{
 		strBid = m_pedit_Bid->GetText();
 	}
 
-	tstring strSendOrg = "";
+	tstring strSendOrg=(_T(""));
 	if (m_pedit_SendOrg != NULL)
 	{
 		strSendOrg = m_pedit_SendOrg->GetText();
 	}
 
-	tstring strRecvOrg = "";
+	tstring strRecvOrg=(_T(""));
 	if (m_pedit_RecvOrg != NULL)
 	{
 		strRecvOrg = m_pedit_RecvOrg->GetText();
 	}
 
-	tstring strSender = "";
+	tstring strSender=(_T(""));
 	if (m_pedit_Sender != NULL)
 	{
 		strSender = m_pedit_Sender->GetText();
 	}
 
-	tstring strSendTime = "";
+	tstring strSendTime=(_T(""));
 	if (m_date_Send_begin != NULL)
 	{
 		strSendTime = m_date_Send_begin->GetText();
 	}
 
-	tstring strSendTimeEnd = "";
+	tstring strSendTimeEnd=(_T(""));
 	if (m_date_Send_end != NULL)
 	{
 		strSendTimeEnd = m_date_Send_end->GetText();
 	}
 
-	tstring strRecvTime = "";
+	tstring strRecvTime=(_T(""));
 	if (m_date_Recv_begin != NULL)
 	{
 		strRecvTime = m_date_Recv_begin->GetText();
 	}
 
-	tstring strRecvTimeEnd = "";
+	tstring strRecvTimeEnd=(_T(""));
 	if (m_date_Recv_end != NULL)
 	{
 		strRecvTimeEnd = m_date_Recv_end->GetText();

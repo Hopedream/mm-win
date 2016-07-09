@@ -25,14 +25,14 @@ struct JP_CONSTRACT_INFO
 	vector<fileInfo> m_vecFiles;
 	JP_CONSTRACT_INFO()
 	{
-		strTime = "";
-		strMoney = "";
-		strNO = "";
-		strName = "";
-		strIdentity = "";
-		strMark = "";
-		strType = "";
-		strOrgid = "";
+		strTime=(_T(""));
+		strMoney=(_T(""));
+		strNO=(_T(""));
+		strName=(_T(""));
+		strIdentity=(_T(""));
+		strMark=(_T(""));
+		strType=(_T(""));
+		strOrgid=(_T(""));
 	}
 	/* 该重载编译无效,原因不明
 	bool operator==(JP_CONSTRACT_INFO& rhs) const 
@@ -71,7 +71,7 @@ protected:
 	bool IsFirstPage();
 	bool IsEndPage();
 	void RemoveAllListItems();
-	bool GetContractInfo(vector<JP_CONSTRACT_INFO>& vecInfo,const tstring status = "1",const tstring type = "",const tstring& stime="",const tstring& etime="",const tstring& key="");
+	bool GetContractInfo(vector<JP_CONSTRACT_INFO>& vecInfo,const tstring status = "1",const tstring type=(_T("")),const tstring& stime=(_T("")),const tstring& etime=(_T("")),const tstring& key=(_T("")));
 	void HideBtn();
 protected:
 	CPaintManagerUI* m_PaintManager;

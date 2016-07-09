@@ -136,7 +136,7 @@ std::tstring CChineseCode::DecodeUTF8( const tstring strUtf8 )
 //std::tstring CChineseCode::str2HexStr( tstring str )
 //{
 //	char[] chars = "0123456789ABCDEF".toCharArray();      
-//	StringBuilder sb = new StringBuilder("");    
+//	StringBuilder sb = new StringBuilder(_T(""));    
 //	byte[] bs = str.getBytes();      
 //	int bit;      
 //

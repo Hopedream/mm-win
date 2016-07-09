@@ -169,7 +169,7 @@ bool CFrameEmployee::getOrgId()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-org");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	tstring strToken = CController::Instance()->GetToken();
 	tstring strHttpResponse;
 	int retCode = httpClient.Post(strUrl, strPost, strToken, strHttpResponse);
@@ -274,7 +274,7 @@ bool CFrameEmployee::getRecipient()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/get-default?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strUrl += strPost;
@@ -433,7 +433,7 @@ bool CFrameEmployee::AddMember( tstring strPhone )
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/add-members?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	tstring strNameDefault = m_strOid;
 	strPost += strNameDefault;

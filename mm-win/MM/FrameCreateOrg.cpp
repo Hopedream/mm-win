@@ -148,12 +148,12 @@ void CFrameCreateOrg::initPropertyComb()
 
 void CFrameCreateOrg::clearFrame()
 {
-	m_pBtnSelect->SetBkImage("");
-	m_pEditAddress->SetText("");
-	//m_pEditAreacode->SetText("");
-	m_pEditCellphone->SetText("");
-	m_pEditTelephone->SetText("");
-	m_pEdtName->SetText("");
+	m_pBtnSelect->SetBkImage(_T(""));
+	m_pEditAddress->SetText(_T(""));
+	//m_pEditAreacode->SetText(_T(""));
+	m_pEditCellphone->SetText(_T(""));
+	m_pEditTelephone->SetText(_T(""));
+	m_pEdtName->SetText(_T(""));
 }
 
 void CFrameCreateOrg::onSelectAvatar()
@@ -290,7 +290,7 @@ bool CFrameCreateOrg::apiCreateOrg( orgInfo & info)
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/create-org?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("name=");
 	tstring strNameDefault = info.strName;
 	strPost += strNameDefault;
@@ -462,7 +462,7 @@ bool CFrameCreateOrg::deleteorg()
 	CHttpClient httpClient;
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("org/del-org?");
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("oid=");
 	strPost += m_strOid;
 	strUrl += strPost;

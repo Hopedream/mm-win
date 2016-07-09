@@ -39,9 +39,9 @@ using namespace std;
 		FriendListItemInfoEx(bool _folder = false, 
 			bool _empty = false, 
 			UINT _itemId = 0, 
-			tstring _logo = "", 
-			tstring _strOrgName  = "",
-			tstring _nick_name  = "")
+			tstring _logo=(_T("")), 
+			tstring _strOrgName =(_T("")),
+			tstring _nick_name =(_T("")))
 		{
 			folder = _folder;
 			empty = _empty;

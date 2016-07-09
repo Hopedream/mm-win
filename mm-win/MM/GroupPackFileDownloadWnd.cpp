@@ -343,7 +343,7 @@ bool CGroupPackFileDownloadWnd::downloadSignalFile( fileInfo& infoFile, IOssEven
 		infoFile.dwFileSize, 
 		infoFile.strFileFullName, 
 		infoFile.strFileName/*infoFile.strKey*/, 
-		tstring("")/*infoFile.stropposite*/);
+		tstring(_T(""))/*infoFile.stropposite*/);
 	bool bSucc = res == OSS_SUCCESS;
 
 	::EnterCriticalSection(&m_csFState);	

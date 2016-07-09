@@ -19,7 +19,7 @@ public:
 	bool Initialize();
 	void RefreshPage();
 	virtual void Notify(TNotifyUI& msg) ;
-	void FetchProjects(tstring& strStartDataTime,const tstring& strSearch = "");
+	void FetchProjects(tstring& strStartDataTime,const tstring& strSearch=(_T("")));
 
 protected:
 	void HandleWindowInitEvent( TNotifyUI& msg );

@@ -8855,7 +8855,7 @@ static int vxprintf(
       case etDYNSTRING:
         bufpt = va_arg(ap,char*);
         if( bufpt==0 ){
-          bufpt = "";
+          bufpt=(_T(""));
         }else if( xtype==etDYNSTRING ){
           zExtra = bufpt;
         }
@@ -19576,7 +19576,7 @@ SQLITE_PRIVATE int sqlite3PagerOpen(
 #ifndef SQLITE_OMIT_MEMORYDB
     if( strcmp(zFilename,":memory:")==0 ){
       memDb = 1;
-      zFullPathname = sqliteStrDup("");
+      zFullPathname = sqliteStrDup(_T(""));
     }else
 #endif
     {
@@ -28622,7 +28622,7 @@ static void checkAppendMsg(
   va_start(ap, zFormat);
   zMsg2 = sqlite3VMPrintf(zFormat, ap);
   va_end(ap);
-  if( zMsg1==0 ) zMsg1 = "";
+  if( zMsg1==0 ) zMsg1=(_T(""));
   if( pCheck->zErrMsg ){
     char *zOld = pCheck->zErrMsg;
     pCheck->zErrMsg = 0;
@@ -30999,7 +30999,7 @@ static char *displayP3(Op *pOp, char *zTemp, int nTemp){
     default: {
       zP3 = pOp->p3;
       if( zP3==0 || pOp->opcode==OP_Noop ){
-        zP3 = "";
+        zP3=(_T(""));
       }
     }
   }
@@ -34306,7 +34306,7 @@ case OP_HexBlob: {            /* same as TK_BLOB */
       sqliteFree(pOp->p3);
     }
     pOp->p3type = P3_STATIC;
-    pOp->p3 = "";
+    pOp->p3=(_T(""));
   }
 
   /* Fall through to the next case, OP_Blob. */
@@ -40800,7 +40800,7 @@ SQLITE_PRIVATE void sqlite3ExprCode(Parse *pParse, Expr *pExpr){
       z = (char*)pExpr->token.z + 2;
       assert( n>=0 );
       if( n==0 ){
-        z = "";
+        z=(_T(""));
       }
       sqlite3VdbeOp3(v, op, 0, 0, z, n);
       break;
@@ -42721,8 +42721,8 @@ static void attachFunc(
 
   zFile = (const char *)sqlite3_value_text(argv[0]);
   zName = (const char *)sqlite3_value_text(argv[1]);
-  if( zFile==0 ) zFile = "";
-  if( zName==0 ) zName = "";
+  if( zFile==0 ) zFile=(_T(""));
+  if( zName==0 ) zName=(_T(""));
 
   /* Check for the following errors:
   **
@@ -42879,7 +42879,7 @@ static void detachFunc(
   Db *pDb = 0;
   char zErr[128];
 
-  if( zName==0 ) zName = "";
+  if( zName==0 ) zName=(_T(""));
   for(i=0; i<db->nDb; i++){
     pDb = &db->aDb[i];
     if( pDb->pBt==0 ) continue;
@@ -44712,7 +44712,7 @@ static char *createTableStmt(Table *p, int isTemp){
   }
   n += identLength(p->zName);
   if( n<50 ){
-    zSep = "";
+    zSep=(_T(""));
     zSep2 = ",";
     zEnd = ")";
   }else{
@@ -45992,7 +45992,7 @@ SQLITE_PRIVATE void sqlite3CreateIndex(
         pName->z);
     }else{
       /* An automatic index created by a PRIMARY KEY or UNIQUE constraint */
-      /* zStmt = sqlite3MPrintf(""); */
+      /* zStmt = sqlite3MPrintf(_T("")); */
       zStmt = 0;
     }
 
@@ -52369,7 +52369,7 @@ SQLITE_PRIVATE void sqlite3Pragma(
 
   /*
   **   PRAGMA temp_store_directory
-  **   PRAGMA temp_store_directory = ""|"directory_name"
+  **   PRAGMA temp_store_directory=(_T(""))|"directory_name"
   **
   ** Return or set the local value of the temp_store_directory flag.  Changing
   ** the value sets a specific directory to be used for temporary files.
@@ -57166,7 +57166,7 @@ SQLITE_PRIVATE void sqlite3PrintSelect(Select *p, int indent){
     for(i=0; i<p->pSrc->nSrc; i++){
       struct SrcList_item *pItem = &p->pSrc->a[i];
       sqlite3DebugPrintf("%*s ", indent+6, zPrefix);
-      zPrefix = "";
+      zPrefix=(_T(""));
       if( pItem->pSelect ){
         sqlite3DebugPrintf("(\n");
         sqlite3PrintSelect(pItem->pSelect, indent+10);
@@ -57283,7 +57283,7 @@ static int sqlite3_get_table_cb(void *pArg, int nCol, char **argv, char **colv){
     p->nColumn = nCol;
     for(i=0; i<nCol; i++){
       if( colv[i]==0 ){
-        z = sqlite3_mprintf("");
+        z = sqlite3_mprintf(_T(""));
       }else{
         z = sqlite3_mprintf("%s", colv[i]);
       }

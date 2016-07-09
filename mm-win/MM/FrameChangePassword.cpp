@@ -124,7 +124,7 @@ void CFrameChangePassword::GetVerifyCode()
 	tstring strUrl(WEB_SERVER_BASE_URL);
 	strUrl += _T("site/create-verify-code?tid=2");
 
-	tstring strPost = _T("");
+	tstring strPost = (_T(""));
 	strPost += _T("cell_phone=");
 	strPost += strPhone;
 
@@ -188,7 +188,7 @@ void CFrameChangePassword::changePasswd()
 		tstring strUrl(WEB_SERVER_BASE_URL);
 		strUrl += _T("user/modify-pwd");
 
-		tstring strPost = _T("");
+		tstring strPost = (_T(""));
 		strPost += _T("cell_phone=");
 		strPost += m_strPhone;
 		strPost += _T("&new_pwd=");
@@ -219,10 +219,10 @@ void CFrameChangePassword::clearDlg()
 	KillTimer(m_PaintManager.GetPaintWindow(), TIMERID_VERIFY_CODE);
 	m_pBtnGetPinCode->SetText(GET_PINCODE_TIPTEXT);
 	m_pBtnGetPinCode->SetEnabled(true);
-	m_pConfirmPasswdEditUI->SetText("");
-	m_pPasswdEditUI->SetText("");
-	m_pPinCodeEditUI->SetText("");
-	m_pLableTip->SetText("");
+	m_pConfirmPasswdEditUI->SetText(_T(""));
+	m_pPasswdEditUI->SetText(_T(""));
+	m_pPinCodeEditUI->SetText(_T(""));
+	m_pLableTip->SetText(_T(""));
 }
 
 void CFrameChangePassword::showFocus()

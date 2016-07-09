@@ -137,7 +137,7 @@ void CSystemSetDlg::OnStoreVCardResult( tstring& strAccount, bool bSucc )
 
 CSystemSetDlg::CSystemSetDlg(CDuiString strAccount)
 {
-	m_strUpdateLogo = _T("");
+	m_strUpdateLogo = (_T(""));
 	m_strMyAccount = strAccount;
 	CController::Instance()->GetUserInfoMgr()->AddEventHandler((IUserManagerEvent*)this);
 }

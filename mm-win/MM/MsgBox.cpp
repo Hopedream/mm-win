@@ -19,7 +19,7 @@ CMsgBox::CMsgBox(const tstring strTile, const tstring strText, UINT icon, UINT u
 UINT CMsgBox::ShowModal(HWND hParent)
 {
 	hParent = GetWindowOwner(hParent) ? GetWindowOwner(hParent): hParent;
-	Create(hParent, _T(""), UI_WNDSTYLE_FRAME, WS_EX_WINDOWEDGE , 0, 0, 0, 0, NULL);
+	Create(hParent, (_T("")), UI_WNDSTYLE_FRAME, WS_EX_WINDOWEDGE , 0, 0, 0, 0, NULL);
 	CenterWindow();
 	SetTopMostWnd();
 	return  CWindowWnd::ShowModal();

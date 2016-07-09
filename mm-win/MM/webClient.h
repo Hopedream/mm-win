@@ -12,7 +12,7 @@ class CWebClient{
 public:
 	static bool IsValidUser(const tstring& strPhoneNo);
 	static bool InviteBussinessParter(const tstring& strPhoneNo, tstring& strErrDescription);
-	static bool GetOrgByPhone( tstring strPhone, orgInfo& _orgInfo,  tstring strOrgId = "");
+	static bool GetOrgByPhone( tstring strPhone, orgInfo& _orgInfo,  tstring strOrgId = (_T("")));
 	static bool GetOrgById(tstring strId, orgInfo& org);
 	static bool GetMyOrg(orgInfo& org);
 	static void ClearOrgCache();
@@ -32,7 +32,7 @@ public:
 	static tstring GetVersion();
 	static tstring GetVerifyCode(const tstring& phone);
 	static bool GetTheOtherSideOrgId(const vector<tstring>& room_member, const tstring& my_account,tstring& other_side_id);
-	static bool getContractInfo(tstring& strResponsInfo,const tstring& status = "1",const tstring& type = "",const tstring& stime="",const tstring& etime="",const tstring& key="");
+	static bool getContractInfo(tstring& strResponsInfo,const tstring& status = _T("1"),const tstring& type = (_T("")),const tstring& stime=(_T("")),const tstring& etime=(_T("")),const tstring& key=(_T("")));
 	static bool getContractFiles(tstring& strRespons,const tstring& strPackId,const tstring& strOrgId);
 	static bool addContract(const vector<tstring>& vecInfo,tstring& strRespons);
 

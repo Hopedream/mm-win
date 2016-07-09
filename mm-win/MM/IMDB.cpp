@@ -1374,8 +1374,8 @@ bool IMDB::AddUserExtendInfo(CppSQLite3DB& db,IM_UID uid,_tDetailedUserInfo & ex
 		<<extendinfo.birthday_type<<_T(",'")
 		<<extendinfo.home_page<<_T("',")
 		<<(UINT16)0<<_T(",'")
-		<<_T("")<<_T("','")
-		<<_T("")<<_T("');");
+		<<(_T(""))<<_T("','")
+		<<(_T(""))<<_T("');");
 	    db.execDML(os.str().c_str());
 
 
@@ -1506,8 +1506,8 @@ bool IMDB::AddContactExtendInfo(CppSQLite3DB& db,IM_UID uid,_tDetailedUserInfo &
 		<<extendinfo.birthday_type<<_T(",'")
 		<<extendinfo.home_page<<_T("',")
 		<<(UINT16)0<<_T(",'")
-		<<_T("")<<_T("','")
-		<<_T("")<<_T("');");
+		<<(_T(""))<<_T("','")
+		<<(_T(""))<<_T("');");
 	db.execDML(os.str().c_str());
 
 
@@ -1532,7 +1532,7 @@ bool IMDB::BeExistContacter(CppSQLite3DB& db,IM_UID uid)
 	//解决方案1:使用m_buf.2:os成员变量化。原因可能是stl库的版本连接的有问题。
 
 	sprintf_s(m_buf, sizeof(m_buf), _T("select * from CONTACTER_INFO where uid = '%s';"),uid.c_str());
-	//m_os.str("");
+	//m_os.str(_T(""));
 	//m_os<<_T("select * from CONTACTER_INFO where uid = '")<<uid.c_str()<<_T("' ;");
 	//db.execDML(BEGIN_TRANSACTION);
 	m_query = db.execQuery(m_buf/*m_os.str().c_str()*/);
@@ -1582,7 +1582,7 @@ bool IMDB::BeExistRecentGroupItem(CppSQLite3DB& db,const tstring& strRoomID)
 
 bool IMDB::BeExistRecentListItem(CppSQLite3DB& db,IM_UID uid)
 {
-	//m_os.str("");
+	//m_os.str(_T(""));
 	//m_os<<_T("select * from RECENTLIST_TABLE where uid = ")<<uid<<_T(" ;");
 
 	sprintf_s(m_buf, sizeof(m_buf), _T("select * from RECENTLIST_TABLE where uid = '%s';"),uid.c_str());
@@ -1784,7 +1784,7 @@ bool IMDB::LoadUserVCard(IM_UID uid,sUserVCard& usrinfo)
 		}
 
 // 		sprintf_s(m_buf, sizeof(m_buf), _T("select * from CONTACTER_INFO where uid = '%s';"),uid.c_str());
-// 		//m_os.str("");
+// 		//m_os.str(_T(""));
 // 		//m_os<<_T("select * from CONTACTER_INFO where uid = '")<<uid.c_str()<<_T("' ;");
 // 		db.execDML(BEGIN_TRANSACTION);
 // 		CppSQLite3Query q = db.execQuery(m_buf/*m_os.str().c_str()*/);
@@ -1796,7 +1796,7 @@ bool IMDB::LoadUserVCard(IM_UID uid,sUserVCard& usrinfo)
 
 		sprintf_s(m_buf, sizeof(m_buf), _T("select * from CONTACTER_INFO where uid = '%s';"),uid.c_str());
 
-		//m_os.str("");
+		//m_os.str(_T(""));
 		//m_os<<_T("select * from CONTACTER_INFO where uid = ")<<uid.c_str()<<_T(" ;");
 
 		//_stprintf(m_buf,_T("select * from %s ;"),tablename.c_str());
@@ -2170,7 +2170,7 @@ bool IMDB::LoadRecentFriendList(vector<RECENTITEM>& recentlist)
 
 
         RECENTITEM item;
-		//m_os.str("");
+		//m_os.str(_T(""));
 		//m_os<<_T("select * from RECENTLIST_TABLE;");
 		m_query = db2.execQuery(m_buf/*m_os.str().c_str()*/);
 		//db2.execDML(BEGIN_TRANSACTION);
@@ -2320,7 +2320,7 @@ bool IMDB::AddRecentItem(CppSQLite3DB& db,RECENTITEM& item)
 {
 	sprintf_s(m_buf, sizeof(m_buf), _T("insert into RECENTLIST_TABLE  values ( '%s','%s');"),item.strUid.c_str(),item.strTime.c_str());
 	db.execDML(m_buf);
-// 	m_os.str("");
+// 	m_os.str(_T(""));
 // 	m_os<<_T("insert into RECENTLIST_TABLE  values ( ")
 // 	<<_T("'")<<item.strUid.c_str()<<_T("'")<<_T(",")
 // 	<<_T("'")<<item.strTime.c_str()<<_T("');");
